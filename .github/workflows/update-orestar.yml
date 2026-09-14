@@ -1,0 +1,33 @@
+name: Refresh ORESTAR data
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
+      - "BeyondTheBallot/candidates.json"
+      - "BeyondTheBallot/Configuration.swift"
+  schedule:
+    - cron: "0 13,14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh public ORESTAR figures
+        run: python backend/update_data.py ${{ github.event_name == 'schedule' && '--scheduled' || '' }}
+      - name: Commit changed data
+        run: |
+          git config user.name "Beyond the Ballot Data Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/candidates.json BeyondTheBallot/candidates.json BeyondTheBallot/Configuration.swift
+          git diff --cached --quiet || git commit -m "Update ORESTAR figures"
+          git push
