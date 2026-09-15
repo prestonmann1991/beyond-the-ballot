@@ -21,7 +21,7 @@ final class ElectionStore: ObservableObject {
             feed = loadCachedFeed() ?? loadBundledFeed()
         }
 
-        if !forceRefresh, let feed, Date().timeIntervalSince(feed.updatedAt) < 3600 {
+        if !forceRefresh, let feed, Date().timeIntervalSince(feed.updatedAt) < 900 {
             return
         }
 
