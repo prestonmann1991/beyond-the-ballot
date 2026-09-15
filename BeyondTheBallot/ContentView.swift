@@ -95,6 +95,7 @@ struct ContentView: View {
         VStack(spacing: 5) {
             Text("Campaign-finance data: Oregon Secretary of State ORESTAR")
             Text("Balance/deficit is ORESTAR's reported field and is not necessarily cash on hand.")
+            Text("Beyond the Ballot is independent and is not affiliated with the Oregon Secretary of State or any candidate or campaign.")
         }
         .font(.caption2)
         .multilineTextAlignment(.center)
@@ -216,4 +217,3 @@ private extension Color {
 #Preview {
     ContentView().environmentObject(ElectionStore())
 }
-

@@ -27,11 +27,11 @@ You can test it immediately from **Actions → Refresh ORESTAR data → Run work
 
 ## Before App Store submission
 
-- Replace the placeholder app icon in `Assets.xcassets/AppIcon.appiconset`.
 - Change the bundle identifier if `com.prestonmann.BeyondTheBallot` is already
   registered to another Apple developer account.
 - Review the candidate website list in `backend/candidates_source.json`.
-- Add a privacy-policy URL in App Store Connect. This version collects no user data.
+- Use `PRIVACY.md` and `SUPPORT.md` as the public App Store privacy and support pages.
+- Copy the prepared listing from `APP_STORE_METADATA.md` into App Store Connect.
 
 ## Data notes
 

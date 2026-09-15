@@ -13,6 +13,7 @@
 		A10000000000000000000005 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Configuration.swift */; };
 		A10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* Assets.xcassets */; };
 		A10000000000000000000007 /* candidates.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* candidates.json */; };
+		A10000000000000000000008 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A20000000000000000000007 /* candidates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = candidates.json; sourceTree = "<group>"; };
 		A20000000000000000000008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20000000000000000000009 /* Beyond the Ballot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beyond the Ballot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000000000000000000000A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				A20000000000000000000006 /* Assets.xcassets */,
 				A20000000000000000000007 /* candidates.json */,
 				A20000000000000000000008 /* Info.plist */,
+				A2000000000000000000000A /* PrivacyInfo.xcprivacy */,
 			);
 			path = BeyondTheBallot;
 			sourceTree = "<group>";
@@ -115,6 +118,7 @@
 			files = (
 				A10000000000000000000006 /* Assets.xcassets in Resources */,
 				A10000000000000000000007 /* candidates.json in Resources */,
+				A10000000000000000000008 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
