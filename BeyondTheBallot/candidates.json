@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T12:28:47-07:00",
+  "updatedAt": "2026-09-15T12:39:39-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -383,9 +383,9 @@
       "campaignURL": "https://www.christinefororegon.com/",
       "filerID": 19050,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19050",
-      "contributionsYTD": 8216196.15,
+      "contributionsYTD": 8276691.15,
       "expendituresYTD": 6865223.44,
-      "balanceDeficit": 2330738.82,
+      "balanceDeficit": 2391233.82,
       "recentContributions": [
         {
           "id": "5809505",
@@ -4370,7 +4370,7 @@
           "amount": 156.0
         }
       ],
-      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
+      "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -4386,9 +4386,151 @@
       "contributionsYTD": 104824.95,
       "expendituresYTD": 146347.96,
       "balanceDeficit": 275339.44,
-      "recentContributions": [],
-      "recentExpenditures": [],
-      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
+      "recentContributions": [
+        {
+          "id": "5781846",
+          "date": "2026-08-24",
+          "name": "Waymo",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
+        {
+          "id": "5781848",
+          "date": "2026-08-24",
+          "name": "Oregon Council of NECA Chapters (135)",
+          "category": "Cash Contribution",
+          "amount": 5000.0
+        },
+        {
+          "id": "5781844",
+          "date": "2026-08-21",
+          "name": "MPC Investment Fund",
+          "category": "Cash Contribution",
+          "amount": 500.0
+        },
+        {
+          "id": "5781840",
+          "date": "2026-08-17",
+          "name": "Anheuser Busch",
+          "category": "Cash Contribution",
+          "amount": 2000.0
+        },
+        {
+          "id": "5781841",
+          "date": "2026-08-17",
+          "name": "RAI Services Company",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
+        {
+          "id": "5781836",
+          "date": "2026-08-14",
+          "name": "Bristol Myers Squibb ER Squibb & Sons, LLC",
+          "category": "Cash Contribution",
+          "amount": 2500.0
+        },
+        {
+          "id": "5781837",
+          "date": "2026-08-14",
+          "name": "American Chemistry Council",
+          "category": "Cash Contribution",
+          "amount": 1500.0
+        },
+        {
+          "id": "5801983",
+          "date": "2026-08-12",
+          "name": "SDLF (1471)",
+          "category": "In-Kind Contribution",
+          "amount": 36467.67
+        },
+        {
+          "id": "5781833",
+          "date": "2026-08-10",
+          "name": "Oregon Nurses Political Action Committee (12986)",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
+        {
+          "id": "5781827",
+          "date": "2026-08-07",
+          "name": "SMACNA PAC (3917)",
+          "category": "Cash Contribution",
+          "amount": 750.0
+        }
+      ],
+      "recentExpenditures": [
+        {
+          "id": "5781779",
+          "date": "2026-08-27",
+          "name": "Polity Staffing LLC",
+          "category": "Cash Expenditure",
+          "amount": 849.19
+        },
+        {
+          "id": "5781783",
+          "date": "2026-08-27",
+          "name": "Emmert International",
+          "category": "Cash Expenditure",
+          "amount": 7000.0
+        },
+        {
+          "id": "5781787",
+          "date": "2026-08-27",
+          "name": "Emmert International",
+          "category": "Cash Expenditure",
+          "amount": 2000.0
+        },
+        {
+          "id": "5781821",
+          "date": "2026-08-27",
+          "name": "Marcus Sis",
+          "category": "Cash Expenditure",
+          "amount": 3436.53
+        },
+        {
+          "id": "5781819",
+          "date": "2026-08-25",
+          "name": "Oregon Secretary of State",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 750.0
+        },
+        {
+          "id": "5782031",
+          "date": "2026-08-24",
+          "name": "Miscellaneous Personal Expenditures $100 and under",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 79.0
+        },
+        {
+          "id": "5781775",
+          "date": "2026-08-11",
+          "name": "C&E Systems",
+          "category": "Cash Expenditure",
+          "amount": 196.78
+        },
+        {
+          "id": "5781814",
+          "date": "2026-08-10",
+          "name": "FedEx",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 285.0
+        },
+        {
+          "id": "5782024",
+          "date": "2026-08-05",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 3.95
+        },
+        {
+          "id": "5781793",
+          "date": "2026-08-03",
+          "name": "Costco",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 587.09
+        }
+      ],
+      "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -4402,11 +4544,153 @@
       "filerID": 21488,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21488",
       "contributionsYTD": 34431.17,
-      "expendituresYTD": 19764.75,
-      "balanceDeficit": 16279.05,
-      "recentContributions": [],
-      "recentExpenditures": [],
-      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
+      "expendituresYTD": 26598.1,
+      "balanceDeficit": 9445.7,
+      "recentContributions": [
+        {
+          "id": "5803320",
+          "date": "2026-09-09",
+          "name": "Rosalind D Anderson",
+          "category": "Cash Contribution",
+          "amount": 125.0
+        },
+        {
+          "id": "5768494",
+          "date": "2026-08-18",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 50.0
+        },
+        {
+          "id": "5764802",
+          "date": "2026-08-11",
+          "name": "The Leadership Fund (2690)",
+          "category": "In-Kind Contribution",
+          "amount": 2500.0
+        },
+        {
+          "id": "5800812",
+          "date": "2026-08-08",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 15.62
+        },
+        {
+          "id": "5755632",
+          "date": "2026-08-07",
+          "name": "Dick Anderson for Oregon (20255)",
+          "category": "In-Kind Contribution",
+          "amount": 4000.0
+        },
+        {
+          "id": "5768477",
+          "date": "2026-08-01",
+          "name": "Colleen Hamilton",
+          "category": "Cash Contribution",
+          "amount": 150.0
+        },
+        {
+          "id": "5739236",
+          "date": "2026-07-28",
+          "name": "The Leadership Fund (2690)",
+          "category": "Cash Contribution",
+          "amount": 15000.0
+        },
+        {
+          "id": "5738404",
+          "date": "2026-07-25",
+          "name": "Heather Hayzlett",
+          "category": "Cash Contribution",
+          "amount": 260.25
+        },
+        {
+          "id": "5738467",
+          "date": "2026-07-25",
+          "name": "Jo Nielsen",
+          "category": "Cash Contribution",
+          "amount": 120.0
+        },
+        {
+          "id": "5738477",
+          "date": "2026-07-25",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 180.0
+        }
+      ],
+      "recentExpenditures": [
+        {
+          "id": "5803280",
+          "date": "2026-09-09",
+          "name": "Haystack",
+          "category": "Cash Expenditure",
+          "amount": 1230.0
+        },
+        {
+          "id": "5803603",
+          "date": "2026-09-08",
+          "name": "Bridgeview Press",
+          "category": "Cash Expenditure",
+          "amount": 885.0
+        },
+        {
+          "id": "5793683",
+          "date": "2026-09-04",
+          "name": "Five Seasons Media, LLC",
+          "category": "Cash Expenditure",
+          "amount": 500.0
+        },
+        {
+          "id": "5784628",
+          "date": "2026-08-25",
+          "name": "Oregon Secretary of State",
+          "category": "Cash Expenditure",
+          "amount": 750.0
+        },
+        {
+          "id": "5768495",
+          "date": "2026-08-18",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 1.97
+        },
+        {
+          "id": "5764844",
+          "date": "2026-08-13",
+          "name": "Haystack",
+          "category": "Cash Expenditure",
+          "amount": 4579.55
+        },
+        {
+          "id": "5764862",
+          "date": "2026-08-13",
+          "name": "Keri Lopez",
+          "category": "Cash Expenditure",
+          "amount": 2253.8
+        },
+        {
+          "id": "5764939",
+          "date": "2026-08-10",
+          "name": "Jackrabbit Promotional Essentials",
+          "category": "Cash Expenditure",
+          "amount": 405.84
+        },
+        {
+          "id": "5800813",
+          "date": "2026-08-08",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 0.62
+        },
+        {
+          "id": "5755631",
+          "date": "2026-08-07",
+          "name": "Five Seasons Media, LLC",
+          "category": "Cash Expenditure",
+          "amount": 1000.0
+        }
+      ],
+      "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     }
