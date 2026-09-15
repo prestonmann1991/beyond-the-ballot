@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T11:32:23-07:00",
+  "updatedAt": "2026-09-15T12:28:47-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -4370,7 +4370,7 @@
           "amount": 156.0
         }
       ],
-      "dataError": null,
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
