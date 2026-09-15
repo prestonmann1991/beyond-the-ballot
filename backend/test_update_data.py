@@ -1,4 +1,6 @@
 from datetime import datetime, timedelta
+import json
+from pathlib import Path
 import unittest
 from urllib.error import HTTPError
 
@@ -104,6 +106,44 @@ class OrestarParserTests(unittest.TestCase):
 
         missing = dict(complete, recentExpenditures=[])
         self.assertEqual(transaction_types_to_refresh(summary, missing), {"E"})
+
+
+class ElectionSourceTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root = Path(__file__).resolve().parents[1]
+        cls.races = json.loads((root / "backend" / "races_source.json").read_text())["races"]
+        cls.candidates = json.loads((root / "backend" / "candidates_source.json").read_text())["candidates"]
+
+    def test_all_2026_races_are_present(self):
+        self.assertEqual(len([race for race in self.races if race["id"].startswith("hd")]), 60)
+        self.assertEqual(len([race for race in self.races if race["id"].startswith("sd")]), 15)
+        self.assertEqual(len(self.races), 76)
+
+    def test_candidate_source_has_no_duplicates(self):
+        identities = [(candidate["race"], candidate["name"]) for candidate in self.candidates]
+        self.assertEqual(len(identities), 148)
+        self.assertEqual(len(identities), len(set(identities)))
+
+        filer_ids = [candidate["filerID"] for candidate in self.candidates if candidate.get("filerID")]
+        self.assertEqual(len(filer_ids), 130)
+        self.assertEqual(len(filer_ids), len(set(filer_ids)))
+
+    def test_historical_election_years_match_product_rules(self):
+        for race in self.races:
+            years = [election["year"] for election in race["historicalElections"]]
+            if race["id"] == "governor":
+                self.assertEqual(years, [2022])
+            elif race["id"].startswith("hd"):
+                self.assertEqual(years, [2024, 2022])
+            else:
+                self.assertEqual(years, [2022])
+            for election in race["historicalElections"]:
+                self.assertGreater(len(election["results"]), 0)
+                for result in election["results"]:
+                    self.assertGreaterEqual(result["votes"], 0)
+                    self.assertGreaterEqual(result["percentage"], 0)
+                    self.assertLessEqual(result["percentage"], 100)
 
 
 if __name__ == "__main__":

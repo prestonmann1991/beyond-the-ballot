@@ -26,11 +26,20 @@ struct Candidate: Codable, Identifiable, Hashable {
     let dataError: String?
 
     var partyShortName: String {
-        switch party {
-        case "Democratic": return "D"
-        case "Republican": return "R"
-        default: return String(party.prefix(1))
-        }
+        party.split(separator: "/").map { component in
+            let name = String(component).trimmingCharacters(in: .whitespaces)
+            switch name {
+            case "Democratic": return "D"
+            case "Republican": return "R"
+            case "Independent": return "I"
+            case "Libertarian": return "L"
+            case "Working Families": return "WF"
+            case "Pacific Green": return "PG"
+            case "Progressive": return "P"
+            case "Constitution": return "C"
+            default: return String(name.prefix(1))
+            }
+        }.joined(separator: "/")
     }
 }
 
@@ -48,8 +57,26 @@ struct RaceInfo: Codable, Identifiable, Hashable {
     let districtOrder: Int
     let incumbentName: String
     let incumbentParty: String
+    let isFeatured: Bool?
     let registration: RegistrationBreakdown?
     let registrationSourceURL: URL?
+    let historicalElections: [HistoricalElection]?
+}
+
+struct HistoricalElection: Codable, Identifiable, Hashable {
+    var id: String { "\(year)-\(title)" }
+    let year: Int
+    let title: String
+    let results: [HistoricalCandidateResult]
+    let sourceURL: URL?
+}
+
+struct HistoricalCandidateResult: Codable, Identifiable, Hashable {
+    var id: String { "\(name)-\(party)-\(votes)" }
+    let name: String
+    let party: String
+    let votes: Int
+    let percentage: Double
 }
 
 struct RegistrationBreakdown: Codable, Hashable {

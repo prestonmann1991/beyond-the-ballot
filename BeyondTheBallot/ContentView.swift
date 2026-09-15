@@ -4,19 +4,33 @@ struct ContentView: View {
     @EnvironmentObject private var store: ElectionStore
     @State private var searchText = ""
     @State private var selectedChamber = "All"
+    @State private var selectedFeed = "Featured"
+    @AppStorage("favoriteRaceIDs") private var favoriteRaceIDsStorage = ""
 
     private let chambers = ["All", "Governor", "House", "Senate"]
+    private let feeds = ["Featured", "All Races", "Favorites"]
+
+    private var favoriteRaceIDs: Set<String> {
+        Set(favoriteRaceIDsStorage.split(separator: ",").map(String.init))
+    }
 
     private var candidates: [Candidate] {
         let all = store.feed?.candidates ?? []
         return all.filter { candidate in
+            let raceInfo = store.feed?.races?.first { $0.name == candidate.race }
+            let feedMatches: Bool
+            switch selectedFeed {
+            case "Featured": feedMatches = raceInfo?.isFeatured ?? true
+            case "Favorites": feedMatches = raceInfo.map { favoriteRaceIDs.contains($0.id) } ?? false
+            default: feedMatches = true
+            }
             let chamberMatches = selectedChamber == "All"
                 || candidate.race.hasPrefix(selectedChamber)
                 || (selectedChamber == "Governor" && candidate.race == "Oregon Governor")
             let queryMatches = searchText.isEmpty
                 || candidate.name.localizedCaseInsensitiveContains(searchText)
                 || candidate.race.localizedCaseInsensitiveContains(searchText)
-            return chamberMatches && queryMatches
+            return feedMatches && chamberMatches && queryMatches
         }
     }
 
@@ -33,6 +47,7 @@ struct ContentView: View {
                 ScrollView {
                     LazyVStack(spacing: 18) {
                         header
+                        feedPicker
                         chamberPicker
 
                         if let message = store.message {
@@ -46,13 +61,27 @@ struct ContentView: View {
                             RaceCard(
                                 race: race,
                                 candidates: candidates,
-                                raceInfo: store.feed?.races?.first { $0.name == race }
+                                raceInfo: store.feed?.races?.first { $0.name == race },
+                                isFavorite: store.feed?.races?.first { $0.name == race }.map { favoriteRaceIDs.contains($0.id) } ?? false,
+                                toggleFavorite: {
+                                    guard let id = store.feed?.races?.first(where: { $0.name == race })?.id else { return }
+                                    toggleFavorite(id)
+                                }
                             )
                         }
 
                         if groupedCandidates.isEmpty && !store.isLoading {
-                            ContentUnavailableView.search(text: searchText)
+                            if selectedFeed == "Favorites" && searchText.isEmpty {
+                                ContentUnavailableView(
+                                    "No Favorite Races",
+                                    systemImage: "star",
+                                    description: Text("Tap the star on a race to add it to this feed.")
+                                )
                                 .foregroundStyle(.white)
+                            } else {
+                                ContentUnavailableView.search(text: searchText)
+                                    .foregroundStyle(.white)
+                            }
                         }
 
                         sourceFooter
@@ -67,6 +96,13 @@ struct ContentView: View {
         }
         .preferredColorScheme(.dark)
         .tint(.brandOrange)
+    }
+
+    private var feedPicker: some View {
+        Picker("Race feed", selection: $selectedFeed) {
+            ForEach(feeds, id: \.self) { Text($0).tag($0) }
+        }
+        .pickerStyle(.segmented)
     }
 
     private var header: some View {
@@ -95,6 +131,16 @@ struct ContentView: View {
         .pickerStyle(.segmented)
     }
 
+    private func toggleFavorite(_ id: String) {
+        var ids = favoriteRaceIDs
+        if ids.contains(id) {
+            ids.remove(id)
+        } else {
+            ids.insert(id)
+        }
+        favoriteRaceIDsStorage = ids.sorted().joined(separator: ",")
+    }
+
     private var sourceFooter: some View {
         VStack(spacing: 5) {
             Text("Campaign-finance data: Oregon Secretary of State ORESTAR")
@@ -113,14 +159,26 @@ private struct RaceCard: View {
     let race: String
     let candidates: [Candidate]
     let raceInfo: RaceInfo?
+    let isFavorite: Bool
+    let toggleFavorite: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             VStack(alignment: .leading, spacing: 8) {
-                Text(race.uppercased())
-                    .font(.caption.weight(.black))
-                    .tracking(1.2)
-                    .foregroundStyle(Color.brandOrange)
+                HStack(alignment: .firstTextBaseline) {
+                    Text(race.uppercased())
+                        .font(.caption.weight(.black))
+                        .tracking(1.2)
+                        .foregroundStyle(Color.brandOrange)
+                    Spacer()
+                    Button(action: toggleFavorite) {
+                        Image(systemName: isFavorite ? "star.fill" : "star")
+                            .font(.body.weight(.semibold))
+                            .foregroundStyle(isFavorite ? Color.brandOrange : .white.opacity(0.62))
+                            .accessibilityLabel(isFavorite ? "Remove \(race) from favorites" : "Add \(race) to favorites")
+                    }
+                    .buttonStyle(.plain)
+                }
 
                 if let raceInfo {
                     Text("Incumbent: \(raceInfo.incumbentName) · \(raceInfo.incumbentParty)")
@@ -143,12 +201,71 @@ private struct RaceCard: View {
                     Divider().overlay(Color.white.opacity(0.12)).padding(.leading, 18)
                 }
             }
+
+            if let elections = raceInfo?.historicalElections, !elections.isEmpty {
+                Divider().overlay(Color.white.opacity(0.12))
+                HistoricalResultsView(elections: elections)
+                    .padding(18)
+            }
         }
         .background(Color.cardSlate, in: RoundedRectangle(cornerRadius: 20))
         .overlay {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.white.opacity(0.09), lineWidth: 1)
         }
+    }
+}
+
+private struct HistoricalResultsView: View {
+    let elections: [HistoricalElection]
+    @State private var isExpanded = false
+
+    var body: some View {
+        DisclosureGroup(isExpanded: $isExpanded) {
+            VStack(alignment: .leading, spacing: 16) {
+                ForEach(elections) { election in
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("\(election.year) \(election.title)")
+                                .font(.caption.weight(.bold))
+                                .foregroundStyle(.white.opacity(0.82))
+                            Spacer()
+                            if let sourceURL = election.sourceURL {
+                                Link("Official results ↗", destination: sourceURL)
+                                    .font(.caption2.weight(.semibold))
+                            }
+                        }
+
+                        ForEach(election.results) { result in
+                            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(result.name)
+                                        .font(.caption.weight(.semibold))
+                                        .foregroundStyle(.white)
+                                    Text(result.party)
+                                        .font(.caption2)
+                                        .foregroundStyle(.white.opacity(0.52))
+                                }
+                                Spacer()
+                                Text("\(result.votes.formatted()) votes")
+                                    .font(.caption.monospacedDigit())
+                                    .foregroundStyle(.white.opacity(0.72))
+                                Text("\(result.percentage.formatted(.number.precision(.fractionLength(1))))%")
+                                    .font(.caption.weight(.bold).monospacedDigit())
+                                    .foregroundStyle(.white)
+                                    .frame(width: 48, alignment: .trailing)
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(.top, 12)
+        } label: {
+            Label("Past election results", systemImage: "chart.bar.xaxis")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.white.opacity(0.78))
+        }
+        .tint(.brandOrange)
     }
 }
 
@@ -200,27 +317,32 @@ private struct CandidateRow: View {
     @State private var transactionSheet: TransactionSheet?
 
     private var partyColor: Color {
-        candidate.party == "Democratic" ? .partyBlue :
-        candidate.party == "Republican" ? .partyRed : .otherParty
+        let hasDemocratic = candidate.party.contains("Democratic")
+        let hasRepublican = candidate.party.contains("Republican")
+        if hasDemocratic && !hasRepublican { return .partyBlue }
+        if hasRepublican && !hasDemocratic { return .partyRed }
+        return .otherParty
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .firstTextBaseline) {
-                Text(candidate.name)
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                Spacer()
-                HStack(spacing: 6) {
-                    Text(candidate.partyShortName)
-                        .font(.caption.bold())
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(candidate.name)
+                        .font(.headline)
                         .foregroundStyle(.white)
-                        .frame(width: 24, height: 24)
-                        .background(partyColor, in: Circle())
                     Text(candidate.party)
                         .font(.caption.weight(.semibold))
-                        .foregroundStyle(.white.opacity(0.76))
+                        .foregroundStyle(.white.opacity(0.68))
+                        .lineLimit(2)
                 }
+                Spacer()
+                Text(candidate.partyShortName)
+                    .font(.caption2.bold())
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 8)
+                    .frame(minWidth: 28, minHeight: 26)
+                    .background(partyColor, in: Capsule())
             }
 
             HStack(spacing: 14) {
@@ -249,8 +371,8 @@ private struct CandidateRow: View {
                 MoneyMetric(title: "Balance / Deficit", value: candidate.balanceDeficit, delta: nil, isInteractive: false)
             }
 
-            if candidate.dataError != nil {
-                Label("Latest ORESTAR refresh unavailable", systemImage: "exclamationmark.triangle")
+            if let dataError = candidate.dataError {
+                Label(dataError, systemImage: "info.circle")
                     .font(.caption2)
                     .foregroundStyle(.white.opacity(0.58))
             }

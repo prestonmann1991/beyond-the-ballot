@@ -1,33 +1,1198 @@
 {
   "candidates": [
-    {"id":"gov-kotek","race":"Oregon Governor","districtOrder":0,"name":"Tina Kotek","party":"Democratic","campaignURL":"https://www.tinafororegon.com/","filerID":4792},
-    {"id":"gov-drazan","race":"Oregon Governor","districtOrder":0,"name":"Christine Drazan","party":"Republican","campaignURL":"https://www.christinefororegon.com/","filerID":19050},
-    {"id":"hd07-rodley","race":"House District 7","districtOrder":107,"name":"Kori Rodley","party":"Democratic","campaignURL":"https://kori-rodley.com/","filerID":19995},
-    {"id":"hd07-wilson","race":"House District 7","districtOrder":107,"name":"Adam Wilson","party":"Republican","campaignURL":"https://www.wilsonforspringfield.com/","filerID":24461},
-    {"id":"hd21-welsh","race":"House District 21","districtOrder":121,"name":"Michael Welsh","party":"Democratic","campaignURL":"https://www.welshfororegon.com/","filerID":24905},
-    {"id":"hd21-mannix","race":"House District 21","districtOrder":121,"name":"Kevin Mannix","party":"Republican","campaignURL":"https://www.kevinmannix.com/","filerID":21839},
-    {"id":"hd22-munoz","race":"House District 22","districtOrder":122,"name":"Lesly Muñoz","party":"Democratic","campaignURL":"https://leslyparaoregon.com/","filerID":23140},
-    {"id":"hd22-legaspi","race":"House District 22","districtOrder":122,"name":"Noemi Legaspi","party":"Republican","campaignURL":"https://www.noemifororegon.com/","filerID":24273},
-    {"id":"hd26-smith","race":"House District 26","districtOrder":126,"name":"Sue Rieke Smith","party":"Democratic","campaignURL":"https://www.drsuefororegon.com/","filerID":24397},
-    {"id":"hd26-carkin","race":"House District 26","districtOrder":126,"name":"Stephanie Carkin","party":"Republican","campaignURL":"https://www.stephaniefororegon.com/","filerID":24539},
-    {"id":"hd32-javadi","race":"House District 32","districtOrder":132,"name":"Cyrus Javadi","party":"Democratic","campaignURL":"https://cyrusfororegon.com/","filerID":21757},
-    {"id":"hd32-sherman","race":"House District 32","districtOrder":132,"name":"Max Sherman","party":"Republican","campaignURL":"https://www.votemaxsherman.com/","filerID":24510},
-    {"id":"hd40-sugar","race":"House District 40","districtOrder":140,"name":"Michael Sugar","party":"Democratic","campaignURL":"https://www.sugarfororegon.com/","filerID":24521},
-    {"id":"hd40-baker","race":"House District 40","districtOrder":140,"name":"Adam Baker","party":"Republican","campaignURL":"https://www.facebook.com/Adam4Oregon/","filerID":21892},
-    {"id":"hd48-wise","race":"House District 48","districtOrder":148,"name":"Lamar Wise","party":"Democratic","campaignURL":"https://www.wisefororegon.com/","filerID":21694},
-    {"id":"hd48-morrison","race":"House District 48","districtOrder":148,"name":"Andrew Morrison","party":"Republican","campaignURL":"https://www.andrewmorrisonfororegon.com/","filerID":22958},
-    {"id":"hd52-sanders","race":"House District 52","districtOrder":152,"name":"Hank Sanders","party":"Democratic","campaignURL":"https://www.hankfororegon.com/","filerID":24613},
-    {"id":"hd52-hege","race":"House District 52","districtOrder":152,"name":"Scott Hege","party":"Republican","campaignURL":"https://www.hegefororegon.com/","filerID":24791},
-    {"id":"hd53-levy","race":"House District 53","districtOrder":153,"name":"Emerson Levy","party":"Democratic","campaignURL":"https://www.oregonlegislature.gov/levy","filerID":20377},
-    {"id":"hd53-summers","race":"House District 53","districtOrder":153,"name":"Michael Summers","party":"Republican","campaignURL":"https://www.facebook.com/SummersforOregon/","filerID":21352},
-    {"id":"sd03-krause","race":"Senate District 3","districtOrder":203,"name":"Denise Krause","party":"Democratic","campaignURL":"https://www.denisekrause.com/","filerID":22066},
-    {"id":"sd03-hicks","race":"Senate District 3","districtOrder":203,"name":"Brad Hicks","party":"Republican","campaignURL":"https://www.hicksforsenate.com/","filerID":24485},
-    {"id":"sd11-stapleton","race":"Senate District 11","districtOrder":211,"name":"Virginia Stapleton","party":"Democratic","campaignURL":"https://www.electvirginiastapleton.com/","filerID":20287},
-    {"id":"sd11-cramer","race":"Senate District 11","districtOrder":211,"name":"Tracy Cramer","party":"Republican","campaignURL":"https://www.tracyfororegon.com/","filerID":22032},
-    {"id":"sd16-armitage","race":"Senate District 16","districtOrder":216,"name":"Rachel Armitage","party":"Democratic","campaignURL":"https://www.rachelfororegon.com/","filerID":21842},
-    {"id":"sd16-bangs","race":"Senate District 16","districtOrder":216,"name":"Courtney Bangs","party":"Republican","campaignURL":"https://www.courtneybangs.com/","filerID":20246},
-    {"id":"sd20-meek","race":"Senate District 20","districtOrder":220,"name":"Mark Meek","party":"Democratic","campaignURL":"https://www.votemarkmeek.com/","filerID":16719},
-    {"id":"sd20-stroh","race":"Senate District 20","districtOrder":220,"name":"Michele Stroh","party":"Republican","campaignURL":"https://votestroh.com/","filerID":21488}
+    {
+      "campaignURL": "https://www.tinafororegon.com/",
+      "districtOrder": 0,
+      "filerID": 4792,
+      "id": "gov-kotek",
+      "name": "Tina Kotek",
+      "party": "Democratic",
+      "race": "Oregon Governor"
+    },
+    {
+      "campaignURL": "https://www.christinefororegon.com/",
+      "districtOrder": 0,
+      "filerID": 19050,
+      "id": "gov-drazan",
+      "name": "Christine Drazan",
+      "party": "Republican",
+      "race": "Oregon Governor"
+    },
+    {
+      "districtOrder": 101,
+      "id": "hd01-bret-cecil",
+      "name": "Bret Cecil",
+      "party": "Democratic",
+      "race": "House District 1",
+      "filerID": 22022
+    },
+    {
+      "districtOrder": 101,
+      "id": "hd01-court-boice",
+      "name": "Court Boice",
+      "party": "Republican",
+      "race": "House District 1",
+      "filerID": 22133
+    },
+    {
+      "districtOrder": 102,
+      "id": "hd02-virgle-j-osborne",
+      "name": "Virgle J Osborne",
+      "party": "Republican / Democratic",
+      "race": "House District 2",
+      "filerID": 21437
+    },
+    {
+      "districtOrder": 103,
+      "id": "hd03-susan-fischer-maki",
+      "name": "Susan Fischer-Maki",
+      "party": "Democratic",
+      "race": "House District 3",
+      "filerID": 24431
+    },
+    {
+      "districtOrder": 103,
+      "id": "hd03-dwayne-yunker",
+      "name": "Dwayne Yunker",
+      "party": "Republican",
+      "race": "House District 3",
+      "filerID": 23071
+    },
+    {
+      "districtOrder": 104,
+      "id": "hd04-alek-skarlatos",
+      "name": "Alek Skarlatos",
+      "party": "Republican",
+      "race": "House District 4",
+      "filerID": 23249
+    },
+    {
+      "districtOrder": 105,
+      "id": "hd05-pam-marsh",
+      "name": "Pam Marsh",
+      "party": "Democratic / Independent",
+      "race": "House District 5",
+      "filerID": 17668
+    },
+    {
+      "districtOrder": 105,
+      "id": "hd05-alexander-krigsvold",
+      "name": "Alexander Krigsvold",
+      "party": "Republican",
+      "race": "House District 5"
+    },
+    {
+      "districtOrder": 106,
+      "id": "hd06-john-p-holm",
+      "name": "John P Holm",
+      "party": "Democratic",
+      "race": "House District 6",
+      "filerID": 23001
+    },
+    {
+      "districtOrder": 106,
+      "id": "hd06-kim-wallan",
+      "name": "Kim Wallan",
+      "party": "Republican",
+      "race": "House District 6",
+      "filerID": 18284
+    },
+    {
+      "campaignURL": "https://kori-rodley.com/",
+      "districtOrder": 107,
+      "filerID": 19995,
+      "id": "hd07-rodley",
+      "name": "Kori Rodley",
+      "party": "Democratic / Working Families",
+      "race": "House District 7"
+    },
+    {
+      "campaignURL": "https://www.wilsonforspringfield.com/",
+      "districtOrder": 107,
+      "filerID": 24461,
+      "id": "hd07-wilson",
+      "name": "Adam Wilson",
+      "party": "Republican / Libertarian",
+      "race": "House District 7"
+    },
+    {
+      "districtOrder": 108,
+      "id": "hd08-lisa-fragala",
+      "name": "Lisa Fragala",
+      "party": "Democratic",
+      "race": "House District 8",
+      "filerID": 19751
+    },
+    {
+      "districtOrder": 108,
+      "id": "hd08-bill-vivian",
+      "name": "Bill Vivian",
+      "party": "Republican",
+      "race": "House District 8",
+      "filerID": 25141
+    },
+    {
+      "districtOrder": 109,
+      "id": "hd09-john-ezra-scheirman",
+      "name": "John Ezra Scheirman",
+      "party": "Democratic",
+      "race": "House District 9",
+      "filerID": 24956
+    },
+    {
+      "districtOrder": 109,
+      "id": "hd09-claire-lynn",
+      "name": "Claire Lynn",
+      "party": "Republican",
+      "race": "House District 9",
+      "filerID": 24663
+    },
+    {
+      "districtOrder": 110,
+      "id": "hd10-david-gomberg",
+      "name": "David Gomberg",
+      "party": "Democratic / Republican / Independent",
+      "race": "House District 10",
+      "filerID": 15348
+    },
+    {
+      "districtOrder": 111,
+      "id": "hd11-ivan-maluski",
+      "name": "Ivan Maluski",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 11",
+      "filerID": 23826
+    },
+    {
+      "districtOrder": 111,
+      "id": "hd11-ken-jackola",
+      "name": "Ken Jackola",
+      "party": "Republican",
+      "race": "House District 11",
+      "filerID": 24696
+    },
+    {
+      "districtOrder": 112,
+      "id": "hd12-amber-smith",
+      "name": "Amber Smith",
+      "party": "Democratic",
+      "race": "House District 12"
+    },
+    {
+      "districtOrder": 112,
+      "id": "hd12-darin-harbick",
+      "name": "Darin Harbick",
+      "party": "Republican",
+      "race": "House District 12",
+      "filerID": 23118
+    },
+    {
+      "districtOrder": 113,
+      "id": "hd13-nancy-nathanson",
+      "name": "Nancy Nathanson",
+      "party": "Democratic",
+      "race": "House District 13",
+      "filerID": 5152
+    },
+    {
+      "districtOrder": 113,
+      "id": "hd13-jonathan-t-abrahamsen",
+      "name": "Jonathan T Abrahamsen",
+      "party": "Republican",
+      "race": "House District 13",
+      "filerID": 24506
+    },
+    {
+      "districtOrder": 114,
+      "id": "hd14-julie-fahey",
+      "name": "Julie Fahey",
+      "party": "Democratic",
+      "race": "House District 14",
+      "filerID": 17469
+    },
+    {
+      "districtOrder": 114,
+      "id": "hd14-kevin-t-burton",
+      "name": "Kevin T Burton",
+      "party": "Republican",
+      "race": "House District 14",
+      "filerID": 25017
+    },
+    {
+      "districtOrder": 115,
+      "id": "hd15-joanna-robinson",
+      "name": "Joanna Robinson",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 15",
+      "filerID": 24710
+    },
+    {
+      "districtOrder": 115,
+      "id": "hd15-shelly-boshart-davis",
+      "name": "Shelly Boshart Davis",
+      "party": "Republican",
+      "race": "House District 15",
+      "filerID": 19151
+    },
+    {
+      "districtOrder": 116,
+      "id": "hd16-sarah-finger-mcdonald",
+      "name": "Sarah Finger McDonald",
+      "party": "Democratic / Republican",
+      "race": "House District 16",
+      "filerID": 23262
+    },
+    {
+      "districtOrder": 117,
+      "id": "hd17-david-nelson",
+      "name": "David Nelson",
+      "party": "Democratic",
+      "race": "House District 17"
+    },
+    {
+      "districtOrder": 117,
+      "id": "hd17-dan-farrington",
+      "name": "Dan Farrington",
+      "party": "Republican",
+      "race": "House District 17",
+      "filerID": 21861
+    },
+    {
+      "districtOrder": 118,
+      "id": "hd18-roy-kaufmann",
+      "name": "Roy Kaufmann",
+      "party": "Democratic / Independent / Working Families / Progressive",
+      "race": "House District 18",
+      "filerID": 24808
+    },
+    {
+      "districtOrder": 118,
+      "id": "hd18-patrick-marnell",
+      "name": "Patrick Marnell",
+      "party": "Libertarian",
+      "race": "House District 18"
+    },
+    {
+      "districtOrder": 118,
+      "id": "hd18-amanda-staehely",
+      "name": "Amanda Staehely",
+      "party": "Republican",
+      "race": "House District 18",
+      "filerID": 24855
+    },
+    {
+      "districtOrder": 119,
+      "id": "hd19-tom-andersen",
+      "name": "Tom Andersen",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 19",
+      "filerID": 16690
+    },
+    {
+      "districtOrder": 119,
+      "id": "hd19-anna-munson",
+      "name": "Anna Munson",
+      "party": "Republican / Libertarian",
+      "race": "House District 19"
+    },
+    {
+      "districtOrder": 120,
+      "id": "hd20-paul-evans",
+      "name": "Paul Evans",
+      "party": "Democratic / Working Families",
+      "race": "House District 20",
+      "filerID": 16508
+    },
+    {
+      "districtOrder": 120,
+      "id": "hd20-taylor-a-rickey",
+      "name": "Taylor A Rickey",
+      "party": "Libertarian",
+      "race": "House District 20"
+    },
+    {
+      "districtOrder": 120,
+      "id": "hd20-andrew-fudge",
+      "name": "Andrew Fudge",
+      "party": "Republican / Independent",
+      "race": "House District 20",
+      "filerID": 25068
+    },
+    {
+      "campaignURL": "https://www.welshfororegon.com/",
+      "districtOrder": 121,
+      "filerID": 24905,
+      "id": "hd21-welsh",
+      "name": "Michael Welsh",
+      "party": "Democratic / Working Families",
+      "race": "House District 21"
+    },
+    {
+      "campaignURL": "https://www.kevinmannix.com/",
+      "districtOrder": 121,
+      "filerID": 21839,
+      "id": "hd21-mannix",
+      "name": "Kevin Mannix",
+      "party": "Republican",
+      "race": "House District 21"
+    },
+    {
+      "campaignURL": "https://leslyparaoregon.com/",
+      "districtOrder": 122,
+      "filerID": 23140,
+      "id": "hd22-munoz",
+      "name": "Lesly Muñoz",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 22"
+    },
+    {
+      "campaignURL": "https://www.noemifororegon.com/",
+      "districtOrder": 122,
+      "filerID": 24273,
+      "id": "hd22-legaspi",
+      "name": "Noemi Legaspi",
+      "party": "Republican / Libertarian",
+      "race": "House District 22"
+    },
+    {
+      "districtOrder": 123,
+      "id": "hd23-kriss-wright",
+      "name": "Kriss Wright",
+      "party": "Democratic",
+      "race": "House District 23",
+      "filerID": 23683
+    },
+    {
+      "districtOrder": 123,
+      "id": "hd23-anna-m-scharf",
+      "name": "Anna M Scharf",
+      "party": "Republican",
+      "race": "House District 23",
+      "filerID": 21575
+    },
+    {
+      "districtOrder": 124,
+      "id": "hd24-lucetta-a-elmer",
+      "name": "Lucetta A Elmer",
+      "party": "Republican",
+      "race": "House District 24",
+      "filerID": 21729
+    },
+    {
+      "districtOrder": 125,
+      "id": "hd25-ben-bowman",
+      "name": "Ben Bowman",
+      "party": "Democratic / Working Families",
+      "race": "House District 25",
+      "filerID": 19763
+    },
+    {
+      "districtOrder": 125,
+      "id": "hd25-bob-niemeyer",
+      "name": "Bob Niemeyer",
+      "party": "Republican",
+      "race": "House District 25",
+      "filerID": 17537
+    },
+    {
+      "campaignURL": "https://www.drsuefororegon.com/",
+      "districtOrder": 126,
+      "filerID": 24397,
+      "id": "hd26-smith",
+      "name": "Sue Rieke Smith",
+      "party": "Democratic / Independent",
+      "race": "House District 26"
+    },
+    {
+      "districtOrder": 126,
+      "id": "hd26-steph-terrio",
+      "name": "Steph Terrio",
+      "party": "Progressive / Pacific Green",
+      "race": "House District 26",
+      "filerID": 25090
+    },
+    {
+      "campaignURL": "https://www.stephaniefororegon.com/",
+      "districtOrder": 126,
+      "filerID": 24539,
+      "id": "hd26-carkin",
+      "name": "Stephanie Carkin",
+      "party": "Republican / Libertarian",
+      "race": "House District 26"
+    },
+    {
+      "districtOrder": 127,
+      "id": "hd27-tammy-carpenter",
+      "name": "Tammy Carpenter",
+      "party": "Democratic / Working Families / Progressive",
+      "race": "House District 27",
+      "filerID": 21883
+    },
+    {
+      "districtOrder": 127,
+      "id": "hd27-g-mark-norman",
+      "name": "G Mark Norman",
+      "party": "Republican",
+      "race": "House District 27",
+      "filerID": 24927
+    },
+    {
+      "districtOrder": 128,
+      "id": "hd28-dacia-grayber",
+      "name": "Dacia Grayber",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 28",
+      "filerID": 20290
+    },
+    {
+      "districtOrder": 128,
+      "id": "hd28-randall-fryer",
+      "name": "Randall Fryer",
+      "party": "Republican",
+      "race": "House District 28",
+      "filerID": 24878
+    },
+    {
+      "districtOrder": 129,
+      "id": "hd29-susan-mclain",
+      "name": "Susan McLain",
+      "party": "Democratic",
+      "race": "House District 29",
+      "filerID": 16812
+    },
+    {
+      "districtOrder": 129,
+      "id": "hd29-brian-schimmel",
+      "name": "Brian Schimmel",
+      "party": "Republican / Independent",
+      "race": "House District 29",
+      "filerID": 23939
+    },
+    {
+      "districtOrder": 130,
+      "id": "hd30-nathan-sosa",
+      "name": "Nathan Sosa",
+      "party": "Democratic",
+      "race": "House District 30",
+      "filerID": 21691
+    },
+    {
+      "districtOrder": 130,
+      "id": "hd30-charles-a-ross",
+      "name": "Charles A Ross",
+      "party": "Republican",
+      "race": "House District 30",
+      "filerID": 24869
+    },
+    {
+      "districtOrder": 131,
+      "id": "hd31-tom-l-forest",
+      "name": "Tom L Forest",
+      "party": "Democratic",
+      "race": "House District 31",
+      "filerID": 24958
+    },
+    {
+      "districtOrder": 131,
+      "id": "hd31-darcey-edwards",
+      "name": "Darcey Edwards",
+      "party": "Republican",
+      "race": "House District 31",
+      "filerID": 23423
+    },
+    {
+      "campaignURL": "https://cyrusfororegon.com/",
+      "districtOrder": 132,
+      "filerID": 21757,
+      "id": "hd32-javadi",
+      "name": "Cyrus Javadi",
+      "party": "Democratic / Independent",
+      "race": "House District 32"
+    },
+    {
+      "campaignURL": "https://www.votemaxsherman.com/",
+      "districtOrder": 132,
+      "filerID": 24510,
+      "id": "hd32-sherman",
+      "name": "Max Sherman",
+      "party": "Republican",
+      "race": "House District 32"
+    },
+    {
+      "districtOrder": 133,
+      "id": "hd33-shannon-jones-isadore",
+      "name": "Shannon Jones Isadore",
+      "party": "Democratic",
+      "race": "House District 33",
+      "filerID": 23464
+    },
+    {
+      "districtOrder": 133,
+      "id": "hd33-ciatta-r-thompson",
+      "name": "Ciatta R Thompson",
+      "party": "Republican",
+      "race": "House District 33",
+      "filerID": 23778
+    },
+    {
+      "districtOrder": 134,
+      "id": "hd34-mari-watanabe",
+      "name": "Mari Watanabe",
+      "party": "Democratic",
+      "race": "House District 34",
+      "filerID": 24400
+    },
+    {
+      "districtOrder": 134,
+      "id": "hd34-shaunie-cousins",
+      "name": "Shaunie Cousins",
+      "party": "Republican",
+      "race": "House District 34",
+      "filerID": 24899
+    },
+    {
+      "districtOrder": 135,
+      "id": "hd35-farrah-chaichi",
+      "name": "Farrah Chaichi",
+      "party": "Democratic / Working Families",
+      "race": "House District 35",
+      "filerID": 21775
+    },
+    {
+      "districtOrder": 135,
+      "id": "hd35-dan-martin",
+      "name": "Dan Martin",
+      "party": "Republican",
+      "race": "House District 35",
+      "filerID": 20457
+    },
+    {
+      "districtOrder": 136,
+      "id": "hd36-hai-pham",
+      "name": "Hai Pham",
+      "party": "Democratic",
+      "race": "House District 36",
+      "filerID": 21727
+    },
+    {
+      "districtOrder": 136,
+      "id": "hd36-michael-orth",
+      "name": "Michael Orth",
+      "party": "Republican",
+      "race": "House District 36",
+      "filerID": 25169
+    },
+    {
+      "districtOrder": 137,
+      "id": "hd37-jules-walters",
+      "name": "Jules Walters",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 37",
+      "filerID": 19369
+    },
+    {
+      "districtOrder": 137,
+      "id": "hd37-chad-parker",
+      "name": "Chad Parker",
+      "party": "Republican",
+      "race": "House District 37",
+      "filerID": 24694
+    },
+    {
+      "districtOrder": 138,
+      "id": "hd38-daniel-loc-nguyen",
+      "name": "Daniel Loc Nguyen",
+      "party": "Democratic / Republican",
+      "race": "House District 38",
+      "filerID": 19463
+    },
+    {
+      "districtOrder": 139,
+      "id": "hd39-april-dobson",
+      "name": "April Dobson",
+      "party": "Democratic / Republican / Independent",
+      "race": "House District 39",
+      "filerID": 22699
+    },
+    {
+      "campaignURL": "https://www.sugarfororegon.com/",
+      "districtOrder": 140,
+      "filerID": 24521,
+      "id": "hd40-sugar",
+      "name": "Michael Sugar",
+      "party": "Democratic / Working Families",
+      "race": "House District 40"
+    },
+    {
+      "districtOrder": 140,
+      "id": "hd40-pat-hubbell",
+      "name": "Pat Hubbell",
+      "party": "Independent",
+      "race": "House District 40"
+    },
+    {
+      "campaignURL": "https://www.facebook.com/Adam4Oregon/",
+      "districtOrder": 140,
+      "filerID": 21892,
+      "id": "hd40-baker",
+      "name": "Adam Baker",
+      "party": "Republican",
+      "race": "House District 40"
+    },
+    {
+      "districtOrder": 141,
+      "id": "hd41-mark-gamba",
+      "name": "Mark Gamba",
+      "party": "Democratic / Working Families",
+      "race": "House District 41",
+      "filerID": 16015
+    },
+    {
+      "districtOrder": 141,
+      "id": "hd41-elvis-clark",
+      "name": "Elvis Clark",
+      "party": "Republican",
+      "race": "House District 41"
+    },
+    {
+      "districtOrder": 142,
+      "id": "hd42-rob-nosse",
+      "name": "Rob Nosse",
+      "party": "Democratic",
+      "race": "House District 42",
+      "filerID": 16459
+    },
+    {
+      "districtOrder": 142,
+      "id": "hd42-morey-straus",
+      "name": "Morey Straus",
+      "party": "Libertarian",
+      "race": "House District 42"
+    },
+    {
+      "districtOrder": 143,
+      "id": "hd43-tawna-sanchez",
+      "name": "Tawna Sanchez",
+      "party": "Democratic",
+      "race": "House District 43",
+      "filerID": 17625
+    },
+    {
+      "districtOrder": 143,
+      "id": "hd43-tim-lemaster",
+      "name": "Tim LeMaster",
+      "party": "Republican",
+      "race": "House District 43",
+      "filerID": 23573
+    },
+    {
+      "districtOrder": 144,
+      "id": "hd44-travis-nelson",
+      "name": "Travis Nelson",
+      "party": "Democratic / Working Families",
+      "race": "House District 44",
+      "filerID": 21678
+    },
+    {
+      "districtOrder": 144,
+      "id": "hd44-margo-logan",
+      "name": "Margo Logan",
+      "party": "Republican",
+      "race": "House District 44"
+    },
+    {
+      "districtOrder": 145,
+      "id": "hd45-thuy-tran",
+      "name": "Thuy Tran",
+      "party": "Democratic / Working Families / Independent",
+      "race": "House District 45",
+      "filerID": 15483
+    },
+    {
+      "districtOrder": 145,
+      "id": "hd45-jason-boyce",
+      "name": "Jason Boyce",
+      "party": "Republican",
+      "race": "House District 45"
+    },
+    {
+      "districtOrder": 146,
+      "id": "hd46-willy-chotzen",
+      "name": "Willy Chotzen",
+      "party": "Democratic / Working Families",
+      "race": "House District 46",
+      "filerID": 23103
+    },
+    {
+      "districtOrder": 146,
+      "id": "hd46-leo-morley",
+      "name": "Leo Morley",
+      "party": "Republican",
+      "race": "House District 46"
+    },
+    {
+      "districtOrder": 147,
+      "id": "hd47-andrea-valderrama",
+      "name": "Andrea Valderrama",
+      "party": "Democratic",
+      "race": "House District 47",
+      "filerID": 18462
+    },
+    {
+      "campaignURL": "https://www.wisefororegon.com/",
+      "districtOrder": 148,
+      "filerID": 21694,
+      "id": "hd48-wise",
+      "name": "Lamar Wise",
+      "party": "Democratic / Independent / Working Families",
+      "race": "House District 48"
+    },
+    {
+      "campaignURL": "https://www.andrewmorrisonfororegon.com/",
+      "districtOrder": 148,
+      "filerID": 22958,
+      "id": "hd48-morrison",
+      "name": "Andrew Morrison",
+      "party": "Republican",
+      "race": "House District 48"
+    },
+    {
+      "districtOrder": 149,
+      "id": "hd49-zach-hudson",
+      "name": "Zach Hudson",
+      "party": "Democratic / Working Families",
+      "race": "House District 49",
+      "filerID": 17995
+    },
+    {
+      "districtOrder": 149,
+      "id": "hd49-ann-walker",
+      "name": "Ann Walker",
+      "party": "Republican",
+      "race": "House District 49",
+      "filerID": 24943
+    },
+    {
+      "districtOrder": 150,
+      "id": "hd50-ricki-ruiz",
+      "name": "Ricki Ruiz",
+      "party": "Democratic / Independent",
+      "race": "House District 50",
+      "filerID": 19778
+    },
+    {
+      "districtOrder": 150,
+      "id": "hd50-brian-gray",
+      "name": "Brian Gray",
+      "party": "Republican",
+      "race": "House District 50"
+    },
+    {
+      "districtOrder": 151,
+      "id": "hd51-darla-mead",
+      "name": "Darla Mead",
+      "party": "Democratic / Working Families",
+      "race": "House District 51",
+      "filerID": 24806
+    },
+    {
+      "districtOrder": 151,
+      "id": "hd51-matt-bunch",
+      "name": "Matt Bunch",
+      "party": "Republican",
+      "race": "House District 51",
+      "filerID": 23161
+    },
+    {
+      "campaignURL": "https://www.hankfororegon.com/",
+      "districtOrder": 152,
+      "filerID": 24613,
+      "id": "hd52-sanders",
+      "name": "Hank Sanders",
+      "party": "Democratic / Independent",
+      "race": "House District 52"
+    },
+    {
+      "campaignURL": "https://www.hegefororegon.com/",
+      "districtOrder": 152,
+      "filerID": 24791,
+      "id": "hd52-hege",
+      "name": "Scott Hege",
+      "party": "Republican",
+      "race": "House District 52"
+    },
+    {
+      "campaignURL": "https://www.oregonlegislature.gov/levy",
+      "districtOrder": 153,
+      "filerID": 20377,
+      "id": "hd53-levy",
+      "name": "Emerson Levy",
+      "party": "Democratic / Independent",
+      "race": "House District 53"
+    },
+    {
+      "campaignURL": "https://www.facebook.com/SummersforOregon/",
+      "districtOrder": 153,
+      "filerID": 21352,
+      "id": "hd53-summers",
+      "name": "Michael Summers",
+      "party": "Republican / Libertarian",
+      "race": "House District 53"
+    },
+    {
+      "districtOrder": 154,
+      "id": "hd54-jason-kropf",
+      "name": "Jason Kropf",
+      "party": "Democratic",
+      "race": "House District 54",
+      "filerID": 18661
+    },
+    {
+      "districtOrder": 155,
+      "id": "hd55-colby-m-simmons",
+      "name": "Colby M Simmons",
+      "party": "Democratic",
+      "race": "House District 55"
+    },
+    {
+      "districtOrder": 155,
+      "id": "hd55-e-werner-reschke",
+      "name": "E Werner Reschke",
+      "party": "Republican",
+      "race": "House District 55",
+      "filerID": 17892
+    },
+    {
+      "districtOrder": 156,
+      "id": "hd56-emily-g-mcintire",
+      "name": "Emily G McIntire",
+      "party": "Republican",
+      "race": "House District 56",
+      "filerID": 21903
+    },
+    {
+      "districtOrder": 157,
+      "id": "hd57-josiah-dean",
+      "name": "Josiah Dean",
+      "party": "Pacific Green",
+      "race": "House District 57",
+      "filerID": 25111
+    },
+    {
+      "districtOrder": 157,
+      "id": "hd57-greg-smith",
+      "name": "Greg Smith",
+      "party": "Republican",
+      "race": "House District 57",
+      "filerID": 3420
+    },
+    {
+      "districtOrder": 158,
+      "id": "hd58-brian-campbell",
+      "name": "Brian Campbell",
+      "party": "Democratic",
+      "race": "House District 58",
+      "filerID": 24978
+    },
+    {
+      "districtOrder": 158,
+      "id": "hd58-bobby-levy",
+      "name": "Bobby Levy",
+      "party": "Republican",
+      "race": "House District 58",
+      "filerID": 20272
+    },
+    {
+      "districtOrder": 159,
+      "id": "hd59-lawrence-jones",
+      "name": "Lawrence Jones",
+      "party": "Democratic",
+      "race": "House District 59"
+    },
+    {
+      "districtOrder": 159,
+      "id": "hd59-vikki-breese-iverson",
+      "name": "Vikki Breese-Iverson",
+      "party": "Republican",
+      "race": "House District 59",
+      "filerID": 20022
+    },
+    {
+      "districtOrder": 160,
+      "id": "hd60-beth-spell",
+      "name": "Beth Spell",
+      "party": "Democratic",
+      "race": "House District 60"
+    },
+    {
+      "districtOrder": 160,
+      "id": "hd60-mark-owens",
+      "name": "Mark Owens",
+      "party": "Republican",
+      "race": "House District 60",
+      "filerID": 20217
+    },
+    {
+      "campaignURL": "https://www.denisekrause.com/",
+      "districtOrder": 203,
+      "filerID": 22066,
+      "id": "sd03-krause",
+      "name": "Denise Krause",
+      "party": "Democratic",
+      "race": "Senate District 3"
+    },
+    {
+      "districtOrder": 203,
+      "id": "sd03-clay-bearnson",
+      "name": "Clay Bearnson",
+      "party": "Independent / Pacific Green",
+      "race": "Senate District 3",
+      "filerID": 17209
+    },
+    {
+      "campaignURL": "https://www.hicksforsenate.com/",
+      "districtOrder": 203,
+      "filerID": 24485,
+      "id": "sd03-hicks",
+      "name": "Brad Hicks",
+      "party": "Republican / Libertarian",
+      "race": "Senate District 3"
+    },
+    {
+      "districtOrder": 204,
+      "id": "sd04-floyd-prozanski",
+      "name": "Floyd Prozanski",
+      "party": "Democratic / Republican",
+      "race": "Senate District 4",
+      "filerID": 1686
+    },
+    {
+      "districtOrder": 206,
+      "id": "sd06-sierrah-williams",
+      "name": "Sierrah Williams",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 6",
+      "filerID": 24911
+    },
+    {
+      "districtOrder": 206,
+      "id": "sd06-caleb-ticer",
+      "name": "Caleb Ticer",
+      "party": "Libertarian",
+      "race": "Senate District 6",
+      "filerID": 25226
+    },
+    {
+      "districtOrder": 206,
+      "id": "sd06-jack-tibbetts",
+      "name": "Jack Tibbetts",
+      "party": "Republican",
+      "race": "Senate District 6",
+      "filerID": 24650
+    },
+    {
+      "districtOrder": 207,
+      "id": "sd07-james-i-manning-jr",
+      "name": "James I Manning Jr",
+      "party": "Democratic / Independent / Working Families",
+      "race": "Senate District 7",
+      "filerID": 18375
+    },
+    {
+      "districtOrder": 207,
+      "id": "sd07-jack-jake-d-huff",
+      "name": "Jack (Jake) D Huff",
+      "party": "Republican",
+      "race": "Senate District 7",
+      "filerID": 25002
+    },
+    {
+      "districtOrder": 208,
+      "id": "sd08-sara-gelser-blouin",
+      "name": "Sara Gelser Blouin",
+      "party": "Democratic",
+      "race": "Senate District 8",
+      "filerID": 4680
+    },
+    {
+      "districtOrder": 208,
+      "id": "sd08-valerie-draper-woldeit",
+      "name": "Valerie Draper Woldeit",
+      "party": "Republican",
+      "race": "Senate District 8",
+      "filerID": 21940
+    },
+    {
+      "districtOrder": 210,
+      "id": "sd10-deb-patterson",
+      "name": "Deb Patterson",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 10",
+      "filerID": 18821
+    },
+    {
+      "districtOrder": 210,
+      "id": "sd10-angela-plowhead",
+      "name": "Angela Plowhead",
+      "party": "Republican / Libertarian",
+      "race": "Senate District 10",
+      "filerID": 22280
+    },
+    {
+      "campaignURL": "https://www.electvirginiastapleton.com/",
+      "districtOrder": 211,
+      "filerID": 20287,
+      "id": "sd11-stapleton",
+      "name": "Virginia Stapleton",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 11"
+    },
+    {
+      "campaignURL": "https://www.tracyfororegon.com/",
+      "districtOrder": 211,
+      "filerID": 22032,
+      "id": "sd11-cramer",
+      "name": "Tracy Cramer",
+      "party": "Republican",
+      "race": "Senate District 11"
+    },
+    {
+      "districtOrder": 213,
+      "id": "sd13-courtney-neron-misslin",
+      "name": "Courtney Neron Misslin",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 13",
+      "filerID": 19466
+    },
+    {
+      "districtOrder": 213,
+      "id": "sd13-tim-e-nelson",
+      "name": "Tim E Nelson",
+      "party": "Libertarian",
+      "race": "Senate District 13"
+    },
+    {
+      "districtOrder": 213,
+      "id": "sd13-glenn-lancaster",
+      "name": "Glenn Lancaster",
+      "party": "Republican",
+      "race": "Senate District 13",
+      "filerID": 23304
+    },
+    {
+      "districtOrder": 215,
+      "id": "sd15-myrna-a-munoz",
+      "name": "Myrna A Munoz",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 15",
+      "filerID": 24761
+    },
+    {
+      "districtOrder": 215,
+      "id": "sd15-harold-hutchison",
+      "name": "Harold Hutchison",
+      "party": "Republican",
+      "race": "Senate District 15",
+      "filerID": 25309
+    },
+    {
+      "campaignURL": "https://www.rachelfororegon.com/",
+      "districtOrder": 216,
+      "filerID": 21842,
+      "id": "sd16-armitage",
+      "name": "Rachel Armitage",
+      "party": "Democratic",
+      "race": "Senate District 16"
+    },
+    {
+      "districtOrder": 216,
+      "id": "sd16-melisa-finkle",
+      "name": "Melisa Finkle",
+      "party": "Independent",
+      "race": "Senate District 16",
+      "filerID": 24955
+    },
+    {
+      "campaignURL": "https://www.courtneybangs.com/",
+      "districtOrder": 216,
+      "filerID": 20246,
+      "id": "sd16-bangs",
+      "name": "Courtney Bangs",
+      "party": "Republican",
+      "race": "Senate District 16"
+    },
+    {
+      "districtOrder": 217,
+      "id": "sd17-lisa-reynolds",
+      "name": "Lisa Reynolds",
+      "party": "Democratic",
+      "race": "Senate District 17",
+      "filerID": 20209
+    },
+    {
+      "districtOrder": 217,
+      "id": "sd17-john-a-n-chee",
+      "name": "John A N Chee",
+      "party": "Republican",
+      "race": "Senate District 17"
+    },
+    {
+      "districtOrder": 219,
+      "id": "sd19-rob-wagner",
+      "name": "Rob Wagner",
+      "party": "Democratic",
+      "race": "Senate District 19",
+      "filerID": 18396
+    },
+    {
+      "districtOrder": 219,
+      "id": "sd19-mary-dirksen",
+      "name": "Mary Dirksen",
+      "party": "Republican",
+      "race": "Senate District 19",
+      "filerID": 24594
+    },
+    {
+      "campaignURL": "https://www.votemarkmeek.com/",
+      "districtOrder": 220,
+      "filerID": 16719,
+      "id": "sd20-meek",
+      "name": "Mark Meek",
+      "party": "Democratic",
+      "race": "Senate District 20"
+    },
+    {
+      "campaignURL": "https://votestroh.com/",
+      "districtOrder": 220,
+      "filerID": 21488,
+      "id": "sd20-stroh",
+      "name": "Michele Stroh",
+      "party": "Republican",
+      "race": "Senate District 20"
+    },
+    {
+      "districtOrder": 224,
+      "id": "sd24-kayse-jama",
+      "name": "Kayse Jama",
+      "party": "Democratic / Working Families",
+      "race": "Senate District 24",
+      "filerID": 18744
+    },
+    {
+      "districtOrder": 226,
+      "id": "sd26-nicole-bassett",
+      "name": "Nicole Bassett",
+      "party": "Democratic / Independent / Working Families",
+      "race": "Senate District 26",
+      "filerID": 24816
+    },
+    {
+      "districtOrder": 226,
+      "id": "sd26-jeff-helfrich",
+      "name": "Jeff Helfrich",
+      "party": "Republican",
+      "race": "Senate District 26",
+      "filerID": 15984
+    }
   ]
 }
-

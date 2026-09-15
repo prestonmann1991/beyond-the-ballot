@@ -1,6 +1,6 @@
 # State of the Races Support
 
-State of the Races provides campaign-finance information for selected 2026 Oregon elections.
+State of the Races provides campaign-finance, voter-registration, candidate, and historical-result information for Oregon's 2026 statewide and legislative elections.
 
 ## Getting help
 
