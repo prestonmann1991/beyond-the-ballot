@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+from threading import Lock
 import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urljoin
@@ -35,19 +36,62 @@ REGISTRATION_URL = "https://data.oregon.gov/resource/8h6y-5uec.json?$order=date%
 REGISTRATION_SOURCE_URL = "https://data.oregon.gov/Administrative/Voter-Registration-Data/8h6y-5uec"
 PACIFIC = ZoneInfo("America/Los_Angeles")
 USER_AGENT = "BeyondTheBallot/1.1 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
+ORESTAR_MIN_INTERVAL_SECONDS = 1.0
+ORESTAR_RETRY_DELAYS = (10, 30, 60)
+_orestar_rate_lock = Lock()
+_last_orestar_request = 0.0
 
 
-def request(url: str, data: bytes | None = None, attempts: int = 3) -> str:
+def wait_for_orestar_slot(url: str) -> None:
+    """Space public ORESTAR requests across all updater threads."""
+    if not url.startswith(ORESTAR_ROOT):
+        return
+    global _last_orestar_request
+    with _orestar_rate_lock:
+        remaining = ORESTAR_MIN_INTERVAL_SECONDS - (time.monotonic() - _last_orestar_request)
+        if remaining > 0:
+            time.sleep(remaining)
+        _last_orestar_request = time.monotonic()
+
+
+def retry_wait_seconds(error: Exception, attempt: int) -> float:
+    if isinstance(error, HTTPError) and error.code in (403, 429):
+        retry_after = error.headers.get("Retry-After") if error.headers else None
+        if retry_after:
+            try:
+                return max(float(retry_after), ORESTAR_RETRY_DELAYS[min(attempt, len(ORESTAR_RETRY_DELAYS) - 1)])
+            except ValueError:
+                pass
+        return ORESTAR_RETRY_DELAYS[min(attempt, len(ORESTAR_RETRY_DELAYS) - 1)]
+    return 2 * (attempt + 1)
+
+
+def request(url: str, data: bytes | None = None, attempts: int = 4) -> str:
     last_error: Exception | None = None
     for attempt in range(attempts):
         try:
+            wait_for_orestar_slot(url)
             req = Request(url, data=data, headers={"User-Agent": USER_AGENT})
             with urlopen(req, timeout=60) as response:
                 return response.read().decode("utf-8", "replace")
         except (HTTPError, URLError, TimeoutError) as error:
             last_error = error
             if attempt + 1 < attempts:
-                time.sleep(2 * (attempt + 1))
+                time.sleep(retry_wait_seconds(error, attempt))
+    raise RuntimeError(str(last_error))
+
+
+def opener_text(opener, req: Request, attempts: int = 4) -> str:
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            wait_for_orestar_slot(req.full_url)
+            with opener.open(req, timeout=60) as response:
+                return response.read().decode("utf-8", "replace")
+        except (HTTPError, URLError, TimeoutError) as error:
+            last_error = error
+            if attempt + 1 < attempts:
+                time.sleep(retry_wait_seconds(error, attempt))
     raise RuntimeError(str(last_error))
 
 
@@ -130,8 +174,7 @@ def csrf_token(opener) -> tuple[str, str]:
         data=b"",
         headers={"User-Agent": USER_AGENT, "FETCH-CSRF-TOKEN": "1"},
     )
-    with opener.open(req, timeout=60) as response:
-        pair = response.read().decode("utf-8", "replace").strip()
+    pair = opener_text(opener, req).strip()
     if ":" not in pair:
         raise ValueError("ORESTAR transaction-search token was not returned")
     name, value = pair.split(":", 1)
@@ -177,8 +220,7 @@ def fetch_transactions(
             "Referer": TRANSACTION_SEARCH_URL,
         },
     )
-    with opener.open(req, timeout=60) as response:
-        return parse_transactions(response.read().decode("utf-8", "replace"))
+    return parse_transactions(opener_text(opener, req))
 
 
 def fetch_candidate(candidate: dict) -> dict:
@@ -197,8 +239,7 @@ def fetch_candidate(candidate: dict) -> dict:
         return item
     summary = parse_account_page(request(ACCOUNT_URL.format(filer_id)))
     opener = build_opener(HTTPCookieProcessor(CookieJar()))
-    with opener.open(Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}), timeout=60) as search:
-        search_page = search.read().decode("utf-8", "replace")
+    search_page = opener_text(opener, Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}))
     fields = hidden_fields(search_page)
     token_name, token_value = csrf_token(opener)
     fields[token_name] = token_value
@@ -337,7 +378,7 @@ def refresh() -> int:
     failures = 0
     refreshed_by_id: dict[str, dict] = {}
 
-    with ThreadPoolExecutor(max_workers=3) as pool:
+    with ThreadPoolExecutor(max_workers=2) as pool:
         futures = {pool.submit(fetch_candidate, candidate): candidate for candidate in source["candidates"]}
         for future in as_completed(futures):
             original = futures[future]

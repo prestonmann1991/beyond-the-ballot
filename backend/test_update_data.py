@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import unittest
+from urllib.error import HTTPError
 
 from backend.update_data import (
     add_ten_day_deltas,
@@ -8,6 +9,7 @@ from backend.update_data import (
     money,
     parse_account_page,
     parse_transactions,
+    retry_wait_seconds,
 )
 
 
@@ -78,6 +80,13 @@ class OrestarParserTests(unittest.TestCase):
         add_ten_day_deltas(candidates, history, now)
         self.assertEqual(candidates[0]["contributionDelta10Days"], 55)
         self.assertEqual(candidates[0]["expenditureDelta10Days"], 30)
+
+    def test_rate_limit_errors_use_longer_backoff(self):
+        forbidden = HTTPError("https://example.com", 403, "Forbidden", {}, None)
+        too_many = HTTPError("https://example.com", 429, "Too Many Requests", {"Retry-After": "45"}, None)
+        self.assertEqual(retry_wait_seconds(forbidden, 0), 10)
+        self.assertEqual(retry_wait_seconds(forbidden, 1), 30)
+        self.assertEqual(retry_wait_seconds(too_many, 0), 45)
 
 
 if __name__ == "__main__":
