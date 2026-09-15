@@ -1,17 +1,20 @@
 # State of the Races
 
-A native SwiftUI iPhone app for tracking selected 2026 Oregon races and four-hour
-ORESTAR campaign-finance totals.
+A native SwiftUI iPhone app for tracking Oregon's 2026 statewide and legislative
+races, with four-hour ORESTAR campaign-finance updates.
 
 ## What is included
 
 - Oregon Governor
-- House Districts 7, 21, 22, 26, 32, 40, 48, 52, and 53
-- Senate Districts 3, 11, 16, and 20
+- All 60 Oregon House districts
+- All 15 Oregon Senate districts on the 2026 ballot
 - Candidate name, party, campaign website, ORESTAR balance/deficit, year-to-date
   contributions, and year-to-date expenditures
+- Featured, All Races, and user-selected Favorites feeds
+- Official prior-election results: 2024 and 2022 for House races, the most recent
+  election for Senate races, and 2022 for governor
 - Search, race filters, pull-to-refresh, local caching, and a bundled offline copy
-- A scheduled GitHub Action that refreshes the data at 6:00 a.m. Oregon time
+- A scheduled GitHub Action that refreshes the data every four hours
 
 ## Fastest setup
 
@@ -21,9 +24,8 @@ ORESTAR campaign-finance totals.
    choose your Apple developer team under **Signing & Capabilities**, connect
    your iPhone, and press **Run**.
 
-The GitHub Action runs at both possible UTC equivalents of 6:00 a.m. and uses
-`America/Los_Angeles` to select the correct run during daylight-saving changes.
-You can test it immediately from **Actions → Refresh ORESTAR data → Run workflow**.
+You can test the updater immediately from **Actions → Refresh Oregon election
+data → Run workflow**.
 
 ## Before App Store submission
 

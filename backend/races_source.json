@@ -1,18 +1,4122 @@
 {
   "races": [
-    {"id":"governor","name":"Oregon Governor","districtOrder":0,"incumbentName":"Tina Kotek","incumbentParty":"Democratic"},
-    {"id":"hd07","name":"House District 7","districtOrder":107,"incumbentName":"John Lively","incumbentParty":"Democratic"},
-    {"id":"hd21","name":"House District 21","districtOrder":121,"incumbentName":"Kevin Mannix","incumbentParty":"Republican"},
-    {"id":"hd22","name":"House District 22","districtOrder":122,"incumbentName":"Lesly Muñoz","incumbentParty":"Democratic"},
-    {"id":"hd26","name":"House District 26","districtOrder":126,"incumbentName":"Sue Rieke Smith","incumbentParty":"Democratic"},
-    {"id":"hd32","name":"House District 32","districtOrder":132,"incumbentName":"Cyrus Javadi","incumbentParty":"Democratic"},
-    {"id":"hd40","name":"House District 40","districtOrder":140,"incumbentName":"Annessa Hartman","incumbentParty":"Democratic"},
-    {"id":"hd48","name":"House District 48","districtOrder":148,"incumbentName":"Lamar Wise","incumbentParty":"Democratic"},
-    {"id":"hd52","name":"House District 52","districtOrder":152,"incumbentName":"Jeff Helfrich","incumbentParty":"Republican"},
-    {"id":"hd53","name":"House District 53","districtOrder":153,"incumbentName":"Emerson Levy","incumbentParty":"Democratic"},
-    {"id":"sd03","name":"Senate District 3","districtOrder":203,"incumbentName":"Jeff Golden","incumbentParty":"Democratic"},
-    {"id":"sd11","name":"Senate District 11","districtOrder":211,"incumbentName":"Kim Thatcher","incumbentParty":"Republican"},
-    {"id":"sd16","name":"Senate District 16","districtOrder":216,"incumbentName":"Suzanne Weber","incumbentParty":"Republican"},
-    {"id":"sd20","name":"Senate District 20","districtOrder":220,"incumbentName":"Mark Meek","incumbentParty":"Democratic"}
+    {
+      "districtOrder": 0,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Tina Kotek",
+              "party": "Democratic",
+              "percentage": 46.96,
+              "votes": 917074
+            },
+            {
+              "name": "Christine Drazan",
+              "party": "Republican",
+              "percentage": 43.54,
+              "votes": 850347
+            },
+            {
+              "name": "Betsy Johnson",
+              "party": "Independent",
+              "percentage": 8.62,
+              "votes": 168431
+            },
+            {
+              "name": "Donice Noelle Smith",
+              "party": "Constitution",
+              "percentage": 0.41,
+              "votes": 8051
+            },
+            {
+              "name": "R. Leon Noble",
+              "party": "Libertarian",
+              "percentage": 0.35,
+              "votes": 6867
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 2113
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "governor",
+      "incumbentName": "Tina Kotek",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "Oregon Governor"
+    },
+    {
+      "districtOrder": 101,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Court Boice",
+              "party": "Republican",
+              "percentage": 67.24,
+              "votes": 26950
+            },
+            {
+              "name": "Bret Cecil",
+              "party": "Democratic",
+              "percentage": 32.52,
+              "votes": 13036
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.23,
+              "votes": 94
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "David Brock Smith",
+              "party": "Republican",
+              "percentage": 70.53,
+              "votes": 25451
+            },
+            {
+              "name": "Bret Cecil",
+              "party": "Democratic",
+              "percentage": 29.2,
+              "votes": 10536
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.27,
+              "votes": 96
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd01",
+      "incumbentName": "Court Boice",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 1"
+    },
+    {
+      "districtOrder": 102,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Virgle J. Osborne",
+              "party": "Republican",
+              "percentage": 71.17,
+              "votes": 26774
+            },
+            {
+              "name": "August Warren",
+              "party": "Democratic",
+              "percentage": 28.54,
+              "votes": 10736
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.3,
+              "votes": 111
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Virgle Osborne",
+              "party": "Republican",
+              "percentage": 70.06,
+              "votes": 23500
+            },
+            {
+              "name": "Rainey S. Lambert",
+              "party": "Democratic",
+              "percentage": 27.2,
+              "votes": 9123
+            },
+            {
+              "name": "Edward Renfroe",
+              "party": "Constitution",
+              "percentage": 2.51,
+              "votes": 841
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.23,
+              "votes": 78
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd02",
+      "incumbentName": "Virgle Osborne",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 2"
+    },
+    {
+      "districtOrder": 103,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Dwayne Yunker",
+              "party": "Republican",
+              "percentage": 66.56,
+              "votes": 23618
+            },
+            {
+              "name": "Mark J.  Seligman",
+              "party": "Democratic",
+              "percentage": 30.98,
+              "votes": 10992
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.46,
+              "votes": 873
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Lily Morgan",
+              "party": "Republican",
+              "percentage": 68.16,
+              "votes": 22206
+            },
+            {
+              "name": "Bradley W. Keister",
+              "party": "Democratic",
+              "percentage": 31.65,
+              "votes": 10311
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.19,
+              "votes": 63
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd03",
+      "incumbentName": "Dwayne Yunker",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 3"
+    },
+    {
+      "districtOrder": 104,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Alek Skarlatos",
+              "party": "Republican",
+              "percentage": 70.18,
+              "votes": 27636
+            },
+            {
+              "name": "Richard Chasm",
+              "party": "Democratic",
+              "percentage": 29.64,
+              "votes": 11671
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 70
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Christine Goodwin",
+              "party": "Republican",
+              "percentage": 97.16,
+              "votes": 23634
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.84,
+              "votes": 691
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd04",
+      "incumbentName": "Alek Skarlatos",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 4"
+    },
+    {
+      "districtOrder": 105,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Pam Marsh",
+              "party": "Democratic",
+              "percentage": 64.07,
+              "votes": 25300
+            },
+            {
+              "name": "Katherine Green",
+              "party": "Republican",
+              "percentage": 35.84,
+              "votes": 14153
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.09,
+              "votes": 34
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Pam Marsh",
+              "party": "Democratic",
+              "percentage": 64.36,
+              "votes": 23063
+            },
+            {
+              "name": "Sandra A. Abercrombie",
+              "party": "Republican",
+              "percentage": 35.55,
+              "votes": 12740
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.08,
+              "votes": 29
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd05",
+      "incumbentName": "Pam Marsh",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 5"
+    },
+    {
+      "districtOrder": 106,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Kim Wallan",
+              "party": "Republican",
+              "percentage": 57.98,
+              "votes": 18557
+            },
+            {
+              "name": "Lilia Caballero",
+              "party": "Democratic",
+              "percentage": 41.89,
+              "votes": 13408
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Kim Wallan",
+              "party": "Republican",
+              "percentage": 60.21,
+              "votes": 16683
+            },
+            {
+              "name": "Dan Davis",
+              "party": "Democratic",
+              "percentage": 39.69,
+              "votes": 10996
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 29
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd06",
+      "incumbentName": "Kim Wallan",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 6"
+    },
+    {
+      "districtOrder": 107,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "John Lively",
+              "party": "Democratic",
+              "percentage": 55.8,
+              "votes": 18868
+            },
+            {
+              "name": "Cory Burket",
+              "party": "Republican",
+              "percentage": 44.03,
+              "votes": 14888
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 59
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "John Lively",
+              "party": "Democratic",
+              "percentage": 51.72,
+              "votes": 15141
+            },
+            {
+              "name": "Alan Stout",
+              "party": "Republican",
+              "percentage": 47.59,
+              "votes": 13934
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.69,
+              "votes": 202
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd07",
+      "incumbentName": "John Lively",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 7"
+    },
+    {
+      "districtOrder": 108,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Lisa Fragala",
+              "party": "Democratic",
+              "percentage": 97.37,
+              "votes": 24811
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.63,
+              "votes": 670
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Paul R. Holvey",
+              "party": "Democratic",
+              "percentage": 84.73,
+              "votes": 24696
+            },
+            {
+              "name": "Michael F. Moore",
+              "party": "Republican",
+              "percentage": 15.01,
+              "votes": 4376
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.25,
+              "votes": 75
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd08",
+      "incumbentName": "Lisa Fragala",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 8"
+    },
+    {
+      "districtOrder": 109,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Boomer Wright",
+              "party": "Republican",
+              "percentage": 61.81,
+              "votes": 23115
+            },
+            {
+              "name": "William Mrkvicka",
+              "party": "Democratic",
+              "percentage": 37.96,
+              "votes": 14196
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.23,
+              "votes": 86
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Boomer Wright",
+              "party": "Republican",
+              "percentage": 60.07,
+              "votes": 20686
+            },
+            {
+              "name": "Jerry Rust",
+              "party": "Democratic",
+              "percentage": 39.8,
+              "votes": 13705
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 45
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd09",
+      "incumbentName": "Boomer Wright",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 9"
+    },
+    {
+      "districtOrder": 110,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "David Gomberg",
+              "party": "Democratic",
+              "percentage": 97.37,
+              "votes": 28672
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.63,
+              "votes": 775
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "David Gomberg",
+              "party": "Democratic",
+              "percentage": 56.69,
+              "votes": 21158
+            },
+            {
+              "name": "Celeste McEntee",
+              "party": "Republican",
+              "percentage": 43.18,
+              "votes": 16115
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 50
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd10",
+      "incumbentName": "David Gomberg",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 10"
+    },
+    {
+      "districtOrder": 111,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Jami Cate",
+              "party": "Republican",
+              "percentage": 73.82,
+              "votes": 26148
+            },
+            {
+              "name": "Ivan Maluski",
+              "party": "Nonaffiliated",
+              "percentage": 25.86,
+              "votes": 9159
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.32,
+              "votes": 112
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Jami Cate",
+              "party": "Republican",
+              "percentage": 74.5,
+              "votes": 24892
+            },
+            {
+              "name": "Mary K. Cooke",
+              "party": "Democratic",
+              "percentage": 25.32,
+              "votes": 8458
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 60
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd11",
+      "incumbentName": "Jami Cate",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 11"
+    },
+    {
+      "districtOrder": 112,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Darin Harbick",
+              "party": "Republican",
+              "percentage": 57.66,
+              "votes": 23256
+            },
+            {
+              "name": "Michelle Emmons",
+              "party": "Democratic",
+              "percentage": 42.18,
+              "votes": 17012
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 62
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Charlie Conrad",
+              "party": "Republican",
+              "percentage": 57.46,
+              "votes": 20410
+            },
+            {
+              "name": "Michelle Emmons",
+              "party": "Democratic",
+              "percentage": 42.43,
+              "votes": 15073
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd12",
+      "incumbentName": "Darin Harbick",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 12"
+    },
+    {
+      "districtOrder": 113,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Nancy Nathanson",
+              "party": "Democratic",
+              "percentage": 66.49,
+              "votes": 27143
+            },
+            {
+              "name": "Timothy S. Sutherland",
+              "party": "Republican",
+              "percentage": 33.39,
+              "votes": 13630
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 52
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Nancy Nathanson",
+              "party": "Democratic",
+              "percentage": 65.21,
+              "votes": 23543
+            },
+            {
+              "name": "Timothy S. Sutherland",
+              "party": "Republican",
+              "percentage": 34.63,
+              "votes": 12501
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 59
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd13",
+      "incumbentName": "Nancy Nathanson",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 13"
+    },
+    {
+      "districtOrder": 114,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Julie Fahey",
+              "party": "Democratic",
+              "percentage": 94.09,
+              "votes": 22176
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 5.91,
+              "votes": 1392
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Julie Fahey",
+              "party": "Democratic",
+              "percentage": 59.71,
+              "votes": 17887
+            },
+            {
+              "name": "Stan Stubblefield",
+              "party": "Republican",
+              "percentage": 40.09,
+              "votes": 12010
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.2,
+              "votes": 59
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd14",
+      "incumbentName": "Julie Fahey",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 14"
+    },
+    {
+      "districtOrder": 115,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Shelly Boshart Davis",
+              "party": "Republican",
+              "percentage": 58.71,
+              "votes": 22197
+            },
+            {
+              "name": "Terrence Virnig",
+              "party": "Democratic",
+              "percentage": 41.17,
+              "votes": 15566
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 43
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Shelly Boshart Davis",
+              "party": "Republican",
+              "percentage": 60,
+              "votes": 19995
+            },
+            {
+              "name": "Benjamin Watts",
+              "party": "Democratic",
+              "percentage": 39.9,
+              "votes": 13300
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 35
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd15",
+      "incumbentName": "Shelly Boshart Davis",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 15"
+    },
+    {
+      "districtOrder": 116,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Sarah Finger McDonald",
+              "party": "Democratic",
+              "percentage": 82.81,
+              "votes": 24894
+            },
+            {
+              "name": "Michael A. Beilstein",
+              "party": "Pacific Green",
+              "percentage": 15.9,
+              "votes": 4781
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.29,
+              "votes": 388
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Dan Rayfield",
+              "party": "Democratic",
+              "percentage": 75.17,
+              "votes": 22483
+            },
+            {
+              "name": "Keith Lembke",
+              "party": "Republican",
+              "percentage": 24.61,
+              "votes": 7362
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.22,
+              "votes": 65
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd16",
+      "incumbentName": "Sarah Finger McDonald",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 16"
+    },
+    {
+      "districtOrder": 117,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Ed Diehl",
+              "party": "Republican",
+              "percentage": 69.27,
+              "votes": 23759
+            },
+            {
+              "name": "David W. Beem",
+              "party": "Democratic",
+              "percentage": 30.57,
+              "votes": 10486
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 52
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Ed Diehl",
+              "party": "Republican",
+              "percentage": 96.7,
+              "votes": 21741
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 3.3,
+              "votes": 742
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd17",
+      "incumbentName": "Ed Diehl",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 17"
+    },
+    {
+      "districtOrder": 118,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Rick Lewis",
+              "party": "Republican",
+              "percentage": 70.81,
+              "votes": 26553
+            },
+            {
+              "name": "Karyssa Dow",
+              "party": "Democratic",
+              "percentage": 29.03,
+              "votes": 10884
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 61
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Rick Lewis",
+              "party": "Republican",
+              "percentage": 71.09,
+              "votes": 24352
+            },
+            {
+              "name": "Jesse S. Smith",
+              "party": "Democratic",
+              "percentage": 28.79,
+              "votes": 9863
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd18",
+      "incumbentName": "Rick Lewis",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 18"
+    },
+    {
+      "districtOrder": 119,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Tom Andersen",
+              "party": "Democratic",
+              "percentage": 54.26,
+              "votes": 17296
+            },
+            {
+              "name": "David Brown",
+              "party": "Republican",
+              "percentage": 45.6,
+              "votes": 14534
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 45
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Tom Andersen",
+              "party": "Democratic",
+              "percentage": 54.39,
+              "votes": 15289
+            },
+            {
+              "name": "TJ Sullivan",
+              "party": "Republican",
+              "percentage": 45.46,
+              "votes": 12779
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd19",
+      "incumbentName": "Tom Andersen",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 19"
+    },
+    {
+      "districtOrder": 120,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Paul Evans",
+              "party": "Democratic",
+              "percentage": 57.99,
+              "votes": 20721
+            },
+            {
+              "name": "Kevin S. Chambers",
+              "party": "Republican",
+              "percentage": 41.81,
+              "votes": 14938
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.2,
+              "votes": 73
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Paul Evans",
+              "party": "Democratic",
+              "percentage": 54.24,
+              "votes": 17316
+            },
+            {
+              "name": "Dan Farrington",
+              "party": "Republican",
+              "percentage": 44.09,
+              "votes": 14077
+            },
+            {
+              "name": "Taylor A. Rickey",
+              "party": "Libertarian",
+              "percentage": 1.57,
+              "votes": 502
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 32
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd20",
+      "incumbentName": "Paul Evans",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 20"
+    },
+    {
+      "districtOrder": 121,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Kevin Mannix",
+              "party": "Republican",
+              "percentage": 51.83,
+              "votes": 14924
+            },
+            {
+              "name": "Virginia Stapleton",
+              "party": "Democratic",
+              "percentage": 48,
+              "votes": 13822
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 49
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Kevin L. Mannix",
+              "party": "Republican",
+              "percentage": 51.38,
+              "votes": 13115
+            },
+            {
+              "name": "Ramiro Navarro Jr.",
+              "party": "Democratic",
+              "percentage": 45.63,
+              "votes": 11646
+            },
+            {
+              "name": "Michael Morrow",
+              "party": "Libertarian",
+              "percentage": 2.89,
+              "votes": 738
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 26
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd21",
+      "incumbentName": "Kevin Mannix",
+      "incumbentParty": "Republican",
+      "isFeatured": true,
+      "name": "House District 21"
+    },
+    {
+      "districtOrder": 122,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Lesly Muñoz",
+              "party": "Democratic",
+              "percentage": 50.3,
+              "votes": 10480
+            },
+            {
+              "name": "Tracy M. Cramer",
+              "party": "Republican",
+              "percentage": 49.53,
+              "votes": 10319
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 36
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Tracy M. Cramer",
+              "party": "Republican",
+              "percentage": 51.49,
+              "votes": 8742
+            },
+            {
+              "name": "Anthony Medina",
+              "party": "Democratic",
+              "percentage": 48.29,
+              "votes": 8200
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.22,
+              "votes": 37
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd22",
+      "incumbentName": "Lesly Muñoz",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 22"
+    },
+    {
+      "districtOrder": 123,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Anna M. Scharf",
+              "party": "Republican",
+              "percentage": 62.05,
+              "votes": 24492
+            },
+            {
+              "name": "Kriss Wright",
+              "party": "Democratic",
+              "percentage": 37.82,
+              "votes": 14929
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 49
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Anna M. Scharf",
+              "party": "Republican",
+              "percentage": 63.18,
+              "votes": 22294
+            },
+            {
+              "name": "Kriss Wright",
+              "party": "Democratic",
+              "percentage": 36.56,
+              "votes": 12900
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.26,
+              "votes": 91
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd23",
+      "incumbentName": "Anna Scharf",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 23"
+    },
+    {
+      "districtOrder": 124,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Lucetta A. Elmer",
+              "party": "Republican",
+              "percentage": 59.62,
+              "votes": 20798
+            },
+            {
+              "name": "Lisa Pool",
+              "party": "Democratic",
+              "percentage": 40.23,
+              "votes": 14033
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 55
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Lucetta A. Elmer",
+              "party": "Republican",
+              "percentage": 56.23,
+              "votes": 17030
+            },
+            {
+              "name": "Victoria Ernst",
+              "party": "Democratic",
+              "percentage": 43.63,
+              "votes": 13216
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 43
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd24",
+      "incumbentName": "Lucetta Elmer",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 24"
+    },
+    {
+      "districtOrder": 125,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Ben Bowman",
+              "party": "Democratic",
+              "percentage": 67.63,
+              "votes": 24096
+            },
+            {
+              "name": "Bob Niemeyer",
+              "party": "Republican",
+              "percentage": 32.2,
+              "votes": 11473
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 60
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Ben Bowman",
+              "party": "Democratic",
+              "percentage": 65.31,
+              "votes": 20636
+            },
+            {
+              "name": "Bob Niemeyer",
+              "party": "Republican",
+              "percentage": 34.52,
+              "votes": 10907
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 56
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd25",
+      "incumbentName": "Ben Bowman",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 25"
+    },
+    {
+      "districtOrder": 126,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Courtney Neron",
+              "party": "Democratic",
+              "percentage": 56.1,
+              "votes": 20931
+            },
+            {
+              "name": "Jason E. Fields",
+              "party": "Republican",
+              "percentage": 43.81,
+              "votes": 16345
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.08,
+              "votes": 31
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Courtney Neron",
+              "party": "Democratic",
+              "percentage": 53.24,
+              "votes": 17606
+            },
+            {
+              "name": "Jason Fields",
+              "party": "Republican",
+              "percentage": 46.69,
+              "votes": 15439
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.07,
+              "votes": 24
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd26",
+      "incumbentName": "Sue Rieke Smith",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 26"
+    },
+    {
+      "districtOrder": 127,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Ken Helm",
+              "party": "Democratic",
+              "percentage": 74.04,
+              "votes": 25142
+            },
+            {
+              "name": "Victoria Kingsbury",
+              "party": "Republican",
+              "percentage": 25.86,
+              "votes": 8780
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 35
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Ken Helm",
+              "party": "Democratic",
+              "percentage": 71.21,
+              "votes": 22375
+            },
+            {
+              "name": "Sandra Nelson",
+              "party": "Republican",
+              "percentage": 28.67,
+              "votes": 9007
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 37
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd27",
+      "incumbentName": "Ken Helm",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 27"
+    },
+    {
+      "districtOrder": 128,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Dacia Grayber",
+              "party": "Democratic",
+              "percentage": 85.85,
+              "votes": 34188
+            },
+            {
+              "name": "Charles Mengis",
+              "party": "Republican",
+              "percentage": 14,
+              "votes": 5575
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 60
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Dacia Grayber",
+              "party": "Democratic",
+              "percentage": 81.98,
+              "votes": 30483
+            },
+            {
+              "name": "Patrick Castles",
+              "party": "Republican",
+              "percentage": 17.92,
+              "votes": 6662
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 39
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd28",
+      "incumbentName": "Dacia Grayber",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 28"
+    },
+    {
+      "districtOrder": 129,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Susan McLain",
+              "party": "Democratic",
+              "percentage": 96.38,
+              "votes": 20176
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 3.62,
+              "votes": 758
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Susan McLain",
+              "party": "Democratic",
+              "percentage": 53.57,
+              "votes": 13592
+            },
+            {
+              "name": "Gina Munster-Moore",
+              "party": "Republican",
+              "percentage": 46.29,
+              "votes": 11746
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 35
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd29",
+      "incumbentName": "Susan McLain",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 29"
+    },
+    {
+      "districtOrder": 130,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Nathan Sosa",
+              "party": "Democratic",
+              "percentage": 96.43,
+              "votes": 20254
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 3.57,
+              "votes": 750
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Nathan Sosa",
+              "party": "Democratic",
+              "percentage": 61.7,
+              "votes": 15572
+            },
+            {
+              "name": "Joe Everton",
+              "party": "Republican",
+              "percentage": 38.16,
+              "votes": 9632
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 34
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd30",
+      "incumbentName": "Nathan Sosa",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 30"
+    },
+    {
+      "districtOrder": 131,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Darcey Edwards",
+              "party": "Republican",
+              "percentage": 59.05,
+              "votes": 23972
+            },
+            {
+              "name": "Jordan Gutierrez",
+              "party": "Democratic",
+              "percentage": 37.3,
+              "votes": 15145
+            },
+            {
+              "name": "Robert Miller",
+              "party": "Libertarian",
+              "percentage": 3.42,
+              "votes": 1389
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.23,
+              "votes": 93
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Brian Stout",
+              "party": "Republican",
+              "percentage": 59.31,
+              "votes": 22026
+            },
+            {
+              "name": "Anthony Sorace",
+              "party": "Democratic",
+              "percentage": 40.48,
+              "votes": 15031
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.21,
+              "votes": 77
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd31",
+      "incumbentName": "Darcey Edwards",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 31"
+    },
+    {
+      "districtOrder": 132,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Cyrus B. Javadi",
+              "party": "Republican",
+              "percentage": 52.1,
+              "votes": 20409
+            },
+            {
+              "name": "Andy Davis",
+              "party": "Democratic",
+              "percentage": 47.72,
+              "votes": 18692
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 68
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Cyrus Javadi",
+              "party": "Republican",
+              "percentage": 51.15,
+              "votes": 17846
+            },
+            {
+              "name": "Logan Laity",
+              "party": "Democratic",
+              "percentage": 48.73,
+              "votes": 17002
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 41
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd32",
+      "incumbentName": "Cyrus Javadi",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 32"
+    },
+    {
+      "districtOrder": 133,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Shannon Jones Isadore",
+              "party": "Democratic",
+              "percentage": 83.6,
+              "votes": 29132
+            },
+            {
+              "name": "Stan Baumhofer",
+              "party": "Republican",
+              "percentage": 12.63,
+              "votes": 4400
+            },
+            {
+              "name": "Thomas J. Busse",
+              "party": "Libertarian",
+              "percentage": 3.61,
+              "votes": 1258
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 58
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Maxine E. Dexter",
+              "party": "Democratic",
+              "percentage": 84.82,
+              "votes": 26154
+            },
+            {
+              "name": "Stan Baumhofer",
+              "party": "Republican",
+              "percentage": 15.08,
+              "votes": 4651
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 30
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd33",
+      "incumbentName": "Shannon Isadore",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 33"
+    },
+    {
+      "districtOrder": 134,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Lisa Reynolds",
+              "party": "Democratic",
+              "percentage": 71.46,
+              "votes": 22572
+            },
+            {
+              "name": "John Verbeek",
+              "party": "Republican",
+              "percentage": 28.41,
+              "votes": 8973
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 44
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Lisa Reynolds",
+              "party": "Democratic",
+              "percentage": 68.67,
+              "votes": 19354
+            },
+            {
+              "name": "John Woods",
+              "party": "Republican",
+              "percentage": 31.23,
+              "votes": 8801
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 30
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd34",
+      "incumbentName": "Representative Mari Watanabe",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 34"
+    },
+    {
+      "districtOrder": 135,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Farrah Chaichi",
+              "party": "Democratic",
+              "percentage": 68.98,
+              "votes": 17072
+            },
+            {
+              "name": "Dan Martin",
+              "party": "Republican",
+              "percentage": 30.83,
+              "votes": 7631
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 445
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Farrah Chaichi",
+              "party": "Democratic",
+              "percentage": 67.17,
+              "votes": 14365
+            },
+            {
+              "name": "Daniel R. Martin",
+              "party": "Republican",
+              "percentage": 32.56,
+              "votes": 6963
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.27,
+              "votes": 58
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd35",
+      "incumbentName": "Farrah Chaichi",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 35"
+    },
+    {
+      "districtOrder": 136,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Hai Pham",
+              "party": "Democratic",
+              "percentage": 62.88,
+              "votes": 23250
+            },
+            {
+              "name": "Shawn Chummar",
+              "party": "Republican",
+              "percentage": 37.01,
+              "votes": 13685
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Hai Pham",
+              "party": "Democratic",
+              "percentage": 61.43,
+              "votes": 19629
+            },
+            {
+              "name": "Greer Trice",
+              "party": "Republican",
+              "percentage": 38.41,
+              "votes": 12272
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 52
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd36",
+      "incumbentName": "Representative Hai Pham",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 36"
+    },
+    {
+      "districtOrder": 137,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Jules Walters",
+              "party": "Democratic",
+              "percentage": 61.26,
+              "votes": 23356
+            },
+            {
+              "name": "Ben Edtl",
+              "party": "Republican",
+              "percentage": 38.57,
+              "votes": 14703
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 65
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Jules Walters",
+              "party": "Democratic",
+              "percentage": 59.15,
+              "votes": 20588
+            },
+            {
+              "name": "Aeric Estep",
+              "party": "Republican",
+              "percentage": 40.73,
+              "votes": 14177
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 39
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd37",
+      "incumbentName": "Jules Walters",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 37"
+    },
+    {
+      "districtOrder": 138,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Daniel Nguyen",
+              "party": "Democratic",
+              "percentage": 97.86,
+              "votes": 30385
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.14,
+              "votes": 664
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Daniel Nguyen",
+              "party": "Democratic",
+              "percentage": 67.98,
+              "votes": 25949
+            },
+            {
+              "name": "Alistair Firmin",
+              "party": "Republican",
+              "percentage": 31.96,
+              "votes": 12200
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.06,
+              "votes": 22
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd38",
+      "incumbentName": "Daniel Nguyễn",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 38"
+    },
+    {
+      "districtOrder": 139,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "April Dobson",
+              "party": "Democratic",
+              "percentage": 54.43,
+              "votes": 17712
+            },
+            {
+              "name": "Aimee L. Reiner",
+              "party": "Republican",
+              "percentage": 45.34,
+              "votes": 14753
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.23,
+              "votes": 75
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Janelle S. Bynum",
+              "party": "Democratic",
+              "percentage": 54.96,
+              "votes": 15678
+            },
+            {
+              "name": "Kori Haynes",
+              "party": "Republican",
+              "percentage": 44.87,
+              "votes": 12801
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 48
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd39",
+      "incumbentName": "April Dobson",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 39"
+    },
+    {
+      "districtOrder": 140,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Annessa Hartman",
+              "party": "Democratic",
+              "percentage": 55.85,
+              "votes": 20658
+            },
+            {
+              "name": "Michael Steven Newgard",
+              "party": "Republican",
+              "percentage": 43.99,
+              "votes": 16271
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 60
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Annessa Hartman",
+              "party": "Democratic",
+              "percentage": 50.22,
+              "votes": 16632
+            },
+            {
+              "name": "Adam Baker",
+              "party": "Republican",
+              "percentage": 49.67,
+              "votes": 16451
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 35
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd40",
+      "incumbentName": "Annessa Hartman",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 40"
+    },
+    {
+      "districtOrder": 141,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Mark F. Gamba",
+              "party": "Democratic",
+              "percentage": 79.86,
+              "votes": 32386
+            },
+            {
+              "name": "Elvis Clark",
+              "party": "Republican",
+              "percentage": 19.98,
+              "votes": 8101
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 64
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Mark F. Gamba",
+              "party": "Democratic",
+              "percentage": 78.21,
+              "votes": 29187
+            },
+            {
+              "name": "Rob Reynolds",
+              "party": "Republican",
+              "percentage": 21.67,
+              "votes": 8088
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 45
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd41",
+      "incumbentName": "Mark Gamba",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 41"
+    },
+    {
+      "districtOrder": 142,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Rob Nosse",
+              "party": "Democratic",
+              "percentage": 98.53,
+              "votes": 32941
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.47,
+              "votes": 491
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Rob Nosse",
+              "party": "Democratic",
+              "percentage": 91.52,
+              "votes": 34777
+            },
+            {
+              "name": "Scott Trahan",
+              "party": "Republican",
+              "percentage": 6.68,
+              "votes": 2540
+            },
+            {
+              "name": "Shira Newman",
+              "party": "Libertarian",
+              "percentage": 1.63,
+              "votes": 619
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 65
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd42",
+      "incumbentName": "Rob Nosse",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 42"
+    },
+    {
+      "districtOrder": 143,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Tawna Sanchez",
+              "party": "Democratic",
+              "percentage": 92.11,
+              "votes": 37084
+            },
+            {
+              "name": "Tim LeMaster",
+              "party": "Republican",
+              "percentage": 7.65,
+              "votes": 3078
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.24,
+              "votes": 97
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Tawna Sanchez",
+              "party": "Democratic",
+              "percentage": 91.8,
+              "votes": 33466
+            },
+            {
+              "name": "Tim LeMaster",
+              "party": "Republican",
+              "percentage": 8.07,
+              "votes": 2943
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 48
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd43",
+      "incumbentName": "Tawna D. Sanchez",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 43"
+    },
+    {
+      "districtOrder": 144,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Travis Nelson",
+              "party": "Democratic",
+              "percentage": 98.29,
+              "votes": 27281
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.71,
+              "votes": 474
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Travis Nelson",
+              "party": "Democratic",
+              "percentage": 87.65,
+              "votes": 26429
+            },
+            {
+              "name": "Rolf Schuler",
+              "party": "Republican",
+              "percentage": 11.42,
+              "votes": 3444
+            },
+            {
+              "name": "Morgan Hinthorne",
+              "party": "Constitution",
+              "percentage": 0.77,
+              "votes": 232
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.16,
+              "votes": 47
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd44",
+      "incumbentName": "Travis Nelson",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 44"
+    },
+    {
+      "districtOrder": 145,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Thuy Tran",
+              "party": "Democratic",
+              "percentage": 98.04,
+              "votes": 29118
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.96,
+              "votes": 582
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Thuy Tran",
+              "party": "Democratic",
+              "percentage": 84.07,
+              "votes": 28946
+            },
+            {
+              "name": "George Donnerberg",
+              "party": "Republican",
+              "percentage": 15.87,
+              "votes": 5465
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.06,
+              "votes": 21
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd45",
+      "incumbentName": "Thủy Trần",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 45"
+    },
+    {
+      "districtOrder": 146,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Willy Chotzen",
+              "party": "Democratic",
+              "percentage": 79.06,
+              "votes": 25542
+            },
+            {
+              "name": "John Mark Alexander",
+              "party": "Republican",
+              "percentage": 13.66,
+              "votes": 4414
+            },
+            {
+              "name": "Kevin Levy",
+              "party": "Independent Party",
+              "percentage": 3.88,
+              "votes": 1252
+            },
+            {
+              "name": "Austin Daniel",
+              "party": "Libertarian",
+              "percentage": 3.22,
+              "votes": 1040
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 58
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Khanh Pham",
+              "party": "Democratic",
+              "percentage": 83.78,
+              "votes": 24289
+            },
+            {
+              "name": "Timothy R. Sytsma",
+              "party": "Republican",
+              "percentage": 16.07,
+              "votes": 4658
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 44
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd46",
+      "incumbentName": "Willy Chotzen",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 46"
+    },
+    {
+      "districtOrder": 147,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Andrea Valderrama",
+              "party": "Democratic",
+              "percentage": 95.53,
+              "votes": 16754
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 4.47,
+              "votes": 784
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Andrea Valderrama",
+              "party": "Democratic",
+              "percentage": 68.56,
+              "votes": 15136
+            },
+            {
+              "name": "William Stewart",
+              "party": "Republican",
+              "percentage": 31.23,
+              "votes": 6894
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.21,
+              "votes": 46
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd47",
+      "incumbentName": "Andrea Valderrama",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 47"
+    },
+    {
+      "districtOrder": 148,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Hoa H. Nguyen",
+              "party": "Democratic",
+              "percentage": 52.95,
+              "votes": 14451
+            },
+            {
+              "name": "John Masterman",
+              "party": "Republican",
+              "percentage": 46.8,
+              "votes": 12773
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.25,
+              "votes": 69
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Hoa H. Nguyen",
+              "party": "Democratic",
+              "percentage": 51.24,
+              "votes": 12329
+            },
+            {
+              "name": "John Masterman",
+              "party": "Republican",
+              "percentage": 48.68,
+              "votes": 11712
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.08,
+              "votes": 20
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd48",
+      "incumbentName": "Lamar Wise",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 48"
+    },
+    {
+      "districtOrder": 149,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Zach Hudson",
+              "party": "Democratic",
+              "percentage": 55.82,
+              "votes": 13784
+            },
+            {
+              "name": "Terry A. Tipsord",
+              "party": "Republican",
+              "percentage": 43.89,
+              "votes": 10838
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.29,
+              "votes": 71
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Zach Hudson",
+              "party": "Democratic",
+              "percentage": 52.08,
+              "votes": 10955
+            },
+            {
+              "name": "Randy E. Lauer",
+              "party": "Republican",
+              "percentage": 47.79,
+              "votes": 10052
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 27
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd49",
+      "incumbentName": "Zach Hudson",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 49"
+    },
+    {
+      "districtOrder": 150,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Ricki Ruiz",
+              "party": "Democratic",
+              "percentage": 54.54,
+              "votes": 15014
+            },
+            {
+              "name": "Paul Drechsler",
+              "party": "Republican",
+              "percentage": 45.22,
+              "votes": 12448
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.24,
+              "votes": 67
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Ricki Ruiz",
+              "party": "Democratic",
+              "percentage": 51.78,
+              "votes": 12157
+            },
+            {
+              "name": "Amelia Salvador",
+              "party": "Republican",
+              "percentage": 48.13,
+              "votes": 11298
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.09,
+              "votes": 21
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd50",
+      "incumbentName": "Ricki Ruiz",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 50"
+    },
+    {
+      "districtOrder": 151,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Christine Drazan",
+              "party": "Republican",
+              "percentage": 94.13,
+              "votes": 27872
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 5.87,
+              "votes": 1737
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "James Hieb",
+              "party": "Republican",
+              "percentage": 66.02,
+              "votes": 23471
+            },
+            {
+              "name": "Walt Trandum",
+              "party": "Democratic",
+              "percentage": 33.66,
+              "votes": 11968
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.32,
+              "votes": 113
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd51",
+      "incumbentName": "Matt Bunch",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 51"
+    },
+    {
+      "districtOrder": 152,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Jeff Helfrich",
+              "party": "Republican",
+              "percentage": 51.84,
+              "votes": 18958
+            },
+            {
+              "name": "Nick Walden Poublon",
+              "party": "Democratic",
+              "percentage": 48.05,
+              "votes": 17573
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Jeff Helfrich",
+              "party": "Republican",
+              "percentage": 52.46,
+              "votes": 16994
+            },
+            {
+              "name": "Darcy Long",
+              "party": "Democratic",
+              "percentage": 47.42,
+              "votes": 15360
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 40
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd52",
+      "incumbentName": "Jeff Helfrich",
+      "incumbentParty": "Republican",
+      "isFeatured": true,
+      "name": "House District 52"
+    },
+    {
+      "districtOrder": 153,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Emerson Levy",
+              "party": "Democratic",
+              "percentage": 54.25,
+              "votes": 23866
+            },
+            {
+              "name": "Keri Lopez",
+              "party": "Republican",
+              "percentage": 45.65,
+              "votes": 20082
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 46
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Emerson Levy",
+              "party": "Democratic",
+              "percentage": 50.61,
+              "votes": 19584
+            },
+            {
+              "name": "Michael Sipe",
+              "party": "Republican",
+              "percentage": 49.3,
+              "votes": 19075
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.09,
+              "votes": 35
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd53",
+      "incumbentName": "Emerson Levy",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "House District 53"
+    },
+    {
+      "districtOrder": 154,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Jason Kropf",
+              "party": "Democratic",
+              "percentage": 96.47,
+              "votes": 28395
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 3.53,
+              "votes": 1040
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Jason Kropf",
+              "party": "Democratic",
+              "percentage": 64.42,
+              "votes": 22865
+            },
+            {
+              "name": "Judy Trego",
+              "party": "Republican",
+              "percentage": 35.51,
+              "votes": 12604
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.08,
+              "votes": 27
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd54",
+      "incumbentName": "Jason Kropf",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "House District 54"
+    },
+    {
+      "districtOrder": 155,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "E. Werner Reschke",
+              "party": "Republican",
+              "percentage": 69.62,
+              "votes": 27260
+            },
+            {
+              "name": "James Williamson",
+              "party": "Democratic",
+              "percentage": 30.26,
+              "votes": 11848
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 45
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "E. Werner Reschke",
+              "party": "Republican",
+              "percentage": 68.74,
+              "votes": 24371
+            },
+            {
+              "name": "Brian Lepore",
+              "party": "Democratic",
+              "percentage": 31.14,
+              "votes": 11041
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 44
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd55",
+      "incumbentName": "E. Werner Reschke",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 55"
+    },
+    {
+      "districtOrder": 156,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Emily G. McIntire",
+              "party": "Republican",
+              "percentage": 96.69,
+              "votes": 25285
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 3.31,
+              "votes": 866
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Emily McIntire",
+              "party": "Republican",
+              "percentage": 72.6,
+              "votes": 21425
+            },
+            {
+              "name": "Jonathan P. Chenjeri",
+              "party": "Democratic",
+              "percentage": 27.23,
+              "votes": 8037
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 49
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd56",
+      "incumbentName": "Emily McIntire",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 56"
+    },
+    {
+      "districtOrder": 157,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Greg Smith",
+              "party": "Republican",
+              "percentage": 97.58,
+              "votes": 19728
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.42,
+              "votes": 489
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Greg Smith",
+              "party": "Republican",
+              "percentage": 97.44,
+              "votes": 17384
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 2.56,
+              "votes": 457
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd57",
+      "incumbentName": "Gregory Smith",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 57"
+    },
+    {
+      "districtOrder": 158,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Bobby Levy",
+              "party": "Republican",
+              "percentage": 98.23,
+              "votes": 26477
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.77,
+              "votes": 476
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Bobby Levy",
+              "party": "Republican",
+              "percentage": 83.66,
+              "votes": 23274
+            },
+            {
+              "name": "Jesse Bonifer",
+              "party": "Libertarian",
+              "percentage": 15.19,
+              "votes": 4226
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.15,
+              "votes": 319
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd58",
+      "incumbentName": "Bobby Levy",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 58"
+    },
+    {
+      "districtOrder": 159,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Vikki Breese-Iverson",
+              "party": "Republican",
+              "percentage": 71.62,
+              "votes": 29431
+            },
+            {
+              "name": "Brian K. Samp",
+              "party": "Democratic",
+              "percentage": 28.13,
+              "votes": 11561
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.24,
+              "votes": 100
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Vikki Breese-Iverson",
+              "party": "Republican",
+              "percentage": 72.42,
+              "votes": 26528
+            },
+            {
+              "name": "Lawrence Jones",
+              "party": "Democratic",
+              "percentage": 27.46,
+              "votes": 10059
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 45
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd59",
+      "incumbentName": "Vikki Breese-Iverson",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 59"
+    },
+    {
+      "districtOrder": 160,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Mark Owens",
+              "party": "Republican",
+              "percentage": 98.79,
+              "votes": 25928
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 1.21,
+              "votes": 318
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2024
+        },
+        {
+          "results": [
+            {
+              "name": "Mark Owens",
+              "party": "Republican",
+              "percentage": 89.19,
+              "votes": 24496
+            },
+            {
+              "name": "Antonio Sunseri",
+              "party": "Progressive",
+              "percentage": 10.33,
+              "votes": 2837
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.48,
+              "votes": 131
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "hd60",
+      "incumbentName": "Mark Owens",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "House District 60"
+    },
+    {
+      "districtOrder": 203,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Jeff Golden",
+              "party": "Democratic",
+              "percentage": 51.89,
+              "votes": 33468
+            },
+            {
+              "name": "Randy Sparacino",
+              "party": "Republican",
+              "percentage": 48.03,
+              "votes": 30980
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.08,
+              "votes": 51
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd03",
+      "incumbentName": "Jeff Golden",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "Senate District 3"
+    },
+    {
+      "districtOrder": 204,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Floyd Prozanski",
+              "party": "Democratic",
+              "percentage": 81.68,
+              "votes": 43219
+            },
+            {
+              "name": "Eric Pinnell",
+              "party": "Libertarian",
+              "percentage": 17.57,
+              "votes": 9295
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.75,
+              "votes": 399
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd04",
+      "incumbentName": "Floyd Prozanski",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 4"
+    },
+    {
+      "districtOrder": 206,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Cedric Ross Hayden",
+              "party": "Republican",
+              "percentage": 65.22,
+              "votes": 45104
+            },
+            {
+              "name": "Ashley Pelton",
+              "party": "Democratic",
+              "percentage": 34.6,
+              "votes": 23926
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.18,
+              "votes": 124
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd06",
+      "incumbentName": "Cedric Hayden",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "Senate District 6"
+    },
+    {
+      "districtOrder": 207,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "James Manning Jr.",
+              "party": "Democratic",
+              "percentage": 64.35,
+              "votes": 42101
+            },
+            {
+              "name": "Raquel M. Ivie",
+              "party": "Republican",
+              "percentage": 35.27,
+              "votes": 23077
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.38,
+              "votes": 247
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd07",
+      "incumbentName": "James I. Manning Jr.",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 7"
+    },
+    {
+      "districtOrder": 208,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Sara Gelser Blouin",
+              "party": "Democratic",
+              "percentage": 59.75,
+              "votes": 37815
+            },
+            {
+              "name": "Valerie Draper Woldeit",
+              "party": "Republican",
+              "percentage": 40.1,
+              "votes": 25375
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 97
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd08",
+      "incumbentName": "Sara Gelser Blouin",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 8"
+    },
+    {
+      "districtOrder": 210,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Deb Patterson",
+              "party": "Democratic",
+              "percentage": 53.4,
+              "votes": 32007
+            },
+            {
+              "name": "Raquel Moore-Green",
+              "party": "Republican",
+              "percentage": 46.47,
+              "votes": 27853
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.14,
+              "votes": 83
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd10",
+      "incumbentName": "Deb Patterson",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 10"
+    },
+    {
+      "districtOrder": 211,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Kim Thatcher",
+              "party": "Republican",
+              "percentage": 52.45,
+              "votes": 22238
+            },
+            {
+              "name": "Richard \"Rich\" Walsh",
+              "party": "Democratic",
+              "percentage": 47.3,
+              "votes": 20054
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.25,
+              "votes": 105
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd11",
+      "incumbentName": "Kim Thatcher",
+      "incumbentParty": "Republican",
+      "isFeatured": true,
+      "name": "Senate District 11"
+    },
+    {
+      "districtOrder": 213,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Aaron Woods",
+              "party": "Democratic",
+              "percentage": 58.02,
+              "votes": 37474
+            },
+            {
+              "name": "John D. Velez",
+              "party": "Republican",
+              "percentage": 41.87,
+              "votes": 27045
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 69
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd13",
+      "incumbentName": "Courtney Neron Misslin",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 13"
+    },
+    {
+      "districtOrder": 215,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Janeen Sollman",
+              "party": "Democratic",
+              "percentage": 55.47,
+              "votes": 28225
+            },
+            {
+              "name": "Carolina Malmedal",
+              "party": "Republican",
+              "percentage": 44.35,
+              "votes": 22566
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.17,
+              "votes": 88
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd15",
+      "incumbentName": "Janeen Sollman",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 15"
+    },
+    {
+      "districtOrder": 216,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Suzanne Weber",
+              "party": "Republican",
+              "percentage": 56.51,
+              "votes": 41144
+            },
+            {
+              "name": "Melissa Busch",
+              "party": "Democratic",
+              "percentage": 43.38,
+              "votes": 31585
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.1,
+              "votes": 74
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd16",
+      "incumbentName": "Suzanne Weber",
+      "incumbentParty": "Republican",
+      "isFeatured": true,
+      "name": "Senate District 16"
+    },
+    {
+      "districtOrder": 217,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Elizabeth Steiner Hayward",
+              "party": "Democratic",
+              "percentage": 78.92,
+              "votes": 46647
+            },
+            {
+              "name": "John Verbeek",
+              "party": "Republican",
+              "percentage": 20.94,
+              "votes": 12377
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 86
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd17",
+      "incumbentName": "Lisa Reynolds",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 17"
+    },
+    {
+      "districtOrder": 219,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Rob Wagner",
+              "party": "Democratic",
+              "percentage": 66.03,
+              "votes": 48309
+            },
+            {
+              "name": "Ben Edtl",
+              "party": "Republican",
+              "percentage": 33.85,
+              "votes": 24767
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.12,
+              "votes": 85
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd19",
+      "incumbentName": "Rob Wagner",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 19"
+    },
+    {
+      "districtOrder": 220,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Mark Meek",
+              "party": "Democratic",
+              "percentage": 50.33,
+              "votes": 31317
+            },
+            {
+              "name": "Bill Kennemer",
+              "party": "Republican",
+              "percentage": 49.52,
+              "votes": 30814
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.15,
+              "votes": 94
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd20",
+      "incumbentName": "Mark Meek",
+      "incumbentParty": "Democratic",
+      "isFeatured": true,
+      "name": "Senate District 20"
+    },
+    {
+      "districtOrder": 224,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Kayse Jama",
+              "party": "Democratic",
+              "percentage": 58.72,
+              "votes": 27021
+            },
+            {
+              "name": "Stan Catherman",
+              "party": "Republican",
+              "percentage": 41.17,
+              "votes": 18948
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.11,
+              "votes": 50
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd24",
+      "incumbentName": "Kayse Jama",
+      "incumbentParty": "Democratic",
+      "isFeatured": false,
+      "name": "Senate District 24"
+    },
+    {
+      "districtOrder": 226,
+      "historicalElections": [
+        {
+          "results": [
+            {
+              "name": "Daniel G. Bonham",
+              "party": "Republican",
+              "percentage": 59.09,
+              "votes": 40351
+            },
+            {
+              "name": "Raz Mason",
+              "party": "Democratic",
+              "percentage": 40.78,
+              "votes": 27850
+            },
+            {
+              "name": "Write-in",
+              "party": "Write-in",
+              "percentage": 0.13,
+              "votes": 90
+            }
+          ],
+          "sourceURL": "https://sos.oregon.gov/elections/Pages/electionhistory.aspx",
+          "title": "General election",
+          "year": 2022
+        }
+      ],
+      "id": "sd26",
+      "incumbentName": "Christine Drazan",
+      "incumbentParty": "Republican",
+      "isFeatured": false,
+      "name": "Senate District 26"
+    }
   ]
 }

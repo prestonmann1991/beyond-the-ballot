@@ -35,7 +35,7 @@ CSRF_TOKEN_URL = ORESTAR_ROOT + "JavaScriptServlet"
 REGISTRATION_URL = "https://data.oregon.gov/resource/8h6y-5uec.json?$order=date%20DESC&$limit=5000"
 REGISTRATION_SOURCE_URL = "https://data.oregon.gov/Administrative/Voter-Registration-Data/8h6y-5uec"
 PACIFIC = ZoneInfo("America/Los_Angeles")
-USER_AGENT = "BeyondTheBallot/1.1 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
+USER_AGENT = "StateOfTheRaces/1.2 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
 ORESTAR_MIN_INTERVAL_SECONDS = 1.0
 ORESTAR_RETRY_DELAYS = (10, 30, 60)
 _orestar_rate_lock = Lock()
@@ -244,7 +244,7 @@ def fetch_candidate(candidate: dict, previous: dict | None = None) -> dict:
             "balanceDeficit": None,
             "recentContributions": [],
             "recentExpenditures": [],
-            "dataError": "No ORESTAR committee reported",
+            "dataError": "ORESTAR committee not yet linked",
         })
         return item
     summary = parse_account_page(request(ACCOUNT_URL.format(filer_id)))

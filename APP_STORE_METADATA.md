@@ -7,20 +7,20 @@
 - **Primary category:** Reference
 - **Secondary category:** News
 - **Price:** Free
-- **Version:** 1.0
+- **Version:** 1.2
 - **Copyright:** 2026 Preston Mann
 - **Privacy policy URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/PRIVACY.md
 - **Support URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/SUPPORT.md
 
 ## Promotional text
 
-Follow campaign-finance activity in selected 2026 Oregon elections, with figures refreshed every four hours from ORESTAR.
+Follow every 2026 Oregon legislative race, save favorites, compare prior results, and view campaign-finance figures refreshed every four hours from ORESTAR.
 
 ## Description
 
-State of the Races provides a clear, convenient look at campaign-finance activity in selected 2026 Oregon elections.
+State of the Races provides a clear, convenient look at Oregon's 2026 statewide and legislative elections.
 
-Track Oregon's race for governor and key Oregon House and Senate districts in one place. Each candidate listing includes:
+Track Oregon's race for governor, all 60 Oregon House districts, and every Oregon Senate district on the 2026 ballot. Browse featured races, view all races, or save the districts you care about to a personal Favorites feed. Each candidate listing includes:
 
 - Candidate name and party affiliation
 - Campaign website
@@ -28,8 +28,12 @@ Track Oregon's race for governor and key Oregon House and Senate districts in on
 - Year-to-date contributions
 - Year-to-date expenditures
 - ORESTAR balance/deficit
+- Active-voter registration percentages by party grouping
+- Prior general-election vote totals and percentages
 
-Figures are refreshed every four hours from public Oregon Secretary of State ORESTAR records. Search by candidate or race, filter between governor, House, and Senate contests, and pull down to request the latest available data.
+Financial figures are refreshed every four hours from public Oregon Secretary of State ORESTAR records. Search by candidate or race, filter between governor, House, and Senate contests, and pull down to request the latest available data.
+
+Historical results include 2024 and 2022 for House districts, the most recent election for Senate districts, and 2022 for governor.
 
 The ORESTAR balance/deficit field is displayed as reported and is not necessarily the same as cash on hand.
 

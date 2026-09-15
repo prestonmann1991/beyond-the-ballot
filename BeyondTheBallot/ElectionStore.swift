@@ -9,7 +9,7 @@ final class ElectionStore: ObservableObject {
 
     private let cacheURL: URL = {
         FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("candidates.json")
+            .appendingPathComponent("candidates-v1.2.json")
     }()
 
     func load(forceRefresh: Bool = false) async {
