@@ -223,8 +223,18 @@ def fetch_transactions(
     return parse_transactions(opener_text(opener, req))
 
 
-def fetch_candidate(candidate: dict) -> dict:
+def transaction_types_to_refresh(summary: dict, previous: dict) -> set[str]:
+    refresh = set()
+    if summary.get("contributionsYTD") != previous.get("contributionsYTD") or not previous.get("recentContributions"):
+        refresh.add("C")
+    if summary.get("expendituresYTD") != previous.get("expendituresYTD") or not previous.get("recentExpenditures"):
+        refresh.add("E")
+    return refresh
+
+
+def fetch_candidate(candidate: dict, previous: dict | None = None) -> dict:
     item = dict(candidate)
+    previous = previous or {}
     filer_id = item.get("filerID")
     item["orestarURL"] = ACCOUNT_URL.format(filer_id) if filer_id else None
     if not filer_id:
@@ -238,15 +248,22 @@ def fetch_candidate(candidate: dict) -> dict:
         })
         return item
     summary = parse_account_page(request(ACCOUNT_URL.format(filer_id)))
-    opener = build_opener(HTTPCookieProcessor(CookieJar()))
-    search_page = opener_text(opener, Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}))
-    fields = hidden_fields(search_page)
-    token_name, token_value = csrf_token(opener)
-    fields[token_name] = token_value
-    action_url = form_action(search_page)
     item.update(summary)
-    item["recentContributions"] = fetch_transactions(opener, action_url, fields, filer_id, "C")
-    item["recentExpenditures"] = fetch_transactions(opener, action_url, fields, filer_id, "E")
+    item["recentContributions"] = previous.get("recentContributions", [])
+    item["recentExpenditures"] = previous.get("recentExpenditures", [])
+
+    refresh_types = transaction_types_to_refresh(summary, previous)
+    if refresh_types:
+        opener = build_opener(HTTPCookieProcessor(CookieJar()))
+        search_page = opener_text(opener, Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}))
+        fields = hidden_fields(search_page)
+        token_name, token_value = csrf_token(opener)
+        fields[token_name] = token_value
+        action_url = form_action(search_page)
+        if "C" in refresh_types:
+            item["recentContributions"] = fetch_transactions(opener, action_url, fields, filer_id, "C")
+        if "E" in refresh_types:
+            item["recentExpenditures"] = fetch_transactions(opener, action_url, fields, filer_id, "E")
     item["dataError"] = None
     return item
 
@@ -379,7 +396,10 @@ def refresh() -> int:
     refreshed_by_id: dict[str, dict] = {}
 
     with ThreadPoolExecutor(max_workers=2) as pool:
-        futures = {pool.submit(fetch_candidate, candidate): candidate for candidate in source["candidates"]}
+        futures = {
+            pool.submit(fetch_candidate, candidate, previous_candidates.get(candidate["id"], {})): candidate
+            for candidate in source["candidates"]
+        }
         for future in as_completed(futures):
             original = futures[future]
             try:

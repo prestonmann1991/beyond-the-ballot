@@ -10,6 +10,7 @@ from backend.update_data import (
     parse_account_page,
     parse_transactions,
     retry_wait_seconds,
+    transaction_types_to_refresh,
 )
 
 
@@ -87,6 +88,22 @@ class OrestarParserTests(unittest.TestCase):
         self.assertEqual(retry_wait_seconds(forbidden, 0), 10)
         self.assertEqual(retry_wait_seconds(forbidden, 1), 30)
         self.assertEqual(retry_wait_seconds(too_many, 0), 45)
+
+    def test_transactions_refresh_only_when_changed_or_missing(self):
+        summary = {"contributionsYTD": 150, "expendituresYTD": 80}
+        complete = {
+            "contributionsYTD": 150,
+            "expendituresYTD": 80,
+            "recentContributions": [{"id": "1"}],
+            "recentExpenditures": [{"id": "2"}],
+        }
+        self.assertEqual(transaction_types_to_refresh(summary, complete), set())
+
+        changed = dict(complete, contributionsYTD=125)
+        self.assertEqual(transaction_types_to_refresh(summary, changed), {"C"})
+
+        missing = dict(complete, recentExpenditures=[])
+        self.assertEqual(transaction_types_to_refresh(summary, missing), {"E"})
 
 
 if __name__ == "__main__":
