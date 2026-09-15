@@ -14,7 +14,7 @@ from pathlib import Path
 import re
 import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urljoin
 from urllib.request import HTTPCookieProcessor, Request, build_opener, urlopen
 from zoneinfo import ZoneInfo
 
@@ -30,6 +30,7 @@ ORESTAR_ROOT = "https://secure.sos.state.or.us/orestar/"
 ACCOUNT_URL = ORESTAR_ROOT + "publicAccountSummary.do?filerId={}"
 TRANSACTION_SEARCH_URL = ORESTAR_ROOT + "gotoPublicTransactionSearch.do"
 TRANSACTION_RESULTS_URL = ORESTAR_ROOT + "gotoPublicTransactionSearchResults.do"
+CSRF_TOKEN_URL = ORESTAR_ROOT + "JavaScriptServlet"
 REGISTRATION_URL = "https://data.oregon.gov/resource/8h6y-5uec.json?$order=date%20DESC&$limit=5000"
 REGISTRATION_SOURCE_URL = "https://data.oregon.gov/Administrative/Voter-Registration-Data/8h6y-5uec"
 PACIFIC = ZoneInfo("America/Los_Angeles")
@@ -112,21 +113,38 @@ def parse_transactions(page: str) -> list[dict]:
     return transactions
 
 
-def csrf_token(page: str) -> str:
-    patterns = [
-        r'name=["\']OWASP_CSRFTOKEN["\'][^>]*value=["\']([^"\']+)',
-        r'OWASP_CSRFTOKEN=([^&"\']+)',
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, page, flags=re.I)
-        if match:
-            return html.unescape(match.group(1))
-    raise ValueError("ORESTAR transaction-search token was not found")
+def form_action(page: str) -> str:
+    match = re.search(
+        r'<form\b[^>]*name=["\']cneSearchForm["\'][^>]*action=["\']([^"\']+)',
+        page,
+        flags=re.I,
+    )
+    if not match:
+        raise ValueError("ORESTAR transaction-search form action was not found")
+    return urljoin(TRANSACTION_SEARCH_URL, html.unescape(match.group(1)))
+
+
+def csrf_token(opener) -> tuple[str, str]:
+    req = Request(
+        CSRF_TOKEN_URL,
+        data=b"",
+        headers={"User-Agent": USER_AGENT, "FETCH-CSRF-TOKEN": "1"},
+    )
+    with opener.open(req, timeout=60) as response:
+        pair = response.read().decode("utf-8", "replace").strip()
+    if ":" not in pair:
+        raise ValueError("ORESTAR transaction-search token was not returned")
+    name, value = pair.split(":", 1)
+    if not name or not value:
+        raise ValueError("ORESTAR transaction-search token was incomplete")
+    return name, value
 
 
 def hidden_fields(page: str) -> dict[str, str]:
     fields = {}
     for tag in re.findall(r"<input\b[^>]*>", page, flags=re.I):
+        if not re.search(r'type=["\']hidden["\']', tag, flags=re.I):
+            continue
         name = re.search(r'name=["\']([^"\']+)', tag, flags=re.I)
         value = re.search(r'value=["\']([^"\']*)', tag, flags=re.I)
         if name:
@@ -134,7 +152,13 @@ def hidden_fields(page: str) -> dict[str, str]:
     return fields
 
 
-def fetch_transactions(opener, base_fields: dict[str, str], filer_id: int, transaction_type: str) -> list[dict]:
+def fetch_transactions(
+    opener,
+    action_url: str,
+    base_fields: dict[str, str],
+    filer_id: int,
+    transaction_type: str,
+) -> list[dict]:
     type_name = "Contribution" if transaction_type == "C" else "Expenditure"
     fields = dict(base_fields)
     fields.update({
@@ -145,9 +169,13 @@ def fetch_transactions(opener, base_fields: dict[str, str], filer_id: int, trans
         "cneSearchTranTypeName": type_name,
     })
     req = Request(
-        TRANSACTION_RESULTS_URL,
+        action_url,
         data=urlencode(fields).encode(),
-        headers={"User-Agent": USER_AGENT, "Content-Type": "application/x-www-form-urlencoded"},
+        headers={
+            "User-Agent": USER_AGENT,
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Referer": TRANSACTION_SEARCH_URL,
+        },
     )
     with opener.open(req, timeout=60) as response:
         return parse_transactions(response.read().decode("utf-8", "replace"))
@@ -172,10 +200,12 @@ def fetch_candidate(candidate: dict) -> dict:
     with opener.open(Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}), timeout=60) as search:
         search_page = search.read().decode("utf-8", "replace")
     fields = hidden_fields(search_page)
-    fields["OWASP_CSRFTOKEN"] = fields.get("OWASP_CSRFTOKEN") or csrf_token(search_page)
+    token_name, token_value = csrf_token(opener)
+    fields[token_name] = token_value
+    action_url = form_action(search_page)
     item.update(summary)
-    item["recentContributions"] = fetch_transactions(opener, fields, filer_id, "C")
-    item["recentExpenditures"] = fetch_transactions(opener, fields, filer_id, "E")
+    item["recentContributions"] = fetch_transactions(opener, action_url, fields, filer_id, "C")
+    item["recentExpenditures"] = fetch_transactions(opener, action_url, fields, filer_id, "E")
     item["dataError"] = None
     return item
 
