@@ -1,8 +1,8 @@
-# Beyond the Ballot — App Store Listing
+# State of the Races — App Store Listing
 
 ## App information
 
-- **Name:** Beyond the Ballot
+- **Name:** State of the Races
 - **Subtitle:** Oregon Campaign Finance
 - **Primary category:** Reference
 - **Secondary category:** News
@@ -14,11 +14,11 @@
 
 ## Promotional text
 
-Follow campaign-finance activity in Oregon's most closely watched 2026 elections, with figures refreshed daily from ORESTAR.
+Follow campaign-finance activity in selected 2026 Oregon elections, with figures refreshed every four hours from ORESTAR.
 
 ## Description
 
-Beyond the Ballot provides a clear, convenient look at campaign-finance activity in selected 2026 Oregon elections.
+State of the Races provides a clear, convenient look at campaign-finance activity in selected 2026 Oregon elections.
 
 Track Oregon's race for governor and key Oregon House and Senate districts in one place. Each candidate listing includes:
 
@@ -29,11 +29,11 @@ Track Oregon's race for governor and key Oregon House and Senate districts in on
 - Year-to-date expenditures
 - ORESTAR balance/deficit
 
-Figures are refreshed daily from public Oregon Secretary of State ORESTAR records. Search by candidate or race, filter between governor, House, and Senate contests, and pull down to request the latest available data.
+Figures are refreshed every four hours from public Oregon Secretary of State ORESTAR records. Search by candidate or race, filter between governor, House, and Senate contests, and pull down to request the latest available data.
 
 The ORESTAR balance/deficit field is displayed as reported and is not necessarily the same as cash on hand.
 
-Beyond the Ballot is an independent informational app. It is not affiliated with, endorsed by, or operated by the Oregon Secretary of State, any candidate, or any campaign.
+State of the Races is an independent informational app. It is not affiliated with, endorsed by, or operated by the Oregon Secretary of State, any candidate, or any campaign.
 
 ## Keywords
 
@@ -45,7 +45,7 @@ Select **No, we do not collect data from this app**. The app has no accounts, ad
 
 ## App Review notes
 
-Beyond the Ballot displays public campaign-finance information derived from the Oregon Secretary of State's ORESTAR system. No account, sign-in, special access, or demo credentials are required. The app does not collect user data. Candidate and ORESTAR links open publicly accessible external websites. Financial figures are refreshed daily through the app's public data feed.
+State of the Races displays public campaign-finance information derived from the Oregon Secretary of State's ORESTAR system. No account, sign-in, special access, or demo credentials are required. The app does not collect user data. Candidate and ORESTAR links open publicly accessible external websites. Financial figures are refreshed every four hours through the app's public data feed.
 
 ## Suggested screenshots
 
@@ -53,4 +53,3 @@ Beyond the Ballot displays public campaign-finance information derived from the 
 2. **Follow Campaign Finance** — candidate card showing contributions, expenditures, and balance/deficit.
 3. **Official Sources, One Tap Away** — candidate card showing Campaign and ORESTAR links.
 4. **Find the Race That Matters** — search field and Governor/House/Senate filter.
-

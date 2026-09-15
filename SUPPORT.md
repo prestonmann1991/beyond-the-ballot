@@ -1,6 +1,6 @@
-# Beyond the Ballot Support
+# State of the Races Support
 
-Beyond the Ballot provides campaign-finance information for selected 2026 Oregon elections.
+State of the Races provides campaign-finance information for selected 2026 Oregon elections.
 
 ## Getting help
 
@@ -13,7 +13,6 @@ Beyond the Ballot provides campaign-finance information for selected 2026 Oregon
 
 Campaign-finance figures are derived from public records in the Oregon Secretary of State's ORESTAR system. The ORESTAR `Balance Deficit` field is displayed as reported and is not necessarily the same as cash on hand.
 
-Beyond the Ballot is an independent informational app. It is not affiliated with, endorsed by, or operated by the Oregon Secretary of State, any candidate, or any campaign.
+State of the Races is an independent informational app. It is not affiliated with, endorsed by, or operated by the Oregon Secretary of State, any candidate, or any campaign.
 
 [Read the privacy policy](PRIVACY.md)
-

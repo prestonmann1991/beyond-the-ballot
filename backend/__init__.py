@@ -1,1 +1,1 @@
-"""Beyond the Ballot data updater package."""
+"""State of the Races data updater package."""

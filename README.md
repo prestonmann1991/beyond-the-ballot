@@ -1,6 +1,6 @@
-# Beyond the Ballot
+# State of the Races
 
-A native SwiftUI iPhone app for tracking selected 2026 Oregon races and daily
+A native SwiftUI iPhone app for tracking selected 2026 Oregon races and four-hour
 ORESTAR campaign-finance totals.
 
 ## What is included

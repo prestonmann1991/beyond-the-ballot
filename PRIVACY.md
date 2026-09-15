@@ -1,12 +1,12 @@
-# Beyond the Ballot Privacy Policy
+# State of the Races Privacy Policy
 
 **Effective date: September 15, 2026**
 
-Beyond the Ballot is an informational iPhone app operated by Preston Mann.
+State of the Races is an informational iPhone app operated by Preston Mann.
 
 ## Information we collect
 
-Beyond the Ballot does not collect, store, sell, share, or use personal information. The app does not require an account and does not include advertising, analytics, tracking, or in-app purchases.
+State of the Races does not collect, store, sell, share, or use personal information. The app does not require an account and does not include advertising, analytics, tracking, or in-app purchases.
 
 ## Public data and external links
 
@@ -22,5 +22,4 @@ This policy may be updated if the app's features or data practices change. The e
 
 ## Contact
 
-Questions about this policy or the app can be submitted through the [Beyond the Ballot support page](SUPPORT.md).
-
+Questions about this policy or the app can be submitted through the [State of the Races support page](SUPPORT.md).

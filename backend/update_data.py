@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh Beyond the Ballot's public Oregon election data feed."""
+"""Refresh State of the Races' public Oregon election data feed."""
 
 from __future__ import annotations
 

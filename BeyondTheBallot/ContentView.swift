@@ -71,10 +71,10 @@ struct ContentView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("BEYOND THE BALLOT")
+            Text("STATE OF THE RACES")
                 .font(.system(size: 30, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
-            Text("Oregon election money, made clear.")
+            Text("ORESTAR updates pulled every four hours.")
                 .font(.subheadline)
                 .foregroundStyle(.white.opacity(0.82))
             if let date = store.feed?.updatedAt {
@@ -86,12 +86,6 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(22)
         .background(Color.brandNavy, in: RoundedRectangle(cornerRadius: 24))
-        .overlay(alignment: .topTrailing) {
-            Image(systemName: "checkmark.square.fill")
-                .font(.system(size: 28, weight: .bold))
-                .foregroundStyle(Color.brandOrange)
-                .padding(20)
-        }
     }
 
     private var chamberPicker: some View {
@@ -106,7 +100,7 @@ struct ContentView: View {
             Text("Campaign-finance data: Oregon Secretary of State ORESTAR")
             Text("Registration data: Oregon Elections Division; active voters only.")
             Text("Balance/deficit is ORESTAR's reported field and is not necessarily cash on hand.")
-            Text("Beyond the Ballot is independent and is not affiliated with the state or any campaign.")
+            Text("State of the Races is independent and is not affiliated with the state or any campaign.")
         }
         .font(.caption2)
         .multilineTextAlignment(.center)
