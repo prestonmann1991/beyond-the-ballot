@@ -7,7 +7,7 @@
 - **Primary category:** Reference
 - **Secondary category:** News
 - **Price:** Free
-- **Version:** 1.2
+- **Version:** 1.0
 - **Copyright:** 2026 Preston Mann
 - **Privacy policy URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/PRIVACY.md
 - **Support URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/SUPPORT.md
