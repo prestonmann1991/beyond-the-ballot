@@ -226,7 +226,7 @@ private struct HistoricalResultsView: View {
                 ForEach(elections) { election in
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
-                            Text("\(election.year) \(election.title)")
+                            Text(verbatim: "\(election.year) \(election.title)")
                                 .font(.caption.weight(.bold))
                                 .foregroundStyle(.white.opacity(0.82))
                             Spacer()
