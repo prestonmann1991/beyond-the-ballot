@@ -253,7 +253,9 @@ private struct HistoricalResultsView: View {
                                 Text("\(result.percentage.formatted(.number.precision(.fractionLength(1))))%")
                                     .font(.caption.weight(.bold).monospacedDigit())
                                     .foregroundStyle(.white)
-                                    .frame(width: 48, alignment: .trailing)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.8)
+                                    .frame(width: 58, alignment: .trailing)
                             }
                         }
                     }
