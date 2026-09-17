@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T06:34:20-07:00",
+  "updatedAt": "2026-09-17T12:48:03-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -4899,9 +4899,9 @@
       "party": "Republican",
       "race": "Oregon Governor",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19050",
-      "contributionsYTD": 8528918.63,
+      "contributionsYTD": 8569613.63,
       "expendituresYTD": 6876258.73,
-      "balanceDeficit": 2631926.01,
+      "balanceDeficit": 2672621.01,
       "recentContributions": [
         {
           "id": "5813115",
@@ -4936,7 +4936,7 @@
           "date": "2026-09-16",
           "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
-          "amount": 3135.78
+          "amount": 4280.78
         },
         {
           "id": "5813132",
@@ -6012,10 +6012,17 @@
       "race": "House District 5",
       "filerID": 17668,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17668",
-      "contributionsYTD": 24425.0,
-      "expendituresYTD": 44919.01,
-      "balanceDeficit": 46230.1,
+      "contributionsYTD": 25425.0,
+      "expendituresYTD": 45113.16,
+      "balanceDeficit": 47035.95,
       "recentContributions": [
+        {
+          "id": "5812758",
+          "date": "2026-09-16",
+          "name": "PacifiCorp Pacific Power/Rocky Mtn Power",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
         {
           "id": "5801961",
           "date": "2026-09-10",
@@ -6078,16 +6085,23 @@
           "name": "Union Pacific Railroad",
           "category": "Cash Contribution",
           "amount": 500.0
-        },
-        {
-          "id": "5661626",
-          "date": "2026-05-11",
-          "name": "Oregon BankPAC",
-          "category": "Cash Contribution",
-          "amount": 1000.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5812556",
+          "date": "2026-09-16",
+          "name": "Paige Prewett",
+          "category": "Cash Expenditure",
+          "amount": 61.6
+        },
+        {
+          "id": "5812754",
+          "date": "2026-09-16",
+          "name": "Paige Prewett",
+          "category": "Cash Expenditure",
+          "amount": 132.55
+        },
         {
           "id": "5812547",
           "date": "2026-09-15",
@@ -6103,11 +6117,32 @@
           "amount": 3.95
         },
         {
+          "id": "5813419",
+          "date": "2026-09-09",
+          "name": "Miscellaneous Personal Expenditures $100 and under",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 6.0
+        },
+        {
           "id": "5796871",
           "date": "2026-09-08",
           "name": "Pam Marsh",
           "category": "Cash Expenditure",
           "amount": 29.4
+        },
+        {
+          "id": "5812561",
+          "date": "2026-09-08",
+          "name": "Best Western Mill Creek Inn",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 124.3
+        },
+        {
+          "id": "5813418",
+          "date": "2026-09-08",
+          "name": "Miscellaneous Personal Expenditures $100 and under",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 2.25
         },
         {
           "id": "5800915",
@@ -6119,41 +6154,6 @@
         {
           "id": "5787346",
           "date": "2026-09-01",
-          "name": "Paige Prewett",
-          "category": "Cash Expenditure",
-          "amount": 200.0
-        },
-        {
-          "id": "5787352",
-          "date": "2026-09-01",
-          "name": "Meghan McGuire",
-          "category": "Cash Expenditure",
-          "amount": 100.0
-        },
-        {
-          "id": "5780609",
-          "date": "2026-08-28",
-          "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 5000.0
-        },
-        {
-          "id": "5776240",
-          "date": "2026-08-26",
-          "name": "Ronald L Adams",
-          "category": "Cash Expenditure",
-          "amount": 100.0
-        },
-        {
-          "id": "5767354",
-          "date": "2026-08-15",
-          "name": "Oregon Secretary of State, Elections Division",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "5747817",
-          "date": "2026-08-01",
           "name": "Paige Prewett",
           "category": "Cash Expenditure",
           "amount": 200.0
@@ -6844,7 +6844,7 @@
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25141",
       "contributionsYTD": 907.24,
       "expendituresYTD": 303.0,
-      "balanceDeficit": 97.0,
+      "balanceDeficit": -653.0,
       "recentContributions": [
         {
           "id": "5790741",
@@ -9591,10 +9591,31 @@
       "race": "House District 20",
       "filerID": 25068,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25068",
-      "contributionsYTD": 925.0,
-      "expendituresYTD": 365.14,
-      "balanceDeficit": -793.55,
+      "contributionsYTD": 2075.0,
+      "expendituresYTD": 1218.6,
+      "balanceDeficit": -497.01,
       "recentContributions": [
+        {
+          "id": "5813491",
+          "date": "2026-09-10",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0
+        },
+        {
+          "id": "5813476",
+          "date": "2026-08-28",
+          "name": "Smart TD PAC",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
+        {
+          "id": "5813469",
+          "date": "2026-08-18",
+          "name": "Andrew Fudge",
+          "category": "Cash Contribution",
+          "amount": 50.0
+        },
         {
           "id": "5765024",
           "date": "2026-08-12",
@@ -9632,6 +9653,27 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813490",
+          "date": "2026-09-10",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 4.3
+        },
+        {
+          "id": "5813480",
+          "date": "2026-08-31",
+          "name": "VistaPrint",
+          "category": "Cash Expenditure",
+          "amount": 846.0
+        },
+        {
+          "id": "5813488",
+          "date": "2026-08-18",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 3.16
+        },
         {
           "id": "5778440",
           "date": "2026-08-06",
@@ -9680,27 +9722,6 @@
           "name": "Miscellaneous Cash Expenditures $100 and under",
           "category": "Cash Expenditure",
           "amount": 46.84
-        },
-        {
-          "id": "5737731",
-          "date": "2026-07-21",
-          "name": "Financial Peace Bookkeeping",
-          "category": "Cash Expenditure",
-          "amount": 150.0
-        },
-        {
-          "id": "5737730",
-          "date": "2026-07-17",
-          "name": "Super Vinyl Signs & Banners",
-          "category": "Cash Expenditure",
-          "amount": 160.0
-        },
-        {
-          "id": "5707210",
-          "date": "2026-07-01",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 8.3
         }
       ],
       "dataError": null,
@@ -10196,10 +10217,17 @@
       "party": "Republican / Libertarian",
       "race": "House District 22",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24273",
-      "contributionsYTD": 187671.58,
-      "expendituresYTD": 173133.11,
+      "contributionsYTD": 230134.58,
+      "expendituresYTD": 215596.11,
       "balanceDeficit": 2029.85,
       "recentContributions": [
+        {
+          "id": "5813453",
+          "date": "2026-09-14",
+          "name": "Evergreen PAC (23238)",
+          "category": "In-Kind Contribution",
+          "amount": 42463.0
+        },
         {
           "id": "5806768",
           "date": "2026-09-11",
@@ -10262,13 +10290,6 @@
           "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
           "amount": 70.0
-        },
-        {
-          "id": "5766160",
-          "date": "2026-08-04",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 10.0
         }
       ],
       "recentExpenditures": [
@@ -10690,10 +10711,45 @@
       "race": "House District 25",
       "filerID": 19763,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19763",
-      "contributionsYTD": 347505.06,
-      "expendituresYTD": 363497.85,
-      "balanceDeficit": 101054.31,
+      "contributionsYTD": 351704.54,
+      "expendituresYTD": 374380.91,
+      "balanceDeficit": 94370.73,
       "recentContributions": [
+        {
+          "id": "5808186",
+          "date": "2026-09-14",
+          "name": "US Oncology Corporate, Inc",
+          "category": "Cash Contribution",
+          "amount": 500.0
+        },
+        {
+          "id": "5809583",
+          "date": "2026-09-14",
+          "name": "Dentists of Oregon PAC (54)",
+          "category": "Cash Contribution",
+          "amount": 2500.0
+        },
+        {
+          "id": "5809591",
+          "date": "2026-09-14",
+          "name": "Alexander Denes",
+          "category": "Cash Contribution",
+          "amount": 250.0
+        },
+        {
+          "id": "5809592",
+          "date": "2026-09-14",
+          "name": "Jeffrey Bluhm",
+          "category": "Cash Contribution",
+          "amount": 500.0
+        },
+        {
+          "id": "5813339",
+          "date": "2026-09-14",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0
+        },
         {
           "id": "5801023",
           "date": "2026-09-09",
@@ -10728,44 +10784,37 @@
           "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
           "amount": 50.0
-        },
-        {
-          "id": "5800886",
-          "date": "2026-09-08",
-          "name": "Foresight Ophthalmology Political Action Committee (66)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5800887",
-          "date": "2026-09-08",
-          "name": "Foresight Ophthalmology Political Action Committee (66)",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5800888",
-          "date": "2026-09-08",
-          "name": "Genentech USA",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5800889",
-          "date": "2026-09-08",
-          "name": "OregonBioPAC (19555)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5800890",
-          "date": "2026-09-08",
-          "name": "Oregon Society of Anesthesiologists PAC (16409)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813338",
+          "date": "2026-09-16",
+          "name": "Just Compassion",
+          "category": "Cash Expenditure",
+          "amount": 500.0
+        },
+        {
+          "id": "5809596",
+          "date": "2026-09-14",
+          "name": "ActBlue",
+          "category": "Cash Expenditure",
+          "amount": 33.58
+        },
+        {
+          "id": "5808184",
+          "date": "2026-09-10",
+          "name": "Friends of Hank Sanders (24613)",
+          "category": "Cash Expenditure",
+          "amount": 5000.0
+        },
+        {
+          "id": "5808185",
+          "date": "2026-09-10",
+          "name": "Committee to Elect Sue Rieke Smith (24397)",
+          "category": "Cash Expenditure",
+          "amount": 5000.0
+        },
         {
           "id": "5801047",
           "date": "2026-09-09",
@@ -10807,34 +10856,6 @@
           "name": "ActBlue",
           "category": "Cash Expenditure",
           "amount": 3.99
-        },
-        {
-          "id": "5764849",
-          "date": "2026-08-06",
-          "name": "The Multnomah Whiskey Library",
-          "category": "Cash Expenditure",
-          "amount": 586.78
-        },
-        {
-          "id": "5752608",
-          "date": "2026-08-04",
-          "name": "Munch",
-          "category": "Cash Expenditure",
-          "amount": 117.3
-        },
-        {
-          "id": "5747919",
-          "date": "2026-07-31",
-          "name": "Cardinal Services, Inc.",
-          "category": "Cash Expenditure",
-          "amount": 252.0
-        },
-        {
-          "id": "5751835",
-          "date": "2026-07-30",
-          "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 100000.0
         }
       ],
       "dataError": null,
@@ -11787,10 +11808,24 @@
       "race": "House District 28",
       "filerID": 24878,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24878",
-      "contributionsYTD": 23525.0,
-      "expendituresYTD": 16648.95,
-      "balanceDeficit": -13168.95,
+      "contributionsYTD": 30525.0,
+      "expendituresYTD": 23773.75,
+      "balanceDeficit": -19293.75,
       "recentContributions": [
+        {
+          "id": "5813447",
+          "date": "2026-09-16",
+          "name": "Cindy Sawyer",
+          "category": "In-Kind Contribution",
+          "amount": 1000.0
+        },
+        {
+          "id": "5813434",
+          "date": "2026-09-08",
+          "name": "Randall Fryer",
+          "category": "Loan Received (Non-Exempt)",
+          "amount": 6000.0
+        },
         {
           "id": "5774695",
           "date": "2026-08-21",
@@ -11846,16 +11881,44 @@
           "name": "Randall Fryer",
           "category": "Cash Contribution",
           "amount": 600.0
-        },
-        {
-          "id": "5707330",
-          "date": "2026-03-25",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813446",
+          "date": "2026-09-14",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 8.0
+        },
+        {
+          "id": "5813435",
+          "date": "2026-09-08",
+          "name": "Operation 1776",
+          "category": "Cash Expenditure",
+          "amount": 3000.0
+        },
+        {
+          "id": "5813443",
+          "date": "2026-09-08",
+          "name": "Cindy Fincher",
+          "category": "Cash Expenditure",
+          "amount": 3000.0
+        },
+        {
+          "id": "5813432",
+          "date": "2026-09-01",
+          "name": "Operation 1776",
+          "category": "Cash Expenditure",
+          "amount": 100.0
+        },
+        {
+          "id": "5813445",
+          "date": "2026-09-01",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 16.8
+        },
         {
           "id": "5774694",
           "date": "2026-08-23",
@@ -11890,41 +11953,6 @@
           "name": "FedEx",
           "category": "Cash Expenditure",
           "amount": 198.34
-        },
-        {
-          "id": "5752174",
-          "date": "2026-08-04",
-          "name": "FedEx",
-          "category": "Cash Expenditure",
-          "amount": 30.0
-        },
-        {
-          "id": "5752173",
-          "date": "2026-08-03",
-          "name": "Operation 1776",
-          "category": "Cash Expenditure",
-          "amount": 4000.0
-        },
-        {
-          "id": "5754995",
-          "date": "2026-08-03",
-          "name": "FedEx",
-          "category": "Cash Expenditure",
-          "amount": 30.0
-        },
-        {
-          "id": "5752166",
-          "date": "2026-08-01",
-          "name": "Operation 1776",
-          "category": "Cash Expenditure",
-          "amount": 10.0
-        },
-        {
-          "id": "5752176",
-          "date": "2026-08-01",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 5.41
         }
       ],
       "dataError": null,
@@ -12849,10 +12877,31 @@
       "party": "Republican",
       "race": "House District 32",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24510",
-      "contributionsYTD": 327807.8,
-      "expendituresYTD": 332623.53,
-      "balanceDeficit": 214.49,
+      "contributionsYTD": 335932.8,
+      "expendituresYTD": 332629.13,
+      "balanceDeficit": 8333.89,
       "recentContributions": [
+        {
+          "id": "5813348",
+          "date": "2026-09-16",
+          "name": "Koch GA Inc.",
+          "category": "Cash Contribution",
+          "amount": 3000.0
+        },
+        {
+          "id": "5813349",
+          "date": "2026-09-16",
+          "name": "Amanda for Oregon (24855)",
+          "category": "Cash Contribution",
+          "amount": 5000.0
+        },
+        {
+          "id": "5813353",
+          "date": "2026-09-16",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 125.0
+        },
         {
           "id": "5811428",
           "date": "2026-09-15",
@@ -12901,30 +12950,16 @@
           "name": "Oregon Nurse Anesthetist PAC (3099)",
           "category": "Cash Contribution",
           "amount": 1000.0
-        },
-        {
-          "id": "5811421",
-          "date": "2026-09-14",
-          "name": "Oregon Forest Industries Council Political Action Committee (154)",
-          "category": "Cash Contribution",
-          "amount": 3000.0
-        },
-        {
-          "id": "5811422",
-          "date": "2026-09-14",
-          "name": "Oregon Nurseries Political Action Committee (175)",
-          "category": "Cash Contribution",
-          "amount": 5000.0
-        },
-        {
-          "id": "5811423",
-          "date": "2026-09-14",
-          "name": "Bring Balance to Salem PAC (21717)",
-          "category": "Cash Contribution",
-          "amount": 10000.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813352",
+          "date": "2026-09-16",
+          "name": "Anedot, Inc",
+          "category": "Cash Expenditure",
+          "amount": 5.6
+        },
         {
           "id": "5811426",
           "date": "2026-09-15",
@@ -12987,13 +13022,6 @@
           "name": "Anedot, Inc",
           "category": "Cash Expenditure",
           "amount": 9.6
-        },
-        {
-          "id": "5800352",
-          "date": "2026-09-07",
-          "name": "Anedot, Inc",
-          "category": "Cash Expenditure",
-          "amount": 1.1
         }
       ],
       "dataError": null,
@@ -17435,10 +17463,17 @@
       "party": "Republican",
       "race": "House District 52",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24791",
-      "contributionsYTD": 430375.1,
-      "expendituresYTD": 328075.97,
-      "balanceDeficit": 102299.13,
+      "contributionsYTD": 431375.1,
+      "expendituresYTD": 328185.95,
+      "balanceDeficit": 103189.15,
       "recentContributions": [
+        {
+          "id": "5813343",
+          "date": "2026-09-16",
+          "name": "Werner for Oregon (17892)",
+          "category": "Cash Contribution",
+          "amount": 1000.0
+        },
         {
           "id": "5811215",
           "date": "2026-09-15",
@@ -17501,22 +17536,29 @@
           "name": "Oregon Bankers PAC (125)",
           "category": "Cash Contribution",
           "amount": 2500.0
-        },
-        {
-          "id": "5809711",
-          "date": "2026-09-14",
-          "name": "AG-PAC (3)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813344",
+          "date": "2026-09-16",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 27.98
+        },
         {
           "id": "5811217",
           "date": "2026-09-15",
           "name": "Noble Consulting LLC",
           "category": "Cash Expenditure",
           "amount": 3315.0
+        },
+        {
+          "id": "5813341",
+          "date": "2026-09-15",
+          "name": "US Postal Service",
+          "category": "Cash Expenditure",
+          "amount": 82.0
         },
         {
           "id": "5809438",
@@ -17566,20 +17608,6 @@
           "name": "Lori Piercy",
           "category": "Cash Expenditure",
           "amount": 571.5
-        },
-        {
-          "id": "5795021",
-          "date": "2026-09-04",
-          "name": "Anedot, Inc.",
-          "category": "Cash Expenditure",
-          "amount": 21.6
-        },
-        {
-          "id": "5788348",
-          "date": "2026-09-02",
-          "name": "Anedot, Inc.",
-          "category": "Cash Expenditure",
-          "amount": 80.3
         }
       ],
       "dataError": null,
@@ -18855,8 +18883,8 @@
       "filerID": 20022,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20022",
       "contributionsYTD": 62675.27,
-      "expendituresYTD": 54414.84,
-      "balanceDeficit": 47408.85,
+      "expendituresYTD": 59414.84,
+      "balanceDeficit": 42408.85,
       "recentContributions": [
         {
           "id": "5812627",
@@ -18931,6 +18959,13 @@
       ],
       "recentExpenditures": [
         {
+          "id": "5813377",
+          "date": "2026-09-17",
+          "name": "Evergreen PAC (23238)",
+          "category": "Cash Expenditure",
+          "amount": 5000.0
+        },
+        {
           "id": "5804354",
           "date": "2026-09-11",
           "name": "Oregon Neighborhood Store Association Political Action Committee (3428)",
@@ -18992,13 +19027,6 @@
           "name": "Crook County 4H",
           "category": "Cash Expenditure",
           "amount": 500.0
-        },
-        {
-          "id": "5764818",
-          "date": "2026-08-12",
-          "name": "USPS",
-          "category": "Cash Expenditure",
-          "amount": 410.0
         }
       ],
       "dataError": null,
@@ -19508,10 +19536,17 @@
       "party": "Republican / Libertarian",
       "race": "Senate District 3",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24485",
-      "contributionsYTD": 839720.51,
-      "expendituresYTD": 886394.78,
-      "balanceDeficit": 46876.04,
+      "contributionsYTD": 839772.56,
+      "expendituresYTD": 886550.43,
+      "balanceDeficit": 46772.44,
       "recentContributions": [
+        {
+          "id": "5813449",
+          "date": "2026-09-17",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 52.05
+        },
         {
           "id": "5809703",
           "date": "2026-09-15",
@@ -19574,16 +19609,23 @@
           "name": "Lucius C Martin",
           "category": "Cash Contribution",
           "amount": 100.0
-        },
-        {
-          "id": "5796866",
-          "date": "2026-09-08",
-          "name": "William Little",
-          "category": "Cash Contribution",
-          "amount": 1000.0
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5813436",
+          "date": "2026-09-17",
+          "name": "Charm Thai Kitchen",
+          "category": "Cash Expenditure",
+          "amount": 153.6
+        },
+        {
+          "id": "5813450",
+          "date": "2026-09-17",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 2.05
+        },
         {
           "id": "5809700",
           "date": "2026-09-15",
@@ -19639,20 +19681,6 @@
           "name": "WinRed",
           "category": "Cash Expenditure",
           "amount": 1.44
-        },
-        {
-          "id": "5801075",
-          "date": "2026-09-09",
-          "name": "Debra K Royal",
-          "category": "Cash Expenditure",
-          "amount": 6000.0
-        },
-        {
-          "id": "5796867",
-          "date": "2026-09-08",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 39.4
         }
       ],
       "dataError": null,
