@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T06:02:32-07:00",
+  "updatedAt": "2026-09-18T13:13:34-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -4886,7 +4886,10 @@
           "amount": 19.99
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -5046,7 +5049,10 @@
           "amount": 13.53
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -5205,7 +5211,10 @@
           "amount": 62.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -5364,7 +5373,10 @@
           "amount": 2.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -5377,150 +5389,272 @@
       "filerID": 21437,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21437",
       "contributionsYTD": 86727.5,
-      "expendituresYTD": 79672.38,
-      "balanceDeficit": 57477.15,
+      "expendituresYTD": 79756.38,
+      "balanceDeficit": 57393.15,
       "recentContributions": [
         {
           "id": "5811242",
           "date": "2026-09-15",
           "name": "Nike Inc And Affiliates",
           "category": "Cash Contribution",
-          "amount": 1000.0
+          "amount": 1000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T13:50:10"
         },
         {
           "id": "5804248",
           "date": "2026-09-09",
           "name": "Court Boice for Oregon (22133)",
           "category": "Cash Contribution",
-          "amount": 362.5
-        },
-        {
-          "id": "5787121",
-          "date": "2026-08-31",
-          "name": "Kalshi, Inc.",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5776201",
-          "date": "2026-08-25",
-          "name": "National Federation of Independent Business Oregon Political Action Committee (101)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5776203",
-          "date": "2026-08-25",
-          "name": "Anheuser Busch",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5776204",
-          "date": "2026-08-25",
-          "name": "RAI Services Company",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5776205",
-          "date": "2026-08-25",
-          "name": "Koch Industries, Inc.",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5769279",
-          "date": "2026-08-19",
-          "name": "Oregon Council of NECA Chapters (135)",
-          "category": "Cash Contribution",
-          "amount": 2000.0
-        },
-        {
-          "id": "5769273",
-          "date": "2026-08-17",
-          "name": "American Chemistry Council",
-          "category": "Cash Contribution",
-          "amount": 2000.0
-        },
-        {
-          "id": "5770378",
-          "date": "2026-08-17",
-          "name": "Eric P Adams",
-          "category": "Cash Contribution",
-          "amount": 20000.0
+          "amount": 362.5,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T09:45:13"
         }
       ],
       "recentExpenditures": [
         {
-          "id": "5809687",
-          "date": "2026-09-15",
-          "name": "Evergreen PAC (23238)",
+          "id": "5814682",
+          "date": "2026-09-17",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
           "category": "Cash Expenditure",
-          "amount": 5000.0
-        },
-        {
-          "id": "5809688",
-          "date": "2026-09-15",
-          "name": "Friends of Chris Boice (16986)",
-          "category": "Cash Expenditure",
-          "amount": 1000.0
+          "amount": 84.0,
+          "filedDate": "2026-09-18",
+          "filedAt": "2026-09-18T07:39:44"
         },
         {
           "id": "5813746",
           "date": "2026-09-15",
           "name": "Douglas Fast Net",
           "category": "Cash Expenditure",
-          "amount": 91.81
+          "amount": 91.81,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T13:51:44"
+        },
+        {
+          "id": "5809688",
+          "date": "2026-09-15",
+          "name": "Friends of Chris Boice (16986)",
+          "category": "Cash Expenditure",
+          "amount": 1000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T09:00:25"
+        },
+        {
+          "id": "5809687",
+          "date": "2026-09-15",
+          "name": "Evergreen PAC (23238)",
+          "category": "Cash Expenditure",
+          "amount": 5000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T09:00:25"
         },
         {
           "id": "5807120",
           "date": "2026-09-12",
           "name": "Friends of David Brock Smith (15377)",
           "category": "Cash Expenditure",
-          "amount": 60.89
-        },
-        {
-          "id": "5804249",
-          "date": "2026-09-11",
-          "name": "Douglas County Republican Central Committee (307)",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "5806939",
-          "date": "2026-09-11",
-          "name": "City of Salem",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 25.68
-        },
-        {
-          "id": "5806940",
-          "date": "2026-09-11",
-          "name": "Northwest Natural Gas",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 9.76
-        },
-        {
-          "id": "5806941",
-          "date": "2026-09-11",
-          "name": "Friends of David Brock Smith (15377)",
-          "category": "Cash Expenditure",
-          "amount": 35.44
+          "amount": 60.89,
+          "filedDate": "2026-09-12",
+          "filedAt": "2026-09-12T11:29:28"
         },
         {
           "id": "5807119",
           "date": "2026-09-11",
           "name": "Portland General Electric",
           "category": "Personal Expenditure for Reimbursement",
-          "amount": 60.89
+          "amount": 60.89,
+          "filedDate": "2026-09-12",
+          "filedAt": "2026-09-12T11:29:28"
         },
         {
-          "id": "5803939",
-          "date": "2026-09-10",
+          "id": "5806941",
+          "date": "2026-09-11",
+          "name": "Friends of David Brock Smith (15377)",
+          "category": "Cash Expenditure",
+          "amount": 35.44,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5806940",
+          "date": "2026-09-11",
+          "name": "Northwest Natural Gas",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 9.76,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5806939",
+          "date": "2026-09-11",
+          "name": "City of Salem",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 25.68,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5804249",
+          "date": "2026-09-11",
+          "name": "Douglas County Republican Central Committee (307)",
+          "category": "Cash Expenditure",
+          "amount": 750.0,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T09:45:13"
+        }
+      ],
+      "reportedContributions7Days": [
+        {
+          "id": "5811242",
+          "date": "2026-09-15",
+          "name": "Nike Inc And Affiliates",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T13:50:10"
+        },
+        {
+          "id": "5804248",
+          "date": "2026-09-09",
+          "name": "Court Boice for Oregon (22133)",
+          "category": "Cash Contribution",
+          "amount": 362.5,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T09:45:13"
+        }
+      ],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5814682",
+          "date": "2026-09-17",
           "name": "Miscellaneous Cash Expenditures $100 and under",
           "category": "Cash Expenditure",
-          "amount": 31.89
+          "amount": 84.0,
+          "filedDate": "2026-09-18",
+          "filedAt": "2026-09-18T07:39:44"
+        },
+        {
+          "id": "5813746",
+          "date": "2026-09-15",
+          "name": "Douglas Fast Net",
+          "category": "Cash Expenditure",
+          "amount": 91.81,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T13:51:44"
+        },
+        {
+          "id": "5809688",
+          "date": "2026-09-15",
+          "name": "Friends of Chris Boice (16986)",
+          "category": "Cash Expenditure",
+          "amount": 1000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T09:00:25"
+        },
+        {
+          "id": "5809687",
+          "date": "2026-09-15",
+          "name": "Evergreen PAC (23238)",
+          "category": "Cash Expenditure",
+          "amount": 5000.0,
+          "filedDate": "2026-09-15",
+          "filedAt": "2026-09-15T09:00:25"
+        },
+        {
+          "id": "5807120",
+          "date": "2026-09-12",
+          "name": "Friends of David Brock Smith (15377)",
+          "category": "Cash Expenditure",
+          "amount": 60.89,
+          "filedDate": "2026-09-12",
+          "filedAt": "2026-09-12T11:29:28"
+        },
+        {
+          "id": "5807119",
+          "date": "2026-09-11",
+          "name": "Portland General Electric",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 60.89,
+          "filedDate": "2026-09-12",
+          "filedAt": "2026-09-12T11:29:28"
+        },
+        {
+          "id": "5806941",
+          "date": "2026-09-11",
+          "name": "Friends of David Brock Smith (15377)",
+          "category": "Cash Expenditure",
+          "amount": 35.44,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5806940",
+          "date": "2026-09-11",
+          "name": "Northwest Natural Gas",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 9.76,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5806939",
+          "date": "2026-09-11",
+          "name": "City of Salem",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 25.68,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T17:57:00"
+        },
+        {
+          "id": "5804249",
+          "date": "2026-09-11",
+          "name": "Douglas County Republican Central Committee (307)",
+          "category": "Cash Expenditure",
+          "amount": 750.0,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T09:45:13"
+        }
+      ],
+      "topContributorsSince2026": [
+        {
+          "name": "Eric P Adams",
+          "amount": 20000.0
+        },
+        {
+          "name": "Cow Creek Band of Umpqua Tribe of Indians",
+          "amount": 10000.0
+        },
+        {
+          "name": "Gary Crowe",
+          "amount": 10000.0
+        },
+        {
+          "name": "Douglas County Republican Central Committee (307)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Kalshi, Inc.",
+          "amount": 2500.0
+        },
+        {
+          "name": "Oregon REALTORS Political Action Committee 2 (24304)",
+          "amount": 2500.0
+        },
+        {
+          "name": "Rick Poland",
+          "amount": 2500.0
+        },
+        {
+          "name": "American Chemistry Council",
+          "amount": 2000.0
+        },
+        {
+          "name": "Heard Farms Inc.",
+          "amount": 2000.0
+        },
+        {
+          "name": "Oregon Council of NECA Chapters (135)",
+          "amount": 2000.0
         }
       ],
       "dataError": null,
@@ -5682,7 +5816,10 @@
           "amount": 16.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -5841,7 +5978,10 @@
           "amount": 81.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6000,7 +6140,10 @@
           "amount": 87.6
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6159,7 +6302,10 @@
           "amount": 200.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6175,6 +6321,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -6192,6 +6341,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -6351,7 +6503,10 @@
           "amount": 25.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6369,74 +6524,76 @@
       "balanceDeficit": 12726.22,
       "recentContributions": [
         {
-          "id": "5809493",
+          "id": "5809500",
           "date": "2026-09-14",
-          "name": "Judith Newman",
+          "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
-          "amount": 150.0
-        },
-        {
-          "id": "5809494",
-          "date": "2026-09-14",
-          "name": "James Babson",
-          "category": "Cash Contribution",
-          "amount": 300.0
+          "amount": 100.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
           "id": "5809498",
           "date": "2026-09-14",
           "name": "Doug Sabin",
           "category": "Cash Contribution",
-          "amount": 150.0
-        },
-        {
-          "id": "5809500",
-          "date": "2026-09-14",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        },
-        {
-          "id": "5809492",
-          "date": "2026-09-12",
-          "name": "Diane Kytta",
-          "category": "Cash Contribution",
-          "amount": 100.0
+          "amount": 150.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
           "id": "5809497",
           "date": "2026-09-12",
           "name": "Tom Bowerman",
           "category": "Cash Contribution",
-          "amount": 1000.0
+          "amount": 1000.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
           "id": "5809496",
           "date": "2026-09-09",
           "name": "Dawn Lesley",
           "category": "Cash Contribution",
-          "amount": 250.0
+          "amount": 250.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
-          "id": "5795732",
-          "date": "2026-09-06",
-          "name": "Mary Kamppi",
+          "id": "5809494",
+          "date": "2026-09-14",
+          "name": "James Babson",
           "category": "Cash Contribution",
-          "amount": 250.0
+          "amount": 300.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
-          "id": "5795733",
-          "date": "2026-09-06",
-          "name": "Margaret Hallock",
+          "id": "5809493",
+          "date": "2026-09-14",
+          "name": "Judith Newman",
           "category": "Cash Contribution",
-          "amount": 250.0
+          "amount": 150.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809492",
+          "date": "2026-09-12",
+          "name": "Diane Kytta",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
           "id": "5809490",
           "date": "2026-09-06",
           "name": "Kaarin Knduson",
           "category": "Cash Contribution",
-          "amount": 250.0
+          "amount": 250.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         }
       ],
       "recentExpenditures": [
@@ -6445,70 +6602,154 @@
           "date": "2026-09-13",
           "name": "ActBlue Technical Services",
           "category": "Cash Expenditure",
-          "amount": 3.95
+          "amount": 3.95,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
           "id": "5809489",
           "date": "2026-09-06",
           "name": "ActBlue Technical Services",
           "category": "Cash Expenditure",
-          "amount": 123.71
+          "amount": 123.71,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        }
+      ],
+      "reportedContributions7Days": [
+        {
+          "id": "5809500",
+          "date": "2026-09-14",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
         },
         {
-          "id": "5795735",
-          "date": "2026-09-04",
+          "id": "5809498",
+          "date": "2026-09-14",
+          "name": "Doug Sabin",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809497",
+          "date": "2026-09-12",
+          "name": "Tom Bowerman",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809496",
+          "date": "2026-09-09",
+          "name": "Dawn Lesley",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809494",
+          "date": "2026-09-14",
+          "name": "James Babson",
+          "category": "Cash Contribution",
+          "amount": 300.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809493",
+          "date": "2026-09-14",
+          "name": "Judith Newman",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809492",
+          "date": "2026-09-12",
+          "name": "Diane Kytta",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809490",
+          "date": "2026-09-06",
+          "name": "Kaarin Knduson",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        }
+      ],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5809491",
+          "date": "2026-09-13",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 3.95,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        },
+        {
+          "id": "5809489",
+          "date": "2026-09-06",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 123.71,
+          "filedDate": "2026-09-14",
+          "filedAt": "2026-09-14T20:44:13"
+        }
+      ],
+      "topContributorsSince2026": [
+        {
           "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 6023.12
+          "amount": 11266.41
         },
         {
-          "id": "5795738",
-          "date": "2026-09-03",
-          "name": "PCUN (Pineros y Campesinos Unidos del Noroeste)",
-          "category": "Cash Expenditure",
-          "amount": 259.0
+          "name": "Oregon Trial Lawyers Association PAC (39)",
+          "amount": 10000.0
         },
         {
-          "id": "5787752",
-          "date": "2026-09-01",
-          "name": "Community Labor Administrative Service",
-          "category": "Cash Expenditure",
-          "amount": 80.0
+          "name": "Friends of John Lively (15519)",
+          "amount": 5000.0
         },
         {
-          "id": "5795721",
-          "date": "2026-08-31",
-          "name": "ActBlue Technical Services",
-          "category": "Cash Expenditure",
-          "amount": 2.38
+          "name": "United Food & Commercial Workers Union Local 555",
+          "amount": 5000.0
         },
         {
-          "id": "5795734",
-          "date": "2026-08-27",
-          "name": "Polity Staffing",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 6023.12
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 3771.0
         },
         {
-          "id": "5787749",
-          "date": "2026-08-23",
-          "name": "Oregon Secretary of State - Elections Division",
-          "category": "Cash Expenditure",
-          "amount": 750.0
+          "name": "Oregon Nurses Political Action Committee (12986)",
+          "amount": 3500.0
         },
         {
-          "id": "5787751",
-          "date": "2026-08-23",
-          "name": "ActBlue Technical Services",
-          "category": "Cash Expenditure",
-          "amount": 26.68
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
+          "amount": 3500.0
         },
         {
-          "id": "5773775",
-          "date": "2026-08-19",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 83.05
+          "name": "Oregon Labor Federation, AFL-CIO",
+          "amount": 3267.43
+        },
+        {
+          "name": "AFSCME",
+          "amount": 2500.0
+        },
+        {
+          "name": "International Brotherhood of Electrical Workers Local 280 PAC (5214)",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -6671,7 +6912,10 @@
           "amount": 2400.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6830,7 +7074,10 @@
           "amount": 3.95
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6891,7 +7138,10 @@
           "amount": 29.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -6994,7 +7244,10 @@
           "amount": 17.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7153,7 +7406,10 @@
           "amount": 4.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7312,7 +7568,10 @@
           "amount": 750.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7471,7 +7730,10 @@
           "amount": 25.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7630,7 +7892,10 @@
           "amount": 135.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7646,6 +7911,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -7805,7 +8073,10 @@
           "amount": 32.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7964,7 +8235,10 @@
           "amount": 276.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -7979,92 +8253,14 @@
       "contributionsYTD": 207.3,
       "expendituresYTD": 402.66,
       "balanceDeficit": -351.36,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5726471",
-          "date": "2026-07-16",
           "name": "Jeff Lang",
-          "category": "Cash Contribution",
-          "amount": 104.1
-        },
-        {
-          "id": "5592354",
-          "date": "2026-02-16",
-          "name": "Jeff Lang",
-          "category": "Cash Contribution",
-          "amount": 103.2
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5726470",
-          "date": "2026-07-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5726469",
-          "date": "2026-06-25",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5658487",
-          "date": "2026-05-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5662152",
-          "date": "2026-04-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5662147",
-          "date": "2026-03-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5733439",
-          "date": "2026-03-06",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 38.66
-        },
-        {
-          "id": "5662141",
-          "date": "2026-02-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5733438",
-          "date": "2026-01-09",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5662110",
-          "date": "2025-12-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
-        },
-        {
-          "id": "5662109",
-          "date": "2025-11-09",
-          "name": "Campaign Partner (Data Ecology LLC)",
-          "category": "Cash Expenditure",
-          "amount": 52.0
+          "amount": 207.3
         }
       ],
       "dataError": null,
@@ -8226,7 +8422,10 @@
           "amount": 63.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -8243,6 +8442,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -8402,7 +8604,10 @@
           "amount": 88.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -8417,148 +8622,50 @@
       "contributionsYTD": 84104.64,
       "expendituresYTD": 167015.49,
       "balanceDeficit": 87774.43,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5801030",
-          "date": "2026-08-28",
-          "name": "Central Willamette Credit Union",
-          "category": "Cash Contribution",
-          "amount": 1750.0
-        },
-        {
-          "id": "5801033",
-          "date": "2026-08-28",
-          "name": "Pure Energy Group",
-          "category": "Cash Contribution",
-          "amount": 5000.0
-        },
-        {
-          "id": "5801034",
-          "date": "2026-08-28",
-          "name": "Oregon Health Care Association PAC (275)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5801036",
-          "date": "2026-08-28",
-          "name": "American Chemistry Council",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5801755",
-          "date": "2026-08-20",
-          "name": "Grocery Retail PAC (152)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5801758",
-          "date": "2026-08-20",
-          "name": "CalPortland Company",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5801759",
-          "date": "2026-08-20",
           "name": "Harbor Industrial Services Corporation",
-          "category": "Cash Contribution",
           "amount": 15000.0
         },
         {
-          "id": "5801760",
-          "date": "2026-08-20",
+          "name": "Knife River Corporation - Northwest",
+          "amount": 8125.31
+        },
+        {
+          "name": "George Packing Company Inc.",
+          "amount": 7500.0
+        },
+        {
+          "name": "The Pape Group, Inc.",
+          "amount": 5205.08
+        },
+        {
+          "name": "NUCA of Oregon & SW Washington PAC - Northwest Utility Contractors Association PAC (4747)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Pure Energy Group",
+          "amount": 5000.0
+        },
+        {
           "name": "Waymo",
-          "category": "Cash Contribution",
           "amount": 3000.0
         },
         {
-          "id": "5801766",
-          "date": "2026-08-15",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 10.0
+          "name": "Altria Client Services LLC",
+          "amount": 2500.0
         },
         {
-          "id": "5747730",
-          "date": "2026-07-23",
-          "name": "Knife River Corporation - Northwest",
-          "category": "Cash Contribution",
-          "amount": 3125.31
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5801754",
-          "date": "2026-09-08",
-          "name": "USAT Media Co",
-          "category": "Cash Expenditure",
-          "amount": 16.99
+          "name": "Matthew Conser",
+          "amount": 2500.0
         },
         {
-          "id": "5793874",
-          "date": "2026-09-04",
-          "name": "Pendleton Roundup",
-          "category": "Cash Expenditure",
-          "amount": 165.27
-        },
-        {
-          "id": "5793899",
-          "date": "2026-09-04",
-          "name": "Draper Digital Communications",
-          "category": "Cash Expenditure",
-          "amount": 2256.0
-        },
-        {
-          "id": "5801753",
-          "date": "2026-09-04",
-          "name": "Mid Valley Newspapers",
-          "category": "Cash Expenditure",
-          "amount": 34.99
-        },
-        {
-          "id": "5773856",
-          "date": "2026-08-23",
-          "name": "Shelly Boshart Davis",
-          "category": "Cash Expenditure",
-          "amount": 1947.0
-        },
-        {
-          "id": "5801767",
-          "date": "2026-08-20",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 12.0
-        },
-        {
-          "id": "5768707",
-          "date": "2026-08-18",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 0.39
-        },
-        {
-          "id": "5773854",
-          "date": "2026-08-18",
-          "name": "Anna Scharf",
-          "category": "Cash Expenditure",
-          "amount": 600.0
-        },
-        {
-          "id": "5801765",
-          "date": "2026-08-13",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 31.66
-        },
-        {
-          "id": "5801041",
-          "date": "2026-08-12",
-          "name": "Currents at the Riverhouse *",
-          "category": "Cash Expenditure",
-          "amount": 42.48
+          "name": "Oregon Health Care Association PAC (275)",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -8720,7 +8827,10 @@
           "amount": 14000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -8736,6 +8846,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -8895,7 +9008,10 @@
           "amount": 17.32
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9054,7 +9170,10 @@
           "amount": 642.47
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9070,6 +9189,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -9229,7 +9351,10 @@
           "amount": 10.92
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9388,7 +9513,10 @@
           "amount": 750.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9404,6 +9532,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -9563,7 +9694,10 @@
           "amount": 100.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9579,6 +9713,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -9724,7 +9861,10 @@
           "amount": 46.84
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -9884,7 +10024,10 @@
           "amount": 835.25
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10044,7 +10187,10 @@
           "amount": 350.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10060,148 +10206,50 @@
       "contributionsYTD": 114964.19,
       "expendituresYTD": 107203.29,
       "balanceDeficit": -21601.6,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5803689",
-          "date": "2026-09-10",
+          "name": "AFSCME Working Families Fund",
+          "amount": 25000.0
+        },
+        {
           "name": "Future PAC, House Builders (1524)",
-          "category": "In-Kind Contribution",
-          "amount": 7500.0
+          "amount": 21432.6
         },
         {
-          "id": "5803686",
-          "date": "2026-09-04",
-          "name": "Future PAC, House Builders (1524)",
-          "category": "In-Kind Contribution",
-          "amount": 1035.82
+          "name": "Citizen Action for Political Education (33)",
+          "amount": 10000.0
         },
         {
-          "id": "5794230",
-          "date": "2026-09-03",
-          "name": "Psychologists of Oregon Political Action Committee (4328)",
-          "category": "Cash Contribution",
-          "amount": 250.0
-        },
-        {
-          "id": "5794231",
-          "date": "2026-09-03",
-          "name": "Veterinarians Organized to Elect PAC (274)",
-          "category": "Cash Contribution",
-          "amount": 250.0
-        },
-        {
-          "id": "5794229",
-          "date": "2026-09-02",
-          "name": "Mark Wilk",
-          "category": "Cash Contribution",
-          "amount": 125.0
-        },
-        {
-          "id": "5794227",
-          "date": "2026-09-01",
           "name": "OEA-PAC (142)",
-          "category": "In-Kind Contribution",
+          "amount": 8243.64
+        },
+        {
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
           "amount": 7500.0
         },
         {
-          "id": "5794233",
-          "date": "2026-08-29",
           "name": "Building a Stronger Oregon (23285)",
-          "category": "Cash Contribution",
           "amount": 5000.0
         },
         {
-          "id": "5794228",
-          "date": "2026-08-28",
-          "name": "Citizen Action for Political Education (33)",
-          "category": "In-Kind Contribution",
-          "amount": 10000.0
+          "name": "Friends of Ben Bowman (19763)",
+          "amount": 5000.0
         },
         {
-          "id": "5794197",
-          "date": "2026-08-26",
-          "name": "Geovanny Tolentino",
-          "category": "Cash Contribution",
-          "amount": 50.0
+          "name": "United Food and Commercial Workers Union Local 555",
+          "amount": 5000.0
         },
         {
-          "id": "5794218",
-          "date": "2026-08-26",
-          "name": "Eric Mcguire",
-          "category": "Cash Contribution",
-          "amount": 101.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5803681",
-          "date": "2026-09-10",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 995.0
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 4998.01
         },
         {
-          "id": "5803678",
-          "date": "2026-09-09",
-          "name": "Empirical Media LLC",
-          "category": "Cash Expenditure",
-          "amount": 13725.0
-        },
-        {
-          "id": "5794161",
-          "date": "2026-09-04",
-          "name": "GBAO",
-          "category": "Cash Expenditure",
-          "amount": 10000.0
-        },
-        {
-          "id": "5803676",
-          "date": "2026-09-04",
-          "name": "Polity Staffing LLC",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 9617.22
-        },
-        {
-          "id": "5794158",
-          "date": "2026-09-02",
-          "name": "ActBlue",
-          "category": "Cash Expenditure",
-          "amount": 4.94
-        },
-        {
-          "id": "5794171",
-          "date": "2026-09-01",
-          "name": "Google",
-          "category": "Cash Expenditure",
-          "amount": 132.0
-        },
-        {
-          "id": "5794157",
-          "date": "2026-08-26",
-          "name": "ActBlue",
-          "category": "Cash Expenditure",
-          "amount": 50.67
-        },
-        {
-          "id": "5794169",
-          "date": "2026-08-26",
-          "name": "Oregon Secretary of State",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "5794154",
-          "date": "2026-08-19",
-          "name": "ActBlue",
-          "category": "Cash Expenditure",
-          "amount": 15.32
-        },
-        {
-          "id": "5775053",
-          "date": "2026-08-12",
-          "name": "ActBlue",
-          "category": "Cash Expenditure",
-          "amount": 69.83
+          "name": "Friends of Rob Nosse (16459)",
+          "amount": 3000.0
         }
       ],
       "dataError": null,
@@ -10364,7 +10412,10 @@
           "amount": 93.75
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10381,6 +10432,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -10540,7 +10594,10 @@
           "amount": 1000.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10699,7 +10756,10 @@
           "amount": 50000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10858,7 +10918,10 @@
           "amount": 3.99
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -10873,150 +10936,11 @@
       "contributionsYTD": 0.0,
       "expendituresYTD": 1863.28,
       "balanceDeficit": -14257.06,
-      "recentContributions": [
-        {
-          "id": "5008323",
-          "date": "2024-08-23",
-          "name": "Daniel H Harris",
-          "category": "Cash Contribution",
-          "amount": 200.0
-        },
-        {
-          "id": "4412687",
-          "date": "2022-11-04",
-          "name": "Washington County Republican Central Committee (349)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "4325968",
-          "date": "2022-10-03",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "4221584",
-          "date": "2022-08-03",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "3587618",
-          "date": "2020-09-21",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 143.77
-        },
-        {
-          "id": "3546044",
-          "date": "2020-08-21",
-          "name": "Robert H Niemeyer, III",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "3026384",
-          "date": "2018-10-15",
-          "name": "Robert H Niemeyer, III",
-          "category": "Cash Contribution",
-          "amount": 700.0
-        },
-        {
-          "id": "3032769",
-          "date": "2018-10-11",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        },
-        {
-          "id": "2985110",
-          "date": "2018-09-25",
-          "name": "Anita Matthews",
-          "category": "Cash Contribution",
-          "amount": 250.0
-        },
-        {
-          "id": "2985112",
-          "date": "2018-09-24",
-          "name": "Robert H Niemeyer, III",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5795842",
-          "date": "2026-09-07",
-          "name": "Meta Platforms Inc.",
-          "category": "Cash Expenditure",
-          "amount": 175.6
-        },
-        {
-          "id": "5770941",
-          "date": "2026-08-18",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 148.84
-        },
-        {
-          "id": "5759396",
-          "date": "2026-08-06",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 98.25
-        },
-        {
-          "id": "5734919",
-          "date": "2026-07-18",
-          "name": "Tigard Life",
-          "category": "Cash Expenditure",
-          "amount": 550.0
-        },
-        {
-          "id": "5539003",
-          "date": "2026-02-16",
-          "name": "Tigard Life",
-          "category": "Cash Expenditure",
-          "amount": 550.0
-        },
-        {
-          "id": "5530114",
-          "date": "2026-02-04",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 159.85
-        },
-        {
-          "id": "5530115",
-          "date": "2026-02-02",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 180.74
-        },
-        {
-          "id": "5040500",
-          "date": "2024-09-13",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 772.25
-        },
-        {
-          "id": "5040502",
-          "date": "2024-09-13",
-          "name": "Minuteman Press, Tigard",
-          "category": "Cash Expenditure",
-          "amount": 500.0
-        },
-        {
-          "id": "4399924",
-          "date": "2022-11-02",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 85.68
-        }
-      ],
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -11177,7 +11101,10 @@
           "amount": 528.75
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -11194,6 +11121,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -11354,7 +11284,10 @@
           "amount": 5000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -11513,7 +11446,10 @@
           "amount": 0.18
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -11637,7 +11573,10 @@
           "amount": 143.56
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -11654,74 +11593,85 @@
       "balanceDeficit": 44699.69,
       "recentContributions": [
         {
+          "id": "5814398",
+          "date": "2026-09-08",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
           "id": "5814391",
           "date": "2026-09-16",
           "name": "Diane Grayber",
           "category": "Cash Contribution",
-          "amount": 101.0
+          "amount": 101.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814390",
           "date": "2026-09-14",
           "name": "Amazon.com Services LLC",
           "category": "Cash Contribution",
-          "amount": 1000.0
+          "amount": 1000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814389",
           "date": "2026-09-10",
           "name": "SMACNA PAC (3917)",
           "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5814398",
-          "date": "2026-09-08",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
+          "amount": 2500.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814387",
           "date": "2026-08-27",
           "name": "Everytown for Gun Safety Action Fund",
           "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5814385",
-          "date": "2026-08-26",
-          "name": "Portland Metro Fire Fighters PAC (223)",
-          "category": "Cash Contribution",
-          "amount": 10000.0
-        },
-        {
-          "id": "5814384",
-          "date": "2026-08-24",
-          "name": "Building a Stronger Oregon (23285)",
-          "category": "Cash Contribution",
-          "amount": 5000.0
-        },
-        {
-          "id": "5814383",
-          "date": "2026-08-20",
-          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
-          "category": "Cash Contribution",
-          "amount": 5000.0
+          "amount": 1000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814386",
           "date": "2026-08-19",
           "name": "Diane Grayber",
           "category": "Cash Contribution",
-          "amount": 101.0
+          "amount": 101.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
-          "id": "5762504",
-          "date": "2026-08-11",
-          "name": "International Association of Fire Fighters",
+          "id": "5814385",
+          "date": "2026-08-26",
+          "name": "Portland Metro Fire Fighters PAC (223)",
           "category": "Cash Contribution",
-          "amount": 25000.0
+          "amount": 10000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814384",
+          "date": "2026-08-24",
+          "name": "Building a Stronger Oregon (23285)",
+          "category": "Cash Contribution",
+          "amount": 5000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814383",
+          "date": "2026-08-20",
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
+          "category": "Cash Contribution",
+          "amount": 5000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         }
       ],
       "recentExpenditures": [
@@ -11730,70 +11680,334 @@
           "date": "2026-09-16",
           "name": "Miscellaneous Cash Expenditures $100 and under",
           "category": "Cash Expenditure",
-          "amount": 3.99
-        },
-        {
-          "id": "5814372",
-          "date": "2026-09-10",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 365.0
-        },
-        {
-          "id": "5814374",
-          "date": "2026-09-08",
-          "name": "MailChimp",
-          "category": "Cash Expenditure",
-          "amount": 110.0
-        },
-        {
-          "id": "5814375",
-          "date": "2026-09-04",
-          "name": "Comcast Cable",
-          "category": "Cash Expenditure",
-          "amount": 147.85
-        },
-        {
-          "id": "5814376",
-          "date": "2026-09-02",
-          "name": "Portland General Electric (PGE)",
-          "category": "Cash Expenditure",
-          "amount": 47.94
-        },
-        {
-          "id": "5814378",
-          "date": "2026-09-02",
-          "name": "Vinny Small Property Management",
-          "category": "Cash Expenditure",
-          "amount": 959.99
-        },
-        {
-          "id": "5814371",
-          "date": "2026-09-01",
-          "name": "Zing Studios, LLC",
-          "category": "Cash Expenditure",
-          "amount": 1200.0
+          "amount": 3.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814397",
           "date": "2026-09-01",
           "name": "Miscellaneous Cash Expenditures $100 and under",
           "category": "Cash Expenditure",
-          "amount": 8.4
+          "amount": 8.4,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814395",
+          "date": "2026-08-19",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 3.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814378",
+          "date": "2026-09-02",
+          "name": "Vinny Small Property Management",
+          "category": "Cash Expenditure",
+          "amount": 959.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814376",
+          "date": "2026-09-02",
+          "name": "Portland General Electric (PGE)",
+          "category": "Cash Expenditure",
+          "amount": 47.94,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814375",
+          "date": "2026-09-04",
+          "name": "Comcast Cable",
+          "category": "Cash Expenditure",
+          "amount": 147.85,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814374",
+          "date": "2026-09-08",
+          "name": "MailChimp",
+          "category": "Cash Expenditure",
+          "amount": 110.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814372",
+          "date": "2026-09-10",
+          "name": "C&E Systems",
+          "category": "Cash Expenditure",
+          "amount": 365.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814371",
+          "date": "2026-09-01",
+          "name": "Zing Studios, LLC",
+          "category": "Cash Expenditure",
+          "amount": 1200.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814365",
           "date": "2026-08-27",
           "name": "Polity Staffing LLC",
           "category": "Cash Expenditure",
-          "amount": 1158.1
+          "amount": 1158.1,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        }
+      ],
+      "reportedContributions7Days": [
+        {
+          "id": "5814398",
+          "date": "2026-09-08",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814391",
+          "date": "2026-09-16",
+          "name": "Diane Grayber",
+          "category": "Cash Contribution",
+          "amount": 101.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814390",
+          "date": "2026-09-14",
+          "name": "Amazon.com Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814389",
+          "date": "2026-09-10",
+          "name": "SMACNA PAC (3917)",
+          "category": "Cash Contribution",
+          "amount": 2500.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814387",
+          "date": "2026-08-27",
+          "name": "Everytown for Gun Safety Action Fund",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814386",
+          "date": "2026-08-19",
+          "name": "Diane Grayber",
+          "category": "Cash Contribution",
+          "amount": 101.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814385",
+          "date": "2026-08-26",
+          "name": "Portland Metro Fire Fighters PAC (223)",
+          "category": "Cash Contribution",
+          "amount": 10000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814384",
+          "date": "2026-08-24",
+          "name": "Building a Stronger Oregon (23285)",
+          "category": "Cash Contribution",
+          "amount": 5000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814383",
+          "date": "2026-08-20",
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
+          "category": "Cash Contribution",
+          "amount": 5000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        }
+      ],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5814399",
+          "date": "2026-09-16",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 3.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814397",
+          "date": "2026-09-01",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 8.4,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814395",
+          "date": "2026-08-19",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 3.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814378",
+          "date": "2026-09-02",
+          "name": "Vinny Small Property Management",
+          "category": "Cash Expenditure",
+          "amount": 959.99,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814376",
+          "date": "2026-09-02",
+          "name": "Portland General Electric (PGE)",
+          "category": "Cash Expenditure",
+          "amount": 47.94,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814375",
+          "date": "2026-09-04",
+          "name": "Comcast Cable",
+          "category": "Cash Expenditure",
+          "amount": 147.85,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814374",
+          "date": "2026-09-08",
+          "name": "MailChimp",
+          "category": "Cash Expenditure",
+          "amount": 110.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814372",
+          "date": "2026-09-10",
+          "name": "C&E Systems",
+          "category": "Cash Expenditure",
+          "amount": 365.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814371",
+          "date": "2026-09-01",
+          "name": "Zing Studios, LLC",
+          "category": "Cash Expenditure",
+          "amount": 1200.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814365",
+          "date": "2026-08-27",
+          "name": "Polity Staffing LLC",
+          "category": "Cash Expenditure",
+          "amount": 1158.1,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
         },
         {
           "id": "5814362",
           "date": "2026-08-24",
           "name": "Oregon Secretary of State",
           "category": "Cash Expenditure",
-          "amount": 750.0
+          "amount": 750.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814358",
+          "date": "2026-08-21",
+          "name": "Welsh for Oregon (24905)",
+          "category": "Cash Expenditure",
+          "amount": 1000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        },
+        {
+          "id": "5814355",
+          "date": "2026-08-18",
+          "name": "Future PAC, House Builders (1524)",
+          "category": "Cash Expenditure",
+          "amount": 30000.0,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T16:54:57"
+        }
+      ],
+      "topContributorsSince2026": [
+        {
+          "name": "International Association of Fire Fighters",
+          "amount": 25000.0
+        },
+        {
+          "name": "IAFF Local #1159 PAC (229)",
+          "amount": 10000.0
+        },
+        {
+          "name": "Oregon Nurses Political Action Committee (12986)",
+          "amount": 10000.0
+        },
+        {
+          "name": "Oregon State Fire Fighters Council",
+          "amount": 10000.0
+        },
+        {
+          "name": "Portland Metro Fire Fighters PAC (223)",
+          "amount": 10000.0
+        },
+        {
+          "name": "Building a Stronger Oregon (23285)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Building a Stronger West",
+          "amount": 5000.0
+        },
+        {
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Professional Firefighters PAC (3219)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Oregon Laborers Political Action Committee (16480)",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -11955,7 +12169,10 @@
           "amount": 198.34
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12114,7 +12331,10 @@
           "amount": 595.89
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12273,7 +12493,10 @@
           "amount": 56.25
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12432,7 +12655,10 @@
           "amount": 500.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12528,7 +12754,10 @@
           "amount": 45.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12545,6 +12774,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -12704,7 +12936,10 @@
           "amount": 750.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -12864,7 +13099,10 @@
           "amount": 2407.15
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13024,7 +13262,10 @@
           "amount": 9.6
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13183,7 +13424,10 @@
           "amount": 237.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13342,7 +13586,10 @@
           "amount": 20.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13501,7 +13748,10 @@
           "amount": 197.12
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13518,6 +13768,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -13677,7 +13930,10 @@
           "amount": 1.98
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13692,115 +13948,11 @@
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
-      "recentContributions": [
-        {
-          "id": "3559863",
-          "date": "2020-09-03",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 20.0
-        },
-        {
-          "id": "3550410",
-          "date": "2020-08-21",
-          "name": "Daniel Martin",
-          "category": "Cash Contribution",
-          "amount": 750.0
-        },
-        {
-          "id": "3536356",
-          "date": "2020-08-11",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        },
-        {
-          "id": "3519531",
-          "date": "2020-07-27",
-          "name": "Daniel Martin",
-          "category": "Cash Contribution",
-          "amount": 400.0
-        },
-        {
-          "id": "3507034",
-          "date": "2020-07-09",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        },
-        {
-          "id": "3506093",
-          "date": "2020-07-06",
-          "name": "Daniel Martin",
-          "category": "Cash Contribution",
-          "amount": 400.0
-        },
-        {
-          "id": "3506134",
-          "date": "2020-07-06",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 7.0
-        },
-        {
-          "id": "3498802",
-          "date": "2020-03-28",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "3722599",
-          "date": "2020-12-24",
-          "name": "Evergreen Oregon PAC (20202)",
-          "category": "Cash Expenditure",
-          "amount": 372.03
-        },
-        {
-          "id": "3676401",
-          "date": "2020-11-09",
-          "name": "Makayla W Martin",
-          "category": "Cash Expenditure",
-          "amount": 150.0
-        },
-        {
-          "id": "3581345",
-          "date": "2020-09-18",
-          "name": "Minuteman Press",
-          "category": "Cash Expenditure",
-          "amount": 35.0
-        },
-        {
-          "id": "3550519",
-          "date": "2020-08-21",
-          "name": "State of Oregon Secretary of State",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "3537711",
-          "date": "2020-08-13",
-          "name": "Minuteman Press",
-          "category": "Cash Expenditure",
-          "amount": 232.5
-        },
-        {
-          "id": "3533144",
-          "date": "2020-08-04",
-          "name": "Signsonthecheap.866-664-9239tx",
-          "category": "Account Payable",
-          "amount": 330.16
-        },
-        {
-          "id": "3559878",
-          "date": "2020-08-04",
-          "name": "Signsonthecheap.866-664-9239tx",
-          "category": "Cash Expenditure",
-          "amount": 330.16
-        }
-      ],
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -13960,7 +14112,10 @@
           "amount": 1000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -13977,6 +14132,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -14136,7 +14294,10 @@
           "amount": 502.01
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -14295,7 +14456,10 @@
           "amount": 104.96
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -14454,7 +14618,10 @@
           "amount": 5000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -14613,7 +14780,10 @@
           "amount": 0.7
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -14773,7 +14943,10 @@
           "amount": 6256.46
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -14789,6 +14962,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -14949,7 +15125,10 @@
           "amount": 4.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -15108,7 +15287,10 @@
           "amount": 4571.94
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -15124,6 +15306,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -15139,148 +15324,50 @@
       "contributionsYTD": 127258.68,
       "expendituresYTD": 273848.38,
       "balanceDeficit": 101475.68,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5777949",
-          "date": "2026-08-25",
-          "name": "Northwest Grocery Assoc. PAC (152)",
-          "category": "Cash Contribution",
-          "amount": 500.0
+          "name": "UFCW Local 555",
+          "amount": 28260.0
         },
         {
-          "id": "5777950",
-          "date": "2026-08-25",
-          "name": "Davita",
-          "category": "Cash Contribution",
-          "amount": 2000.0
+          "name": "Oregon Hospital Political Action Committee (161)",
+          "amount": 11000.0
         },
         {
-          "id": "5777951",
-          "date": "2026-08-25",
-          "name": "Communities for Oregonians With Disabilities (944)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Oregon Nurses Political Action Committee (12986)",
+          "amount": 10000.0
         },
         {
-          "id": "5777947",
-          "date": "2026-08-24",
-          "name": "UFCW Active Ballot Club General Fund",
-          "category": "Cash Contribution",
+          "name": "Citizen Action for Political Education (33)",
           "amount": 5000.0
         },
         {
-          "id": "5777946",
-          "date": "2026-08-21",
-          "name": "Northwest Acute Care Spec PC",
-          "category": "Cash Contribution",
-          "amount": 250.0
+          "name": "OFNHP AFT 5017 Political Action Committee (17220)",
+          "amount": 5000.0
         },
         {
-          "id": "5778266",
-          "date": "2026-08-21",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "5777944",
-          "date": "2026-08-20",
-          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5777948",
-          "date": "2026-08-20",
-          "name": "McKesson Corporation Employee Political Fund",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5777943",
-          "date": "2026-08-19",
-          "name": "Pharmaceutical Care Management Association",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5777941",
-          "date": "2026-08-17",
           "name": "Oregon Health Care Association PAC (275)",
-          "category": "Cash Contribution",
           "amount": 5000.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5777913",
-          "date": "2026-08-25",
-          "name": "Oregon Secretary of State Elections Division",
-          "category": "Cash Expenditure",
-          "amount": 750.0
         },
         {
-          "id": "5777914",
-          "date": "2026-08-25",
-          "name": "RUN Website Builder",
-          "category": "Cash Expenditure",
-          "amount": 50.0
+          "name": "UFCW Active Ballot Club General Fund",
+          "amount": 5000.0
         },
         {
-          "id": "5778267",
-          "date": "2026-08-24",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 6.0
+          "name": "DentaQuest PAC TN-C",
+          "amount": 2500.0
         },
         {
-          "id": "5777906",
-          "date": "2026-08-18",
-          "name": "Darla Mead for Oregon (24806)",
-          "category": "Cash Expenditure",
-          "amount": 1000.0
+          "name": "Oregon Nurse Anesthetist PAC (3099)",
+          "amount": 2500.0
         },
         {
-          "id": "5777907",
-          "date": "2026-08-18",
-          "name": "Cyrus for Oregon (21757)",
-          "category": "Cash Expenditure",
-          "amount": 2000.0
-        },
-        {
-          "id": "5777908",
-          "date": "2026-08-18",
-          "name": "Welsh for Oregon (24905)",
-          "category": "Cash Expenditure",
-          "amount": 2000.0
-        },
-        {
-          "id": "5777909",
-          "date": "2026-08-18",
-          "name": "Friends of Em Levy (20377)",
-          "category": "Cash Expenditure",
-          "amount": 1000.0
-        },
-        {
-          "id": "5777910",
-          "date": "2026-08-18",
-          "name": "Friends of Andrea Valderrama (18462)",
-          "category": "Cash Expenditure",
-          "amount": 2000.0
-        },
-        {
-          "id": "5777911",
-          "date": "2026-08-18",
-          "name": "Worldpay- C&E Merchant Services",
-          "category": "Cash Expenditure",
-          "amount": 63.0
-        },
-        {
-          "id": "5777905",
-          "date": "2026-08-11",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 195.0
+          "name": "Springboard Group",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -15299,6 +15386,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -15314,148 +15404,50 @@
       "contributionsYTD": 123950.0,
       "expendituresYTD": 163881.99,
       "balanceDeficit": 17992.91,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5794272",
-          "date": "2026-09-03",
-          "name": "Psychologists of Oregon Political Action Committee (4328)",
-          "category": "Cash Contribution",
-          "amount": 500.0
+          "name": "Oregon Health Care Association PAC (275)",
+          "amount": 12500.0
         },
         {
-          "id": "5794274",
-          "date": "2026-09-03",
-          "name": "Veterinarians Organized to Elect PAC (274)",
-          "category": "Cash Contribution",
-          "amount": 500.0
+          "name": "Cow Creek Band of Umpqua Tribe of Indians",
+          "amount": 10000.0
         },
         {
-          "id": "5794269",
-          "date": "2026-08-31",
-          "name": "Hampton Lumber",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Confederated Tribes of the Umatilla Indian Reservation",
+          "amount": 7500.0
         },
         {
-          "id": "5794271",
-          "date": "2026-08-31",
+          "name": "Oregon Hospital Political Action Committee (161)",
+          "amount": 7500.0
+        },
+        {
+          "name": "Oregon AFSCME Council 75",
+          "amount": 6000.0
+        },
+        {
+          "name": "Oregon Council of NECA Chapters (135)",
+          "amount": 5500.0
+        },
+        {
+          "name": "Coquille Indian Tribe",
+          "amount": 5000.0
+        },
+        {
+          "name": "Local 48 Electricians PAC (4572)",
+          "amount": 5000.0
+        },
+        {
+          "name": "NAYA Action Fund",
+          "amount": 5000.0
+        },
+        {
           "name": "Oregon Beverage PAC (126)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5794267",
-          "date": "2026-08-25",
-          "name": "JP Morgan Chase & Co. PAC",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5794266",
-          "date": "2026-08-24",
-          "name": "Building a Stronger Oregon (23285)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5794260",
-          "date": "2026-08-22",
-          "name": "The Confederated Tribes of the Colville Reservation",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5794262",
-          "date": "2026-08-22",
-          "name": "Northwest Health Foundation",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5794264",
-          "date": "2026-08-22",
-          "name": "Nike Inc. and Affiliates",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5794313",
-          "date": "2026-08-21",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5794250",
-          "date": "2026-09-02",
-          "name": "Worldpay- C&E Merchant Services",
-          "category": "Cash Expenditure",
-          "amount": 3.5
-        },
-        {
-          "id": "5794252",
-          "date": "2026-09-02",
-          "name": "Jon Pugsley",
-          "category": "Cash Expenditure",
-          "amount": 409.64
-        },
-        {
-          "id": "5794246",
-          "date": "2026-08-31",
-          "name": "Basic Rights Oregon",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 310.04
-        },
-        {
-          "id": "5794248",
-          "date": "2026-08-31",
-          "name": "Jon Pugsley",
-          "category": "Cash Expenditure",
-          "amount": 310.04
-        },
-        {
-          "id": "5794236",
-          "date": "2026-08-27",
-          "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 23000.0
-        },
-        {
-          "id": "5794244",
-          "date": "2026-08-27",
-          "name": "Morel Ink",
-          "category": "Cash Expenditure",
-          "amount": 1897.42
-        },
-        {
-          "id": "5794238",
-          "date": "2026-08-25",
-          "name": "Oregon Secretary of State",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "5794234",
-          "date": "2026-08-11",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 367.76
-        },
-        {
-          "id": "5757825",
-          "date": "2026-08-07",
-          "name": "Laura Booth",
-          "category": "Cash Expenditure",
-          "amount": 322.0
-        },
-        {
-          "id": "5794309",
-          "date": "2026-08-06",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 4.07
+          "amount": 5000.0
         }
       ],
       "dataError": null,
@@ -15475,6 +15467,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -15634,7 +15629,10 @@
           "amount": 17.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -15650,6 +15648,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -15809,7 +15810,10 @@
           "amount": 5000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -15825,6 +15829,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -15984,7 +15991,10 @@
           "amount": 16000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -16000,6 +16010,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -16159,7 +16172,10 @@
           "amount": 19.99
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -16175,148 +16191,70 @@
       "contributionsYTD": 126259.84,
       "expendituresYTD": 60685.15,
       "balanceDeficit": 90719.97,
-      "recentContributions": [
-        {
-          "id": "5770564",
-          "date": "2026-08-19",
-          "name": "Lamar Wise",
-          "category": "In-Kind Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5770571",
-          "date": "2026-08-19",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "5770570",
-          "date": "2026-08-18",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5768464",
-          "date": "2026-08-17",
-          "name": "Daniel Morris",
-          "category": "Cash Contribution",
-          "amount": 150.0
-        },
-        {
-          "id": "5768475",
-          "date": "2026-08-17",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 150.0
-        },
-        {
-          "id": "5768473",
-          "date": "2026-08-16",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5768472",
-          "date": "2026-08-15",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 75.0
-        },
-        {
-          "id": "5768459",
-          "date": "2026-08-14",
-          "name": "Steph Routh",
-          "category": "Cash Contribution",
-          "amount": 101.0
-        },
-        {
-          "id": "5768460",
-          "date": "2026-08-14",
-          "name": "Brian Decker",
-          "category": "Cash Contribution",
-          "amount": 150.0
-        },
-        {
-          "id": "5768471",
-          "date": "2026-08-14",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 150.0
-        }
-      ],
+      "recentContributions": [],
       "recentExpenditures": [
         {
           "id": "5768453",
           "date": "2026-08-18",
           "name": "Sway DC",
           "category": "Cash Expenditure",
-          "amount": 14046.03
-        },
+          "amount": 14046.03,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T23:59:00"
+        }
+      ],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [
         {
-          "id": "5770561",
+          "id": "5768453",
           "date": "2026-08-18",
-          "name": "Worldpay- C&E Merchant Services",
+          "name": "Sway DC",
           "category": "Cash Expenditure",
-          "amount": 31.53
+          "amount": 14046.03,
+          "filedDate": "2026-09-17",
+          "filedAt": "2026-09-17T23:59:00"
+        }
+      ],
+      "topContributorsSince2026": [
+        {
+          "name": "AFSCME Working Families Fund",
+          "amount": 50000.0
         },
         {
-          "id": "5768451",
-          "date": "2026-08-17",
-          "name": "Canva",
-          "category": "Cash Expenditure",
-          "amount": 15.0
+          "name": "Local 48 Electricians PAC (4572)",
+          "amount": 10000.0
         },
         {
-          "id": "5768474",
-          "date": "2026-08-17",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 13.75
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 6337.0
         },
         {
-          "id": "5768450",
-          "date": "2026-08-14",
+          "name": "DIRA Partners",
+          "amount": 5000.0
+        },
+        {
+          "name": "Friends of Daniel Nguyen (19463)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Citizen Action for Political Education (33)",
+          "amount": 3500.0
+        },
+        {
           "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 6464.99
+          "amount": 3242.12
         },
         {
-          "id": "5762305",
-          "date": "2026-08-11",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 365.0
+          "name": "Oregon Beverage PAC (126)",
+          "amount": 2500.0
         },
         {
-          "id": "5756141",
-          "date": "2026-08-04",
-          "name": "Worldpay- C&E Merchant Services",
-          "category": "Cash Expenditure",
-          "amount": 69.12
+          "name": "Oregon Health Care Association PAC (275)",
+          "amount": 2500.0
         },
         {
-          "id": "5756143",
-          "date": "2026-08-03",
-          "name": "Mailchimp",
-          "category": "Cash Expenditure",
-          "amount": 100.0
-        },
-        {
-          "id": "5756145",
-          "date": "2026-07-30",
-          "name": "Polity Staffing LLC",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 6464.99
-        },
-        {
-          "id": "5735976",
-          "date": "2026-07-20",
-          "name": "Future PAC, House Builders (1524)",
-          "category": "Cash Expenditure",
-          "amount": 5684.0
+          "name": "Oregon Trial Lawyers Association PAC (39)",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -16479,7 +16417,10 @@
           "amount": 28.32
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -16638,7 +16579,10 @@
           "amount": 0.6
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -16797,7 +16741,10 @@
           "amount": 5.98
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -16812,148 +16759,50 @@
       "contributionsYTD": 83520.42,
       "expendituresYTD": 65722.78,
       "balanceDeficit": 33189.62,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5775170",
-          "date": "2026-08-24",
-          "name": "UFCW Active Ballot Fund",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5775171",
-          "date": "2026-08-24",
-          "name": "Building Trades PAC (12845)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5775167",
-          "date": "2026-08-20",
-          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
-          "category": "Cash Contribution",
-          "amount": 3500.0
-        },
-        {
-          "id": "5775168",
-          "date": "2026-08-20",
           "name": "Oregon Health Care Association PAC (275)",
-          "category": "Cash Contribution",
-          "amount": 5000.0
+          "amount": 10000.0
         },
         {
-          "id": "5775166",
-          "date": "2026-08-14",
-          "name": "Natural Gas Political Action Committee (102)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
+          "name": "La Pulga Fantastica",
+          "amount": 8691.42
         },
         {
-          "id": "5775164",
-          "date": "2026-08-10",
-          "name": "Oregon Nurses Political Action Committee (12986)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5775165",
-          "date": "2026-08-10",
-          "name": "SMART Local 16 PAC (16178)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5775169",
-          "date": "2026-07-25",
           "name": "Future PAC, House Builders (1524)",
-          "category": "In-Kind Contribution",
           "amount": 6500.0
         },
         {
-          "id": "5744770",
-          "date": "2026-07-20",
           "name": "Friends of Daniel Nguyen (19463)",
-          "category": "Cash Contribution",
           "amount": 5000.0
         },
         {
-          "id": "5744769",
-          "date": "2026-07-16",
-          "name": "John Vandermosten",
-          "category": "Cash Contribution",
-          "amount": 750.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5775163",
-          "date": "2026-08-20",
-          "name": "AA COINS AND PINS",
-          "category": "Cash Expenditure",
-          "amount": 1175.0
+          "name": "Jeff Swickard",
+          "amount": 5000.0
         },
         {
-          "id": "5775161",
-          "date": "2026-08-17",
-          "name": "Verizon Wireless",
-          "category": "Cash Expenditure",
-          "amount": 249.31
+          "name": "Oregon Realtors Political Action Committee (191)",
+          "amount": 5000.0
         },
         {
-          "id": "5775162",
-          "date": "2026-08-17",
-          "name": "Best Buy.Com",
-          "category": "Cash Expenditure",
-          "amount": 969.99
+          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
+          "amount": 3500.0
         },
         {
-          "id": "5775152",
-          "date": "2026-08-13",
-          "name": "Elect Zach Hudson (17995)",
-          "category": "Cash Expenditure",
-          "amount": 1000.0
+          "name": "Joint Council of Teamsters No. 37 Political Fund (80)",
+          "amount": 2500.0
         },
         {
-          "id": "5775155",
-          "date": "2026-08-13",
-          "name": "Bruin Touchdown Club",
-          "category": "Cash Expenditure",
-          "amount": 500.0
+          "name": "Natural Gas Political Action Committee (102)",
+          "amount": 2500.0
         },
         {
-          "id": "5775156",
-          "date": "2026-08-13",
-          "name": "Antonio Alcocer LLC",
-          "category": "Cash Expenditure",
-          "amount": 500.0
-        },
-        {
-          "id": "5775148",
-          "date": "2026-08-11",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 796.82
-        },
-        {
-          "id": "5775159",
-          "date": "2026-08-11",
-          "name": "CROWN TROPHY GRESHAM",
-          "category": "Cash Expenditure",
-          "amount": 393.63
-        },
-        {
-          "id": "5775235",
-          "date": "2026-08-10",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 26.5
-        },
-        {
-          "id": "5753210",
-          "date": "2026-08-04",
-          "name": "Worldpay- C&E Merchant Services",
-          "category": "Cash Expenditure",
-          "amount": 26.25
+          "name": "Oregon Beverage PAC (126)",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -16972,6 +16821,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -17131,7 +16983,10 @@
           "amount": 49.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -17290,7 +17145,10 @@
           "amount": 30.15
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -17450,7 +17308,10 @@
           "amount": 15440.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -17610,7 +17471,10 @@
           "amount": 571.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -17770,7 +17634,10 @@
           "amount": 100.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -17930,7 +17797,10 @@
           "amount": 655.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18089,7 +17959,10 @@
           "amount": 100.8
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18105,6 +17978,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -18120,148 +17996,50 @@
       "contributionsYTD": 98528.6,
       "expendituresYTD": 108640.61,
       "balanceDeficit": 53457.04,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5795120",
-          "date": "2026-09-04",
-          "name": "Oregon Cattle PAC (5410)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Oregon Soft Drink PAC (197)",
+          "amount": 7500.0
         },
         {
-          "id": "5795121",
-          "date": "2026-09-04",
-          "name": "AGC Committee for Action (4)",
-          "category": "Cash Contribution",
-          "amount": 2000.0
+          "name": "Altria Client Services LLC",
+          "amount": 5000.0
         },
         {
-          "id": "5801294",
-          "date": "2026-09-04",
-          "name": "Oregon Orthopedic Political Action Committee (2963)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5801298",
-          "date": "2026-09-04",
-          "name": "Koch Industries",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
-        {
-          "id": "5801299",
-          "date": "2026-09-04",
-          "name": "Weyerhaeuser",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5803950",
-          "date": "2026-09-02",
-          "name": "United Health Group",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5789982",
-          "date": "2026-09-01",
-          "name": "Allstate Insurance Company",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5789985",
-          "date": "2026-09-01",
           "name": "Oregon Bankers PAC (125)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
+          "amount": 5000.0
         },
         {
-          "id": "5803825",
-          "date": "2026-08-31",
-          "name": "Kalshi",
-          "category": "Cash Contribution",
-          "amount": 2500.0
+          "name": "Oregon Realtors Political Action Committee (191)",
+          "amount": 5000.0
         },
         {
-          "id": "5795125",
-          "date": "2026-08-23",
+          "name": "PNW PhRMA PAC",
+          "amount": 5000.0
+        },
+        {
           "name": "Oregon Neighborhood Store Association Political Action Committee (3428)",
-          "category": "Cash Contribution",
+          "amount": 4000.0
+        },
+        {
+          "name": "Comcast",
+          "amount": 3500.0
+        },
+        {
+          "name": "AGC Committee for Action (4)",
+          "amount": 3000.0
+        },
+        {
+          "name": "Amazon.com Services, Inc",
           "amount": 2500.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5801301",
-          "date": "2026-09-08",
-          "name": "Tacos Ala Mexicana",
-          "category": "Cash Expenditure",
-          "amount": 28.75
         },
         {
-          "id": "5801326",
-          "date": "2026-09-08",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 15.37
-        },
-        {
-          "id": "5793835",
-          "date": "2026-09-04",
-          "name": "Outfront *",
-          "category": "Cash Expenditure",
-          "amount": 6750.0
-        },
-        {
-          "id": "5801295",
-          "date": "2026-09-04",
-          "name": "Starbucks",
-          "category": "Cash Expenditure",
-          "amount": 60.0
-        },
-        {
-          "id": "5801325",
-          "date": "2026-09-04",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 17.25
-        },
-        {
-          "id": "5793839",
-          "date": "2026-09-03",
-          "name": "E. Werner Reschke",
-          "category": "Cash Expenditure",
-          "amount": 1034.36
-        },
-        {
-          "id": "5801324",
-          "date": "2026-09-02",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 16.04
-        },
-        {
-          "id": "5801292",
-          "date": "2026-08-31",
-          "name": "Sergio Mexican Restaurant",
-          "category": "Cash Expenditure",
-          "amount": 69.85
-        },
-        {
-          "id": "5801323",
-          "date": "2026-08-31",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 15.0
-        },
-        {
-          "id": "5793827",
-          "date": "2026-08-29",
-          "name": "GODADDY.com",
-          "category": "Cash Expenditure",
-          "amount": 47.38
+          "name": "Bristol-Myers Squibb Co.",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -18423,7 +18201,10 @@
           "amount": 2.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18519,7 +18300,10 @@
           "amount": 28.87
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18678,7 +18462,10 @@
           "amount": 76.95
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18695,6 +18482,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -18854,7 +18644,10 @@
           "amount": 75.78
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -18870,6 +18663,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -19029,7 +18825,10 @@
           "amount": 500.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -19045,6 +18844,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -19204,7 +19006,10 @@
           "amount": 15.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -19364,7 +19169,10 @@
           "amount": 73.09
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -19523,7 +19331,10 @@
           "amount": 76.55
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -19683,7 +19494,10 @@
           "amount": 1.44
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -19842,7 +19656,10 @@
           "amount": 1000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20001,7 +19818,10 @@
           "amount": 3.61
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20018,6 +19838,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -20033,148 +19856,50 @@
       "contributionsYTD": 96984.17,
       "expendituresYTD": 87338.9,
       "balanceDeficit": -690.5,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5793786",
-          "date": "2026-08-31",
-          "name": "NUCA of Oregon & SW Washington PAC-Northwest Utility Contractors Association PAC (4747)",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5793787",
-          "date": "2026-08-31",
-          "name": "Ric Christian",
-          "category": "Cash Contribution",
-          "amount": 300.0
-        },
-        {
-          "id": "5793784",
-          "date": "2026-08-28",
-          "name": "Tara Lancaster",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5793783",
-          "date": "2026-08-20",
-          "name": "America's Electric Cooperatives PAC - Oregon (117)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5793778",
-          "date": "2026-08-19",
-          "name": "Julia Ingram",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5793775",
-          "date": "2026-08-17",
-          "name": "Wendy L Stevens",
-          "category": "Cash Contribution",
-          "amount": 208.65
-        },
-        {
-          "id": "5793766",
-          "date": "2026-08-14",
-          "name": "Reynolds Service Comany",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5793767",
-          "date": "2026-08-14",
-          "name": "Koch- GA Inc",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5793768",
-          "date": "2026-08-14",
-          "name": "Anheuser Busch",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5793770",
-          "date": "2026-08-14",
-          "name": "William Cross",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5793785",
-          "date": "2026-08-28",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 2.3
-        },
-        {
-          "id": "5793780",
-          "date": "2026-08-19",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 2.3
-        },
-        {
-          "id": "5793776",
-          "date": "2026-08-17",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 8.65
-        },
-        {
-          "id": "5758901",
-          "date": "2026-08-10",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 21.6
-        },
-        {
-          "id": "5758898",
-          "date": "2026-08-05",
-          "name": "Brockman Allen",
-          "category": "Cash Expenditure",
+          "name": "Oregon Firearms Education Foundation",
           "amount": 10000.0
         },
         {
-          "id": "5758886",
-          "date": "2026-08-04",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 4.3
+          "name": "Larry Wasem",
+          "amount": 7500.0
         },
         {
-          "id": "5758836",
-          "date": "2026-07-27",
-          "name": "Costco",
-          "category": "Cash Expenditure",
-          "amount": 195.49
+          "name": "Barbara R. Banke Revocable Trust",
+          "amount": 7000.0
         },
         {
-          "id": "5758785",
-          "date": "2026-07-24",
-          "name": "Financial Peace Bookkeeping",
-          "category": "Cash Expenditure",
-          "amount": 75.0
+          "name": "Harrison J Tibbetts",
+          "amount": 5300.0
         },
         {
-          "id": "5758781",
-          "date": "2026-07-21",
-          "name": "Anedot",
-          "category": "Cash Expenditure",
-          "amount": 2.3
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 4289.0
         },
         {
-          "id": "5758923",
-          "date": "2026-07-15",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 50.0
+          "name": "Ralph Christensen",
+          "amount": 4000.0
+        },
+        {
+          "name": "Friends of Gap Road (23704)",
+          "amount": 3000.0
+        },
+        {
+          "name": "The Nicholas R. Tibbetts Trust",
+          "amount": 3000.0
+        },
+        {
+          "name": "Blue Star Gas Associates",
+          "amount": 2500.0
+        },
+        {
+          "name": "Dale Gangle",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -20336,7 +20061,10 @@
           "amount": 15.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20353,6 +20081,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -20512,7 +20243,10 @@
           "amount": 7.87
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20671,7 +20405,10 @@
           "amount": 42.1
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20830,7 +20567,10 @@
           "amount": 61.65
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -20851,142 +20591,64 @@
           "date": "2026-09-14",
           "name": "Burnett Media Group",
           "category": "In-Kind Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5796671",
-          "date": "2026-09-03",
-          "name": "Piyush Aneja",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5796696",
-          "date": "2026-09-03",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5796665",
-          "date": "2026-09-02",
-          "name": "Peter Alotta",
-          "category": "Cash Contribution",
-          "amount": 200.0
-        },
-        {
-          "id": "5787531",
-          "date": "2026-09-01",
-          "name": "The Leadership Fund (2690)",
-          "category": "In-Kind Contribution",
-          "amount": 3000.0
-        },
-        {
-          "id": "5796663",
-          "date": "2026-09-01",
-          "name": "Richard Duncan",
-          "category": "Cash Contribution",
-          "amount": 100.0
-        },
-        {
-          "id": "5796693",
-          "date": "2026-08-28",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5796648",
-          "date": "2026-08-26",
-          "name": "Eileen Altschul",
-          "category": "Cash Contribution",
-          "amount": 400.0
-        },
-        {
-          "id": "5796691",
-          "date": "2026-08-26",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 55.0
-        },
-        {
-          "id": "5796690",
-          "date": "2026-08-25",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 50.0
+          "amount": 1000.0,
+          "filedDate": "2026-09-16",
+          "filedAt": "2026-09-16T17:52:02"
         }
       ],
-      "recentExpenditures": [
+      "recentExpenditures": [],
+      "reportedContributions7Days": [
         {
-          "id": "5796673",
-          "date": "2026-09-03",
-          "name": "Anedot Inc",
-          "category": "Cash Expenditure",
-          "amount": 42.6
-        },
-        {
-          "id": "5796676",
-          "date": "2026-09-03",
-          "name": "Elite Custom Screen Printing",
-          "category": "Cash Expenditure",
-          "amount": 210.0
-        },
-        {
-          "id": "5796664",
-          "date": "2026-09-02",
-          "name": "Anedot Inc",
-          "category": "Cash Expenditure",
-          "amount": 8.3
-        },
-        {
-          "id": "5796667",
-          "date": "2026-09-02",
-          "name": "Nicole Kalk",
-          "category": "Cash Expenditure",
-          "amount": 1000.0
-        },
-        {
-          "id": "5796668",
-          "date": "2026-09-02",
-          "name": "Nicole Kalk",
-          "category": "Cash Expenditure",
-          "amount": 124.99
-        },
-        {
-          "id": "5796678",
-          "date": "2026-09-02",
+          "id": "5813069",
+          "date": "2026-09-14",
           "name": "Burnett Media Group",
-          "category": "Cash Expenditure",
-          "amount": 1079.0
+          "category": "In-Kind Contribution",
+          "amount": 1000.0,
+          "filedDate": "2026-09-16",
+          "filedAt": "2026-09-16T17:52:02"
+        }
+      ],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
+        {
+          "name": "The Leadership Fund (2690)",
+          "amount": 39500.0
         },
         {
-          "id": "5796695",
-          "date": "2026-09-02",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 13.8
+          "name": "Burnett Media Group",
+          "amount": 7500.0
         },
         {
-          "id": "5796662",
-          "date": "2026-09-01",
-          "name": "Anedot Inc",
-          "category": "Cash Expenditure",
-          "amount": 4.3
+          "name": "Angela Plowhead",
+          "amount": 5000.0
         },
         {
-          "id": "5796694",
-          "date": "2026-08-31",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 7.99
+          "name": "Craig H Pubols",
+          "amount": 5000.0
         },
         {
-          "id": "5796655",
-          "date": "2026-08-28",
-          "name": "Anedot Inc",
-          "category": "Cash Expenditure",
-          "amount": 2.3
+          "name": "Starr Leadership Fund (23228)",
+          "amount": 5000.0
+        },
+        {
+          "name": "Richard Withnell",
+          "amount": 2750.0
+        },
+        {
+          "name": "Bill Riecke",
+          "amount": 2500.0
+        },
+        {
+          "name": "Committee to Elect Dennis Linthicum (17895)",
+          "amount": 2500.0
+        },
+        {
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 2405.5
+        },
+        {
+          "name": "Richard Duncan",
+          "amount": 2300.0
         }
       ],
       "dataError": null,
@@ -21149,7 +20811,10 @@
           "amount": 80.38
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21309,7 +20974,10 @@
           "amount": 8.3
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21468,7 +21136,10 @@
           "amount": 126.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21484,6 +21155,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -21643,7 +21317,10 @@
           "amount": 0.7
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21802,7 +21479,10 @@
           "amount": 80.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21819,6 +21499,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -21979,7 +21662,10 @@
           "amount": 33.6
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -21996,6 +21682,9 @@
       "balanceDeficit": 0.0,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -22156,7 +21845,10 @@
           "amount": 156.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -22171,148 +21863,50 @@
       "contributionsYTD": 101372.0,
       "expendituresYTD": 97680.39,
       "balanceDeficit": 59673.27,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5801074",
-          "date": "2026-09-04",
-          "name": "Oregon School Employees Association - Voice of Involved Classified Employees (2307)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Oregon Beverage PAC (126)",
+          "amount": 12500.0
         },
         {
-          "id": "5801073",
-          "date": "2026-09-03",
-          "name": "Everytown for Gun Safety Action Fund",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Coalition for a Healthy Oregon PAC (15808)",
+          "amount": 7500.0
         },
         {
-          "id": "5775982",
-          "date": "2026-08-23",
-          "name": "Waymo LLC",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "AllCare Physicians PAC (17638)",
+          "amount": 5000.0
         },
         {
-          "id": "5775983",
-          "date": "2026-08-23",
-          "name": "CVS Pharmacy Inc",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Oregon Hospital Political Action Committee (161)",
+          "amount": 4500.0
         },
         {
-          "id": "5775984",
-          "date": "2026-08-23",
-          "name": "Regence",
-          "category": "Cash Contribution",
-          "amount": 500.0
+          "name": "Oregon Nurses Political Action Committee (12986)",
+          "amount": 3500.0
         },
         {
-          "id": "5775985",
-          "date": "2026-08-21",
-          "name": "Novo Nordisk Inc",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Equitable Housing PAC (14041)",
+          "amount": 3000.0
         },
         {
-          "id": "5775986",
-          "date": "2026-08-21",
-          "name": "Foresight Ophthalmology Political Action Committee (66)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Oregon State Fire Fighters Council",
+          "amount": 3000.0
         },
         {
-          "id": "5775988",
-          "date": "2026-08-21",
-          "name": "Communities for Oregonians With Disabilities (944)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5775978",
-          "date": "2026-08-17",
           "name": "Credit Union Legislative Action Fund (51)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "amount": 2500.0
         },
         {
-          "id": "5775979",
-          "date": "2026-08-17",
-          "name": "Google",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5801076",
-          "date": "2026-09-07",
-          "name": "Elect Virginia Stapleton (20287)",
-          "category": "Cash Expenditure",
-          "amount": 500.0
+          "name": "Dentists of Oregon PAC (54)",
+          "amount": 2500.0
         },
         {
-          "id": "5801072",
-          "date": "2026-09-01",
-          "name": "Google",
-          "category": "Cash Expenditure",
-          "amount": 28.0
-        },
-        {
-          "id": "5801078",
-          "date": "2026-08-31",
-          "name": "Bassett for Oregon (24816)",
-          "category": "Cash Expenditure",
-          "amount": 500.0
-        },
-        {
-          "id": "5801071",
-          "date": "2026-08-28",
-          "name": "Zoom Video Communications",
-          "category": "Cash Expenditure",
-          "amount": 66.99
-        },
-        {
-          "id": "5801068",
-          "date": "2026-08-26",
-          "name": "Oregon Secretary of State",
-          "category": "Cash Expenditure",
-          "amount": 750.0
-        },
-        {
-          "id": "5786808",
-          "date": "2026-08-23",
-          "name": "Lisa Reynolds",
-          "category": "Cash Expenditure",
-          "amount": 400.0
-        },
-        {
-          "id": "5801070",
-          "date": "2026-08-13",
-          "name": "Mailchimp",
-          "category": "Cash Expenditure",
-          "amount": 110.0
-        },
-        {
-          "id": "5786807",
-          "date": "2026-08-10",
-          "name": "Lines for Life",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 400.0
-        },
-        {
-          "id": "5768701",
-          "date": "2026-08-03",
-          "name": "Google",
-          "category": "Cash Expenditure",
-          "amount": 28.0
-        },
-        {
-          "id": "5768700",
-          "date": "2026-07-28",
-          "name": "Zoom Video Communications",
-          "category": "Cash Expenditure",
-          "amount": 66.99
+          "name": "FamilyCare, Inc",
+          "amount": 2500.0
         }
       ],
       "dataError": null,
@@ -22331,6 +21925,9 @@
       "balanceDeficit": null,
       "recentContributions": [],
       "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
       "dataError": "ORESTAR committee not yet linked",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -22490,7 +22087,10 @@
           "amount": 37.94
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -22649,7 +22249,10 @@
           "amount": 37.5
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -22667,146 +22270,68 @@
       "balanceDeficit": 275339.44,
       "recentContributions": [
         {
-          "id": "5781846",
-          "date": "2026-08-24",
-          "name": "Waymo",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5781848",
-          "date": "2026-08-24",
-          "name": "Oregon Council of NECA Chapters (135)",
-          "category": "Cash Contribution",
-          "amount": 5000.0
-        },
-        {
-          "id": "5781844",
-          "date": "2026-08-21",
-          "name": "MPC Investment Fund",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5781840",
-          "date": "2026-08-17",
-          "name": "Anheuser Busch",
-          "category": "Cash Contribution",
-          "amount": 2000.0
-        },
-        {
-          "id": "5781841",
-          "date": "2026-08-17",
-          "name": "RAI Services Company",
-          "category": "Cash Contribution",
-          "amount": 1000.0
-        },
-        {
-          "id": "5781836",
-          "date": "2026-08-14",
-          "name": "Bristol Myers Squibb ER Squibb & Sons, LLC",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        },
-        {
-          "id": "5781837",
-          "date": "2026-08-14",
-          "name": "American Chemistry Council",
-          "category": "Cash Contribution",
-          "amount": 1500.0
-        },
+          "id": "5801983",
+          "date": "2026-08-12",
+          "name": "SDLF (1471)",
+          "category": "In-Kind Contribution",
+          "amount": 36467.67,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T18:16:57"
+        }
+      ],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [
         {
           "id": "5801983",
           "date": "2026-08-12",
           "name": "SDLF (1471)",
           "category": "In-Kind Contribution",
+          "amount": 36467.67,
+          "filedDate": "2026-09-11",
+          "filedAt": "2026-09-11T18:16:57"
+        }
+      ],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
+        {
+          "name": "SDLF (1471)",
           "amount": 36467.67
         },
         {
-          "id": "5781833",
-          "date": "2026-08-10",
-          "name": "Oregon Nurses Political Action Committee (12986)",
-          "category": "Cash Contribution",
-          "amount": 1000.0
+          "name": "Kate Lieber for State Senate (20136)",
+          "amount": 10000.0
         },
         {
-          "id": "5781827",
-          "date": "2026-08-07",
-          "name": "SMACNA PAC (3917)",
-          "category": "Cash Contribution",
-          "amount": 750.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5781779",
-          "date": "2026-08-27",
-          "name": "Polity Staffing LLC",
-          "category": "Cash Expenditure",
-          "amount": 849.19
+          "name": "Oregon Council of NECA Chapters (135)",
+          "amount": 5000.0
         },
         {
-          "id": "5781783",
-          "date": "2026-08-27",
-          "name": "Emmert International",
-          "category": "Cash Expenditure",
-          "amount": 7000.0
+          "name": "Oregon Realtors Political Action Committee (191)",
+          "amount": 5000.0
         },
         {
-          "id": "5781787",
-          "date": "2026-08-27",
-          "name": "Emmert International",
-          "category": "Cash Expenditure",
+          "name": "United Food and Commercial Workers Union Local 555",
+          "amount": 5000.0
+        },
+        {
+          "name": "Bristol Myers Squibb ER Squibb & Sons, LLC",
+          "amount": 2500.0
+        },
+        {
+          "name": "Google Client Services LLC",
+          "amount": 2500.0
+        },
+        {
+          "name": "Nike, Inc",
+          "amount": 2500.0
+        },
+        {
+          "name": "Anheuser Busch",
           "amount": 2000.0
         },
         {
-          "id": "5781821",
-          "date": "2026-08-27",
-          "name": "Marcus Sis",
-          "category": "Cash Expenditure",
-          "amount": 3436.53
-        },
-        {
-          "id": "5781819",
-          "date": "2026-08-25",
-          "name": "Oregon Secretary of State",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 750.0
-        },
-        {
-          "id": "5782031",
-          "date": "2026-08-24",
-          "name": "Miscellaneous Personal Expenditures $100 and under",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 79.0
-        },
-        {
-          "id": "5781775",
-          "date": "2026-08-11",
-          "name": "C&E Systems",
-          "category": "Cash Expenditure",
-          "amount": 196.78
-        },
-        {
-          "id": "5781814",
-          "date": "2026-08-10",
-          "name": "FedEx",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 285.0
-        },
-        {
-          "id": "5782024",
-          "date": "2026-08-05",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 3.95
-        },
-        {
-          "id": "5781793",
-          "date": "2026-08-03",
-          "name": "Costco",
-          "category": "Personal Expenditure for Reimbursement",
-          "amount": 587.09
+          "name": "Equitable Housing PAC (14041)",
+          "amount": 2000.0
         }
       ],
       "dataError": null,
@@ -22969,7 +22494,10 @@
           "amount": 1000.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -23128,7 +22656,10 @@
           "amount": 317.0
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: <urlopen error [Errno 111] Connection refused>",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -23287,7 +22818,10 @@
           "amount": 347.06
         }
       ],
-      "dataError": null,
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [],
+      "dataError": "Refresh failed: HTTP Error 403: Forbidden",
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
     },
@@ -23302,148 +22836,50 @@
       "contributionsYTD": 141221.35,
       "expendituresYTD": 122544.3,
       "balanceDeficit": 88422.23,
-      "recentContributions": [
+      "recentContributions": [],
+      "recentExpenditures": [],
+      "reportedContributions7Days": [],
+      "reportedExpenditures7Days": [],
+      "topContributorsSince2026": [
         {
-          "id": "5803827",
-          "date": "2026-09-04",
-          "name": "Kalshi",
-          "category": "Cash Contribution",
-          "amount": 2500.0
+          "name": "Oregon Realtors Political Action Committee (191)",
+          "amount": 32500.0
         },
         {
-          "id": "5795113",
-          "date": "2026-09-02",
           "name": "Marta von Borstel",
-          "category": "Cash Contribution",
+          "amount": 10000.0
+        },
+        {
+          "name": "Oregon Beverage PAC (126)",
+          "amount": 10000.0
+        },
+        {
+          "name": "AGC Committee for Action (4)",
+          "amount": 9500.0
+        },
+        {
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 9061.35
+        },
+        {
+          "name": "Oregon Council of NECA Chapters (135)",
+          "amount": 6000.0
+        },
+        {
+          "name": "Active Ballot Club General Fund",
           "amount": 5000.0
         },
         {
-          "id": "5800895",
-          "date": "2026-09-02",
-          "name": "Marta von Borstel",
-          "category": "Cash Contribution",
+          "name": "Altria Client Services LLC",
           "amount": 5000.0
         },
         {
-          "id": "5800909",
-          "date": "2026-09-02",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "5786583",
-          "date": "2026-08-31",
-          "name": "Oregonians for Food & Shelter PAC (17654)",
-          "category": "Cash Contribution",
-          "amount": 500.0
-        },
-        {
-          "id": "5795108",
-          "date": "2026-08-31",
-          "name": "Linda Spatuzzi",
-          "category": "Cash Contribution",
-          "amount": 50.0
-        },
-        {
-          "id": "5800908",
-          "date": "2026-08-31",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "5800907",
-          "date": "2026-08-30",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 10.0
-        },
-        {
-          "id": "5800906",
-          "date": "2026-08-29",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 25.0
-        },
-        {
-          "id": "5785973",
-          "date": "2026-08-28",
           "name": "DaVita",
-          "category": "Cash Contribution",
-          "amount": 2500.0
-        }
-      ],
-      "recentExpenditures": [
-        {
-          "id": "5800900",
-          "date": "2026-09-08",
-          "name": "iDONATEpro",
-          "category": "Cash Expenditure",
-          "amount": 350.0
+          "amount": 4500.0
         },
         {
-          "id": "5800901",
-          "date": "2026-09-07",
-          "name": "Orion Digital LLC",
-          "category": "Cash Expenditure",
-          "amount": 2.5
-        },
-        {
-          "id": "5800902",
-          "date": "2026-09-07",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 0.99
-        },
-        {
-          "id": "5793866",
-          "date": "2026-09-04",
-          "name": "Capitol Consulting Inc.",
-          "category": "Cash Expenditure",
-          "amount": 11750.0
-        },
-        {
-          "id": "5800910",
-          "date": "2026-09-04",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 15.0
-        },
-        {
-          "id": "5793815",
-          "date": "2026-09-03",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 394.0
-        },
-        {
-          "id": "5793897",
-          "date": "2026-09-02",
-          "name": "Orion Digital LLC",
-          "category": "Cash Expenditure",
-          "amount": 7.5
-        },
-        {
-          "id": "5793898",
-          "date": "2026-09-02",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 2.96
-        },
-        {
-          "id": "5793895",
-          "date": "2026-09-01",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 1.38
-        },
-        {
-          "id": "5786423",
-          "date": "2026-08-31",
-          "name": "LR3 Consulting, LLC",
-          "category": "Cash Expenditure",
-          "amount": 5000.0
+          "name": "Oregon Bankers PAC (125)",
+          "amount": 3500.0
         }
       ],
       "dataError": null,
