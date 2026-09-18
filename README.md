@@ -19,6 +19,8 @@ races, with four-hour ORESTAR campaign-finance updates.
   election for Senate races, and 2022 for governor
 - Search, race filters, pull-to-refresh, local caching, and a bundled offline copy
 - A scheduled GitHub Action that refreshes the data every four hours
+- A shared ORESTAR transaction ledger that updates every tracked committee from
+  statewide filed-date searches instead of repeating searches candidate by candidate
 
 ## Fastest setup
 
@@ -45,7 +47,13 @@ ORESTAR totals are public records provided by the Oregon Secretary of State.
 The app displays the `Balance Deficit` field exactly as ORESTAR reports it; it
 should not be treated as the same thing as cash on hand. If ORESTAR is
 temporarily unavailable, the updater preserves the last successful value and
-records an error for that candidate instead of replacing data with zero.
+tries again later instead of replacing data with zero or showing a raw network error.
+Recent filings are collected statewide and assigned locally by committee ID.
+Candidate account summaries are refreshed when activity is detected, with a
+24-hour rotating reconciliation for committees without new filings. The first
+ledger build backfills complete 2026 contribution histories for a small group
+of committees per run; each recovered committee switches to the shared ledger
+immediately, while existing top-contributor data remains in place for the rest.
 
 Candidate videos are optional. Add a `videos` array to a candidate in
 `backend/candidates_source.json`; each entry must contain `id`, `title`, `date`,

@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 import json
 from pathlib import Path
 import unittest
@@ -7,7 +7,9 @@ from urllib.error import HTTPError
 from backend.update_data import (
     add_ten_day_deltas,
     aggregate_top_contributors,
+    candidate_from_collective_data,
     detail_recovery_ids,
+    filer_id_from_cell,
     form_action,
     hidden_fields,
     money,
@@ -16,10 +18,12 @@ from backend.update_data import (
     parse_filed_at,
     parse_filed_date,
     parse_transactions,
+    replace_transaction_day,
     reported_transaction_types_to_refresh,
     retain_filed_since,
     retry_wait_seconds,
     top_contributors_need_refresh,
+    transaction_dates_for_sync,
 )
 
 
@@ -73,6 +77,17 @@ class OrestarParserTests(unittest.TestCase):
                 "amount": 100.0,
             }],
         )
+
+    def test_statewide_transactions_include_filer_id(self):
+        page = """
+        <table><tr>
+          <td>5806472</td><td>09/11/2026</td><td>Original</td>
+          <td><a href="sooDetail.do?cneCommitteeId=12345">Committee</a></td>
+          <td>Jane Doe</td><td>Cash Contribution</td><td>$100.00</td>
+        </tr></table>
+        """
+        self.assertEqual(filer_id_from_cell('x?filerId=12345'), 12345)
+        self.assertEqual(parse_transactions(page)[0]["filerID"], 12345)
 
     def test_transaction_next_page(self):
         page = '''<script>window.location="/orestar/gotoPublicTransactionSearchResults.do?cneSearchButtonName=next&amp;cneSearchPageIdx=1"</script>'''
@@ -178,11 +193,48 @@ class OrestarParserTests(unittest.TestCase):
             {"id": "2", "filedDate": "2026-09-11"},
             {"id": "3", "filedDate": "2026-09-18"},
         ]
-        from datetime import date
         self.assertEqual(
             [item["id"] for item in retain_filed_since(transactions, date(2026, 9, 11))],
             ["2", "3"],
         )
+
+    def test_collective_sync_dates_cover_full_window_once_then_recent_days(self):
+        now = datetime.fromisoformat("2026-09-18T12:00:00-07:00")
+        rolling = transaction_dates_for_sync(now, {})
+        self.assertEqual((rolling[0], rolling[-1]), (date(2026, 9, 11), date(2026, 9, 18)))
+        recent = transaction_dates_for_sync(now, {"rollingReconciledOn": "2026-09-18"})
+        self.assertEqual(recent, [date(2026, 9, 17), date(2026, 9, 18)])
+
+    def test_replacing_a_filed_day_removes_deleted_transactions(self):
+        cached = {
+            "1": {"id": "1", "filerID": 10, "transactionType": "C", "filedDate": "2026-09-18"},
+            "2": {"id": "2", "filerID": 20, "transactionType": "E", "filedDate": "2026-09-18"},
+        }
+        changed = replace_transaction_day(
+            cached,
+            "C",
+            date(2026, 9, 18),
+            [{"id": "3", "filerID": 30, "date": "2026-09-17", "name": "New", "category": "Cash", "amount": 5}],
+        )
+        self.assertEqual(set(cached), {"2", "3"})
+        self.assertEqual(changed, {10, 30})
+        self.assertEqual(cached["3"]["filedDate"], "2026-09-18")
+
+    def test_candidate_finance_lists_are_derived_from_shared_ledger(self):
+        now = datetime.fromisoformat("2026-09-18T12:00:00-07:00")
+        candidate = {"id": "jane", "name": "Jane", "filerID": 123}
+        previous = {"contributionsYTD": 100, "expendituresYTD": 20, "balanceDeficit": 80}
+        transactions = [
+            {"id": "1", "filerID": 123, "transactionType": "C", "filedDate": "2026-09-18", "filedAt": "2026-09-18T00:00:00", "date": "2026-09-17", "name": "Donor", "category": "Cash", "amount": 75},
+            {"id": "2", "filerID": 123, "transactionType": "C", "filedDate": "2026-08-01", "filedAt": "2026-08-01T00:00:00", "date": "2026-07-31", "name": "Donor", "category": "Cash", "amount": 25},
+        ]
+        item, failed = candidate_from_collective_data(
+            candidate, previous, transactions, True, False, now
+        )
+        self.assertFalse(failed)
+        self.assertEqual([entry["id"] for entry in item["reportedContributions7Days"]], ["1"])
+        self.assertEqual(item["topContributorsSince2026"], [{"name": "Donor", "amount": 100.0}])
+        self.assertFalse(item["financeDetailsPending"])
 
 
 class ElectionSourceTests(unittest.TestCase):
