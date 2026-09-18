@@ -19,10 +19,12 @@ struct Candidate: Codable, Identifiable, Hashable {
     let contributionsYTD: Double?
     let expendituresYTD: Double?
     let balanceDeficit: Double?
-    let contributionDelta10Days: Double?
-    let expenditureDelta10Days: Double?
     let recentContributions: [CampaignTransaction]?
     let recentExpenditures: [CampaignTransaction]?
+    let reportedContributions7Days: [CampaignTransaction]?
+    let reportedExpenditures7Days: [CampaignTransaction]?
+    let topContributorsSince2026: [TopContributor]?
+    let videos: [CandidateVideo]?
     let dataError: String?
 
     var partyShortName: String {
@@ -49,6 +51,22 @@ struct CampaignTransaction: Codable, Identifiable, Hashable {
     let name: String
     let category: String
     let amount: Double
+    let filedDate: String?
+    let filedAt: String?
+}
+
+struct TopContributor: Codable, Identifiable, Hashable {
+    var id: String { name }
+    let name: String
+    let amount: Double
+}
+
+struct CandidateVideo: Codable, Identifiable, Hashable {
+    let id: String
+    let title: String
+    let date: String
+    let source: String
+    let url: URL
 }
 
 struct RaceInfo: Codable, Identifiable, Hashable {

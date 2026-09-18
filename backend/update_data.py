@@ -24,6 +24,7 @@ SOURCE_PATH = ROOT / "backend" / "candidates_source.json"
 RACES_PATH = ROOT / "backend" / "races_source.json"
 OUTPUT_PATH = ROOT / "data" / "candidates.json"
 HISTORY_PATH = ROOT / "data" / "snapshots.json"
+CHECKPOINT_PATH = ROOT / "data" / "update_checkpoint.json"
 BUNDLED_PATH = ROOT / "BeyondTheBallot" / "candidates.json"
 CONFIGURATION_PATH = ROOT / "BeyondTheBallot" / "Configuration.swift"
 
@@ -35,7 +36,7 @@ CSRF_TOKEN_URL = ORESTAR_ROOT + "JavaScriptServlet"
 REGISTRATION_URL = "https://data.oregon.gov/resource/8h6y-5uec.json?$order=date%20DESC&$limit=5000"
 REGISTRATION_SOURCE_URL = "https://data.oregon.gov/Administrative/Voter-Registration-Data/8h6y-5uec"
 PACIFIC = ZoneInfo("America/Los_Angeles")
-USER_AGENT = "StateOfTheRaces/1.2 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
+USER_AGENT = "StateOfTheRaces/1.1 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
 ORESTAR_MIN_INTERVAL_SECONDS = 1.0
 ORESTAR_RETRY_DELAYS = (10, 30, 60)
 _orestar_rate_lock = Lock()
@@ -152,9 +153,36 @@ def parse_transactions(page: str) -> list[dict]:
             "category": cells[5] or "Not reported",
             "amount": money(cells[6]),
         })
-        if len(transactions) == 10:
-            break
     return transactions
+
+
+def next_page_url(page: str) -> str | None:
+    match = re.search(
+        r'window\.location=["\']([^"\']*cneSearchButtonName=next[^"\']*)',
+        page,
+        flags=re.I,
+    )
+    return urljoin(ORESTAR_ROOT, html.unescape(match.group(1))) if match else None
+
+
+def parse_filed_at(page: str) -> str:
+    for cells in table_rows(page):
+        for index, cell in enumerate(cells):
+            if cell.strip() != "Filed Date":
+                continue
+            for value in cells[index + 1:]:
+                if value == ":":
+                    continue
+                for date_format in ("%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y"):
+                    try:
+                        return datetime.strptime(value, date_format).isoformat(timespec="seconds")
+                    except ValueError:
+                        pass
+    raise ValueError("ORESTAR transaction filed date was not found")
+
+
+def parse_filed_date(page: str) -> str:
+    return parse_filed_at(page)[:10]
 
 
 def form_action(page: str) -> str:
@@ -195,12 +223,13 @@ def hidden_fields(page: str) -> dict[str, str]:
     return fields
 
 
-def fetch_transactions(
+def fetch_transaction_pages(
     opener,
     action_url: str,
     base_fields: dict[str, str],
     filer_id: int,
     transaction_type: str,
+    date_fields: dict[str, str] | None = None,
 ) -> list[dict]:
     type_name = "Contribution" if transaction_type == "C" else "Expenditure"
     fields = dict(base_fields)
@@ -211,6 +240,7 @@ def fetch_transactions(
         "cneSearchTranType": transaction_type,
         "cneSearchTranTypeName": type_name,
     })
+    fields.update(date_fields or {})
     req = Request(
         action_url,
         data=urlencode(fields).encode(),
@@ -220,21 +250,88 @@ def fetch_transactions(
             "Referer": TRANSACTION_SEARCH_URL,
         },
     )
-    return parse_transactions(opener_text(opener, req))
+    page = opener_text(opener, req)
+    transactions: list[dict] = []
+    seen_ids: set[str] = set()
+    while True:
+        page_transactions = parse_transactions(page)
+        new_transactions = [item for item in page_transactions if item["id"] not in seen_ids]
+        if not new_transactions:
+            break
+        transactions.extend(new_transactions)
+        seen_ids.update(item["id"] for item in new_transactions)
+        next_url = next_page_url(page)
+        if not next_url:
+            break
+        page = opener_text(opener, Request(next_url, headers={"User-Agent": USER_AGENT, "Referer": action_url}))
+    return transactions
 
 
-def transaction_types_to_refresh(summary: dict, previous: dict) -> set[str]:
+def add_filed_dates(opener, transactions: list[dict], cached: list[dict]) -> list[dict]:
+    cached_dates = {item["id"]: item.get("filedDate") for item in cached if item.get("filedDate")}
+    cached_times = {item["id"]: item.get("filedAt") for item in cached if item.get("filedAt")}
+    output = []
+    for transaction in transactions:
+        item = dict(transaction)
+        filed_date = cached_dates.get(item["id"])
+        filed_at = cached_times.get(item["id"])
+        if not filed_date or not filed_at:
+            detail_url = urljoin(ORESTAR_ROOT, f"gotoPublicTransactionDetail.do?tranRsn={item['id']}")
+            filed_at = parse_filed_at(
+                opener_text(opener, Request(detail_url, headers={"User-Agent": USER_AGENT}))
+            )
+            filed_date = filed_at[:10]
+        item["filedDate"] = filed_date
+        item["filedAt"] = filed_at
+        output.append(item)
+    return sorted(output, key=lambda item: (item["filedAt"], int(item["id"])), reverse=True)
+
+
+def aggregate_top_contributors(transactions: list[dict], limit: int = 10) -> list[dict]:
+    totals: dict[str, dict] = {}
+    for transaction in transactions:
+        name = " ".join(transaction.get("name", "Not reported").split()) or "Not reported"
+        key = name.casefold()
+        if key not in totals:
+            totals[key] = {"name": name, "amount": 0.0}
+        totals[key]["amount"] += transaction.get("amount", 0)
+    ranked = sorted(totals.values(), key=lambda item: (-item["amount"], item["name"].casefold()))
+    return [{"name": item["name"], "amount": round(item["amount"], 2)} for item in ranked[:limit]]
+
+
+def top_contributors_need_refresh(summary: dict, previous: dict) -> bool:
+    return (
+        summary.get("contributionsYTD") != previous.get("contributionsYTD")
+        or "topContributorsSince2026" not in previous
+        or str(previous.get("dataError", "")).startswith("Refresh failed:")
+    )
+
+
+def reported_transaction_types_to_refresh(summary: dict, previous: dict) -> set[str]:
     refresh = set()
-    if summary.get("contributionsYTD") != previous.get("contributionsYTD") or not previous.get("recentContributions"):
+    if (
+        summary.get("contributionsYTD") != previous.get("contributionsYTD")
+        or "reportedContributions7Days" not in previous
+        or str(previous.get("dataError", "")).startswith("Refresh failed:")
+    ):
         refresh.add("C")
-    if summary.get("expendituresYTD") != previous.get("expendituresYTD") or not previous.get("recentExpenditures"):
+    if (
+        summary.get("expendituresYTD") != previous.get("expendituresYTD")
+        or "reportedExpenditures7Days" not in previous
+        or str(previous.get("dataError", "")).startswith("Refresh failed:")
+    ):
         refresh.add("E")
     return refresh
 
 
-def fetch_candidate(candidate: dict, previous: dict | None = None) -> dict:
+def retain_filed_since(transactions: list[dict], cutoff) -> list[dict]:
+    return [item for item in transactions if item.get("filedDate", "") >= cutoff.isoformat()]
+
+
+def fetch_candidate(candidate: dict, previous: dict | None = None, now: datetime | None = None) -> dict:
     item = dict(candidate)
     previous = previous or {}
+    now = now or datetime.now(PACIFIC)
     filer_id = item.get("filerID")
     item["orestarURL"] = ACCOUNT_URL.format(filer_id) if filer_id else None
     if not filer_id:
@@ -244,6 +341,9 @@ def fetch_candidate(candidate: dict, previous: dict | None = None) -> dict:
             "balanceDeficit": None,
             "recentContributions": [],
             "recentExpenditures": [],
+            "reportedContributions7Days": [],
+            "reportedExpenditures7Days": [],
+            "topContributorsSince2026": [],
             "dataError": "ORESTAR committee not yet linked",
         })
         return item
@@ -251,19 +351,53 @@ def fetch_candidate(candidate: dict, previous: dict | None = None) -> dict:
     item.update(summary)
     item["recentContributions"] = previous.get("recentContributions", [])
     item["recentExpenditures"] = previous.get("recentExpenditures", [])
+    seven_days_ago = now.date() - timedelta(days=7)
+    item["reportedContributions7Days"] = retain_filed_since(
+        previous.get("reportedContributions7Days", []), seven_days_ago
+    )
+    item["reportedExpenditures7Days"] = retain_filed_since(
+        previous.get("reportedExpenditures7Days", []), seven_days_ago
+    )
+    item["topContributorsSince2026"] = previous.get("topContributorsSince2026", [])
 
-    refresh_types = transaction_types_to_refresh(summary, previous)
-    if refresh_types:
+    refresh_types = reported_transaction_types_to_refresh(summary, previous)
+    refresh_top = top_contributors_need_refresh(summary, previous)
+    if refresh_types or refresh_top:
         opener = build_opener(HTTPCookieProcessor(CookieJar()))
         search_page = opener_text(opener, Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}))
         fields = hidden_fields(search_page)
         token_name, token_value = csrf_token(opener)
         fields[token_name] = token_value
         action_url = form_action(search_page)
-        if "C" in refresh_types:
-            item["recentContributions"] = fetch_transactions(opener, action_url, fields, filer_id, "C")
-        if "E" in refresh_types:
-            item["recentExpenditures"] = fetch_transactions(opener, action_url, fields, filer_id, "E")
+
+    filed_range = {
+        "cneSearchTranFiledStartDate": seven_days_ago.strftime("%m/%d/%Y"),
+        "cneSearchTranFiledEndDate": now.date().strftime("%m/%d/%Y"),
+    }
+    for transaction_type, field_name in (
+        ("C", "reportedContributions7Days"),
+        ("E", "reportedExpenditures7Days"),
+    ):
+        if transaction_type not in refresh_types:
+            continue
+        transactions = fetch_transaction_pages(
+            opener, action_url, fields, filer_id, transaction_type, filed_range
+        )
+        item[field_name] = add_filed_dates(opener, transactions, previous.get(field_name, []))
+
+    # Preserve the legacy fields while version 1.0 remains installable.
+    item["recentContributions"] = item["reportedContributions7Days"][:10]
+    item["recentExpenditures"] = item["reportedExpenditures7Days"][:10]
+
+    if refresh_top:
+        transaction_range = {
+            "cneSearchTranStartDate": "01/01/2026",
+            "cneSearchTranEndDate": now.date().strftime("%m/%d/%Y"),
+        }
+        contributions = fetch_transaction_pages(
+            opener, action_url, fields, filer_id, "C", transaction_range
+        )
+        item["topContributorsSince2026"] = aggregate_top_contributors(contributions)
     item["dataError"] = None
     return item
 
@@ -390,15 +524,25 @@ def refresh() -> int:
     race_source = read_json(RACES_PATH, {"races": []})
     previous_feed = read_json(OUTPUT_PATH, {})
     previous_candidates = {item["id"]: item for item in previous_feed.get("candidates", [])}
+    checkpoint_candidates = read_json(CHECKPOINT_PATH, {})
+    previous_candidates.update(checkpoint_candidates)
     previous_races = {item["id"]: item for item in previous_feed.get("races", [])}
     history = read_json(HISTORY_PATH, [])
     failures = 0
-    refreshed_by_id: dict[str, dict] = {}
+    refreshed_by_id: dict[str, dict] = dict(checkpoint_candidates)
 
+    total_candidates = len(source["candidates"])
+    completed = len(checkpoint_candidates)
+    if completed:
+        print(f"Resuming from checkpoint: {completed}/{total_candidates} candidates complete", flush=True)
+    migration_order = sorted(
+        [item for item in source["candidates"] if item["id"] not in checkpoint_candidates],
+        key=lambda item: previous_candidates.get(item["id"], {}).get("contributionsYTD") or 0,
+    )
     with ThreadPoolExecutor(max_workers=2) as pool:
         futures = {
             pool.submit(fetch_candidate, candidate, previous_candidates.get(candidate["id"], {})): candidate
-            for candidate in source["candidates"]
+            for candidate in migration_order
         }
         for future in as_completed(futures):
             original = futures[future]
@@ -412,10 +556,21 @@ def refresh() -> int:
                 for field in (
                     "contributionsYTD", "expendituresYTD", "balanceDeficit",
                     "recentContributions", "recentExpenditures",
+                    "reportedContributions7Days", "reportedExpenditures7Days",
+                    "topContributorsSince2026",
                 ):
-                    item[field] = old.get(field, [] if field.startswith("recent") else None)
+                    is_collection = field.startswith("recent") or field.startswith("reported") or field.startswith("top")
+                    item[field] = old.get(field, [] if is_collection else None)
                 item["dataError"] = f"Refresh failed: {error}"
             refreshed_by_id[item["id"]] = item
+            if not str(item.get("dataError", "")).startswith("Refresh failed:"):
+                checkpoint_candidates[item["id"]] = item
+                CHECKPOINT_PATH.write_text(
+                    json.dumps(checkpoint_candidates, indent=2, ensure_ascii=False) + "\n"
+                )
+            completed += 1
+            status = item.get("dataError") or "complete"
+            print(f"[{completed}/{total_candidates}] {item['name']}: {status}", flush=True)
 
     candidates = [refreshed_by_id[item["id"]] for item in source["candidates"]]
     now = datetime.now(PACIFIC)
@@ -433,6 +588,7 @@ def refresh() -> int:
     OUTPUT_PATH.write_text(encoded)
     BUNDLED_PATH.write_text(encoded)
     HISTORY_PATH.write_text(json.dumps(update_history(history, candidates, now), indent=2) + "\n")
+    CHECKPOINT_PATH.unlink(missing_ok=True)
     print(f"Updated {len(candidates) - failures}/{len(candidates)} candidates; {failures} failures")
     return 1 if failures == len(candidates) else 0
 

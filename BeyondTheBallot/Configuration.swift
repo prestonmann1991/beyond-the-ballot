@@ -2,7 +2,7 @@ import Foundation
 
 enum AppConfiguration {
 #if DEBUG
-    private static let feedBranch = "version-1.2"
+    private static let feedBranch = "v1.1-finance-videos"
 #else
     private static let feedBranch = "main"
 #endif
