@@ -7,6 +7,7 @@ from urllib.error import HTTPError
 from backend.update_data import (
     add_ten_day_deltas,
     aggregate_top_contributors,
+    detail_recovery_ids,
     form_action,
     hidden_fields,
     money,
@@ -139,6 +140,7 @@ class OrestarParserTests(unittest.TestCase):
 
         missing = {"contributionsYTD": 150}
         self.assertTrue(top_contributors_need_refresh(summary, missing))
+        self.assertTrue(top_contributors_need_refresh(summary, dict(complete, financeDetailsPending=True)))
 
     def test_reported_transactions_refresh_when_totals_change_or_fields_are_missing(self):
         summary = {"contributionsYTD": 150, "expendituresYTD": 80}
@@ -155,6 +157,20 @@ class OrestarParserTests(unittest.TestCase):
         missing = dict(complete)
         del missing["reportedContributions7Days"]
         self.assertEqual(reported_transaction_types_to_refresh(summary, missing), {"C"})
+        self.assertEqual(
+            reported_transaction_types_to_refresh(summary, dict(complete, financeDetailsPending=True)),
+            {"C", "E"},
+        )
+
+    def test_detail_recovery_is_batched_in_source_order(self):
+        candidates = [{"id": "a"}, {"id": "b"}, {"id": "c"}, {"id": "d"}]
+        previous = {
+            "a": {"dataError": "Refresh failed: HTTP Error 403: Forbidden"},
+            "b": {"financeDetailsPending": True},
+            "c": {"dataError": None},
+            "d": {"financeDetailsPending": True},
+        }
+        self.assertEqual(detail_recovery_ids(candidates, previous, limit=2), {"a", "b"})
 
     def test_expired_reported_transactions_are_removed_from_cache(self):
         transactions = [

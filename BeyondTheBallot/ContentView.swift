@@ -430,7 +430,8 @@ private struct CandidateRow: View {
                 .tint(.brandOrange)
             }
 
-            if let dataError = candidate.dataError {
+            if let dataError = candidate.dataError,
+               !dataError.hasPrefix("Refresh failed:") {
                 Label(dataError, systemImage: "info.circle")
                     .font(.caption2)
                     .foregroundStyle(.white.opacity(0.58))
