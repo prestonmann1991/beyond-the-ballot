@@ -7,7 +7,7 @@
 - **Primary category:** Reference
 - **Secondary category:** News
 - **Price:** Free
-- **Version:** 1.0
+- **Version:** 1.1
 - **Copyright:** 2026 Preston Mann
 - **Privacy policy URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/PRIVACY.md
 - **Support URL:** https://github.com/prestonmann1991/beyond-the-ballot/blob/main/SUPPORT.md
@@ -28,8 +28,11 @@ Track Oregon's race for governor, all 60 Oregon House districts, and every Orego
 - Year-to-date contributions
 - Year-to-date expenditures
 - ORESTAR balance/deficit
+- Contributions and expenditures reported to ORESTAR in the last seven days
+- The 10 largest contributors since January 1, 2026, aggregated by contributor
 - Active-voter registration percentages by party grouping
 - Prior general-election vote totals and percentages
+- Candidate video links when available
 
 Financial figures are refreshed every four hours from public Oregon Secretary of State ORESTAR records. Search by candidate or race, filter between governor, House, and Senate contests, and pull down to request the latest available data.
 
@@ -50,6 +53,14 @@ Select **No, we do not collect data from this app**. The app has no accounts, ad
 ## App Review notes
 
 State of the Races displays public campaign-finance information derived from the Oregon Secretary of State's ORESTAR system. No account, sign-in, special access, or demo credentials are required. The app does not collect user data. Candidate and ORESTAR links open publicly accessible external websites. Financial figures are refreshed every four hours through the app's public data feed.
+
+## What's New in Version 1.1
+
+- View all contributions and expenditures reported to ORESTAR in the last seven days.
+- See each candidate's 10 largest contributors since January 1, 2026, with repeated contributions combined.
+- Open candidate videos when available.
+- See a clearer label and date for voter-registration data.
+- Removes the previous 10-day totals comparison.
 
 ## Suggested screenshots
 

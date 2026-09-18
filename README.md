@@ -10,6 +10,10 @@ races, with four-hour ORESTAR campaign-finance updates.
 - All 15 Oregon Senate districts on the 2026 ballot
 - Candidate name, party, campaign website, ORESTAR balance/deficit, year-to-date
   contributions, and year-to-date expenditures
+- All contributions and expenditures reported to ORESTAR in the last seven days
+- Each candidate's 10 largest aggregated contributors since January 1, 2026
+- Optional candidate-video links that can be added through the data feed
+- Clearly labeled active-voter registration percentages by party group
 - Featured, All Races, and user-selected Favorites feeds
 - Official prior-election results: 2024 and 2022 for House races, the most recent
   election for Senate races, and 2022 for governor
@@ -42,3 +46,7 @@ The app displays the `Balance Deficit` field exactly as ORESTAR reports it; it
 should not be treated as the same thing as cash on hand. If ORESTAR is
 temporarily unavailable, the updater preserves the last successful value and
 records an error for that candidate instead of replacing data with zero.
+
+Candidate videos are optional. Add a `videos` array to a candidate in
+`backend/candidates_source.json`; each entry must contain `id`, `title`, `date`,
+`source`, and `url`. Candidates without videos do not display the section.

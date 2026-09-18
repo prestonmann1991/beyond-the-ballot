@@ -277,6 +277,21 @@ private struct RegistrationView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
+            HStack {
+                Text("Voter registration")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundStyle(.white.opacity(0.72))
+                Spacer()
+                if let sourceURL {
+                    Link("As of \(registration.asOf) ↗", destination: sourceURL)
+                        .foregroundStyle(.white.opacity(0.55))
+                } else {
+                    Text("As of \(registration.asOf)")
+                        .foregroundStyle(.white.opacity(0.55))
+                }
+            }
+            .font(.system(size: 10, weight: .semibold))
+
             GeometryReader { geometry in
                 HStack(spacing: 2) {
                     Rectangle().fill(Color.partyBlue)
@@ -293,13 +308,6 @@ private struct RegistrationView: View {
                 registrationLabel("D", registration.democraticPct, .partyBlue)
                 registrationLabel("R", registration.republicanPct, .partyRed)
                 registrationLabel("Other", registration.otherPct, .otherParty)
-                Spacer()
-                if let sourceURL {
-                    Link("\(registration.asOf) ↗", destination: sourceURL)
-                        .foregroundStyle(.white.opacity(0.55))
-                } else {
-                    Text(registration.asOf)
-                }
             }
             .font(.system(size: 10, weight: .semibold))
             .foregroundStyle(.white.opacity(0.72))
@@ -317,6 +325,8 @@ private struct RegistrationView: View {
 private struct CandidateRow: View {
     let candidate: Candidate
     @State private var transactionSheet: TransactionSheet?
+    @State private var contributorsExpanded = false
+    @State private var videosExpanded = false
 
     private var partyColor: Color {
         let hasDemocratic = candidate.party.contains("Democratic")
@@ -361,16 +371,63 @@ private struct CandidateRow: View {
                 metricButton(
                     title: "Contributions",
                     value: candidate.contributionsYTD,
-                    delta: candidate.contributionDelta10Days,
-                    transactions: candidate.recentContributions ?? []
+                    transactions: candidate.reportedContributions7Days ?? candidate.recentContributions ?? []
                 )
                 metricButton(
                     title: "Expenditures",
                     value: candidate.expendituresYTD,
-                    delta: candidate.expenditureDelta10Days,
-                    transactions: candidate.recentExpenditures ?? []
+                    transactions: candidate.reportedExpenditures7Days ?? candidate.recentExpenditures ?? []
                 )
-                MoneyMetric(title: "Balance / Deficit", value: candidate.balanceDeficit, delta: nil, isInteractive: false)
+                MoneyMetric(title: "Balance / Deficit", value: candidate.balanceDeficit, isInteractive: false)
+            }
+
+            if let videos = candidate.videos, !videos.isEmpty {
+                DisclosureGroup(isExpanded: $videosExpanded) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(videos) { video in
+                            Link(destination: video.url) {
+                                HStack(alignment: .top) {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(video.title).font(.caption.weight(.semibold))
+                                        Text("\(video.date) · \(video.source)")
+                                            .font(.caption2)
+                                            .foregroundStyle(.white.opacity(0.55))
+                                    }
+                                    Spacer()
+                                    Image(systemName: "arrow.up.right.square")
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top, 8)
+                } label: {
+                    Label("Candidate videos", systemImage: "play.rectangle")
+                        .font(.caption.weight(.bold))
+                }
+                .tint(.brandOrange)
+            }
+
+            if let contributors = candidate.topContributorsSince2026, !contributors.isEmpty {
+                DisclosureGroup(isExpanded: $contributorsExpanded) {
+                    VStack(spacing: 8) {
+                        ForEach(Array(contributors.enumerated()), id: \.element.id) { index, contributor in
+                            HStack(alignment: .firstTextBaseline) {
+                                Text("\(index + 1). \(contributor.name)")
+                                    .font(.caption)
+                                    .foregroundStyle(.white.opacity(0.78))
+                                Spacer()
+                                Text(MoneyMetric.currency(contributor.amount))
+                                    .font(.caption.weight(.bold).monospacedDigit())
+                                    .foregroundStyle(.white)
+                            }
+                        }
+                    }
+                    .padding(.top, 8)
+                } label: {
+                    Label("Largest contributors since Jan. 1, 2026", systemImage: "chart.bar")
+                        .font(.caption.weight(.bold))
+                }
+                .tint(.brandOrange)
             }
 
             if let dataError = candidate.dataError {
@@ -385,21 +442,19 @@ private struct CandidateRow: View {
         }
     }
 
-    private func metricButton(title: String, value: Double?, delta: Double?, transactions: [CampaignTransaction]) -> some View {
+    private func metricButton(title: String, value: Double?, transactions: [CampaignTransaction]) -> some View {
         Button {
             transactionSheet = TransactionSheet(candidateName: candidate.name, title: title, transactions: transactions)
         } label: {
-            MoneyMetric(title: title, value: value, delta: delta, isInteractive: !transactions.isEmpty)
+            MoneyMetric(title: title, value: value, isInteractive: true)
         }
         .buttonStyle(.plain)
-        .disabled(transactions.isEmpty)
     }
 }
 
 private struct MoneyMetric: View {
     let title: String
     let value: Double?
-    let delta: Double?
     let isInteractive: Bool
 
     var body: some View {
@@ -419,21 +474,8 @@ private struct MoneyMetric: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.58)
 
-            if let delta {
-                Text("\(delta >= 0 ? "+" : "")\(Self.currency(delta)) in 10d")
-                    .font(.system(size: 8, weight: .bold))
-                    .foregroundStyle(delta == 0 ? .white.opacity(0.5) : Color.brandOrange)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-            } else if title != "Balance / Deficit" {
-                Text("10-day history building")
-                    .font(.system(size: 8, weight: .medium))
-                    .foregroundStyle(.white.opacity(0.42))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-            }
         }
-        .frame(maxWidth: .infinity, minHeight: 62, alignment: .leading)
+        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
         .padding(9)
         .background(Color.metricSlate, in: RoundedRectangle(cornerRadius: 10))
     }
@@ -457,19 +499,24 @@ private struct TransactionListView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("Most recent 10") {
-                    ForEach(sheet.transactions) { transaction in
-                        VStack(alignment: .leading, spacing: 5) {
-                            HStack(alignment: .firstTextBaseline) {
-                                Text(transaction.name).font(.headline)
-                                Spacer()
-                                Text(MoneyMetric.currency(transaction.amount)).font(.headline)
+                Section("Reported to ORESTAR in the last 7 days") {
+                    if sheet.transactions.isEmpty {
+                        Text("No \(sheet.title.lowercased()) were reported to ORESTAR in the last 7 days.")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        ForEach(sheet.transactions) { transaction in
+                            VStack(alignment: .leading, spacing: 5) {
+                                HStack(alignment: .firstTextBaseline) {
+                                    Text(transaction.name).font(.headline)
+                                    Spacer()
+                                    Text(MoneyMetric.currency(transaction.amount)).font(.headline)
+                                }
+                                Text(transactionDescription(transaction))
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
                             }
-                            Text("\(transaction.date) · \(transaction.category)")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
+                            .padding(.vertical, 4)
                         }
-                        .padding(.vertical, 4)
                     }
                 }
                 Section {
@@ -486,6 +533,11 @@ private struct TransactionListView: View {
                 }
             }
         }
+    }
+
+    private func transactionDescription(_ transaction: CampaignTransaction) -> String {
+        let filed = transaction.filedDate.map { "Reported \($0)" } ?? "Reported date unavailable"
+        return "\(filed) · Transaction \(transaction.date) · \(transaction.category)"
     }
 }
 

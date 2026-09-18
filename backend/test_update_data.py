@@ -6,13 +6,19 @@ from urllib.error import HTTPError
 
 from backend.update_data import (
     add_ten_day_deltas,
+    aggregate_top_contributors,
     form_action,
     hidden_fields,
     money,
+    next_page_url,
     parse_account_page,
+    parse_filed_at,
+    parse_filed_date,
     parse_transactions,
+    reported_transaction_types_to_refresh,
+    retain_filed_since,
     retry_wait_seconds,
-    transaction_types_to_refresh,
+    top_contributors_need_refresh,
 )
 
 
@@ -67,6 +73,35 @@ class OrestarParserTests(unittest.TestCase):
             }],
         )
 
+    def test_transaction_next_page(self):
+        page = '''<script>window.location="/orestar/gotoPublicTransactionSearchResults.do?cneSearchButtonName=next&amp;cneSearchPageIdx=1"</script>'''
+        self.assertEqual(
+            next_page_url(page),
+            "https://secure.sos.state.or.us/orestar/gotoPublicTransactionSearchResults.do?cneSearchButtonName=next&cneSearchPageIdx=1",
+        )
+
+    def test_filed_date(self):
+        page = """
+        <table><tr><td>Transaction Sub Type</td><td>:</td><td>Cash</td>
+        <td>Filed Date </td><td>:</td><td>09/16/2026 10:37:00 AM</td></tr></table>
+        """
+        self.assertEqual(parse_filed_date(page), "2026-09-16")
+        self.assertEqual(parse_filed_at(page), "2026-09-16T10:37:00")
+
+    def test_top_contributors_are_combined_and_ranked(self):
+        transactions = [
+            {"name": "Jane Doe", "amount": 100},
+            {"name": "  JANE   DOE ", "amount": 75.25},
+            {"name": "Acme PAC", "amount": 200},
+        ]
+        self.assertEqual(
+            aggregate_top_contributors(transactions),
+            [
+                {"name": "Acme PAC", "amount": 200.0},
+                {"name": "Jane Doe", "amount": 175.25},
+            ],
+        )
+
     def test_ten_day_delta_uses_latest_eligible_snapshot(self):
         now = datetime.fromisoformat("2026-09-15T12:00:00-07:00")
         history = [
@@ -91,21 +126,47 @@ class OrestarParserTests(unittest.TestCase):
         self.assertEqual(retry_wait_seconds(forbidden, 1), 30)
         self.assertEqual(retry_wait_seconds(too_many, 0), 45)
 
-    def test_transactions_refresh_only_when_changed_or_missing(self):
+    def test_top_contributors_refresh_only_when_changed_or_missing(self):
         summary = {"contributionsYTD": 150, "expendituresYTD": 80}
         complete = {
             "contributionsYTD": 150,
-            "expendituresYTD": 80,
-            "recentContributions": [{"id": "1"}],
-            "recentExpenditures": [{"id": "2"}],
+            "topContributorsSince2026": [{"name": "Jane Doe", "amount": 100}],
         }
-        self.assertEqual(transaction_types_to_refresh(summary, complete), set())
+        self.assertFalse(top_contributors_need_refresh(summary, complete))
 
         changed = dict(complete, contributionsYTD=125)
-        self.assertEqual(transaction_types_to_refresh(summary, changed), {"C"})
+        self.assertTrue(top_contributors_need_refresh(summary, changed))
 
-        missing = dict(complete, recentExpenditures=[])
-        self.assertEqual(transaction_types_to_refresh(summary, missing), {"E"})
+        missing = {"contributionsYTD": 150}
+        self.assertTrue(top_contributors_need_refresh(summary, missing))
+
+    def test_reported_transactions_refresh_when_totals_change_or_fields_are_missing(self):
+        summary = {"contributionsYTD": 150, "expendituresYTD": 80}
+        complete = {
+            **summary,
+            "reportedContributions7Days": [],
+            "reportedExpenditures7Days": [],
+        }
+        self.assertEqual(reported_transaction_types_to_refresh(summary, complete), set())
+        self.assertEqual(
+            reported_transaction_types_to_refresh(summary, dict(complete, expendituresYTD=70)),
+            {"E"},
+        )
+        missing = dict(complete)
+        del missing["reportedContributions7Days"]
+        self.assertEqual(reported_transaction_types_to_refresh(summary, missing), {"C"})
+
+    def test_expired_reported_transactions_are_removed_from_cache(self):
+        transactions = [
+            {"id": "1", "filedDate": "2026-09-10"},
+            {"id": "2", "filedDate": "2026-09-11"},
+            {"id": "3", "filedDate": "2026-09-18"},
+        ]
+        from datetime import date
+        self.assertEqual(
+            [item["id"] for item in retain_filed_since(transactions, date(2026, 9, 11))],
+            ["2", "3"],
+        )
 
 
 class ElectionSourceTests(unittest.TestCase):
