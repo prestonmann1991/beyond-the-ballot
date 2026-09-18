@@ -37,8 +37,9 @@ REGISTRATION_URL = "https://data.oregon.gov/resource/8h6y-5uec.json?$order=date%
 REGISTRATION_SOURCE_URL = "https://data.oregon.gov/Administrative/Voter-Registration-Data/8h6y-5uec"
 PACIFIC = ZoneInfo("America/Los_Angeles")
 USER_AGENT = "StateOfTheRaces/1.1 (public election data updater; github.com/prestonmann1991/beyond-the-ballot)"
-ORESTAR_MIN_INTERVAL_SECONDS = 1.0
+ORESTAR_MIN_INTERVAL_SECONDS = 2.0
 ORESTAR_RETRY_DELAYS = (10, 30, 60)
+DETAIL_RECOVERY_BATCH_SIZE = 12
 _orestar_rate_lock = Lock()
 _last_orestar_request = 0.0
 
@@ -303,6 +304,7 @@ def top_contributors_need_refresh(summary: dict, previous: dict) -> bool:
     return (
         summary.get("contributionsYTD") != previous.get("contributionsYTD")
         or "topContributorsSince2026" not in previous
+        or previous.get("financeDetailsPending") is True
         or str(previous.get("dataError", "")).startswith("Refresh failed:")
     )
 
@@ -312,12 +314,14 @@ def reported_transaction_types_to_refresh(summary: dict, previous: dict) -> set[
     if (
         summary.get("contributionsYTD") != previous.get("contributionsYTD")
         or "reportedContributions7Days" not in previous
+        or previous.get("financeDetailsPending") is True
         or str(previous.get("dataError", "")).startswith("Refresh failed:")
     ):
         refresh.add("C")
     if (
         summary.get("expendituresYTD") != previous.get("expendituresYTD")
         or "reportedExpenditures7Days" not in previous
+        or previous.get("financeDetailsPending") is True
         or str(previous.get("dataError", "")).startswith("Refresh failed:")
     ):
         refresh.add("E")
@@ -328,7 +332,12 @@ def retain_filed_since(transactions: list[dict], cutoff) -> list[dict]:
     return [item for item in transactions if item.get("filedDate", "") >= cutoff.isoformat()]
 
 
-def fetch_candidate(candidate: dict, previous: dict | None = None, now: datetime | None = None) -> dict:
+def fetch_candidate(
+    candidate: dict,
+    previous: dict | None = None,
+    now: datetime | None = None,
+    refresh_details: bool = True,
+) -> dict:
     item = dict(candidate)
     previous = previous or {}
     now = now or datetime.now(PACIFIC)
@@ -344,6 +353,7 @@ def fetch_candidate(candidate: dict, previous: dict | None = None, now: datetime
             "reportedContributions7Days": [],
             "reportedExpenditures7Days": [],
             "topContributorsSince2026": [],
+            "financeDetailsPending": False,
             "dataError": "ORESTAR committee not yet linked",
         })
         return item
@@ -362,6 +372,10 @@ def fetch_candidate(candidate: dict, previous: dict | None = None, now: datetime
 
     refresh_types = reported_transaction_types_to_refresh(summary, previous)
     refresh_top = top_contributors_need_refresh(summary, previous)
+    if (refresh_types or refresh_top) and not refresh_details:
+        item["financeDetailsPending"] = True
+        item["dataError"] = None
+        return item
     if refresh_types or refresh_top:
         opener = build_opener(HTTPCookieProcessor(CookieJar()))
         search_page = opener_text(opener, Request(TRANSACTION_SEARCH_URL, headers={"User-Agent": USER_AGENT}))
@@ -398,8 +412,24 @@ def fetch_candidate(candidate: dict, previous: dict | None = None, now: datetime
             opener, action_url, fields, filer_id, "C", transaction_range
         )
         item["topContributorsSince2026"] = aggregate_top_contributors(contributions)
+    item["financeDetailsPending"] = False
     item["dataError"] = None
     return item
+
+
+def detail_recovery_ids(
+    candidates: list[dict], previous_candidates: dict[str, dict], limit: int = DETAIL_RECOVERY_BATCH_SIZE
+) -> set[str]:
+    """Select a small, deterministic batch of interrupted detail migrations."""
+    pending = []
+    for candidate in candidates:
+        previous = previous_candidates.get(candidate["id"], {})
+        if (
+            previous.get("financeDetailsPending") is True
+            or str(previous.get("dataError", "")).startswith("Refresh failed:")
+        ):
+            pending.append(candidate["id"])
+    return set(pending[:limit])
 
 
 def latest_registration_rows() -> tuple[list[dict], str]:
@@ -530,6 +560,19 @@ def refresh() -> int:
     history = read_json(HISTORY_PATH, [])
     failures = 0
     refreshed_by_id: dict[str, dict] = dict(checkpoint_candidates)
+    pending_ids = {
+        candidate["id"]
+        for candidate in source["candidates"]
+        if previous_candidates.get(candidate["id"], {}).get("financeDetailsPending") is True
+        or str(previous_candidates.get(candidate["id"], {}).get("dataError", "")).startswith("Refresh failed:")
+    }
+    recovery_ids = detail_recovery_ids(source["candidates"], previous_candidates)
+    if pending_ids:
+        print(
+            f"Recovering detailed finance data for {len(recovery_ids)} of "
+            f"{len(pending_ids)} pending candidates this run",
+            flush=True,
+        )
 
     total_candidates = len(source["candidates"])
     completed = len(checkpoint_candidates)
@@ -539,9 +582,15 @@ def refresh() -> int:
         [item for item in source["candidates"] if item["id"] not in checkpoint_candidates],
         key=lambda item: previous_candidates.get(item["id"], {}).get("contributionsYTD") or 0,
     )
-    with ThreadPoolExecutor(max_workers=2) as pool:
+    with ThreadPoolExecutor(max_workers=1) as pool:
         futures = {
-            pool.submit(fetch_candidate, candidate, previous_candidates.get(candidate["id"], {})): candidate
+            pool.submit(
+                fetch_candidate,
+                candidate,
+                previous_candidates.get(candidate["id"], {}),
+                None,
+                candidate["id"] not in pending_ids or candidate["id"] in recovery_ids,
+            ): candidate
             for candidate in migration_order
         }
         for future in as_completed(futures):
@@ -561,9 +610,10 @@ def refresh() -> int:
                 ):
                     is_collection = field.startswith("recent") or field.startswith("reported") or field.startswith("top")
                     item[field] = old.get(field, [] if is_collection else None)
-                item["dataError"] = f"Refresh failed: {error}"
+                item["financeDetailsPending"] = True
+                item["dataError"] = None
             refreshed_by_id[item["id"]] = item
-            if not str(item.get("dataError", "")).startswith("Refresh failed:"):
+            if not item.get("financeDetailsPending"):
                 checkpoint_candidates[item["id"]] = item
                 CHECKPOINT_PATH.write_text(
                     json.dumps(checkpoint_candidates, indent=2, ensure_ascii=False) + "\n"
