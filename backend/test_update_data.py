@@ -19,6 +19,7 @@ from backend.update_data import (
     parse_filed_date,
     parse_transactions,
     replace_transaction_day,
+    replace_filer_contributions,
     reported_transaction_types_to_refresh,
     retain_filed_since,
     retry_wait_seconds,
@@ -219,6 +220,19 @@ class OrestarParserTests(unittest.TestCase):
         self.assertEqual(set(cached), {"2", "3"})
         self.assertEqual(changed, {10, 30})
         self.assertEqual(cached["3"]["filedDate"], "2026-09-18")
+
+    def test_history_backfill_retains_older_contribution_reported_this_week(self):
+        cached = {
+            "old": {"id": "old", "filerID": 10, "transactionType": "C", "date": "2025-12-30", "filedDate": "2026-09-18", "amount": 50},
+            "current": {"id": "current", "filerID": 10, "transactionType": "C", "date": "2026-09-17", "filedDate": "2026-09-18", "amount": 100},
+            "removed": {"id": "removed", "filerID": 10, "transactionType": "C", "date": "2026-07-01", "filedDate": "2026-07-02", "amount": 20},
+        }
+        replace_filer_contributions(
+            cached, 10, [{"id": "current", "date": "2026-09-17", "name": "Donor", "amount": 100}]
+        )
+        self.assertEqual(set(cached), {"old", "current"})
+        self.assertEqual(cached["current"]["filedDate"], "2026-09-18")
+        self.assertEqual(cached["old"]["filedDate"], "2026-09-18")
 
     def test_candidate_finance_lists_are_derived_from_shared_ledger(self):
         now = datetime.fromisoformat("2026-09-18T12:00:00-07:00")

@@ -407,14 +407,15 @@ def fetch_statewide_transaction_day(opener, action_url, fields, transaction_type
             "cneSearchTranFiledEndDate": date_text,
         },
     )
-    if transactions and not any(item.get("filerID") for item in transactions):
-        raise ValueError("ORESTAR statewide results did not expose filer committee IDs")
+    if any(not item.get("filerID") for item in transactions):
+        raise ValueError("ORESTAR statewide results did not expose every filer committee ID")
     return transactions
 
 
 def replace_filer_contributions(
     transactions: dict[str, dict], filer_id: int, replacements: list[dict]
 ) -> None:
+    """Rebuild 2026 history while retaining older transactions filed recently."""
     existing = {
         transaction_id: item
         for transaction_id, item in transactions.items()
@@ -431,6 +432,9 @@ def replace_filer_contributions(
                 if existing[item["id"]].get(field):
                     item[field] = existing[item["id"]][field]
         transactions[item["id"]] = item
+    for transaction_id, item in existing.items():
+        if item.get("date", "") < LEDGER_START_DATE.isoformat() and transaction_id not in transactions:
+            transactions[transaction_id] = item
 
 
 def collective_transaction_sync(
