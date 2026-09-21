@@ -424,8 +424,9 @@ private struct CandidateRow: View {
                     }
                     .padding(.top, 8)
                 } label: {
-                    Label("Largest contributors since Jan. 1, 2026", systemImage: "chart.bar")
+                    Label("Top contributors", systemImage: "chart.bar")
                         .font(.caption.weight(.bold))
+                        .lineLimit(1)
                 }
                 .tint(.brandOrange)
             }
