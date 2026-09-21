@@ -64,7 +64,6 @@ struct TopContributor: Codable, Identifiable, Hashable {
 struct CandidateVideo: Codable, Identifiable, Hashable {
     let id: String
     let title: String
-    let date: String
     let source: String
     let url: URL
 }

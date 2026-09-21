@@ -306,6 +306,18 @@ class ElectionSourceTests(unittest.TestCase):
         self.assertEqual(len(filer_ids), 130)
         self.assertEqual(len(filer_ids), len(set(filer_ids)))
 
+    def test_candidate_videos_have_unique_ids_and_no_dates(self):
+        videos = [
+            video
+            for candidate in self.candidates
+            for video in candidate.get("videos", [])
+        ]
+        self.assertEqual(len(videos), 4)
+        self.assertEqual(len({video["id"] for video in videos}), len(videos))
+        for video in videos:
+            self.assertEqual(set(video), {"id", "title", "source", "url"})
+            self.assertTrue(video["url"].startswith("https://"))
+
     def test_historical_election_years_match_product_rules(self):
         for race in self.races:
             years = [election["year"] for election in race["historicalElections"]]
