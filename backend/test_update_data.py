@@ -23,6 +23,7 @@ from backend.update_data import (
     reported_transaction_types_to_refresh,
     retain_filed_since,
     retry_wait_seconds,
+    summary_reconciliation_ids,
     top_contributors_need_refresh,
     transaction_dates_for_sync,
 )
@@ -220,6 +221,39 @@ class OrestarParserTests(unittest.TestCase):
         self.assertEqual(set(cached), {"2", "3"})
         self.assertEqual(changed, {10, 30})
         self.assertEqual(cached["3"]["filedDate"], "2026-09-18")
+
+    def test_unmapped_statewide_row_preserves_matching_cached_transaction(self):
+        cached = {
+            "1": {"id": "1", "filerID": 10, "transactionType": "C", "filedDate": "2026-09-18"},
+            "2": {"id": "2", "filerID": 20, "transactionType": "C", "filedDate": "2026-09-18"},
+        }
+        changed = replace_transaction_day(
+            cached,
+            "C",
+            date(2026, 9, 18),
+            [
+                {"id": "1", "date": "2026-09-17", "name": "Unknown", "amount": 10},
+                {"id": "3", "filerID": 30, "date": "2026-09-17", "name": "New", "amount": 5},
+            ],
+        )
+        self.assertEqual(set(cached), {"1", "3"})
+        self.assertEqual(cached["1"]["filerID"], 10)
+        self.assertEqual(changed, {20, 30})
+
+    def test_summary_reconciliation_sorts_missing_timestamps_safely(self):
+        candidates = [
+            {"id": "missing", "filerID": 10},
+            {"id": "dated", "filerID": 20},
+        ]
+        previous = {
+            "missing": {"financeSummaryUpdatedAt": None},
+            "dated": {"financeSummaryUpdatedAt": "2026-09-01T00:00:00-07:00"},
+        }
+        now = datetime.fromisoformat("2026-09-21T09:00:00-07:00")
+        self.assertEqual(
+            summary_reconciliation_ids(candidates, previous, set(), now),
+            {"missing", "dated"},
+        )
 
     def test_history_backfill_retains_older_contribution_reported_this_week(self):
         cached = {
