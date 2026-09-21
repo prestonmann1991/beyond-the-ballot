@@ -389,7 +389,7 @@ private struct CandidateRow: View {
                                 HStack(alignment: .top) {
                                     VStack(alignment: .leading, spacing: 2) {
                                         Text(video.title).font(.caption.weight(.semibold))
-                                        Text("\(video.date) · \(video.source)")
+                                        Text(video.source)
                                             .font(.caption2)
                                             .foregroundStyle(.white.opacity(0.55))
                                     }

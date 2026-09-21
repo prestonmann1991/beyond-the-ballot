@@ -56,5 +56,5 @@ of committees per run; each recovered committee switches to the shared ledger
 immediately, while existing top-contributor data remains in place for the rest.
 
 Candidate videos are optional. Add a `videos` array to a candidate in
-`backend/candidates_source.json`; each entry must contain `id`, `title`, `date`,
+`backend/candidates_source.json`; each entry must contain `id`, `title`,
 `source`, and `url`. Candidates without videos do not display the section.
