@@ -312,7 +312,7 @@ class ElectionSourceTests(unittest.TestCase):
             for candidate in self.candidates
             for video in candidate.get("videos", [])
         ]
-        self.assertEqual(len(videos), 4)
+        self.assertEqual(len(videos), 16)
         self.assertEqual(len({video["id"] for video in videos}), len(videos))
         for video in videos:
             self.assertEqual(set(video), {"id", "title", "source", "url"})
