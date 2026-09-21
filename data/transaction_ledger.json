@@ -6,13 +6,19 @@
     23001,
     23573,
     23683,
+    24506,
+    24869,
     24899,
+    24955,
+    24956,
     24958,
     24978,
+    25002,
     25017,
     25090,
     25169,
-    25226
+    25226,
+    25309
   ],
   "contributionReconcileCursor": 0,
   "transactions": {
@@ -19277,6 +19283,28 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "C"
     },
+    "5818930": {
+      "id": "5818930",
+      "date": "2026-09-21",
+      "name": "Verizon",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 20022,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
+    "5818937": {
+      "id": "5818937",
+      "date": "2026-09-21",
+      "name": "Keith Lovett",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 20022,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
     "5817986": {
       "id": "5817986",
       "date": "2026-09-20",
@@ -19838,6 +19866,17 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "E"
     },
+    "5818932": {
+      "id": "5818932",
+      "date": "2026-09-21",
+      "name": "USPS",
+      "category": "Cash Expenditure",
+      "amount": 194.0,
+      "filerID": 20022,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
     "5818074": {
       "id": "5818074",
       "date": "2026-09-20",
@@ -20090,9 +20129,90 @@
       "filedDate": "2026-09-21",
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "E"
+    },
+    "5726471": {
+      "id": "5726471",
+      "date": "2026-07-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5592354": {
+      "id": "5592354",
+      "date": "2026-02-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 103.2,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5793542": {
+      "id": "5793542",
+      "date": "2026-08-04",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 5.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5726531": {
+      "id": "5726531",
+      "date": "2026-04-09",
+      "name": "Adam Beckmann",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5612956": {
+      "id": "5612956",
+      "date": "2026-03-09",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5802939": {
+      "id": "5802939",
+      "date": "2026-08-15",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5670819": {
+      "id": "5670819",
+      "date": "2026-05-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5624125": {
+      "id": "5624125",
+      "date": "2026-04-04",
+      "name": "Darlene Madsen-Martin",
+      "category": "In-Kind Contribution",
+      "amount": 34.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5624123": {
+      "id": "5624123",
+      "date": "2026-04-02",
+      "name": "Darlene Madsen-Martin",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24956,
+      "transactionType": "C"
     }
   },
   "rollingReconciledOn": "2026-09-21",
-  "lastSuccessfulSync": "2026-09-21T13:02:13-07:00",
+  "lastSuccessfulSync": "2026-09-21T13:17:44-07:00",
   "contributionBackfillComplete": false
 }
