@@ -364,12 +364,19 @@ def replace_transaction_day(
 ) -> set[int]:
     """Replace one filed-date/type slice so amendments and deletions are reflected."""
     date_text = filed_date.isoformat()
-    removed = [
-        transaction_id
+    unresolved_ids = {
+        str(item["id"])
+        for item in replacements
+        if item.get("id") and not item.get("filerID")
+    }
+    before = {
+        transaction_id: dict(item)
         for transaction_id, item in transactions.items()
         if item.get("transactionType") == transaction_type and item.get("filedDate") == date_text
+    }
+    removed = [
+        transaction_id for transaction_id in before if transaction_id not in unresolved_ids
     ]
-    before = {transaction_id: dict(transactions[transaction_id]) for transaction_id in removed}
     for transaction_id in removed:
         del transactions[transaction_id]
     for transaction in replacements:
@@ -407,8 +414,13 @@ def fetch_statewide_transaction_day(opener, action_url, fields, transaction_type
             "cneSearchTranFiledEndDate": date_text,
         },
     )
-    if any(not item.get("filerID") for item in transactions):
-        raise ValueError("ORESTAR statewide results did not expose every filer committee ID")
+    unresolved = sum(not item.get("filerID") for item in transactions)
+    if unresolved:
+        print(
+            f"ORESTAR returned {unresolved} {transaction_type} transaction(s) filed "
+            f"{filed_date.isoformat()} without a committee ID; preserving any matching cached rows",
+            flush=True,
+        )
     return transactions
 
 
@@ -463,7 +475,11 @@ def collective_transaction_sync(
                 opener, action_url, fields, transaction_type, filed_date
             )
             if tracked_filer_ids is not None:
-                fetched = [item for item in fetched if item.get("filerID") in tracked_filer_ids]
+                fetched = [
+                    item
+                    for item in fetched
+                    if not item.get("filerID") or item.get("filerID") in tracked_filer_ids
+                ]
             changed_filers.update(
                 replace_transaction_day(output["transactions"], transaction_type, filed_date, fetched)
             )
@@ -535,8 +551,8 @@ def summary_reconciliation_ids(
             and candidate["id"] not in changed
             and summary_is_stale(previous_candidates.get(candidate["id"], {}), now)
         ),
-        key=lambda candidate: previous_candidates.get(candidate["id"], {}).get(
-            "financeSummaryUpdatedAt", ""
+        key=lambda candidate: (
+            previous_candidates.get(candidate["id"], {}).get("financeSummaryUpdatedAt") or ""
         ),
     )
     return changed | {candidate["id"] for candidate in stale[:SUMMARY_RECONCILIATION_BATCH_SIZE]}
