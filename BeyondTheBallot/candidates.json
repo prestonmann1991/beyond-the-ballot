@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T13:17:44-07:00",
+  "updatedAt": "2026-09-21T13:26:15-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -16759,7 +16759,7 @@
           "amount": 100.0
         }
       ],
-      "financeDetailsPending": true,
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -19173,7 +19173,7 @@
           "amount": 130.0
         }
       ],
-      "financeDetailsPending": true,
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -21178,9 +21178,9 @@
           "category": "Cash Contribution",
           "amount": 100.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         },
         {
           "id": "5813476",
@@ -21189,9 +21189,9 @@
           "category": "Cash Contribution",
           "amount": 1000.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         },
         {
           "id": "5813469",
@@ -21200,9 +21200,9 @@
           "category": "Cash Contribution",
           "amount": 50.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         }
       ],
       "reportedExpenditures7Days": [
@@ -21248,9 +21248,9 @@
           "category": "Cash Contribution",
           "amount": 100.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         },
         {
           "id": "5813476",
@@ -21259,9 +21259,9 @@
           "category": "Cash Contribution",
           "amount": 1000.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         },
         {
           "id": "5813469",
@@ -21270,9 +21270,9 @@
           "category": "Cash Contribution",
           "amount": 50.0,
           "filerID": 25068,
+          "transactionType": "C",
           "filedDate": "2026-09-17",
-          "filedAt": "2026-09-17T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-17T00:00:00"
         }
       ],
       "recentExpenditures": [
@@ -21328,7 +21328,7 @@
           "amount": 200.0
         }
       ],
-      "financeDetailsPending": true,
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -30971,9 +30971,9 @@
           "category": "Cash Contribution",
           "amount": 104.48,
           "filerID": 24943,
+          "transactionType": "C",
           "filedDate": "2026-09-14",
-          "filedAt": "2026-09-14T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-14T00:00:00"
         },
         {
           "id": "5808249",
@@ -30982,9 +30982,9 @@
           "category": "Cash Contribution",
           "amount": 200.0,
           "filerID": 24943,
+          "transactionType": "C",
           "filedDate": "2026-09-14",
-          "filedAt": "2026-09-14T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-14T00:00:00"
         }
       ],
       "reportedExpenditures7Days": [
@@ -31052,9 +31052,9 @@
           "category": "Cash Contribution",
           "amount": 104.48,
           "filerID": 24943,
+          "transactionType": "C",
           "filedDate": "2026-09-14",
-          "filedAt": "2026-09-14T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-14T00:00:00"
         },
         {
           "id": "5808249",
@@ -31063,9 +31063,9 @@
           "category": "Cash Contribution",
           "amount": 200.0,
           "filerID": 24943,
+          "transactionType": "C",
           "filedDate": "2026-09-14",
-          "filedAt": "2026-09-14T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-14T00:00:00"
         }
       ],
       "recentExpenditures": [
@@ -31125,8 +31125,49 @@
           "transactionType": "E"
         }
       ],
-      "topContributorsSince2026": [],
-      "financeDetailsPending": true,
+      "topContributorsSince2026": [
+        {
+          "name": "Mary Carlton",
+          "amount": 750.0
+        },
+        {
+          "name": "Evergreen PAC (23238)",
+          "amount": 594.0
+        },
+        {
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 530.0
+        },
+        {
+          "name": "Ann Walker",
+          "amount": 435.0
+        },
+        {
+          "name": "Leslie Henson",
+          "amount": 312.81
+        },
+        {
+          "name": "Pam Inman",
+          "amount": 208.96
+        },
+        {
+          "name": "Glenn Hayter",
+          "amount": 200.0
+        },
+        {
+          "name": "KBDT, Inc.",
+          "amount": 200.0
+        },
+        {
+          "name": "Linda Hayter",
+          "amount": 200.0
+        },
+        {
+          "name": "Bruce McDaniel",
+          "amount": 104.48
+        }
+      ],
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -33205,8 +33246,25 @@
       "reportedExpenditures7Days": [],
       "recentContributions": [],
       "recentExpenditures": [],
-      "topContributorsSince2026": [],
-      "financeDetailsPending": true,
+      "topContributorsSince2026": [
+        {
+          "name": "Cascade Campaign Management",
+          "amount": 1500.0
+        },
+        {
+          "name": "Lee Weinstein",
+          "amount": 500.0
+        },
+        {
+          "name": "Deborah Ferrer",
+          "amount": 330.0
+        },
+        {
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 325.0
+        }
+      ],
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
@@ -35947,9 +36005,9 @@
           "category": "Loan Received (Non-Exempt)",
           "amount": 50.0,
           "filerID": 21940,
+          "transactionType": "C",
           "filedDate": "2026-09-21",
-          "filedAt": "2026-09-21T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-21T00:00:00"
         }
       ],
       "reportedExpenditures7Days": [],
@@ -35961,14 +36019,31 @@
           "category": "Loan Received (Non-Exempt)",
           "amount": 50.0,
           "filerID": 21940,
+          "transactionType": "C",
           "filedDate": "2026-09-21",
-          "filedAt": "2026-09-21T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-21T00:00:00"
         }
       ],
       "recentExpenditures": [],
-      "topContributorsSince2026": [],
-      "financeDetailsPending": true,
+      "topContributorsSince2026": [
+        {
+          "name": "The Leadership Fund (2690)",
+          "amount": 750.0
+        },
+        {
+          "name": "Benton County Republican Central Committee (292)",
+          "amount": 500.0
+        },
+        {
+          "name": "Valerie Draper Woldeit",
+          "amount": 375.0
+        },
+        {
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 135.0
+        }
+      ],
+      "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": null,
       "expenditureDelta10Days": null
