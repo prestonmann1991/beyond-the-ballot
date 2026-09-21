@@ -2,11 +2,17 @@
   "version": 1,
   "backfilledFilerIDs": [
     17537,
+    20457,
     23001,
+    23573,
     23683,
+    24899,
     24958,
+    24978,
     25017,
-    25090
+    25090,
+    25169,
+    25226
   ],
   "contributionReconcileCursor": 0,
   "transactions": {
@@ -19546,6 +19552,17 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "C"
     },
+    "5818814": {
+      "id": "5818814",
+      "date": "2026-09-20",
+      "name": "Linda Leathers",
+      "category": "Cash Contribution",
+      "amount": 40000.0,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
     "5818112": {
       "id": "5818112",
       "date": "2026-09-19",
@@ -19656,6 +19673,17 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "C"
     },
+    "5818821": {
+      "id": "5818821",
+      "date": "2026-09-16",
+      "name": "Northwest Oregon (25045)",
+      "category": "In-Kind Contribution",
+      "amount": 1000.0,
+      "filerID": 24927,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
     "5818084": {
       "id": "5818084",
       "date": "2026-09-14",
@@ -19689,6 +19717,28 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "C"
     },
+    "5818769": {
+      "id": "5818769",
+      "date": "2026-09-14",
+      "name": "Committee to Elect Lucetta Elmer (21729)",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
+    "5818803": {
+      "id": "5818803",
+      "date": "2026-09-11",
+      "name": "Valerie Draper Woldeit",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 50.0,
+      "filerID": 21940,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
     "5818108": {
       "id": "5818108",
       "date": "2026-09-08",
@@ -19696,6 +19746,17 @@
       "category": "Cash Contribution",
       "amount": 500.0,
       "filerID": 21883,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "C"
+    },
+    "5799804": {
+      "id": "5799804",
+      "date": "2026-09-05",
+      "name": "Fred Meyer",
+      "category": "Cash Contribution",
+      "amount": 208.2,
+      "filerID": 24927,
       "filedDate": "2026-09-21",
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "C"
@@ -19751,6 +19812,28 @@
       "category": "Cash Expenditure",
       "amount": 7754.0,
       "filerID": 24791,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5818748": {
+      "id": "5818748",
+      "date": "2026-09-21",
+      "name": "Trevor W. Broomhall",
+      "category": "Cash Expenditure",
+      "amount": 275.0,
+      "filerID": 21352,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5818833": {
+      "id": "5818833",
+      "date": "2026-09-21",
+      "name": "Strategic Media Services",
+      "category": "Cash Expenditure",
+      "amount": 15000.0,
+      "filerID": 21839,
       "filedDate": "2026-09-21",
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "E"
@@ -19887,6 +19970,28 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "E"
     },
+    "5818813": {
+      "id": "5818813",
+      "date": "2026-09-16",
+      "name": "Oregon Republican Party (379)",
+      "category": "Cash Expenditure",
+      "amount": 700.0,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5818823": {
+      "id": "5818823",
+      "date": "2026-09-16",
+      "name": "Big Frog Custom T-shirts",
+      "category": "Cash Expenditure",
+      "amount": 264.0,
+      "filerID": 24927,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
     "5818102": {
       "id": "5818102",
       "date": "2026-09-15",
@@ -19920,6 +20025,50 @@
       "filedAt": "2026-09-21T00:00:00",
       "transactionType": "E"
     },
+    "5818798": {
+      "id": "5818798",
+      "date": "2026-09-14",
+      "name": "The Watermelon Crawl",
+      "category": "Cash Expenditure",
+      "amount": 120.0,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5818809": {
+      "id": "5818809",
+      "date": "2026-09-14",
+      "name": "The Watermelon Crawl",
+      "category": "Cash Expenditure",
+      "amount": 8.0,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5818815": {
+      "id": "5818815",
+      "date": "2026-09-14",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 183.07,
+      "filerID": 22958,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
+    "5799805": {
+      "id": "5799805",
+      "date": "2026-09-05",
+      "name": "winred",
+      "category": "Cash Expenditure",
+      "amount": 8.2,
+      "filerID": 24927,
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00",
+      "transactionType": "E"
+    },
     "5818705": {
       "id": "5818705",
       "date": "2026-09-03",
@@ -19944,6 +20093,6 @@
     }
   },
   "rollingReconciledOn": "2026-09-21",
-  "lastSuccessfulSync": "2026-09-21T10:06:11-07:00",
+  "lastSuccessfulSync": "2026-09-21T13:02:13-07:00",
   "contributionBackfillComplete": false
 }
