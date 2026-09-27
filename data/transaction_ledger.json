@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 5,
+  "contributionReconcileCursor": 6,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -209608,6 +209608,50 @@
       "filedAt": "2026-09-27T00:00:00",
       "transactionType": "C"
     },
+    "5832218": {
+      "id": "5832218",
+      "date": "2026-09-26",
+      "name": "Altria Client Services LLC",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 23118,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "C"
+    },
+    "5832228": {
+      "id": "5832228",
+      "date": "2026-09-26",
+      "name": "Altria Client Services LLC",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 23423,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "C"
+    },
+    "5832230": {
+      "id": "5832230",
+      "date": "2026-09-26",
+      "name": "Karen Schmidlin",
+      "category": "Cash Contribution",
+      "amount": 260.73,
+      "filerID": 23423,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "C"
+    },
+    "5832276": {
+      "id": "5832276",
+      "date": "2026-09-26",
+      "name": "Altria Client Services LLC",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 24539,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "C"
+    },
     "5832188": {
       "id": "5832188",
       "date": "2026-09-25",
@@ -209652,6 +209696,17 @@
       "filedAt": "2026-09-27T00:00:00",
       "transactionType": "E"
     },
+    "5832231": {
+      "id": "5832231",
+      "date": "2026-09-26",
+      "name": "Anedot, Inc.",
+      "category": "Cash Expenditure",
+      "amount": 10.73,
+      "filerID": 23423,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
     "5832096": {
       "id": "5832096",
       "date": "2026-09-25",
@@ -209676,6 +209731,6 @@
     }
   },
   "rollingReconciledOn": "2026-09-27",
-  "lastSuccessfulSync": "2026-09-27T11:23:31-07:00",
+  "lastSuccessfulSync": "2026-09-27T12:46:29-07:00",
   "contributionBackfillComplete": true
 }

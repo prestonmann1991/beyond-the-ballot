@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T11:23:31-07:00",
+  "updatedAt": "2026-09-27T12:46:29-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -20796,7 +20796,7 @@
       "party": "Democratic / Working Families",
       "race": "House District 7",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19995",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 159960.5,
       "expendituresYTD": 150265.95,
       "balanceDeficit": 20292.16,
@@ -21172,7 +21172,7 @@
       "party": "Republican / Libertarian",
       "race": "House District 7",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24461",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 62633.44,
       "expendituresYTD": 53256.42,
       "balanceDeficit": -4259.93,
@@ -22424,11 +22424,22 @@
       "race": "House District 12",
       "filerID": 23118,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23118",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
-      "contributionsYTD": 33175.0,
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "contributionsYTD": 34175.0,
       "expendituresYTD": 21338.1,
-      "balanceDeficit": 985.85,
+      "balanceDeficit": 1985.85,
       "reportedContributions7Days": [
+        {
+          "id": "5832218",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5831140",
           "date": "2026-09-24",
@@ -22488,6 +22499,17 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5832218",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5831140",
           "date": "2026-09-24",
@@ -22590,7 +22612,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 6875.0,
+      "contributionDelta10Days": 7875.0,
       "expenditureDelta10Days": 2500.0
     },
     {
@@ -22981,7 +23003,7 @@
       "race": "House District 14",
       "filerID": 17469,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17469",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 219522.0,
       "expendituresYTD": 278135.66,
       "balanceDeficit": 112542.95,
@@ -23356,7 +23378,7 @@
       "race": "House District 15",
       "filerID": 24710,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24710",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 55788.14,
       "expendituresYTD": 13036.72,
       "balanceDeficit": 42751.42,
@@ -24694,7 +24716,7 @@
       "race": "House District 20",
       "filerID": 16508,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16508",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 139972.53,
       "expendituresYTD": 104882.36,
       "balanceDeficit": 26970.0,
@@ -28342,7 +28364,7 @@
       "race": "House District 25",
       "filerID": 19763,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19763",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 468204.54,
       "expendituresYTD": 374388.91,
       "balanceDeficit": 210862.73,
@@ -29434,11 +29456,22 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24539",
-      "financeSummaryUpdatedAt": "2026-09-26T15:53:59-07:00",
-      "contributionsYTD": 143289.34,
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "contributionsYTD": 145789.34,
       "expendituresYTD": 180778.05,
-      "balanceDeficit": 47290.61,
+      "balanceDeficit": 49790.61,
       "reportedContributions7Days": [
+        {
+          "id": "5832276",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 2500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5829417",
           "date": "2026-09-24",
@@ -29597,6 +29630,17 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5832276",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 2500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5829417",
           "date": "2026-09-24",
@@ -29798,7 +29842,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 39794.59,
+      "contributionDelta10Days": 42294.59,
       "expenditureDelta10Days": 37192.05
     },
     {
@@ -32385,11 +32429,33 @@
       "race": "House District 31",
       "filerID": 23423,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23423",
-      "financeSummaryUpdatedAt": "2026-09-26T22:21:48-07:00",
-      "contributionsYTD": 49463.4,
-      "expendituresYTD": 58553.14,
-      "balanceDeficit": 4521.57,
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "contributionsYTD": 50724.13,
+      "expendituresYTD": 58563.87,
+      "balanceDeficit": 5771.57,
       "reportedContributions7Days": [
+        {
+          "id": "5832230",
+          "date": "2026-09-26",
+          "name": "Karen Schmidlin",
+          "category": "Cash Contribution",
+          "amount": 260.73,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5832228",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5828030",
           "date": "2026-09-23",
@@ -32436,6 +32502,17 @@
         }
       ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5832231",
+          "date": "2026-09-26",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 10.73,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5829804",
           "date": "2026-09-25",
@@ -32516,6 +32593,28 @@
       ],
       "recentContributions": [
         {
+          "id": "5832230",
+          "date": "2026-09-26",
+          "name": "Karen Schmidlin",
+          "category": "Cash Contribution",
+          "amount": 260.73,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5832228",
+          "date": "2026-09-26",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5828030",
           "date": "2026-09-23",
           "name": "Miscellaneous Cash Contributions $100 and under",
@@ -32561,6 +32660,17 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5832231",
+          "date": "2026-09-26",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 10.73,
+          "filerID": 23423,
+          "filedDate": "2026-09-27",
+          "filedAt": "2026-09-27T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5829804",
           "date": "2026-09-25",
@@ -32683,8 +32793,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 3179.48,
-      "expenditureDelta10Days": 7898.08
+      "contributionDelta10Days": 4440.21,
+      "expenditureDelta10Days": 7908.81
     },
     {
       "campaignURL": "https://cyrusfororegon.com/",
@@ -35140,10 +35250,10 @@
       "party": "Democratic / Working Families",
       "race": "House District 40",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24521",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 180703.31,
       "expendituresYTD": 125182.57,
-      "balanceDeficit": 52524.63,
+      "balanceDeficit": 52876.13,
       "reportedContributions7Days": [
         {
           "id": "5831417",
@@ -36703,7 +36813,7 @@
       "race": "House District 44",
       "filerID": 21678,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21678",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 55716.0,
       "expendituresYTD": 65081.73,
       "balanceDeficit": 18593.26,
@@ -37651,7 +37761,7 @@
       "party": "Democratic / Independent / Working Families",
       "race": "House District 48",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21694",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 143239.84,
       "expendituresYTD": 76166.76,
       "balanceDeficit": 92218.36,
@@ -39344,7 +39454,7 @@
       "race": "House District 51",
       "filerID": 23161,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23161",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 67053.0,
       "expendituresYTD": 58117.53,
       "balanceDeficit": 6956.75,
@@ -40508,7 +40618,7 @@
       "party": "Republican / Libertarian",
       "race": "House District 53",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21352",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 125804.0,
       "expendituresYTD": 84924.05,
       "balanceDeficit": 45890.65,
@@ -40641,7 +40751,7 @@
       "race": "House District 54",
       "filerID": 18661,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18661",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 70102.9,
       "expendituresYTD": 86042.76,
       "balanceDeficit": 20509.97,
@@ -41375,7 +41485,7 @@
       "race": "House District 57",
       "filerID": 25111,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25111",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 4151.02,
       "expendituresYTD": 2657.62,
       "balanceDeficit": -5784.55,
@@ -41852,7 +41962,7 @@
       "race": "House District 57",
       "filerID": 3420,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=3420",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 155636.45,
       "expendituresYTD": 159171.42,
       "balanceDeficit": 14630.22,
@@ -42607,7 +42717,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22066",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 384380.56,
       "expendituresYTD": 285929.11,
       "balanceDeficit": 100939.64,
@@ -43840,7 +43950,7 @@
       "race": "Senate District 4",
       "filerID": 1686,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=1686",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 47250.0,
       "expendituresYTD": 67684.18,
       "balanceDeficit": 48714.89,
@@ -46954,7 +47064,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20287",
-      "financeSummaryUpdatedAt": "2026-09-26T06:08:28-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 340159.7,
       "expendituresYTD": 281208.95,
       "balanceDeficit": 88553.46,
@@ -47536,7 +47646,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22032",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 858585.33,
       "expendituresYTD": 498168.12,
       "balanceDeficit": 410231.34,
@@ -48677,7 +48787,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20246",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 405092.09,
       "expendituresYTD": 433258.44,
       "balanceDeficit": 9187.72,
@@ -49401,7 +49511,7 @@
       "race": "Senate District 19",
       "filerID": 18396,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18396",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 467441.84,
       "expendituresYTD": 612263.44,
       "balanceDeficit": 1735.49,
@@ -50073,7 +50183,7 @@
       "party": "Democratic",
       "race": "Senate District 20",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16719",
-      "financeSummaryUpdatedAt": "2026-09-25T22:02:37-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 144324.95,
       "expendituresYTD": 161551.4,
       "balanceDeficit": 299636.0,
@@ -50581,7 +50691,7 @@
       "party": "Republican",
       "race": "Senate District 20",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21488",
-      "financeSummaryUpdatedAt": "2026-09-25T16:19:47-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 34457.2,
       "expendituresYTD": 26599.13,
       "balanceDeficit": 9470.7,
@@ -50935,7 +51045,7 @@
       "race": "Senate District 26",
       "filerID": 24816,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24816",
-      "financeSummaryUpdatedAt": "2026-09-25T16:19:47-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 146275.0,
       "expendituresYTD": 78194.44,
       "balanceDeficit": 68095.56,
@@ -50998,7 +51108,7 @@
       "race": "Senate District 26",
       "filerID": 15984,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=15984",
-      "financeSummaryUpdatedAt": "2026-09-25T16:19:47-07:00",
+      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
       "contributionsYTD": 141221.35,
       "expendituresYTD": 122544.3,
       "balanceDeficit": 88422.23,
