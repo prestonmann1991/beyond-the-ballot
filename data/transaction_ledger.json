@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 6,
+  "contributionReconcileCursor": 7,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -209520,6 +209520,17 @@
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "E"
     },
+    "5832292": {
+      "id": "5832292",
+      "date": "2026-09-27",
+      "name": "Amy Whittle",
+      "category": "Cash Contribution",
+      "amount": 520.51,
+      "filerID": 24485,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "C"
+    },
     "5832041": {
       "id": "5832041",
       "date": "2026-09-26",
@@ -209685,6 +209696,28 @@
       "filedAt": "2026-09-27T00:00:00",
       "transactionType": "E"
     },
+    "5832293": {
+      "id": "5832293",
+      "date": "2026-09-27",
+      "name": "WinRed",
+      "category": "Cash Expenditure",
+      "amount": 20.51,
+      "filerID": 24485,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
+    "5832308": {
+      "id": "5832308",
+      "date": "2026-09-27",
+      "name": "Oregon Restaurant Member Services",
+      "category": "Cash Expenditure",
+      "amount": 800.0,
+      "filerID": 19050,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
     "5832095": {
       "id": "5832095",
       "date": "2026-09-26",
@@ -209728,9 +209761,53 @@
       "filedDate": "2026-09-27",
       "filedAt": "2026-09-27T00:00:00",
       "transactionType": "E"
+    },
+    "5832297": {
+      "id": "5832297",
+      "date": "2026-09-25",
+      "name": "Strategic Media Services",
+      "category": "Account Payable",
+      "amount": 9975.0,
+      "filerID": 20246,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
+    "5832310": {
+      "id": "5832310",
+      "date": "2026-09-18",
+      "name": "Miscellaneous Personal Expenditures $100 and under",
+      "category": "Personal Expenditure for Reimbursement",
+      "amount": 21.8,
+      "filerID": 19050,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
+    "5832309": {
+      "id": "5832309",
+      "date": "2026-09-17",
+      "name": "Miscellaneous Personal Expenditures $100 and under",
+      "category": "Personal Expenditure for Reimbursement",
+      "amount": 24.69,
+      "filerID": 19050,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
+    },
+    "5832296": {
+      "id": "5832296",
+      "date": "2026-09-14",
+      "name": "Powers Interactive",
+      "category": "Account Payable",
+      "amount": 10000.0,
+      "filerID": 20246,
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00",
+      "transactionType": "E"
     }
   },
   "rollingReconciledOn": "2026-09-27",
-  "lastSuccessfulSync": "2026-09-27T12:46:29-07:00",
+  "lastSuccessfulSync": "2026-09-27T16:04:51-07:00",
   "contributionBackfillComplete": true
 }
