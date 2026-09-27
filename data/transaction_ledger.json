@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 3,
+  "contributionReconcileCursor": 4,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -208629,6 +208629,17 @@
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "C"
     },
+    "5831943": {
+      "id": "5831943",
+      "date": "2026-09-26",
+      "name": "Altria Client Services LLC",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 18284,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
     "5831417": {
       "id": "5831417",
       "date": "2026-09-25",
@@ -209025,6 +209036,17 @@
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "C"
     },
+    "5831947": {
+      "id": "5831947",
+      "date": "2026-09-23",
+      "name": "Tom L Forest",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 100.0,
+      "filerID": 24958,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
     "5831602": {
       "id": "5831602",
       "date": "2026-09-21",
@@ -209131,6 +209153,171 @@
       "category": "Cash Contribution",
       "amount": 100.0,
       "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831728": {
+      "id": "5831728",
+      "date": "2026-08-23",
+      "name": "Diane Niflis",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831724": {
+      "id": "5831724",
+      "date": "2026-08-17",
+      "name": "Corinne Rupp",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831726": {
+      "id": "5831726",
+      "date": "2026-08-17",
+      "name": "Timothy Borman",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831830": {
+      "id": "5831830",
+      "date": "2026-08-07",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831721": {
+      "id": "5831721",
+      "date": "2026-08-02",
+      "name": "Beatrice Michel",
+      "category": "Cash Contribution",
+      "amount": 1500.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831720": {
+      "id": "5831720",
+      "date": "2026-07-30",
+      "name": "Eric Halperin",
+      "category": "Cash Contribution",
+      "amount": 1500.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831829": {
+      "id": "5831829",
+      "date": "2026-07-30",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831827": {
+      "id": "5831827",
+      "date": "2026-07-24",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 75.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831007": {
+      "id": "5831007",
+      "date": "2026-07-21",
+      "name": "Tom L Forest",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 10.0,
+      "filerID": 24958,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831825": {
+      "id": "5831825",
+      "date": "2026-07-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 110.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831823": {
+      "id": "5831823",
+      "date": "2026-07-17",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831821": {
+      "id": "5831821",
+      "date": "2026-07-14",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831712": {
+      "id": "5831712",
+      "date": "2026-07-12",
+      "name": "Deborah Boothe-Schmidt",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5831818": {
+      "id": "5831818",
+      "date": "2026-07-10",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 175.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "C"
+    },
+    "5830863": {
+      "id": "5830863",
+      "date": "2026-04-21",
+      "name": "Tom L Forest",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 51.0,
+      "filerID": 24958,
       "filedDate": "2026-09-26",
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "C"
@@ -209245,6 +209432,28 @@
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "E"
     },
+    "5831948": {
+      "id": "5831948",
+      "date": "2026-09-23",
+      "name": "Tom L Forest",
+      "category": "Loan Payment (Non-Exempt)",
+      "amount": 161.0,
+      "filerID": 24958,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831949": {
+      "id": "5831949",
+      "date": "2026-09-23",
+      "name": "Tom L Forest",
+      "category": "Cash Expenditure",
+      "amount": 1014.0,
+      "filerID": 24958,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
     "5831416": {
       "id": "5831416",
       "date": "2026-09-15",
@@ -209255,9 +209464,174 @@
       "filedDate": "2026-09-26",
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "E"
+    },
+    "5831701": {
+      "id": "5831701",
+      "date": "2026-08-26",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 2.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831700": {
+      "id": "5831700",
+      "date": "2026-08-23",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 21.6,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831699": {
+      "id": "5831699",
+      "date": "2026-08-19",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 4.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831698": {
+      "id": "5831698",
+      "date": "2026-08-17",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 45.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831697": {
+      "id": "5831697",
+      "date": "2026-08-14",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 2.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831696": {
+      "id": "5831696",
+      "date": "2026-08-07",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 2.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831695": {
+      "id": "5831695",
+      "date": "2026-08-03",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 0.5,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831694": {
+      "id": "5831694",
+      "date": "2026-08-02",
+      "name": "Anedot",
+      "category": "Cash Expenditure",
+      "amount": 60.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831828": {
+      "id": "5831828",
+      "date": "2026-07-30",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 62.6,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831826": {
+      "id": "5831826",
+      "date": "2026-07-24",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 3.6,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831824": {
+      "id": "5831824",
+      "date": "2026-07-18",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 5.0,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831822": {
+      "id": "5831822",
+      "date": "2026-07-17",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 4.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831820": {
+      "id": "5831820",
+      "date": "2026-07-14",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 2.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831819": {
+      "id": "5831819",
+      "date": "2026-07-12",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 10.3,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
+    },
+    "5831817": {
+      "id": "5831817",
+      "date": "2026-07-10",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 7.9,
+      "filerID": 21757,
+      "filedDate": "2026-09-26",
+      "filedAt": "2026-09-26T00:00:00",
+      "transactionType": "E"
     }
   },
   "rollingReconciledOn": "2026-09-26",
-  "lastSuccessfulSync": "2026-09-26T15:53:59-07:00",
+  "lastSuccessfulSync": "2026-09-26T22:21:48-07:00",
   "contributionBackfillComplete": true
 }
