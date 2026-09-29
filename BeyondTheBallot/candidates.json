@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T03:43:02-07:00",
+  "updatedAt": "2026-09-29T11:06:17-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -21497,7 +21497,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 1126086.56,
-      "expenditureDelta10Days": 1685154.74
+      "expenditureDelta10Days": 1018722.19
     },
     {
       "campaignURL": "https://www.christinefororegon.com/",
@@ -21522,11 +21522,616 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19050",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
-      "contributionsYTD": 9889712.94,
-      "expendituresYTD": 9905296.58,
-      "balanceDeficit": 958631.53,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 9917936.28,
+      "expendituresYTD": 9907235.71,
+      "balanceDeficit": 984915.74,
       "reportedContributions7Days": [
+        {
+          "id": "5839256",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 1801.4,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839148",
+          "date": "2026-09-28",
+          "name": "Jeffrey Kelder",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839145",
+          "date": "2026-09-28",
+          "name": "Jan Murphy",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839141",
+          "date": "2026-09-28",
+          "name": "Rebecca Green",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839140",
+          "date": "2026-09-28",
+          "name": "Joseph King",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839115",
+          "date": "2026-09-28",
+          "name": "Brian Gehring",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839093",
+          "date": "2026-09-28",
+          "name": "Cheri Rasmussan",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839091",
+          "date": "2026-09-28",
+          "name": "Tim Knox",
+          "category": "Cash Contribution",
+          "amount": 104.1,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839086",
+          "date": "2026-09-28",
+          "name": "Daniel Mummey",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839084",
+          "date": "2026-09-28",
+          "name": "Sandi Duenas",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839082",
+          "date": "2026-09-28",
+          "name": "Clifford Stammich",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839078",
+          "date": "2026-09-28",
+          "name": "Robert Chase",
+          "category": "Cash Contribution",
+          "amount": 10.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839073",
+          "date": "2026-09-28",
+          "name": "Paul Russell",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839071",
+          "date": "2026-09-28",
+          "name": "Calvin Souther",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839067",
+          "date": "2026-09-28",
+          "name": "Joseph (Joe) Bruesch",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839065",
+          "date": "2026-09-28",
+          "name": "Rick Bailey",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839062",
+          "date": "2026-09-28",
+          "name": "Nancy House",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839047",
+          "date": "2026-09-28",
+          "name": "Joe McDonald",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839046",
+          "date": "2026-09-28",
+          "name": "William J Elfering",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839042",
+          "date": "2026-09-28",
+          "name": "Patricia Snopkowski",
+          "category": "Cash Contribution",
+          "amount": 141.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839037",
+          "date": "2026-09-28",
+          "name": "Bonnie Atkinson",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839034",
+          "date": "2026-09-28",
+          "name": "June Kalkhoven",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839027",
+          "date": "2026-09-28",
+          "name": "Gail LaMontagne",
+          "category": "Cash Contribution",
+          "amount": 26.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839026",
+          "date": "2026-09-28",
+          "name": "Joe Levesque",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839023",
+          "date": "2026-09-28",
+          "name": "Mark Estes",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839022",
+          "date": "2026-09-28",
+          "name": "Ethel Knowles",
+          "category": "Cash Contribution",
+          "amount": 10.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839020",
+          "date": "2026-09-28",
+          "name": "Mike DeSouza",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839018",
+          "date": "2026-09-28",
+          "name": "John Mhoon",
+          "category": "Cash Contribution",
+          "amount": 200.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839003",
+          "date": "2026-09-28",
+          "name": "Brian Williamson",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838999",
+          "date": "2026-09-28",
+          "name": "John Bouck",
+          "category": "Cash Contribution",
+          "amount": 104.1,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838998",
+          "date": "2026-09-28",
+          "name": "Cynthia Fahy",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838997",
+          "date": "2026-09-28",
+          "name": "Scott Etzel",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838996",
+          "date": "2026-09-28",
+          "name": "Roy Brainard",
+          "category": "Cash Contribution",
+          "amount": 104.1,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838994",
+          "date": "2026-09-28",
+          "name": "Frank Horn",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838990",
+          "date": "2026-09-28",
+          "name": "Scott Sherman",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838979",
+          "date": "2026-09-28",
+          "name": "Larry Bennett",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838961",
+          "date": "2026-09-28",
+          "name": "Jennifer Dorn",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838957",
+          "date": "2026-09-28",
+          "name": "Steve McClelland",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838955",
+          "date": "2026-09-28",
+          "name": "Linn Roanna Burch",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838944",
+          "date": "2026-09-28",
+          "name": "Kathleen Nelson",
+          "category": "Cash Contribution",
+          "amount": 114.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838942",
+          "date": "2026-09-28",
+          "name": "Steve McInnis",
+          "category": "Cash Contribution",
+          "amount": 5000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838933",
+          "date": "2026-09-28",
+          "name": "Ed Emberlin",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838930",
+          "date": "2026-09-28",
+          "name": "Ronald Snow",
+          "category": "Cash Contribution",
+          "amount": 26.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838929",
+          "date": "2026-09-28",
+          "name": "Daniel Shaw",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838928",
+          "date": "2026-09-28",
+          "name": "Mark McGirr",
+          "category": "Cash Contribution",
+          "amount": 200.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838926",
+          "date": "2026-09-28",
+          "name": "Sara Magenheimer",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838922",
+          "date": "2026-09-28",
+          "name": "Deborah Oester",
+          "category": "Cash Contribution",
+          "amount": 104.1,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838919",
+          "date": "2026-09-28",
+          "name": "Rich Kansky",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838916",
+          "date": "2026-09-28",
+          "name": "James Nguyen",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838915",
+          "date": "2026-09-28",
+          "name": "Katie Cox",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838905",
+          "date": "2026-09-28",
+          "name": "Vickie Drury",
+          "category": "Cash Contribution",
+          "amount": 26.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838902",
+          "date": "2026-09-28",
+          "name": "Barry Cain",
+          "category": "Cash Contribution",
+          "amount": 10000.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838901",
+          "date": "2026-09-28",
+          "name": "Biomass One LLp",
+          "category": "Cash Contribution",
+          "amount": 2602.54,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838898",
+          "date": "2026-09-28",
+          "name": "Stephen Gallier",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5838886",
+          "date": "2026-09-28",
+          "name": "Garry Smith",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5838560",
           "date": "2026-09-22",
@@ -25050,6 +25655,50 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5839255",
+          "date": "2026-09-28",
+          "name": "Orion Digital Media LLC",
+          "category": "Cash Expenditure",
+          "amount": 607.92,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839254",
+          "date": "2026-09-28",
+          "name": "Majority Money",
+          "category": "Cash Expenditure",
+          "amount": 2.6,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839253",
+          "date": "2026-09-28",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 272.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839249",
+          "date": "2026-09-28",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 1056.61,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5838570",
           "date": "2026-09-28",
           "name": "James Dornan",
@@ -25778,117 +26427,161 @@
       ],
       "recentContributions": [
         {
-          "id": "5838560",
-          "date": "2026-09-22",
-          "name": "Friends of Shelly Boshart Davis (19151)",
-          "category": "In-Kind Contribution",
-          "amount": 65.0,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5832728",
-          "date": "2026-09-27",
+          "id": "5839256",
+          "date": "2026-09-28",
           "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
-          "amount": 833.08,
+          "amount": 1801.4,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832575",
-          "date": "2026-09-27",
-          "name": "Brian Erland",
-          "category": "Cash Contribution",
-          "amount": 25.0,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5832574",
-          "date": "2026-09-27",
-          "name": "David Schutt",
-          "category": "Cash Contribution",
-          "amount": 100.0,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5832571",
-          "date": "2026-09-27",
-          "name": "Debra Royal",
+          "id": "5839148",
+          "date": "2026-09-28",
+          "name": "Jeffrey Kelder",
           "category": "Cash Contribution",
           "amount": 50.0,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832569",
-          "date": "2026-09-27",
-          "name": "Ron Cozad",
+          "id": "5839145",
+          "date": "2026-09-28",
+          "name": "Jan Murphy",
           "category": "Cash Contribution",
-          "amount": 20.0,
+          "amount": 100.0,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832568",
-          "date": "2026-09-27",
-          "name": "Larry Fenstermaker",
+          "id": "5839141",
+          "date": "2026-09-28",
+          "name": "Rebecca Green",
           "category": "Cash Contribution",
-          "amount": 10.0,
+          "amount": 50.0,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832567",
-          "date": "2026-09-27",
-          "name": "Tim Englet",
+          "id": "5839140",
+          "date": "2026-09-28",
+          "name": "Joseph King",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839115",
+          "date": "2026-09-28",
+          "name": "Brian Gehring",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839093",
+          "date": "2026-09-28",
+          "name": "Cheri Rasmussan",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839091",
+          "date": "2026-09-28",
+          "name": "Tim Knox",
           "category": "Cash Contribution",
           "amount": 104.1,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832563",
-          "date": "2026-09-27",
-          "name": "Paul Heatherman",
+          "id": "5839086",
+          "date": "2026-09-28",
+          "name": "Daniel Mummey",
           "category": "Cash Contribution",
-          "amount": 26.0,
+          "amount": 25.0,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         },
         {
-          "id": "5832561",
-          "date": "2026-09-27",
-          "name": "Lorna Hudson",
+          "id": "5839084",
+          "date": "2026-09-28",
+          "name": "Sandi Duenas",
           "category": "Cash Contribution",
-          "amount": 104.1,
+          "amount": 100.0,
           "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839255",
+          "date": "2026-09-28",
+          "name": "Orion Digital Media LLC",
+          "category": "Cash Expenditure",
+          "amount": 607.92,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839254",
+          "date": "2026-09-28",
+          "name": "Majority Money",
+          "category": "Cash Expenditure",
+          "amount": 2.6,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839253",
+          "date": "2026-09-28",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 272.0,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839249",
+          "date": "2026-09-28",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 1056.61,
+          "filerID": 19050,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5838570",
           "date": "2026-09-28",
@@ -25954,50 +26647,6 @@
           "filedDate": "2026-09-28",
           "filedAt": "2026-09-28T00:00:00",
           "transactionType": "E"
-        },
-        {
-          "id": "5832736",
-          "date": "2026-09-28",
-          "name": "Mountain View Consulting",
-          "category": "Cash Expenditure",
-          "amount": 716.8,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5832733",
-          "date": "2026-09-27",
-          "name": "Dropbox",
-          "category": "Cash Expenditure",
-          "amount": 119.88,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5832730",
-          "date": "2026-09-27",
-          "name": "Kyle Bunch",
-          "category": "Cash Expenditure",
-          "amount": 491.55,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5832726",
-          "date": "2026-09-27",
-          "name": "Orion Digital Media LLC",
-          "category": "Cash Expenditure",
-          "amount": 128.4,
-          "filerID": 19050,
-          "filedDate": "2026-09-28",
-          "filedAt": "2026-09-28T00:00:00",
-          "transactionType": "E"
         }
       ],
       "topContributorsSince2026": [
@@ -26027,7 +26676,7 @@
         },
         {
           "name": "Miscellaneous Cash Contributions $100 and under",
-          "amount": 252115.75
+          "amount": 253917.15
         },
         {
           "name": "The Pape Group, Inc.",
@@ -26044,8 +26693,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 1293780.8,
-      "expenditureDelta10Days": 3025722.5
+      "contributionDelta10Days": 1322004.14,
+      "expenditureDelta10Days": 3027661.63
     },
     {
       "districtOrder": 101,
@@ -26118,11 +26767,33 @@
       "race": "House District 1",
       "filerID": 22133,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22133",
-      "financeSummaryUpdatedAt": "2026-09-28T13:33:00-07:00",
-      "contributionsYTD": 67867.76,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 70867.76,
       "expendituresYTD": 27957.29,
-      "balanceDeficit": 65592.56,
+      "balanceDeficit": 68592.56,
       "reportedContributions7Days": [
+        {
+          "id": "5839343",
+          "date": "2026-09-28",
+          "name": "Altria Client Services, LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 22133,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839341",
+          "date": "2026-09-28",
+          "name": "Oregon Council of NECA Chapters (135)",
+          "category": "Cash Contribution",
+          "amount": 2000.0,
+          "filerID": 22133,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5823923",
           "date": "2026-09-16",
@@ -26568,6 +27239,28 @@
       ],
       "recentContributions": [
         {
+          "id": "5839343",
+          "date": "2026-09-28",
+          "name": "Altria Client Services, LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 22133,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839341",
+          "date": "2026-09-28",
+          "name": "Oregon Council of NECA Chapters (135)",
+          "category": "Cash Contribution",
+          "amount": 2000.0,
+          "filerID": 22133,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5823923",
           "date": "2026-09-16",
           "name": "Miscellaneous Cash Contributions $100 and under",
@@ -26786,6 +27479,10 @@
           "amount": 3000.0
         },
         {
+          "name": "Oregon Council of NECA Chapters (135)",
+          "amount": 3000.0
+        },
+        {
           "name": "AllCare Physicians PAC (17638)",
           "amount": 2500.0
         },
@@ -26804,15 +27501,11 @@
         {
           "name": "Miscellaneous Cash Contributions $100 and under",
           "amount": 1547.76
-        },
-        {
-          "name": "Isabella Johnson",
-          "amount": 1500.0
         }
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 4975.0,
+      "contributionDelta10Days": 7975.0,
       "expenditureDelta10Days": 4299.08
     },
     {
@@ -26823,10 +27516,10 @@
       "race": "House District 2",
       "filerID": 21437,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21437",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 93630.0,
-      "expendituresYTD": 80976.38,
-      "balanceDeficit": 63075.65,
+      "expendituresYTD": 82593.18,
+      "balanceDeficit": 61458.85,
       "reportedContributions7Days": [
         {
           "id": "5832041",
@@ -26874,6 +27567,61 @@
         }
       ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5839339",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 42.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839331",
+          "date": "2026-09-29",
+          "name": "Friends of David Brock Smith (15377)",
+          "category": "Cash Expenditure",
+          "amount": 650.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839313",
+          "date": "2026-09-28",
+          "name": "Daniel Bonham",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 650.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839312",
+          "date": "2026-09-28",
+          "name": "Spirit Mountain Casino",
+          "category": "Cash Expenditure",
+          "amount": 238.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839303",
+          "date": "2026-09-28",
+          "name": "Friends of Chris Boice (16986)",
+          "category": "Cash Expenditure",
+          "amount": 1000.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5831456",
           "date": "2026-09-23",
@@ -26934,6 +27682,61 @@
       ],
       "recentExpenditures": [
         {
+          "id": "5839339",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 42.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839331",
+          "date": "2026-09-29",
+          "name": "Friends of David Brock Smith (15377)",
+          "category": "Cash Expenditure",
+          "amount": 650.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839313",
+          "date": "2026-09-28",
+          "name": "Daniel Bonham",
+          "category": "Personal Expenditure for Reimbursement",
+          "amount": 650.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839312",
+          "date": "2026-09-28",
+          "name": "Spirit Mountain Casino",
+          "category": "Cash Expenditure",
+          "amount": 238.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839303",
+          "date": "2026-09-28",
+          "name": "Friends of Chris Boice (16986)",
+          "category": "Cash Expenditure",
+          "amount": 1000.0,
+          "filerID": 21437,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5831456",
           "date": "2026-09-23",
           "name": "Los Dos Amigos Fiesta",
@@ -26990,7 +27793,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 6902.5,
-      "expenditureDelta10Days": 1220.0
+      "expenditureDelta10Days": 2836.8
     },
     {
       "districtOrder": 103,
@@ -27000,7 +27803,7 @@
       "race": "House District 3",
       "filerID": 24431,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24431",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 19682.13,
       "expendituresYTD": 19679.19,
       "balanceDeficit": -11143.94,
@@ -27816,7 +28619,7 @@
       "race": "House District 4",
       "filerID": 23249,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23249",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 60841.76,
       "expendituresYTD": 63270.39,
       "balanceDeficit": 32504.67,
@@ -28883,11 +29686,22 @@
       "race": "House District 6",
       "filerID": 18284,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18284",
-      "financeSummaryUpdatedAt": "2026-09-28T13:33:00-07:00",
-      "contributionsYTD": 55800.0,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 56300.0,
       "expendituresYTD": 48038.71,
-      "balanceDeficit": 81615.66,
+      "balanceDeficit": 82115.66,
       "reportedContributions7Days": [
+        {
+          "id": "5839206",
+          "date": "2026-09-28",
+          "name": "Jackson County Republican Central Committee (315)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 18284,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5831943",
           "date": "2026-09-26",
@@ -28935,6 +29749,17 @@
       ],
       "reportedExpenditures7Days": [],
       "recentContributions": [
+        {
+          "id": "5839206",
+          "date": "2026-09-28",
+          "name": "Jackson County Republican Central Committee (315)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 18284,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5831943",
           "date": "2026-09-26",
@@ -29025,7 +29850,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 5500.0,
+      "contributionDelta10Days": 6000.0,
       "expenditureDelta10Days": 9463.71
     },
     {
@@ -29678,7 +30503,7 @@
       "race": "House District 8",
       "filerID": 19751,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19751",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 38921.0,
       "expendituresYTD": 56538.81,
       "balanceDeficit": 31766.57,
@@ -30468,11 +31293,22 @@
       "race": "House District 11",
       "filerID": 24696,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24696",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
-      "contributionsYTD": 55626.53,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 55826.53,
       "expendituresYTD": 50758.36,
-      "balanceDeficit": 1868.17,
+      "balanceDeficit": 2068.17,
       "reportedContributions7Days": [
+        {
+          "id": "5839199",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 200.0,
+          "filerID": 24696,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832150",
           "date": "2026-09-26",
@@ -30498,6 +31334,17 @@
       ],
       "reportedExpenditures7Days": [],
       "recentContributions": [
+        {
+          "id": "5839199",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 200.0,
+          "filerID": 24696,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832150",
           "date": "2026-09-26",
@@ -30548,12 +31395,12 @@
           "amount": 2000.0
         },
         {
-          "name": "Santiam Excursion LLC",
-          "amount": 1500.0
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "amount": 1575.0
         },
         {
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "amount": 1375.0
+          "name": "Santiam Excursion LLC",
+          "amount": 1500.0
         },
         {
           "name": "Alton Sullivan",
@@ -30566,7 +31413,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 1600.0,
+      "contributionDelta10Days": 1800.0,
       "expenditureDelta10Days": 762.6
     },
     {
@@ -30597,11 +31444,33 @@
       "race": "House District 12",
       "filerID": 23118,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23118",
-      "financeSummaryUpdatedAt": "2026-09-29T03:43:02-07:00",
-      "contributionsYTD": 34175.0,
-      "expendituresYTD": 21338.1,
-      "balanceDeficit": 1985.85,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 34700.0,
+      "expendituresYTD": 21339.4,
+      "balanceDeficit": 2509.55,
       "reportedContributions7Days": [
+        {
+          "id": "5839181",
+          "date": "2026-09-28",
+          "name": "Tanya Sano",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839180",
+          "date": "2026-09-28",
+          "name": "Albertsons Companies",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832218",
           "date": "2026-09-26",
@@ -30638,6 +31507,17 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5839183",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 1.3,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5831142",
           "date": "2026-09-25",
           "name": "Wilson for Springfield (24461)",
@@ -30650,6 +31530,28 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5839181",
+          "date": "2026-09-28",
+          "name": "Tanya Sano",
+          "category": "Cash Contribution",
+          "amount": 25.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839180",
+          "date": "2026-09-28",
+          "name": "Albertsons Companies",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832218",
           "date": "2026-09-26",
@@ -30685,6 +31587,17 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839183",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 1.3,
+          "filerID": 23118,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5831142",
           "date": "2026-09-25",
@@ -30741,8 +31654,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 7875.0,
-      "expenditureDelta10Days": 2500.0
+      "contributionDelta10Days": 8400.0,
+      "expenditureDelta10Days": 2501.3
     },
     {
       "districtOrder": 113,
@@ -34784,7 +35697,7 @@
       "race": "House District 20",
       "filerID": 25068,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25068",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 2075.0,
       "expendituresYTD": 1605.1,
       "balanceDeficit": -883.51,
@@ -35686,11 +36599,33 @@
       "party": "Republican",
       "race": "House District 21",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21839",
-      "financeSummaryUpdatedAt": "2026-09-28T13:33:00-07:00",
-      "contributionsYTD": 322901.38,
-      "expendituresYTD": 314360.25,
-      "balanceDeficit": 14499.87,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 342001.38,
+      "expendituresYTD": 333360.25,
+      "balanceDeficit": 14599.87,
       "reportedContributions7Days": [
+        {
+          "id": "5839242",
+          "date": "2026-09-29",
+          "name": "Evergreen Oregon PAC (20202)",
+          "category": "In-Kind Contribution",
+          "amount": 19000.0,
+          "filerID": 21839,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839237",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 21839,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5833445",
           "date": "2026-09-28",
@@ -35850,6 +36785,28 @@
       ],
       "recentContributions": [
         {
+          "id": "5839242",
+          "date": "2026-09-29",
+          "name": "Evergreen Oregon PAC (20202)",
+          "category": "In-Kind Contribution",
+          "amount": 19000.0,
+          "filerID": 21839,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839237",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 21839,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5833445",
           "date": "2026-09-28",
           "name": "Cindy Robert",
@@ -35936,17 +36893,6 @@
           "filedDate": "2026-09-23",
           "filedAt": "2026-09-23T00:00:00",
           "transactionType": "C"
-        },
-        {
-          "id": "5821782",
-          "date": "2026-09-23",
-          "name": "Oregon Realtors Political Action Committee (191)",
-          "category": "Cash Contribution",
-          "amount": 10000.0,
-          "filerID": 21839,
-          "filedDate": "2026-09-23",
-          "filedAt": "2026-09-23T00:00:00",
-          "transactionType": "C"
         }
       ],
       "recentExpenditures": [
@@ -36009,7 +36955,7 @@
       "topContributorsSince2026": [
         {
           "name": "Evergreen Oregon PAC (20202)",
-          "amount": 89800.0
+          "amount": 108800.0
         },
         {
           "name": "Bring Balance to Salem PAC (21717)",
@@ -36050,8 +36996,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 43060.0,
-      "expenditureDelta10Days": 55045.75
+      "contributionDelta10Days": 62160.0,
+      "expenditureDelta10Days": 74045.75
     },
     {
       "campaignURL": "https://leslyparaoregon.com/",
@@ -36429,7 +37375,7 @@
       "race": "House District 23",
       "filerID": 23683,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23683",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -36451,7 +37397,7 @@
       "race": "House District 23",
       "filerID": 21575,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21575",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 94038.06,
       "expendituresYTD": 106944.16,
       "balanceDeficit": 26859.25,
@@ -37442,7 +38388,7 @@
       "race": "House District 25",
       "filerID": 17537,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17537",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 2773.28,
       "balanceDeficit": -15167.06,
@@ -38216,7 +39162,7 @@
       "race": "House District 26",
       "filerID": 25090,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25090",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -38247,11 +39193,55 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24539",
-      "financeSummaryUpdatedAt": "2026-09-29T03:43:02-07:00",
-      "contributionsYTD": 145789.34,
-      "expendituresYTD": 180778.05,
-      "balanceDeficit": 49790.61,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 148100.07,
+      "expendituresYTD": 180788.78,
+      "balanceDeficit": 52090.61,
       "reportedContributions7Days": [
+        {
+          "id": "5839194",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839192",
+          "date": "2026-09-28",
+          "name": "Kim Young",
+          "category": "Cash Contribution",
+          "amount": 260.73,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839191",
+          "date": "2026-09-28",
+          "name": "Valerie Boucher",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839189",
+          "date": "2026-09-28",
+          "name": "IEC Oregon Merit Shop Electrical PAC (14942)",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832276",
           "date": "2026-09-26",
@@ -38332,6 +39322,17 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5839193",
+          "date": "2026-09-28",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 10.73,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5829607",
           "date": "2026-09-25",
           "name": "Noble Consulting, LLC",
@@ -38377,6 +39378,50 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5839194",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839192",
+          "date": "2026-09-28",
+          "name": "Kim Young",
+          "category": "Cash Contribution",
+          "amount": 260.73,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839191",
+          "date": "2026-09-28",
+          "name": "Valerie Boucher",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839189",
+          "date": "2026-09-28",
+          "name": "IEC Oregon Merit Shop Electrical PAC (14942)",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832276",
           "date": "2026-09-26",
@@ -38442,20 +39487,20 @@
           "filedDate": "2026-09-22",
           "filedAt": "2026-09-22T00:00:00",
           "transactionType": "C"
-        },
-        {
-          "id": "5820443",
-          "date": "2026-09-22",
-          "name": "Daniel Bowen",
-          "category": "Cash Contribution",
-          "amount": 10000.0,
-          "filerID": 24539,
-          "filedDate": "2026-09-22",
-          "filedAt": "2026-09-22T00:00:00",
-          "transactionType": "C"
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839193",
+          "date": "2026-09-28",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 10.73,
+          "filerID": 24539,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5829607",
           "date": "2026-09-25",
@@ -38545,8 +39590,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 42294.59,
-      "expenditureDelta10Days": 36492.05
+      "contributionDelta10Days": 44605.32,
+      "expenditureDelta10Days": 36502.78
     },
     {
       "districtOrder": 127,
@@ -39188,7 +40233,7 @@
       "race": "House District 28",
       "filerID": 20290,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20290",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 104924.0,
       "expendituresYTD": 97045.06,
       "balanceDeficit": 44699.69,
@@ -39318,7 +40363,7 @@
       "race": "House District 29",
       "filerID": 16812,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16812",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 56756.05,
       "expendituresYTD": 92360.64,
       "balanceDeficit": 12620.57,
@@ -39381,7 +40426,7 @@
       "race": "House District 29",
       "filerID": 23939,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23939",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 18401.0,
       "expendituresYTD": 6451.23,
       "balanceDeficit": 11725.92,
@@ -39844,7 +40889,7 @@
       "race": "House District 30",
       "filerID": 21691,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21691",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 41264.99,
       "expendituresYTD": 59086.18,
       "balanceDeficit": 36070.93,
@@ -39907,7 +40952,7 @@
       "race": "House District 30",
       "filerID": 24869,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24869",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 365.25,
       "expendituresYTD": 15.25,
       "balanceDeficit": -545.0,
@@ -40360,11 +41405,22 @@
       "race": "House District 31",
       "filerID": 23423,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23423",
-      "financeSummaryUpdatedAt": "2026-09-29T03:43:02-07:00",
-      "contributionsYTD": 50724.13,
-      "expendituresYTD": 58563.87,
-      "balanceDeficit": 5771.57,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 51224.13,
+      "expendituresYTD": 58562.57,
+      "balanceDeficit": 6272.87,
       "reportedContributions7Days": [
+        {
+          "id": "5839202",
+          "date": "2026-09-25",
+          "name": "State Farm Federal PAC",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 23423,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5832230",
           "date": "2026-09-26",
@@ -40422,6 +41478,17 @@
         }
       ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5839205",
+          "date": "2026-09-23",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 5.48,
+          "filerID": 23423,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5832231",
           "date": "2026-09-26",
@@ -40513,6 +41580,17 @@
       ],
       "recentContributions": [
         {
+          "id": "5839202",
+          "date": "2026-09-25",
+          "name": "State Farm Federal PAC",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 23423,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5832230",
           "date": "2026-09-26",
           "name": "Karen Schmidlin",
@@ -40569,6 +41647,17 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839205",
+          "date": "2026-09-23",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 5.48,
+          "filerID": 23423,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5832231",
           "date": "2026-09-26",
@@ -40702,8 +41791,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 4440.21,
-      "expenditureDelta10Days": 7908.81
+      "contributionDelta10Days": 4940.21,
+      "expenditureDelta10Days": 7907.51
     },
     {
       "campaignURL": "https://cyrusfororegon.com/",
@@ -41359,11 +42448,66 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24510",
-      "financeSummaryUpdatedAt": "2026-09-28T13:33:00-07:00",
-      "contributionsYTD": 568599.42,
-      "expendituresYTD": 553999.22,
-      "balanceDeficit": 19630.42,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 575849.42,
+      "expendituresYTD": 559724.12,
+      "balanceDeficit": 21155.52,
       "reportedContributions7Days": [
+        {
+          "id": "5839176",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839172",
+          "date": "2026-09-28",
+          "name": "Linda Hanratty",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839171",
+          "date": "2026-09-28",
+          "name": "Michael Hanratty",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839169",
+          "date": "2026-09-28",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 5650.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839168",
+          "date": "2026-09-28",
+          "name": "IEC Oregon Merit Shop Electrical PAC (14942)",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5833157",
           "date": "2026-09-26",
@@ -41664,6 +42808,28 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5839175",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 50.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839174",
+          "date": "2026-09-28",
+          "name": "Anedot, Inc",
+          "category": "Cash Expenditure",
+          "amount": 24.9,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5833159",
           "date": "2026-09-28",
           "name": "Orion Digital Media",
@@ -41842,6 +43008,61 @@
       ],
       "recentContributions": [
         {
+          "id": "5839176",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839172",
+          "date": "2026-09-28",
+          "name": "Linda Hanratty",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839171",
+          "date": "2026-09-28",
+          "name": "Michael Hanratty",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839169",
+          "date": "2026-09-28",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 5650.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839168",
+          "date": "2026-09-28",
+          "name": "IEC Oregon Merit Shop Electrical PAC (14942)",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5833157",
           "date": "2026-09-26",
           "name": "Weyerhaeuser",
@@ -41895,64 +43116,31 @@
           "filedDate": "2026-09-27",
           "filedAt": "2026-09-27T00:00:00",
           "transactionType": "C"
-        },
-        {
-          "id": "5832085",
-          "date": "2026-09-26",
-          "name": "American Property Casualty Insurance Association PAC",
-          "category": "Cash Contribution",
-          "amount": 1000.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-27",
-          "filedAt": "2026-09-27T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5830912",
-          "date": "2026-09-25",
-          "name": "Miscellaneous In-Kind Contributions $100 and under",
-          "category": "In-Kind Contribution",
-          "amount": 50.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5830784",
-          "date": "2026-09-24",
-          "name": "Robert Killgore",
-          "category": "Cash Contribution",
-          "amount": 250.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5830677",
-          "date": "2026-09-24",
-          "name": "The Standard",
-          "category": "Cash Contribution",
-          "amount": 2000.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5830652",
-          "date": "2026-09-25",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 140.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839175",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 50.0,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839174",
+          "date": "2026-09-28",
+          "name": "Anedot, Inc",
+          "category": "Cash Expenditure",
+          "amount": 24.9,
+          "filerID": 24510,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5833159",
           "date": "2026-09-28",
@@ -42040,34 +43228,12 @@
           "filedDate": "2026-09-25",
           "filedAt": "2026-09-25T00:00:00",
           "transactionType": "E"
-        },
-        {
-          "id": "5831081",
-          "date": "2026-09-25",
-          "name": "Intisar Strategies, LLC",
-          "category": "Cash Expenditure",
-          "amount": 23662.6,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5830864",
-          "date": "2026-09-25",
-          "name": "Powers Interactive Digital LLC",
-          "category": "Cash Expenditure",
-          "amount": 4000.0,
-          "filerID": 24510,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "E"
         }
       ],
       "topContributorsSince2026": [
         {
           "name": "Bring Balance to Salem PAC (21717)",
-          "amount": 241425.0
+          "amount": 247075.0
         },
         {
           "name": "Evergreen PAC (23238)",
@@ -42108,8 +43274,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 194016.62,
-      "expenditureDelta10Days": 189960.49
+      "contributionDelta10Days": 201266.62,
+      "expenditureDelta10Days": 195685.39
     },
     {
       "districtOrder": 133,
@@ -42119,7 +43285,7 @@
       "race": "House District 33",
       "filerID": 23464,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23464",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 16725.0,
       "expendituresYTD": 6633.56,
       "balanceDeficit": -13515.78,
@@ -42182,7 +43348,7 @@
       "race": "House District 33",
       "filerID": 23778,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23778",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 14777.44,
       "expendituresYTD": 10279.54,
       "balanceDeficit": 3653.95,
@@ -42245,7 +43411,7 @@
       "race": "House District 34",
       "filerID": 24400,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24400",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 38676.0,
       "expendituresYTD": 25705.52,
       "balanceDeficit": 34690.99,
@@ -42308,7 +43474,7 @@
       "race": "House District 34",
       "filerID": 24899,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24899",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -49573,7 +50739,7 @@
       "race": "House District 54",
       "filerID": 18661,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18661",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 70102.9,
       "expendituresYTD": 86042.76,
       "balanceDeficit": 20509.97,
@@ -50750,14 +51916,238 @@
       "race": "House District 56",
       "filerID": 21903,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21903",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
-      "contributionsYTD": 79616.8,
-      "expendituresYTD": 55045.7,
-      "balanceDeficit": 56971.0,
-      "reportedContributions7Days": [],
-      "reportedExpenditures7Days": [],
-      "recentContributions": [],
-      "recentExpenditures": [],
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 85116.8,
+      "expendituresYTD": 65645.69,
+      "balanceDeficit": 51871.01,
+      "reportedContributions7Days": [
+        {
+          "id": "5839289",
+          "date": "2026-09-28",
+          "name": "Jackson County Republican Central Committee",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839286",
+          "date": "2026-09-28",
+          "name": "Family Care Inc.",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839283",
+          "date": "2026-09-28",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839281",
+          "date": "2026-09-28",
+          "name": "verizon",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839280",
+          "date": "2026-09-28",
+          "name": "Confederated Tribes of the Umatilla Indian Reservation",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5821947",
+          "date": "2026-09-23",
+          "name": "ChamberPAC (5067)",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5839308",
+          "date": "2026-09-03",
+          "name": "Anna Scharf",
+          "category": "Cash Expenditure",
+          "amount": 77.25,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839307",
+          "date": "2026-09-03",
+          "name": "Anna Scharf",
+          "category": "Cash Expenditure",
+          "amount": 45.35,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839296",
+          "date": "2026-09-24",
+          "name": "Evergreen PAC (23238)",
+          "category": "Cash Expenditure",
+          "amount": 10000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839293",
+          "date": "2026-09-24",
+          "name": "Costco",
+          "category": "Cash Expenditure",
+          "amount": 599.99,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
+      "recentContributions": [
+        {
+          "id": "5839289",
+          "date": "2026-09-28",
+          "name": "Jackson County Republican Central Committee",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839286",
+          "date": "2026-09-28",
+          "name": "Family Care Inc.",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839283",
+          "date": "2026-09-28",
+          "name": "Altria Client Services LLC",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839281",
+          "date": "2026-09-28",
+          "name": "verizon",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839280",
+          "date": "2026-09-28",
+          "name": "Confederated Tribes of the Umatilla Indian Reservation",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5821947",
+          "date": "2026-09-23",
+          "name": "ChamberPAC (5067)",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
+      "recentExpenditures": [
+        {
+          "id": "5839308",
+          "date": "2026-09-03",
+          "name": "Anna Scharf",
+          "category": "Cash Expenditure",
+          "amount": 77.25,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839307",
+          "date": "2026-09-03",
+          "name": "Anna Scharf",
+          "category": "Cash Expenditure",
+          "amount": 45.35,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839296",
+          "date": "2026-09-24",
+          "name": "Evergreen PAC (23238)",
+          "category": "Cash Expenditure",
+          "amount": 10000.0,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839293",
+          "date": "2026-09-24",
+          "name": "Costco",
+          "category": "Cash Expenditure",
+          "amount": 599.99,
+          "filerID": 21903,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
       "topContributorsSince2026": [
         {
           "name": "Oregon Hospital Political Action Committee (161)",
@@ -50802,8 +52192,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 6500.0,
-      "expenditureDelta10Days": 122.6
+      "contributionDelta10Days": 12000.0,
+      "expenditureDelta10Days": 10722.59
     },
     {
       "districtOrder": 157,
@@ -50813,7 +52203,7 @@
       "race": "House District 57",
       "filerID": 25111,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25111",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 4151.02,
       "expendituresYTD": 2657.62,
       "balanceDeficit": -5784.55,
@@ -51969,7 +53359,7 @@
       "race": "House District 60",
       "filerID": 20217,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20217",
-      "financeSummaryUpdatedAt": "2026-09-27T16:04:51-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 93608.96,
       "expendituresYTD": 92208.64,
       "balanceDeficit": 46081.18,
@@ -52850,11 +54240,99 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24485",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
-      "contributionsYTD": 1235108.05,
-      "expendituresYTD": 1258088.58,
-      "balanceDeficit": 70569.78,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 1286091.1,
+      "expendituresYTD": 1295516.16,
+      "balanceDeficit": 84125.25,
       "reportedContributions7Days": [
+        {
+          "id": "5839604",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 4630.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839599",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 28000.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839595",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 4630.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839338",
+          "date": "2026-09-29",
+          "name": "Jason Stranberg",
+          "category": "Cash Contribution",
+          "amount": 2602.54,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839274",
+          "date": "2026-09-29",
+          "name": "Amy Dunn",
+          "category": "Cash Contribution",
+          "amount": 520.51,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839269",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839259",
+          "date": "2026-09-29",
+          "name": "Mike McLane for Oregon (23253)",
+          "category": "Cash Contribution",
+          "amount": 10000.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839246",
+          "date": "2026-09-29",
+          "name": "Jackson County Republican Central Committee (315)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5833449",
           "date": "2026-09-28",
@@ -53177,6 +54655,61 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5839342",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 102.54,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839275",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 20.51,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839270",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 3.94,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839239",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 10.59,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839233",
+          "date": "2026-09-29",
+          "name": "Rogue Credit Union",
+          "category": "Cash Expenditure",
+          "amount": 30.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5837584",
           "date": "2026-09-28",
           "name": "Charm Thai Kitchen",
@@ -53454,6 +54987,94 @@
       ],
       "recentContributions": [
         {
+          "id": "5839604",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 4630.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839599",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 28000.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839595",
+          "date": "2026-09-29",
+          "name": "Bring Balance to Salem PAC (21717)",
+          "category": "In-Kind Contribution",
+          "amount": 4630.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839338",
+          "date": "2026-09-29",
+          "name": "Jason Stranberg",
+          "category": "Cash Contribution",
+          "amount": 2602.54,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839274",
+          "date": "2026-09-29",
+          "name": "Amy Dunn",
+          "category": "Cash Contribution",
+          "amount": 520.51,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839269",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839259",
+          "date": "2026-09-29",
+          "name": "Mike McLane for Oregon (23253)",
+          "category": "Cash Contribution",
+          "amount": 10000.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839246",
+          "date": "2026-09-29",
+          "name": "Jackson County Republican Central Committee (315)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5833449",
           "date": "2026-09-28",
           "name": "Kathleen W Jones-McCann",
@@ -53474,97 +55095,64 @@
           "filedDate": "2026-09-27",
           "filedAt": "2026-09-27T00:00:00",
           "transactionType": "C"
-        },
-        {
-          "id": "5831631",
-          "date": "2026-09-26",
-          "name": "Oregon Construction Materials PAC (134)",
-          "category": "Cash Contribution",
-          "amount": 5000.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5831626",
-          "date": "2026-09-26",
-          "name": "Barbara R Banke",
-          "category": "Cash Contribution",
-          "amount": 5000.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5831614",
-          "date": "2026-09-26",
-          "name": "Gary Hall",
-          "category": "Cash Contribution",
-          "amount": 150.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5831610",
-          "date": "2026-09-26",
-          "name": "Altria Client Services, LLC",
-          "category": "Cash Contribution",
-          "amount": 5000.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5831496",
-          "date": "2026-09-26",
-          "name": "Bring Balance to Salem PAC (21717)",
-          "category": "Cash Contribution",
-          "amount": 250000.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5831490",
-          "date": "2026-09-26",
-          "name": "Biomass One LP",
-          "category": "Cash Contribution",
-          "amount": 1041.02,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5829890",
-          "date": "2026-09-25",
-          "name": "Miscellaneous Cash Contributions $100 and under",
-          "category": "Cash Contribution",
-          "amount": 10.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5829608",
-          "date": "2026-09-25",
-          "name": "Eric S Muller",
-          "category": "Cash Contribution",
-          "amount": 500.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "C"
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5839342",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 102.54,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839275",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 20.51,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839270",
+          "date": "2026-09-29",
+          "name": "WinRed",
+          "category": "Cash Expenditure",
+          "amount": 3.94,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839239",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 10.59,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839233",
+          "date": "2026-09-29",
+          "name": "Rogue Credit Union",
+          "category": "Cash Expenditure",
+          "amount": 30.0,
+          "filerID": 24485,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5837584",
           "date": "2026-09-28",
@@ -53619,67 +55207,12 @@
           "filedDate": "2026-09-26",
           "filedAt": "2026-09-26T00:00:00",
           "transactionType": "E"
-        },
-        {
-          "id": "5831495",
-          "date": "2026-09-26",
-          "name": "Miscellaneous Cash Expenditures $100 and under",
-          "category": "Cash Expenditure",
-          "amount": 26.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5831492",
-          "date": "2026-09-26",
-          "name": "Harbor Freight",
-          "category": "Cash Expenditure",
-          "amount": 24.87,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5831491",
-          "date": "2026-09-26",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 41.02,
-          "filerID": 24485,
-          "filedDate": "2026-09-26",
-          "filedAt": "2026-09-26T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5829889",
-          "date": "2026-09-25",
-          "name": "WinRed",
-          "category": "Cash Expenditure",
-          "amount": 0.39,
-          "filerID": 24485,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5829844",
-          "date": "2026-09-25",
-          "name": "Cookies and Grace",
-          "category": "Cash Expenditure",
-          "amount": 625.0,
-          "filerID": 24485,
-          "filedDate": "2026-09-25",
-          "filedAt": "2026-09-25T00:00:00",
-          "transactionType": "E"
         }
       ],
       "topContributorsSince2026": [
         {
           "name": "Bring Balance to Salem PAC (21717)",
-          "amount": 701530.0
+          "amount": 738790.0
         },
         {
           "name": "Starr Leadership Fund (23228)",
@@ -53720,8 +55253,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 395335.49,
-      "expenditureDelta10Days": 371418.15
+      "contributionDelta10Days": 446318.54,
+      "expenditureDelta10Days": 408845.73
     },
     {
       "districtOrder": 204,
@@ -55213,14 +56746,62 @@
       "race": "Senate District 8",
       "filerID": 21940,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21940",
-      "financeSummaryUpdatedAt": "2026-09-28T17:23:15-07:00",
-      "contributionsYTD": 1760.0,
-      "expendituresYTD": 1666.29,
-      "balanceDeficit": -2351.8,
-      "reportedContributions7Days": [],
-      "reportedExpenditures7Days": [],
-      "recentContributions": [],
-      "recentExpenditures": [],
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 1860.0,
+      "expendituresYTD": 1751.29,
+      "balanceDeficit": -2336.8,
+      "reportedContributions7Days": [
+        {
+          "id": "5839518",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 21940,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5839517",
+          "date": "2026-09-21",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 85.0,
+          "filerID": 21940,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
+      "recentContributions": [
+        {
+          "id": "5839518",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 100.0,
+          "filerID": 21940,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
+      "recentExpenditures": [
+        {
+          "id": "5839517",
+          "date": "2026-09-21",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 85.0,
+          "filerID": 21940,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
       "topContributorsSince2026": [
         {
           "name": "The Leadership Fund (2690)",
@@ -55236,13 +56817,13 @@
         },
         {
           "name": "Miscellaneous Cash Contributions $100 and under",
-          "amount": 135.0
+          "amount": 235.0
         }
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 50.0,
-      "expenditureDelta10Days": 0.0
+      "contributionDelta10Days": 150.0,
+      "expenditureDelta10Days": 85.0
     },
     {
       "districtOrder": 210,
@@ -56738,25 +58319,55 @@
       "race": "Senate District 10",
       "filerID": 22280,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22280",
-      "financeSummaryUpdatedAt": "2026-09-28T13:33:00-07:00",
-      "contributionsYTD": 101463.78,
-      "expendituresYTD": 77484.07,
-      "balanceDeficit": 22898.99,
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 102018.78,
+      "expendituresYTD": 78749.99,
+      "balanceDeficit": 22188.07,
       "reportedContributions7Days": [
         {
-          "id": "5824165",
-          "date": "2025-10-02",
-          "name": "Barbara Kanz",
+          "id": "5839336",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
           "category": "Cash Contribution",
-          "amount": 200.0,
+          "amount": 105.0,
           "filerID": 22280,
-          "filedDate": "2026-09-23",
-          "filedAt": "2026-09-23T00:00:00",
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
           "transactionType": "C"
-        }
-      ],
-      "reportedExpenditures7Days": [],
-      "recentContributions": [
+        },
+        {
+          "id": "5839334",
+          "date": "2026-09-25",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839292",
+          "date": "2026-09-28",
+          "name": "Kassandra Fuller",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839278",
+          "date": "2026-09-25",
+          "name": "Darrell Fuller",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5824165",
           "date": "2025-10-02",
@@ -56769,7 +58380,221 @@
           "transactionType": "C"
         }
       ],
-      "recentExpenditures": [],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5839335",
+          "date": "2026-09-25",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 14.41,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839333",
+          "date": "2026-09-24",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 34.93,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839332",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 200.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839305",
+          "date": "2026-09-28",
+          "name": "Home Depot",
+          "category": "Cash Expenditure",
+          "amount": 294.18,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839297",
+          "date": "2026-09-28",
+          "name": "Anedot Inc",
+          "category": "Cash Expenditure",
+          "amount": 11.1,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839284",
+          "date": "2026-09-25",
+          "name": "Mid-Valley Clays & Shooting School",
+          "category": "Cash Expenditure",
+          "amount": 698.4,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839279",
+          "date": "2026-09-25",
+          "name": "Anedot Inc",
+          "category": "Cash Expenditure",
+          "amount": 12.9,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
+      "recentContributions": [
+        {
+          "id": "5839336",
+          "date": "2026-09-28",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 105.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839334",
+          "date": "2026-09-25",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839292",
+          "date": "2026-09-28",
+          "name": "Kassandra Fuller",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839278",
+          "date": "2026-09-25",
+          "name": "Darrell Fuller",
+          "category": "Cash Contribution",
+          "amount": 150.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5824165",
+          "date": "2025-10-02",
+          "name": "Barbara Kanz",
+          "category": "Cash Contribution",
+          "amount": 200.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-23",
+          "filedAt": "2026-09-23T00:00:00",
+          "transactionType": "C"
+        }
+      ],
+      "recentExpenditures": [
+        {
+          "id": "5839335",
+          "date": "2026-09-25",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 14.41,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839333",
+          "date": "2026-09-24",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 34.93,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839332",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 200.0,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839305",
+          "date": "2026-09-28",
+          "name": "Home Depot",
+          "category": "Cash Expenditure",
+          "amount": 294.18,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839297",
+          "date": "2026-09-28",
+          "name": "Anedot Inc",
+          "category": "Cash Expenditure",
+          "amount": 11.1,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839284",
+          "date": "2026-09-25",
+          "name": "Mid-Valley Clays & Shooting School",
+          "category": "Cash Expenditure",
+          "amount": 698.4,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839279",
+          "date": "2026-09-25",
+          "name": "Anedot Inc",
+          "category": "Cash Expenditure",
+          "amount": 12.9,
+          "filerID": 22280,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        }
+      ],
       "topContributorsSince2026": [
         {
           "name": "The Leadership Fund (2690)",
@@ -56801,7 +58626,7 @@
         },
         {
           "name": "Miscellaneous Cash Contributions $100 and under",
-          "amount": 2650.5
+          "amount": 2905.5
         },
         {
           "name": "Bill Riecke",
@@ -56814,8 +58639,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 6545.0,
-      "expenditureDelta10Days": 67.3
+      "contributionDelta10Days": 7100.0,
+      "expenditureDelta10Days": 1333.22
     },
     {
       "campaignURL": "https://www.electvirginiastapleton.com/",
@@ -57386,7 +59211,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 59824.93,
-      "expenditureDelta10Days": 95048.78
+      "expenditureDelta10Days": 94907.78
     },
     {
       "campaignURL": "https://www.tracyfororegon.com/",
@@ -57405,7 +59230,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22032",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 858585.33,
       "expendituresYTD": 498168.12,
       "balanceDeficit": 410231.34,
@@ -60351,12 +62176,79 @@
       "race": "Senate District 19",
       "filerID": 24594,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24594",
-      "financeSummaryUpdatedAt": "2026-09-29T03:43:02-07:00",
-      "contributionsYTD": 18920.98,
-      "expendituresYTD": 14631.44,
-      "balanceDeficit": 7855.53,
-      "reportedContributions7Days": [],
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
+      "contributionsYTD": 18980.98,
+      "expendituresYTD": 15325.33,
+      "balanceDeficit": 7221.64,
+      "reportedContributions7Days": [
+        {
+          "id": "5839500",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 10.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839493",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5839489",
+          "date": "2026-09-29",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 0.7,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839470",
+          "date": "2026-09-23",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 2.3,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839460",
+          "date": "2026-09-14",
+          "name": "MPG Marketing & Mailing Services",
+          "category": "Cash Expenditure",
+          "amount": 558.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839425",
+          "date": "2026-09-21",
+          "name": "Cascade Campaign Compliance (CCC)",
+          "category": "Cash Expenditure",
+          "amount": 132.89,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5828175",
           "date": "2026-09-19",
@@ -60369,8 +62261,75 @@
           "transactionType": "E"
         }
       ],
-      "recentContributions": [],
+      "recentContributions": [
+        {
+          "id": "5839500",
+          "date": "2026-09-29",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 10.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5839493",
+          "date": "2026-09-23",
+          "name": "Miscellaneous Cash Contributions $100 and under",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "C"
+        }
+      ],
       "recentExpenditures": [
+        {
+          "id": "5839489",
+          "date": "2026-09-29",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 0.7,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839470",
+          "date": "2026-09-23",
+          "name": "Anedot, Inc.",
+          "category": "Cash Expenditure",
+          "amount": 2.3,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839460",
+          "date": "2026-09-14",
+          "name": "MPG Marketing & Mailing Services",
+          "category": "Cash Expenditure",
+          "amount": 558.0,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5839425",
+          "date": "2026-09-21",
+          "name": "Cascade Campaign Compliance (CCC)",
+          "category": "Cash Expenditure",
+          "amount": 132.89,
+          "filerID": 24594,
+          "filedDate": "2026-09-29",
+          "filedAt": "2026-09-29T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5828175",
           "date": "2026-09-19",
@@ -60394,7 +62353,7 @@
         },
         {
           "name": "Miscellaneous Cash Contributions $100 and under",
-          "amount": 1234.0
+          "amount": 1294.0
         },
         {
           "name": "Kirsten Thompson",
@@ -60427,8 +62386,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 0.0,
-      "expenditureDelta10Days": 0.0
+      "contributionDelta10Days": 60.0,
+      "expenditureDelta10Days": 693.89
     },
     {
       "campaignURL": "https://www.votemarkmeek.com/",
@@ -60439,7 +62398,7 @@
       "party": "Democratic",
       "race": "Senate District 20",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16719",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 144324.95,
       "expendituresYTD": 161551.4,
       "balanceDeficit": 299636.0,
@@ -60947,7 +62906,7 @@
       "party": "Republican",
       "race": "Senate District 20",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21488",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 34457.2,
       "expendituresYTD": 26599.13,
       "balanceDeficit": 9470.7,
@@ -61213,7 +63172,7 @@
       "race": "Senate District 26",
       "filerID": 24816,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24816",
-      "financeSummaryUpdatedAt": "2026-09-27T12:46:29-07:00",
+      "financeSummaryUpdatedAt": "2026-09-29T11:06:17-07:00",
       "contributionsYTD": 146275.0,
       "expendituresYTD": 78194.44,
       "balanceDeficit": 68095.56,
