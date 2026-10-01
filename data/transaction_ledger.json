@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 16,
+  "contributionReconcileCursor": 17,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -1541,33 +1541,6 @@
       "filedDate": "2026-09-14",
       "filedAt": "2026-09-14T00:00:00",
       "transactionType": "E"
-    },
-    "5790741": {
-      "id": "5790741",
-      "date": "2026-08-17",
-      "name": "Joan Medina",
-      "category": "Cash Contribution",
-      "amount": 300.0,
-      "filerID": 25141,
-      "transactionType": "C"
-    },
-    "5790749": {
-      "id": "5790749",
-      "date": "2026-08-17",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 25141,
-      "transactionType": "C"
-    },
-    "5790718": {
-      "id": "5790718",
-      "date": "2026-08-04",
-      "name": "Bill Vivian",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 507.24,
-      "filerID": 25141,
-      "transactionType": "C"
     },
     "5707153": {
       "id": "5707153",
@@ -191322,6 +191295,87 @@
       "filedAt": "2026-09-23T00:00:00",
       "transactionType": "E"
     },
+    "5726471": {
+      "id": "5726471",
+      "date": "2026-07-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5592354": {
+      "id": "5592354",
+      "date": "2026-02-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 103.2,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5793542": {
+      "id": "5793542",
+      "date": "2026-08-04",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 5.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5726531": {
+      "id": "5726531",
+      "date": "2026-04-09",
+      "name": "Adam Beckmann",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5612956": {
+      "id": "5612956",
+      "date": "2026-03-09",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5802939": {
+      "id": "5802939",
+      "date": "2026-08-15",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5670819": {
+      "id": "5670819",
+      "date": "2026-05-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5624125": {
+      "id": "5624125",
+      "date": "2026-04-04",
+      "name": "Darlene Madsen-Martin",
+      "category": "In-Kind Contribution",
+      "amount": 34.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
+    "5624123": {
+      "id": "5624123",
+      "date": "2026-04-02",
+      "name": "Darlene Madsen-Martin",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24956,
+      "transactionType": "C"
+    },
     "5827959": {
       "id": "5827959",
       "date": "2026-09-24",
@@ -205453,17 +205507,6 @@
       "category": "Cash Contribution",
       "amount": 52.4,
       "filerID": 20246,
-      "filedDate": "2026-09-25",
-      "filedAt": "2026-09-25T00:00:00",
-      "transactionType": "C"
-    },
-    "5831264": {
-      "id": "5831264",
-      "date": "2026-09-16",
-      "name": "Raquel Moore-Green",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 22032,
       "filedDate": "2026-09-25",
       "filedAt": "2026-09-25T00:00:00",
       "transactionType": "C"
@@ -220274,6 +220317,17 @@
       "filedAt": "2026-09-28T00:00:00",
       "transactionType": "C"
     },
+    "5831927": {
+      "id": "5831927",
+      "date": "2026-09-23",
+      "name": "Darin Harbick",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19151,
+      "filedDate": "2026-09-28",
+      "filedAt": "2026-09-28T00:00:00",
+      "transactionType": "C"
+    },
     "5831928": {
       "id": "5831928",
       "date": "2026-09-23",
@@ -220291,6 +220345,17 @@
       "name": "ORLAPAC (193)",
       "category": "Cash Contribution",
       "amount": 200.0,
+      "filerID": 19151,
+      "filedDate": "2026-09-28",
+      "filedAt": "2026-09-28T00:00:00",
+      "transactionType": "C"
+    },
+    "5831937": {
+      "id": "5831937",
+      "date": "2026-09-23",
+      "name": "Dan Cooper",
+      "category": "Cash Contribution",
+      "amount": 100.0,
       "filerID": 19151,
       "filedDate": "2026-09-28",
       "filedAt": "2026-09-28T00:00:00",
@@ -220620,7 +220685,7 @@
       "date": "2026-09-23",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 950.0,
+      "amount": 2225.0,
       "filerID": 19151,
       "filedDate": "2026-09-28",
       "filedAt": "2026-09-28T00:00:00",
@@ -221990,17 +222055,6 @@
       "filedAt": "2026-09-28T00:00:00",
       "transactionType": "E"
     },
-    "5838900": {
-      "id": "5838900",
-      "date": "2026-09-23",
-      "name": "Coastal Farm & Ranch",
-      "category": "Cash Expenditure",
-      "amount": 400.0,
-      "filerID": 19151,
-      "filedDate": "2026-09-28",
-      "filedAt": "2026-09-28T00:00:00",
-      "transactionType": "E"
-    },
     "5824298": {
       "id": "5824298",
       "date": "2026-09-22",
@@ -222957,51 +223011,6 @@
       "filedDate": "2026-09-28",
       "filedAt": "2026-09-28T00:00:00",
       "transactionType": "E"
-    },
-    "5726471": {
-      "id": "5726471",
-      "date": "2026-07-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 104.1,
-      "filerID": 24506,
-      "transactionType": "C"
-    },
-    "5592354": {
-      "id": "5592354",
-      "date": "2026-02-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 103.2,
-      "filerID": 24506,
-      "transactionType": "C"
-    },
-    "5793542": {
-      "id": "5793542",
-      "date": "2026-08-04",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 5.0,
-      "filerID": 24869,
-      "transactionType": "C"
-    },
-    "5726531": {
-      "id": "5726531",
-      "date": "2026-04-09",
-      "name": "Adam Beckmann",
-      "category": "Cash Contribution",
-      "amount": 260.25,
-      "filerID": 24869,
-      "transactionType": "C"
-    },
-    "5612956": {
-      "id": "5612956",
-      "date": "2026-03-09",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24869,
-      "transactionType": "C"
     },
     "5839237": {
       "id": "5839237",
@@ -224528,6 +224537,17 @@
       "category": "Cash Contribution",
       "amount": 500.0,
       "filerID": 19050,
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00",
+      "transactionType": "C"
+    },
+    "5842523": {
+      "id": "5842523",
+      "date": "2026-09-28",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24956,
       "filedDate": "2026-09-29",
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "C"
@@ -235647,7 +235667,7 @@
       "date": "2026-09-30",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 1210.0,
+      "amount": 3474.47,
       "filerID": 19050,
       "filedDate": "2026-09-30",
       "filedAt": "2026-09-30T00:00:00",
@@ -238282,6 +238302,17 @@
       "filedAt": "2026-09-30T00:00:00",
       "transactionType": "C"
     },
+    "5827666": {
+      "id": "5827666",
+      "date": "2026-09-23",
+      "name": "Democratic Party of Oregon (353)",
+      "category": "In-Kind Contribution",
+      "amount": 3014.71,
+      "filerID": 4792,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "C"
+    },
     "5829359": {
       "id": "5829359",
       "date": "2026-09-23",
@@ -238333,6 +238364,39 @@
       "category": "Cash Contribution",
       "amount": 250.0,
       "filerID": 21757,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "C"
+    },
+    "5838563": {
+      "id": "5838563",
+      "date": "2026-09-23",
+      "name": "SEIU Local 503",
+      "category": "In-Kind Contribution",
+      "amount": 1219.05,
+      "filerID": 4792,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "C"
+    },
+    "5838564": {
+      "id": "5838564",
+      "date": "2026-09-23",
+      "name": "SEIU Local 49",
+      "category": "In-Kind Contribution",
+      "amount": 2269.02,
+      "filerID": 4792,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "C"
+    },
+    "5846288": {
+      "id": "5846288",
+      "date": "2026-09-23",
+      "name": "Liz Fuller",
+      "category": "In-Kind Contribution",
+      "amount": 1466.6,
+      "filerID": 4792,
       "filedDate": "2026-09-30",
       "filedAt": "2026-09-30T00:00:00",
       "transactionType": "C"
@@ -240471,6 +240535,28 @@
       "filedAt": "2026-09-30T00:00:00",
       "transactionType": "E"
     },
+    "5834170": {
+      "id": "5834170",
+      "date": "2026-09-23",
+      "name": "Canva",
+      "category": "Cash Expenditure",
+      "amount": 15.0,
+      "filerID": 4792,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "E"
+    },
+    "5834175": {
+      "id": "5834175",
+      "date": "2026-09-23",
+      "name": "Canal Partners Media",
+      "category": "Cash Expenditure",
+      "amount": 1083105.0,
+      "filerID": 4792,
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00",
+      "transactionType": "E"
+    },
     "5847530": {
       "id": "5847530",
       "date": "2026-09-23",
@@ -240977,55 +241063,530 @@
       "filedAt": "2026-09-30T00:00:00",
       "transactionType": "E"
     },
-    "5842523": {
-      "id": "5842523",
-      "date": "2026-09-28",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24956,
-      "transactionType": "C",
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00"
-    },
-    "5802939": {
-      "id": "5802939",
-      "date": "2026-08-15",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 24956,
-      "transactionType": "C"
-    },
-    "5670819": {
-      "id": "5670819",
-      "date": "2026-05-18",
-      "name": "Miscellaneous Cash Contributions $100 and under",
+    "5850724": {
+      "id": "5850724",
+      "date": "2026-09-30",
+      "name": "Patrick Burkett",
       "category": "Cash Contribution",
       "amount": 25.0,
-      "filerID": 24956,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
       "transactionType": "C"
     },
-    "5624125": {
-      "id": "5624125",
-      "date": "2026-04-04",
-      "name": "Darlene Madsen-Martin",
-      "category": "In-Kind Contribution",
-      "amount": 34.0,
-      "filerID": 24956,
+    "5850725": {
+      "id": "5850725",
+      "date": "2026-09-30",
+      "name": "Stephen Stover",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
       "transactionType": "C"
     },
-    "5624123": {
-      "id": "5624123",
-      "date": "2026-04-02",
-      "name": "Darlene Madsen-Martin",
+    "5850730": {
+      "id": "5850730",
+      "date": "2026-09-30",
+      "name": "Lynn Wilson",
+      "category": "Cash Contribution",
+      "amount": 15.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850744": {
+      "id": "5850744",
+      "date": "2026-09-30",
+      "name": "Larry Tuttle",
       "category": "Cash Contribution",
       "amount": 500.0,
-      "filerID": 24956,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850747": {
+      "id": "5850747",
+      "date": "2026-09-30",
+      "name": "Arthur (Art) Castro",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850759": {
+      "id": "5850759",
+      "date": "2026-09-30",
+      "name": "Debra Gardner",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850765": {
+      "id": "5850765",
+      "date": "2026-09-30",
+      "name": "Christine Slack",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850775": {
+      "id": "5850775",
+      "date": "2026-09-30",
+      "name": "Paul Lauritzon",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850791": {
+      "id": "5850791",
+      "date": "2026-09-30",
+      "name": "Stephen Hunt",
+      "category": "Cash Contribution",
+      "amount": 1041.02,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850794": {
+      "id": "5850794",
+      "date": "2026-09-30",
+      "name": "Tad Everhart",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850796": {
+      "id": "5850796",
+      "date": "2026-09-30",
+      "name": "Lucia Bosworth",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850801": {
+      "id": "5850801",
+      "date": "2026-09-30",
+      "name": "Jeffrey Gray",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850802": {
+      "id": "5850802",
+      "date": "2026-09-30",
+      "name": "Fred Hauer",
+      "category": "Cash Contribution",
+      "amount": 52.05,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850819": {
+      "id": "5850819",
+      "date": "2026-09-30",
+      "name": "Scott Miller",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850822": {
+      "id": "5850822",
+      "date": "2026-09-30",
+      "name": "Rich Hildreth",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850825": {
+      "id": "5850825",
+      "date": "2026-09-30",
+      "name": "Warren Bean",
+      "category": "Cash Contribution",
+      "amount": 1041.02,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850830": {
+      "id": "5850830",
+      "date": "2026-09-30",
+      "name": "Tim Faherty",
+      "category": "Cash Contribution",
+      "amount": 127.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850836": {
+      "id": "5850836",
+      "date": "2026-09-30",
+      "name": "Karen Staats",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850837": {
+      "id": "5850837",
+      "date": "2026-09-30",
+      "name": "Gennediy Bakis",
+      "category": "Cash Contribution",
+      "amount": 520.51,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850840": {
+      "id": "5850840",
+      "date": "2026-09-30",
+      "name": "Eric Moreland",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850843": {
+      "id": "5850843",
+      "date": "2026-09-30",
+      "name": "Gary Thomsen",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850845": {
+      "id": "5850845",
+      "date": "2026-09-30",
+      "name": "Kathleen White",
+      "category": "Cash Contribution",
+      "amount": 10.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850846": {
+      "id": "5850846",
+      "date": "2026-09-30",
+      "name": "Jon Rand",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850853": {
+      "id": "5850853",
+      "date": "2026-09-30",
+      "name": "Clinton Carlson",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850855": {
+      "id": "5850855",
+      "date": "2026-09-30",
+      "name": "Gerald Miller",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850856": {
+      "id": "5850856",
+      "date": "2026-09-30",
+      "name": "Robert Saldivar",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850860": {
+      "id": "5850860",
+      "date": "2026-09-30",
+      "name": "Cliff Stephens",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850861": {
+      "id": "5850861",
+      "date": "2026-09-30",
+      "name": "Shaun Day",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850866": {
+      "id": "5850866",
+      "date": "2026-09-30",
+      "name": "John Godon",
+      "category": "Cash Contribution",
+      "amount": 3.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850868": {
+      "id": "5850868",
+      "date": "2026-09-30",
+      "name": "Robert Chase",
+      "category": "Cash Contribution",
+      "amount": 10.41,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850873": {
+      "id": "5850873",
+      "date": "2026-09-30",
+      "name": "Paul Schatz",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850874": {
+      "id": "5850874",
+      "date": "2026-09-30",
+      "name": "Andrew Piper",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850876": {
+      "id": "5850876",
+      "date": "2026-09-30",
+      "name": "Dale Hoogestraat",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850877": {
+      "id": "5850877",
+      "date": "2026-09-30",
+      "name": "Larry Jordan",
+      "category": "Cash Contribution",
+      "amount": 21.86,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850881": {
+      "id": "5850881",
+      "date": "2026-09-30",
+      "name": "Karen Zahner",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850882": {
+      "id": "5850882",
+      "date": "2026-09-30",
+      "name": "Marcus R Watt",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850883": {
+      "id": "5850883",
+      "date": "2026-09-30",
+      "name": "Sue Carol Durham",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850884": {
+      "id": "5850884",
+      "date": "2026-09-30",
+      "name": "Ron Walker",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850885": {
+      "id": "5850885",
+      "date": "2026-09-30",
+      "name": "Brad Young",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850889": {
+      "id": "5850889",
+      "date": "2026-09-30",
+      "name": "Michael Powell",
+      "category": "Cash Contribution",
+      "amount": 15.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850890": {
+      "id": "5850890",
+      "date": "2026-09-30",
+      "name": "Birney D Dayton",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850936": {
+      "id": "5850936",
+      "date": "2026-09-30",
+      "name": "WinRed",
+      "category": "Cash Expenditure",
+      "amount": 361.9,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5850937": {
+      "id": "5850937",
+      "date": "2026-09-30",
+      "name": "WinRed",
+      "category": "Cash Expenditure",
+      "amount": 495.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5850938": {
+      "id": "5850938",
+      "date": "2026-09-30",
+      "name": "Majority Money",
+      "category": "Cash Expenditure",
+      "amount": 31.24,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5850940": {
+      "id": "5850940",
+      "date": "2026-09-30",
+      "name": "Orion Digital Media LLC",
+      "category": "Cash Expenditure",
+      "amount": 271.8,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5790741": {
+      "id": "5790741",
+      "date": "2026-08-17",
+      "name": "Joan Medina",
+      "category": "Cash Contribution",
+      "amount": 300.0,
+      "filerID": 25141,
+      "transactionType": "C"
+    },
+    "5790749": {
+      "id": "5790749",
+      "date": "2026-08-17",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 25141,
+      "transactionType": "C"
+    },
+    "5790718": {
+      "id": "5790718",
+      "date": "2026-08-04",
+      "name": "Bill Vivian",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 507.24,
+      "filerID": 25141,
       "transactionType": "C"
     }
   },
-  "rollingReconciledOn": "2026-09-30",
-  "lastSuccessfulSync": "2026-09-30T23:00:24-07:00",
+  "rollingReconciledOn": "2026-10-01",
+  "lastSuccessfulSync": "2026-10-01T08:28:31-07:00",
   "contributionBackfillComplete": true
 }
