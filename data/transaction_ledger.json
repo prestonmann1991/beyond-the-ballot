@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 17,
+  "contributionReconcileCursor": 18,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -189469,17 +189469,6 @@
       "filedAt": "2026-09-23T00:00:00",
       "transactionType": "C"
     },
-    "5824512": {
-      "id": "5824512",
-      "date": "2026-09-22",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 600.0,
-      "filerID": 25309,
-      "filedDate": "2026-09-23",
-      "filedAt": "2026-09-23T00:00:00",
-      "transactionType": "C"
-    },
     "5823918": {
       "id": "5823918",
       "date": "2026-09-21",
@@ -224585,17 +224574,6 @@
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "C"
     },
-    "5844318": {
-      "id": "5844318",
-      "date": "2026-09-28",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 25309,
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00",
-      "transactionType": "C"
-    },
     "5844816": {
       "id": "5844816",
       "date": "2026-09-28",
@@ -229069,17 +229047,6 @@
       "category": "Cash Contribution",
       "amount": 50.0,
       "filerID": 24816,
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00",
-      "transactionType": "C"
-    },
-    "5844094": {
-      "id": "5844094",
-      "date": "2026-09-11",
-      "name": "Harold Hutchison",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 500.0,
-      "filerID": 25309,
       "filedDate": "2026-09-29",
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "C"
@@ -234947,6 +234914,33 @@
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "E"
     },
+    "5790741": {
+      "id": "5790741",
+      "date": "2026-08-17",
+      "name": "Joan Medina",
+      "category": "Cash Contribution",
+      "amount": 300.0,
+      "filerID": 25141,
+      "transactionType": "C"
+    },
+    "5790749": {
+      "id": "5790749",
+      "date": "2026-08-17",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 25141,
+      "transactionType": "C"
+    },
+    "5790718": {
+      "id": "5790718",
+      "date": "2026-08-04",
+      "name": "Bill Vivian",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 507.24,
+      "filerID": 25141,
+      "transactionType": "C"
+    },
     "5848905": {
       "id": "5848905",
       "date": "2026-09-30",
@@ -235667,7 +235661,7 @@
       "date": "2026-09-30",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 3474.47,
+      "amount": 4740.47,
       "filerID": 19050,
       "filedDate": "2026-09-30",
       "filedAt": "2026-09-30T00:00:00",
@@ -241063,6 +241057,127 @@
       "filedAt": "2026-09-30T00:00:00",
       "transactionType": "E"
     },
+    "5851055": {
+      "id": "5851055",
+      "date": "2026-10-01",
+      "name": "AGC Committee for Action (4)",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851057": {
+      "id": "5851057",
+      "date": "2026-10-01",
+      "name": "Alberstons Companies",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851058": {
+      "id": "5851058",
+      "date": "2026-10-01",
+      "name": "Oregon Beverage Recycling Cooperative",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851059": {
+      "id": "5851059",
+      "date": "2026-10-01",
+      "name": "Oregonians for Affordable Housing (2069)",
+      "category": "Cash Contribution",
+      "amount": 2000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851060": {
+      "id": "5851060",
+      "date": "2026-10-01",
+      "name": "Oregon Farm Bureau Political Action Committee (147)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851062": {
+      "id": "5851062",
+      "date": "2026-10-01",
+      "name": "Jobs Political Action Committee (16428)",
+      "category": "Cash Contribution",
+      "amount": 20000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851065": {
+      "id": "5851065",
+      "date": "2026-10-01",
+      "name": "Oregon Manufactured Housing Political Support Committee (169)",
+      "category": "Cash Contribution",
+      "amount": 3000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851067": {
+      "id": "5851067",
+      "date": "2026-10-01",
+      "name": "Gerald Weipert",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851069": {
+      "id": "5851069",
+      "date": "2026-10-01",
+      "name": "Evergreen Oregon PAC (20202)",
+      "category": "In-Kind Contribution",
+      "amount": 760.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851074": {
+      "id": "5851074",
+      "date": "2026-10-01",
+      "name": "Douglas Riggs",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851201": {
+      "id": "5851201",
+      "date": "2026-10-01",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 6000.0,
+      "filerID": 21488,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
     "5850724": {
       "id": "5850724",
       "date": "2026-09-30",
@@ -241514,6 +241629,490 @@
       "filedAt": "2026-10-01T00:00:00",
       "transactionType": "C"
     },
+    "5850983": {
+      "id": "5850983",
+      "date": "2026-09-30",
+      "name": "Joyce Wood",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5850994": {
+      "id": "5850994",
+      "date": "2026-09-30",
+      "name": "Richard Campbell",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851001": {
+      "id": "5851001",
+      "date": "2026-09-30",
+      "name": "Melissa Laird",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851014": {
+      "id": "5851014",
+      "date": "2026-09-30",
+      "name": "Jay Peery",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851023": {
+      "id": "5851023",
+      "date": "2026-09-30",
+      "name": "Gary Mittelstaedt",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851026": {
+      "id": "5851026",
+      "date": "2026-09-30",
+      "name": "Joseph Tennant",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851142": {
+      "id": "5851142",
+      "date": "2026-09-30",
+      "name": "Murphy Plywood",
+      "category": "In-Kind Contribution",
+      "amount": 3957.6,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851156": {
+      "id": "5851156",
+      "date": "2026-09-29",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 2343.52,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851157": {
+      "id": "5851157",
+      "date": "2026-09-29",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 9231.63,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851159": {
+      "id": "5851159",
+      "date": "2026-09-29",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 7549.75,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851266": {
+      "id": "5851266",
+      "date": "2026-09-29",
+      "name": "Steve Buettner",
+      "category": "Cash Contribution",
+      "amount": 2083.65,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851162": {
+      "id": "5851162",
+      "date": "2026-09-28",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 19000.0,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851163": {
+      "id": "5851163",
+      "date": "2026-09-28",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 43327.0,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851004": {
+      "id": "5851004",
+      "date": "2026-09-26",
+      "name": "William Adams",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24927,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851018": {
+      "id": "5851018",
+      "date": "2026-09-26",
+      "name": "Richard Campbell",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24927,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851224": {
+      "id": "5851224",
+      "date": "2026-09-26",
+      "name": "Brett Morelock",
+      "category": "Cash Contribution",
+      "amount": 1041.98,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851270": {
+      "id": "5851270",
+      "date": "2026-09-26",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 152.4,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851281": {
+      "id": "5851281",
+      "date": "2026-09-26",
+      "name": "Brianna Cadwell",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851123": {
+      "id": "5851123",
+      "date": "2026-09-25",
+      "name": "Humane Voters Oregon PAC (16953)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 17668,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851124": {
+      "id": "5851124",
+      "date": "2026-09-25",
+      "name": "Charter Communications",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 17668,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851164": {
+      "id": "5851164",
+      "date": "2026-09-25",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 3389.96,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851161": {
+      "id": "5851161",
+      "date": "2026-09-24",
+      "name": "Evergreen PAC (23238)",
+      "category": "In-Kind Contribution",
+      "amount": 2751.0,
+      "filerID": 24273,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "C"
+    },
+    "5851076": {
+      "id": "5851076",
+      "date": "2026-10-01",
+      "name": "Google Voice Inc.",
+      "category": "Cash Expenditure",
+      "amount": 33.6,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851087": {
+      "id": "5851087",
+      "date": "2026-10-01",
+      "name": "Oregon Excellence, LLC",
+      "category": "Cash Expenditure",
+      "amount": 1000.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851089": {
+      "id": "5851089",
+      "date": "2026-10-01",
+      "name": "Michelle Mhoon",
+      "category": "Cash Expenditure",
+      "amount": 350.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851090": {
+      "id": "5851090",
+      "date": "2026-10-01",
+      "name": "Kevin L. Mannix P.C.",
+      "category": "Cash Expenditure",
+      "amount": 2500.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851099": {
+      "id": "5851099",
+      "date": "2026-10-01",
+      "name": "PT Strategy LLC",
+      "category": "Cash Expenditure",
+      "amount": 5000.0,
+      "filerID": 24485,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851105": {
+      "id": "5851105",
+      "date": "2026-10-01",
+      "name": "Ashland Sneak Preview",
+      "category": "Cash Expenditure",
+      "amount": 696.0,
+      "filerID": 24485,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851122": {
+      "id": "5851122",
+      "date": "2026-10-01",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 50.55,
+      "filerID": 24485,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851125": {
+      "id": "5851125",
+      "date": "2026-10-01",
+      "name": "William R Freda",
+      "category": "Cash Expenditure",
+      "amount": 1500.0,
+      "filerID": 24485,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851137": {
+      "id": "5851137",
+      "date": "2026-10-01",
+      "name": "Intisar Strategies, LLC",
+      "category": "Cash Expenditure",
+      "amount": 11184.95,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851138": {
+      "id": "5851138",
+      "date": "2026-10-01",
+      "name": "Intisar Strategies, LLC",
+      "category": "Cash Expenditure",
+      "amount": 8687.96,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851141": {
+      "id": "5851141",
+      "date": "2026-10-01",
+      "name": "Intisar Strategies, LLC",
+      "category": "Cash Expenditure",
+      "amount": 10680.19,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851143": {
+      "id": "5851143",
+      "date": "2026-10-01",
+      "name": "Kaylee Dresser",
+      "category": "Cash Expenditure",
+      "amount": 73.97,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851144": {
+      "id": "5851144",
+      "date": "2026-10-01",
+      "name": "Kaylee Dresser",
+      "category": "Cash Expenditure",
+      "amount": 568.01,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851147": {
+      "id": "5851147",
+      "date": "2026-10-01",
+      "name": "Google LLC",
+      "category": "Cash Expenditure",
+      "amount": 336.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851178": {
+      "id": "5851178",
+      "date": "2026-10-01",
+      "name": "Michael Town",
+      "category": "Cash Expenditure",
+      "amount": 3000.0,
+      "filerID": 21892,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851187": {
+      "id": "5851187",
+      "date": "2026-10-01",
+      "name": "Samantha Bebout",
+      "category": "Cash Expenditure",
+      "amount": 1000.0,
+      "filerID": 21892,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851197": {
+      "id": "5851197",
+      "date": "2026-10-01",
+      "name": "Michael Town",
+      "category": "Cash Expenditure",
+      "amount": 648.55,
+      "filerID": 21892,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851222": {
+      "id": "5851222",
+      "date": "2026-10-01",
+      "name": "Orion Digital Media",
+      "category": "Cash Expenditure",
+      "amount": 2500.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851223": {
+      "id": "5851223",
+      "date": "2026-10-01",
+      "name": "Hype Strategies",
+      "category": "Cash Expenditure",
+      "amount": 3000.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851275": {
+      "id": "5851275",
+      "date": "2026-10-01",
+      "name": "Apple.com",
+      "category": "Cash Expenditure",
+      "amount": 11.99,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851276": {
+      "id": "5851276",
+      "date": "2026-10-01",
+      "name": "Google LLC",
+      "category": "Cash Expenditure",
+      "amount": 81.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851301": {
+      "id": "5851301",
+      "date": "2026-10-01",
+      "name": "Google Voice Inc.",
+      "category": "Cash Expenditure",
+      "amount": 13.7,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
     "5850936": {
       "id": "5850936",
       "date": "2026-09-30",
@@ -241558,35 +242157,184 @@
       "filedAt": "2026-10-01T00:00:00",
       "transactionType": "E"
     },
-    "5790741": {
-      "id": "5790741",
-      "date": "2026-08-17",
-      "name": "Joan Medina",
-      "category": "Cash Contribution",
-      "amount": 300.0,
-      "filerID": 25141,
-      "transactionType": "C"
+    "5851129": {
+      "id": "5851129",
+      "date": "2026-09-30",
+      "name": "Better Mousetrap Digital",
+      "category": "Cash Expenditure",
+      "amount": 9.0,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
     },
-    "5790749": {
-      "id": "5790749",
-      "date": "2026-08-17",
+    "5851146": {
+      "id": "5851146",
+      "date": "2026-09-30",
+      "name": "Space Age #21",
+      "category": "Cash Expenditure",
+      "amount": 103.04,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851148": {
+      "id": "5851148",
+      "date": "2026-09-30",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 10.5,
+      "filerID": 19050,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851272": {
+      "id": "5851272",
+      "date": "2026-09-30",
+      "name": "Apple.com",
+      "category": "Cash Expenditure",
+      "amount": 2.99,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851267": {
+      "id": "5851267",
+      "date": "2026-09-29",
+      "name": "Anedot, Inc.",
+      "category": "Cash Expenditure",
+      "amount": 83.65,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851095": {
+      "id": "5851095",
+      "date": "2026-09-28",
+      "name": "Michelle Ashley Custom Cakes",
+      "category": "Cash Expenditure",
+      "amount": 200.0,
+      "filerID": 21839,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851022": {
+      "id": "5851022",
+      "date": "2026-09-26",
+      "name": "winred",
+      "category": "Cash Expenditure",
+      "amount": 8.2,
+      "filerID": 24927,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851225": {
+      "id": "5851225",
+      "date": "2026-09-26",
+      "name": "Anedot, Inc.",
+      "category": "Cash Expenditure",
+      "amount": 41.98,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851262": {
+      "id": "5851262",
+      "date": "2026-09-26",
+      "name": "Anedot, Inc.",
+      "category": "Cash Expenditure",
+      "amount": 4.3,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851265": {
+      "id": "5851265",
+      "date": "2026-09-26",
+      "name": "Anedot, Inc.",
+      "category": "Cash Expenditure",
+      "amount": 2.4,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851279": {
+      "id": "5851279",
+      "date": "2026-09-26",
+      "name": "Chat GPT",
+      "category": "Cash Expenditure",
+      "amount": 100.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851280": {
+      "id": "5851280",
+      "date": "2026-09-26",
+      "name": "The Grand Hotel Salem",
+      "category": "Cash Expenditure",
+      "amount": 213.39,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5851284": {
+      "id": "5851284",
+      "date": "2026-09-26",
+      "name": "Oregon Republican Party (379)",
+      "category": "Cash Expenditure",
+      "amount": 700.0,
+      "filerID": 21352,
+      "filedDate": "2026-10-01",
+      "filedAt": "2026-10-01T00:00:00",
+      "transactionType": "E"
+    },
+    "5844318": {
+      "id": "5844318",
+      "date": "2026-09-28",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 25141,
-      "transactionType": "C"
+      "amount": 25.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
     },
-    "5790718": {
-      "id": "5790718",
-      "date": "2026-08-04",
-      "name": "Bill Vivian",
+    "5824512": {
+      "id": "5824512",
+      "date": "2026-09-22",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 600.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-09-23",
+      "filedAt": "2026-09-23T00:00:00"
+    },
+    "5844094": {
+      "id": "5844094",
+      "date": "2026-09-11",
+      "name": "Harold Hutchison",
       "category": "Loan Received (Non-Exempt)",
-      "amount": 507.24,
-      "filerID": 25141,
-      "transactionType": "C"
+      "amount": 500.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
     }
   },
   "rollingReconciledOn": "2026-10-01",
-  "lastSuccessfulSync": "2026-10-01T08:28:31-07:00",
+  "lastSuccessfulSync": "2026-10-01T14:03:02-07:00",
   "contributionBackfillComplete": true
 }
