@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T09:38:39-07:00",
+  "updatedAt": "2026-10-05T10:10:15-07:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -26937,7 +26937,7 @@
       "race": "House District 2",
       "filerID": 21437,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21437",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 98330.0,
       "expendituresYTD": 84470.15,
       "balanceDeficit": 65281.88,
@@ -27422,7 +27422,7 @@
       "race": "House District 3",
       "filerID": 24431,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24431",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 32354.89,
       "expendituresYTD": 31190.32,
       "balanceDeficit": -28377.61,
@@ -28061,11 +28061,22 @@
       "race": "House District 3",
       "filerID": 23071,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23071",
-      "financeSummaryUpdatedAt": "2026-10-04T22:45:35-07:00",
-      "contributionsYTD": 60503.88,
-      "expendituresYTD": 74063.38,
-      "balanceDeficit": -484.95,
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
+      "contributionsYTD": 61503.88,
+      "expendituresYTD": 74835.19,
+      "balanceDeficit": -256.76,
       "reportedContributions7Days": [
+        {
+          "id": "5857037",
+          "date": "2026-10-04",
+          "name": "Brett Loper",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5833753",
           "date": "2026-09-24",
@@ -28079,6 +28090,39 @@
         }
       ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5857038",
+          "date": "2026-10-04",
+          "name": "Anedot, Inc",
+          "category": "Cash Expenditure",
+          "amount": 40.3,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857033",
+          "date": "2026-10-05",
+          "name": "Grants Pass Sneak Preview",
+          "category": "Cash Expenditure",
+          "amount": 710.0,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857032",
+          "date": "2026-10-01",
+          "name": "Facebook",
+          "category": "Cash Expenditure",
+          "amount": 21.51,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5833762",
           "date": "2026-09-22",
@@ -28126,6 +28170,17 @@
       ],
       "recentContributions": [
         {
+          "id": "5857037",
+          "date": "2026-10-04",
+          "name": "Brett Loper",
+          "category": "Cash Contribution",
+          "amount": 1000.0,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5833753",
           "date": "2026-09-24",
           "name": "Robert Henderson",
@@ -28138,6 +28193,39 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5857038",
+          "date": "2026-10-04",
+          "name": "Anedot, Inc",
+          "category": "Cash Expenditure",
+          "amount": 40.3,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857033",
+          "date": "2026-10-05",
+          "name": "Grants Pass Sneak Preview",
+          "category": "Cash Expenditure",
+          "amount": 710.0,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857032",
+          "date": "2026-10-01",
+          "name": "Facebook",
+          "category": "Cash Expenditure",
+          "amount": 21.51,
+          "filerID": 23071,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5833762",
           "date": "2026-09-22",
@@ -28227,8 +28315,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 200.0,
-      "expenditureDelta10Days": 465.18
+      "contributionDelta10Days": 1200.0,
+      "expenditureDelta10Days": 1236.99
     },
     {
       "districtOrder": 104,
@@ -28810,7 +28898,7 @@
       "race": "House District 6",
       "filerID": 18284,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18284",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 59800.0,
       "expendituresYTD": 48038.71,
       "balanceDeficit": 85615.66,
@@ -32615,7 +32703,7 @@
       "race": "House District 15",
       "filerID": 24710,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24710",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 61914.89,
       "expendituresYTD": 13126.39,
       "balanceDeficit": 48788.5,
@@ -33012,7 +33100,7 @@
       "race": "House District 15",
       "filerID": 19151,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19151",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 202200.59,
       "expendituresYTD": 303854.1,
       "balanceDeficit": 68646.1,
@@ -34934,7 +35022,7 @@
       "race": "House District 18",
       "filerID": 24808,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24808",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 36675.11,
       "expendituresYTD": 32678.91,
       "balanceDeficit": 6.61,
@@ -35590,7 +35678,7 @@
       "race": "House District 19",
       "filerID": 16690,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16690",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 60029.24,
       "expendituresYTD": 70120.72,
       "balanceDeficit": 10576.25,
@@ -36666,7 +36754,7 @@
       "race": "House District 20",
       "filerID": 25068,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25068",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 2075.0,
       "expendituresYTD": 1605.1,
       "balanceDeficit": -883.51,
@@ -39336,7 +39424,7 @@
       "race": "House District 23",
       "filerID": 23683,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23683",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -40392,7 +40480,7 @@
       "race": "House District 25",
       "filerID": 19763,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19763",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 521707.44,
       "expendituresYTD": 578892.91,
       "balanceDeficit": 59861.63,
@@ -40866,7 +40954,7 @@
       "race": "House District 25",
       "filerID": 17537,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17537",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 2773.28,
       "balanceDeficit": -15167.06,
@@ -42872,12 +42960,34 @@
       "race": "House District 28",
       "filerID": 24878,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24878",
-      "financeSummaryUpdatedAt": "2026-10-04T22:45:35-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 30525.0,
-      "expendituresYTD": 23972.42,
-      "balanceDeficit": -19492.42,
+      "expendituresYTD": 26989.22,
+      "balanceDeficit": -22509.22,
       "reportedContributions7Days": [],
       "reportedExpenditures7Days": [
+        {
+          "id": "5857060",
+          "date": "2026-10-01",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 16.8,
+          "filerID": 24878,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857058",
+          "date": "2026-09-30",
+          "name": "Cindy Fincher",
+          "category": "Cash Expenditure",
+          "amount": 3000.0,
+          "filerID": 24878,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5834094",
           "date": "2026-09-24",
@@ -42892,6 +43002,28 @@
       ],
       "recentContributions": [],
       "recentExpenditures": [
+        {
+          "id": "5857060",
+          "date": "2026-10-01",
+          "name": "Miscellaneous Cash Expenditures $100 and under",
+          "category": "Cash Expenditure",
+          "amount": 16.8,
+          "filerID": 24878,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5857058",
+          "date": "2026-09-30",
+          "name": "Cindy Fincher",
+          "category": "Cash Expenditure",
+          "amount": 3000.0,
+          "filerID": 24878,
+          "filedDate": "2026-10-05",
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5834094",
           "date": "2026-09-24",
@@ -42929,7 +43061,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 0.0,
-      "expenditureDelta10Days": 198.67
+      "expenditureDelta10Days": 3215.47
     },
     {
       "districtOrder": 129,
@@ -43106,9 +43238,9 @@
           "category": "Cash Contribution",
           "amount": 1000.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         },
         {
           "id": "5849458",
@@ -43117,9 +43249,9 @@
           "category": "Cash Contribution",
           "amount": 200.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         },
         {
           "id": "5824500",
@@ -43128,9 +43260,9 @@
           "category": "Cash Contribution",
           "amount": 125.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         }
       ],
       "reportedExpenditures7Days": [
@@ -43187,9 +43319,9 @@
           "category": "Cash Contribution",
           "amount": 1000.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         },
         {
           "id": "5849458",
@@ -43198,9 +43330,9 @@
           "category": "Cash Contribution",
           "amount": 200.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         },
         {
           "id": "5824500",
@@ -43209,9 +43341,9 @@
           "category": "Cash Contribution",
           "amount": 125.0,
           "filerID": 23939,
+          "transactionType": "C",
           "filedDate": "2026-09-30",
-          "filedAt": "2026-09-30T00:00:00",
-          "transactionType": "C"
+          "filedAt": "2026-09-30T00:00:00"
         }
       ],
       "recentExpenditures": [
@@ -44977,7 +45109,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24510",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 642726.95,
       "expendituresYTD": 648580.06,
       "balanceDeficit": -50822.89,
@@ -46219,9 +46351,9 @@
           "category": "Cash Contribution",
           "amount": 500.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5857015",
@@ -46230,9 +46362,9 @@
           "category": "Cash Contribution",
           "amount": 2000.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5857014",
@@ -46241,9 +46373,9 @@
           "category": "Cash Contribution",
           "amount": 500.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5833203",
@@ -46322,9 +46454,9 @@
           "category": "Cash Contribution",
           "amount": 500.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5857015",
@@ -46333,9 +46465,9 @@
           "category": "Cash Contribution",
           "amount": 2000.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5857014",
@@ -46344,9 +46476,9 @@
           "category": "Cash Contribution",
           "amount": 500.0,
           "filerID": 21775,
-          "transactionType": "C",
           "filedDate": "2026-10-05",
-          "filedAt": "2026-10-05T00:00:00"
+          "filedAt": "2026-10-05T00:00:00",
+          "transactionType": "C"
         },
         {
           "id": "5833203",
@@ -55136,7 +55268,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24791",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 707748.1,
       "expendituresYTD": 585595.73,
       "balanceDeficit": 122152.37,
@@ -62019,7 +62151,7 @@
       "race": "Senate District 6",
       "filerID": 24911,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24911",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 6519.51,
       "expendituresYTD": 3429.44,
       "balanceDeficit": 3090.07,
@@ -62802,7 +62934,7 @@
       "race": "Senate District 7",
       "filerID": 18375,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18375",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 58807.0,
       "expendituresYTD": 44710.33,
       "balanceDeficit": 35443.36,
@@ -63419,7 +63551,7 @@
       "race": "Senate District 7",
       "filerID": 25002,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25002",
-      "financeSummaryUpdatedAt": "2026-10-03T22:57:45-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -64090,7 +64222,7 @@
       "race": "Senate District 10",
       "filerID": 18821,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18821",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 315844.4,
       "expendituresYTD": 336214.31,
       "balanceDeficit": 125508.57,
@@ -65256,7 +65388,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20287",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 626539.61,
       "expendituresYTD": 594396.39,
       "balanceDeficit": 61045.93,
@@ -66509,7 +66641,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22032",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 861385.33,
       "expendituresYTD": 500968.12,
       "balanceDeficit": 410231.34,
@@ -66618,7 +66750,7 @@
       "race": "Senate District 13",
       "filerID": 19466,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19466",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 57304.0,
       "expendituresYTD": 74587.6,
       "balanceDeficit": -17125.74,
@@ -68049,7 +68181,7 @@
       "race": "Senate District 15",
       "filerID": 25309,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25309",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 1125.0,
       "expendituresYTD": 601.3,
       "balanceDeficit": 23.7,
@@ -68904,7 +69036,7 @@
       "race": "Senate District 16",
       "filerID": 24955,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24955",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -68935,7 +69067,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20246",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 405092.09,
       "expendituresYTD": 433258.44,
       "balanceDeficit": -10787.28,
@@ -69448,7 +69580,7 @@
       "race": "Senate District 19",
       "filerID": 18396,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18396",
-      "financeSummaryUpdatedAt": "2026-10-04T07:05:49-07:00",
+      "financeSummaryUpdatedAt": "2026-10-05T10:10:15-07:00",
       "contributionsYTD": 514016.84,
       "expendituresYTD": 613802.82,
       "balanceDeficit": 46693.18,
