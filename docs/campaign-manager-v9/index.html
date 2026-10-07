@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Campaign Manager Simulator</title>
+<style>
+:root{--bg:#08101c;--panel:#11182b;--panel2:#18223a;--line:#2a3656;--text:#eef3ff;--muted:#9eabc7;--accent:#6ea8fe;--good:#45d483;--warn:#ffcc66;--bad:#ff6b6b;--purple:#a98bff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(#08101c,#0b1020);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:1100px;margin:auto;padding:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:15px;margin-bottom:12px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.muted{color:var(--muted)}h1,h2,h3{margin:0 0 10px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric,.item{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:11px}.metric b{font-size:21px;display:block}
+.tabs{display:flex;gap:7px;overflow:auto;margin:12px 0;padding-bottom:2px}.tabs button,button{border:0;border-radius:10px;padding:10px 12px;font-weight:750;background:var(--accent);color:#07111f}.tabs button{white-space:nowrap;background:#17223a;color:var(--text);border:1px solid var(--line)}.tabs button.on{background:#27477d}
+.sec{display:none}.sec.on{display:block}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.stack{display:grid;gap:9px}
+input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:#0d1425;color:var(--text)}label{display:block;margin:7px 0 4px}.bar{height:7px;background:#0b1120;border-radius:99px;overflow:hidden;margin-top:5px}.bar i{display:block;height:100%;background:var(--accent)}
+.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.purple{color:var(--purple)}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px}.choice{display:block;width:100%;text-align:left;margin-top:7px;background:#202a43;color:var(--text);border:1px solid var(--line)}
+.badge{display:inline-block;padding:3px 7px;border-radius:999px;background:#24314f;color:#cdd9f4;font-size:12px;margin-right:5px}.modal{position:fixed;inset:0;background:rgba(2,6,15,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.on{display:flex}.modal .card{max-width:680px;width:100%;max-height:88vh;overflow:auto;border-color:#47618f}.region{display:grid;grid-template-columns:1fr auto;gap:8px}.tiny{font-size:12px}.time-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#0d1425;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:10px;position:sticky;top:72px;z-index:7}.time-summary b{display:block;font-size:22px}.schedule-row{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:10px;align-items:center}.schedule-row select{margin:0}.decision-card.resolved{opacity:.78;border-color:#31558f}.decision-result{margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:13px}.budget-select,.schedule-select{appearance:auto;-webkit-appearance:menulist}
+@media(max-width:720px){
+  html,body{min-height:100%;overscroll-behavior-y:none}
+  body{font-size:16px;padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+  .app{padding:10px 10px 0;max-width:none}
+  #game>.top{position:sticky;top:0;z-index:8;background:rgba(8,16,28,.96);backdrop-filter:blur(14px);margin:-10px -10px 10px;padding:12px 12px 10px;border-bottom:1px solid var(--line)}
+  #game>.top h1{font-size:20px;line-height:1.15;margin-bottom:4px;max-width:230px}
+  #scenario{font-size:12px;line-height:1.25;max-width:240px}
+  .pill{padding:6px 9px;font-size:12px;white-space:nowrap}
+  .metrics{grid-template-columns:1fr 1fr;gap:7px;margin-bottom:8px}
+  .metric{padding:10px;border-radius:14px;min-height:78px}
+  .metric b{font-size:20px;line-height:1.2;margin-top:2px}
+  .metric small,.tiny{font-size:12px}
+  .grid2{grid-template-columns:1fr;gap:9px}
+  .card{padding:13px;border-radius:16px;margin-bottom:10px}
+  .card>h2{font-size:21px}
+  .item{padding:13px;border-radius:14px}
+  .item h3{font-size:17px}
+  button,.choice{min-height:48px;font-size:16px;border-radius:12px;padding:12px 14px;touch-action:manipulation}
+  .choice{line-height:1.25}
+  input,select{font-size:16px;min-height:48px;padding:11px 12px;border-radius:11px}
+  input[type="number"]{font-variant-numeric:tabular-nums}
+  input[type="range"]{min-height:48px;padding:0;touch-action:pan-y;width:100%;accent-color:var(--accent)}
+  input[type="range"]::-webkit-slider-thumb{width:28px;height:28px}
+  label{font-size:14px;margin-top:10px}
+  .row{align-items:center}
+  .tabs{
+    position:fixed;left:0;right:0;bottom:0;z-index:15;
+    margin:0;padding:7px 7px calc(7px + env(safe-area-inset-bottom));
+    background:rgba(8,16,28,.98);backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:5px;overflow:visible
+  }
+  .tabs button{min-width:0;min-height:52px;padding:7px 3px;font-size:11px;white-space:normal;line-height:1.05;border-radius:11px}
+  .tabs button.on{background:#31558f}
+  .mobile-actionbar{
+    position:fixed;left:8px;right:8px;bottom:calc(65px + env(safe-area-inset-bottom));z-index:14;
+    background:rgba(17,24,43,.97);backdrop-filter:blur(16px);padding:8px;border:1px solid var(--line);
+    border-radius:15px;box-shadow:0 8px 30px rgba(0,0,0,.35);margin:0
+  }
+  .mobile-actionbar .row{gap:8px}.mobile-actionbar button{flex:1}
+  .modal{align-items:flex-end;padding:0;z-index:30}
+  .modal .card{width:100%;max-width:none;max-height:85vh;margin:0;border-radius:22px 22px 0 0;padding:18px 14px calc(18px + env(safe-area-inset-bottom));border-left:0;border-right:0;border-bottom:0}
+  #moreModal .card{max-height:70vh}
+  .more-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .more-grid button{background:#202a43;color:var(--text);border:1px solid var(--line);text-align:left}
+  .sec{margin-bottom:4px}
+  #policyList .item small{display:block;margin-top:6px}
+  .region{grid-template-columns:minmax(0,1fr) auto}
+}
+</style>
+</head>
+<body>
+<div class="app" id="setup">
+<div class="card"><div class="badge">MOBILE BUILD V9</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
+<label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select>
+<p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
+
+<div class="app" id="game" style="display:none">
+<div class="top"><div><div class="badge">V9</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="metrics">
+<div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
+<div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
+<div class="metric"><span class="muted">Energy</span><b id="energy">72%</b><div class="bar"><i id="ebar"></i></div></div>
+<div class="metric"><span class="muted">Staff morale</span><b id="morale">74%</b><div class="bar"><i id="mbar"></i></div></div>
+</div>
+
+<div class="tabs" id="tabs"></div>
+<div id="inbox" class="card sec on"><h2>Weekly command decisions</h2><p class="muted">Resolve all three decisions before advancing the week.</p><div id="decisionList" class="stack"></div><h2 style="margin-top:18px">Inbox</h2><div id="inboxList" class="stack"></div></div>
+<div id="time" class="card sec"><h2>Candidate schedule</h2><div class="time-summary"><div><span class="muted">Hours remaining</span><b id="hoursRemaining">60</b></div><div><span class="muted">Scheduled</span><b id="timeTotal">0 / 60</b></div></div><p class="muted">Set broad weekly blocks in 5-hour increments. Meetings and interviews booked elsewhere also draw from this same 60-hour week.</p><div id="timeList" class="stack"></div></div>
+<div id="budget" class="card sec"><h2>Budget</h2><div id="budgetList" class="grid2"></div><p class="row"><span>Planned spend</span><b id="spend">$0</b></p></div>
+
+<div id="strategy" class="card sec">
+<h2>Strategy</h2>
+<div class="grid2">
+<div class="item"><h3>Message of the week</h3><select id="message" onchange="setMessage(this.value)"></select><p class="muted tiny">A consistent message improves efficiency. Abrupt weekly shifts can dilute it.</p></div>
+<div class="item"><h3>Major ad creative</h3><label>Objective</label><select id="adObjective" onchange="setAd('objective',this.value)"></select><label>Tone</label><select id="adTone" onchange="setAd('tone',this.value)"></select><p class="muted tiny">Creative affects persuasion, backlash and opponent response.</p></div>
+</div>
+<h3 style="margin-top:14px">Policy platform</h3><div id="policyList" class="grid2"></div>
+</div>
+
+<div id="polling" class="card sec"><h2>Polling</h2><div id="pollList" class="stack"></div><p><button onclick="buyPoll()">Commission $90k benchmark poll</button></p></div>
+<div id="voters" class="card sec"><h2>Voter blocs</h2><p class="muted">Estimates become more precise when you buy polling.</p><div id="blocList" class="grid2"></div></div>
+
+<div id="research" class="card sec"><h2>Research</h2><div class="grid2">
+<div class="item"><h3>Opposition research</h3><p class="muted">Commission deeper research on the opponent. Findings may be strong, weak or unusable.</p><button class="choice" onclick="doResearch('oppo')">Spend $75k on opponent research</button></div>
+<div class="item"><h3>Self-opposition research</h3><p class="muted">Find your own vulnerabilities before the press or opponent does.</p><button class="choice" onclick="doResearch('self')">Spend $60k on self-oppo</button></div>
+</div><div id="researchList" class="stack" style="margin-top:10px"></div></div>
+
+<div id="people" class="card sec"><h2>People & politics</h2><div id="peopleList" class="stack"></div></div>
+<div id="impact" class="card sec"><h2>Weekly impact</h2><div id="impactList" class="stack"></div></div>
+<div class="card mobile-actionbar"><div class="row"><button onclick="save()">Save</button><button onclick="advance()">Advance week</button></div></div>
+</div>
+
+<div class="modal" id="questionnaireModal"><div class="card"><div id="questionnaireContent"></div></div></div>
+<div class="modal" id="moreModal"><div class="card"><div class="row"><div><span class="badge">CAMPAIGN HQ</span><h2 style="margin-top:8px">More</h2></div><button onclick="closeMore()" style="background:#202a43;color:var(--text)">Close</button></div><div class="more-grid" id="moreGrid"></div></div></div>
+<div class="modal" id="warModal"><div class="card"><div id="warContent"></div></div></div>
+<div class="modal" id="debateModal"><div class="card"><div id="debateContent"></div></div></div>
+
+<script>
+const S={
+Oregon:{you:40,opp:49,cash:4200000,party:"Republican",diff:"Uphill",regions:["Portland core","Portland suburbs","Willamette Valley","Central Oregon","Southern Oregon","Coast & rural"]},
+California:{you:33,opp:56,cash:9000000,party:"Republican",diff:"Brutal",regions:["Los Angeles","Bay Area","Orange County","Central Valley","Inland Empire","San Diego"]},
+Washington:{you:36,opp:53,cash:6000000,party:"Republican",diff:"Long Shot",regions:["Seattle","King suburbs","Pierce County","Southwest","Eastern Washington","Spokane"]},
+Nevada:{you:43,opp:48,cash:4500000,party:"Underdog",diff:"Competitive",regions:["Las Vegas core","Las Vegas suburbs","Washoe County","Rural north","Rural south","Statewide late mail"]},
+Arizona:{you:42,opp:49,cash:5000000,party:"Underdog",diff:"Uphill",regions:["Phoenix core","Maricopa suburbs","Tucson","Pinal County","Northern Arizona","Rural south"]}
+};
+const T=["Fundraising","Public events","Press","Policy/debate prep","Donor/endorsement meetings","Rest/personal"];
+const B=["Broadcast TV","Streaming/CTV","Digital","Direct mail","Field","Polling/research","Opposition research","Travel/events"];
+const BLOCS={
+Oregon:["Portland progressives","Portland suburbs","Willamette swing voters","Rural conservatives","Coastal voters","Central Oregon independents"],
+California:["LA Democrats","Bay Area liberals","Orange County swing voters","Central Valley voters","Inland conservatives","Asian American persuadables"],
+Washington:["Seattle progressives","King County suburbs","Pierce swing voters","Eastern Washington conservatives","Southwest independents","College-educated moderates"],
+Nevada:["Clark Democrats","Las Vegas swing voters","Washoe independents","Rural conservatives","Latino persuadables","Service workers"],
+Arizona:["Phoenix suburbanites","Maricopa conservatives","Latino persuadables","Tucson liberals","Rural conservatives","Independent retirees"]
+};
+const POLICY={
+"Economy & taxes":["Targeted tax relief","Broad tax reduction","Maintain current rates","Revenue-neutral reform","Targeted new revenue for services"],
+"Housing":["Local incentives and permitting reform","Statewide zoning reform","Major housing subsidy expansion","Public-private construction push","Tenant-protection emphasis"],
+"Public safety":["Police staffing and prosecution","Prevention plus enforcement","Sentencing reform","Community intervention emphasis","State-local accountability package"],
+"Education":["K-12 funding increase","Accountability and outcomes","School choice expansion","Workforce/CTE emphasis","Higher-ed affordability"],
+"Health care":["Cost transparency and competition","Medicaid access protection","Public-option style expansion","Provider workforce expansion","Insurance regulation expansion"],
+"Abortion policy":["Protect current law","Broader statutory protections","Restrictions with exceptions","Defer to voters/courts","Incremental restrictions"],
+"Climate & energy":["Clean-energy acceleration","All-of-the-above reliability","Market-based emissions reduction","Pause mandates and review costs","Aggressive electrification"],
+"Transportation":["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"]
+};
+const MESSAGES=["Cost of living","Public safety","Housing","Education","Government accountability","Jobs & growth","Health care","Reproductive policy"];
+const ADOBJ=["Introduce candidate","Improve favorability","Persuade undecided voters","Attack opponent","Respond to attack","Mobilize supporters"];
+const ADTONE=["Positive biography","Straight factual contrast","Aggressive attack","Personal testimonial","Values appeal","Humor/satire"];
+const OPPO_FINDINGS=[
+{title:"Opponent contradicted prior tax pledge",strength:3,text:"Archived remarks conflict with the opponent's current tax message."},
+{title:"Questionable consulting relationship",strength:2,text:"A prior contract looks politically awkward but is not clearly improper."},
+{title:"Old vote with current relevance",strength:3,text:"A legislative vote is vulnerable to a clean factual contrast."},
+{title:"Personal rumor does not verify",strength:0,text:"Researchers cannot substantiate the allegation. Using it would carry major credibility risk."}
+];
+const SELF_FINDINGS=[
+{title:"Old interview creates policy contradiction",risk:3,text:"A five-year-old interview conflicts with the campaign's current position."},
+{title:"Resume wording is vulnerable",risk:2,text:"A biographical claim is technically defensible but likely to draw scrutiny."},
+{title:"Former staff dispute",risk:2,text:"A former employee may speak critically about management style."},
+{title:"No major new vulnerability",risk:0,text:"The review found no significant undisclosed issue in this round."}
+];
+const QUESTIONNAIRE=[
+ {issue:"Economy & taxes",q:"What should be the candidate's basic approach to taxes and the economy?",opts:["Targeted tax relief","Broad tax reduction","Maintain current rates","Revenue-neutral reform","Targeted new revenue for services"]},
+ {issue:"Housing",q:"What is the candidate's preferred housing strategy?",opts:["Local incentives and permitting reform","Statewide zoning reform","Major housing subsidy expansion","Public-private construction push","Tenant-protection emphasis"]},
+ {issue:"Public safety",q:"How should the candidate approach public safety?",opts:["Police staffing and prosecution","Prevention plus enforcement","Sentencing reform","Community intervention emphasis","State-local accountability package"]},
+ {issue:"Education",q:"What is the candidate's education priority?",opts:["K-12 funding increase","Accountability and outcomes","School choice expansion","Workforce/CTE emphasis","Higher-ed affordability"]},
+ {issue:"Health care",q:"What is the candidate's health-care approach?",opts:["Cost transparency and competition","Medicaid access protection","Public-option style expansion","Provider workforce expansion","Insurance regulation expansion"]},
+ {issue:"Abortion policy",q:"Which position best reflects the candidate's approach to abortion policy?",opts:["Protect current law","Broader statutory protections","Restrictions with exceptions","Defer to voters/courts","Incremental restrictions"]},
+ {issue:"Climate & energy",q:"What should anchor the candidate's climate and energy platform?",opts:["Clean-energy acceleration","All-of-the-above reliability","Market-based emissions reduction","Pause mandates and review costs","Aggressive electrification"]},
+ {issue:"Transportation",q:"What is the candidate's transportation priority?",opts:["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"]}
+];
+const DECISION_POOL=[
+ {title:"Opponent launches a new attack ad",text:"The opponent is spending heavily to define your candidate before you can answer.",opts:[
+  {label:"Answer immediately with a factual rebuttal",fx:{cash:-250000,you:.18,press:1},result:"You stopped some of the damage, but paid heavily for speed."},
+  {label:"Counterattack on a different vulnerability",fx:{cash:-200000,you:.12,opp:-.18,stress:2},result:"You changed the conversation, though the original attack remains partly unanswered."},
+  {label:"Ignore it and stay on message",fx:{you:-.12,morale:1},result:"You preserved resources but allowed the attack more room to circulate."}]},
+ {title:"Major donor asks for a private meeting",text:"A major supporter is considering a much larger contribution but wants direct candidate access.",opts:[
+  {label:"Take the meeting",hours:["Donor/endorsement meetings",2],fx:{cash:175000,donor:7,energy:-2},result:"The relationship strengthened and produced new money."},
+  {label:"Send the finance director instead",fx:{cash:70000,donor:1},result:"You raised some money without spending candidate time."},
+  {label:"Decline and protect the schedule",fx:{donor:-4,energy:1},result:"The schedule stayed intact, but the donor cooled."}]},
+ {title:"Editorial board interview invitation",text:"A major outlet offers an hour-long endorsement interview on short notice.",opts:[
+  {label:"Candidate attends",hours:["Press",2],fx:{press:6,energy:-2,you:.08},result:"The campaign gained credibility and access, at a cost to candidate time."},
+  {label:"Send policy staff with written answers",fx:{press:1},result:"You participated, but the outlet noticed the candidate's absence."},
+  {label:"Decline",fx:{press:-4},result:"You protected time but damaged the relationship."}]},
+ {title:"Internal poll shows a regional weakness",text:"Your pollster says one persuadable region is slipping while your base remains stable.",opts:[
+  {label:"Shift paid media toward the weak region",fx:{cash:-150000,you:.16},result:"The targeted intervention improved the weak spot."},
+  {label:"Send the candidate for a regional swing",hours:["Public events",4],fx:{you:.13,energy:-3},result:"The candidate visit helped, but it added fatigue."},
+  {label:"Trust the statewide strategy",fx:{you:-.06},result:"You avoided overreacting, but the regional problem lingered."}]},
+ {title:"Union seeks a policy commitment",text:"A major organization offers an endorsement if the candidate gives a clearer answer on one of its priorities.",opts:[
+  {label:"Make the requested commitment",fx:{endorse:1,you:.08,cred:-2},result:"You secured support but narrowed future policy flexibility."},
+  {label:"Meet without making a commitment",hours:["Donor/endorsement meetings",2],fx:{endorse:1,donor:1},result:"Relationship work paid off without a formal policy concession."},
+  {label:"Decline the courtship",fx:{},result:"You kept maximum flexibility but gained no organizational help."}]},
+ {title:"Reporter has an old quote",text:"A reporter found an old statement that does not fit neatly with the current platform.",opts:[
+  {label:"Acknowledge the evolution directly",fx:{press:4,fav:2,you:.10},result:"The answer limited the story and improved trust with reporters."},
+  {label:"Argue the quote is being taken out of context",fx:{press:-2,you:-.05},result:"The pushback energized staff but prolonged the story."},
+  {label:"Decline comment",fx:{press:-4,you:-.12},result:"The story ran without your explanation."}]},
+ {title:"Campaign staff are burning out",text:"Senior staff say the current pace is producing mistakes and internal tension.",opts:[
+  {label:"Give the team a lighter weekend",fx:{morale:8,you:-.03},result:"Morale recovered, though you gave up some activity."},
+  {label:"Push through until the next benchmark",fx:{morale:-6,you:.05},result:"You squeezed out more activity but increased organizational strain."},
+  {label:"Replace an underperforming manager",fx:{cash:-30000,morale:-2},result:"The change may help later, but caused immediate disruption."}]},
+ {title:"Outside group runs an unhelpful ad",text:"An allied independent group launches a message that conflicts with your campaign's strategy.",opts:[
+  {label:"Publicly distance the campaign",fx:{press:3,you:.06},result:"You clarified your message but created some public friction."},
+  {label:"Say nothing",fx:{you:-.04},result:"You avoided a fight but allowed mixed messaging to continue."},
+  {label:"Use the attention to pivot back to your message",fx:{you:.10,energy:-1},result:"The campaign regained message discipline."}]},
+ {title:"Opponent makes a factual mistake",text:"The opponent misstated a key fact during a press availability. Reporters are asking whether you'll capitalize.",opts:[
+  {label:"Hit it hard immediately",fx:{opp:-.16,you:.08,press:1},result:"The mistake became a larger story."},
+  {label:"Correct it calmly and move on",fx:{you:.07,fav:1},result:"You gained a smaller but cleaner advantage."},
+  {label:"Ignore it",fx:{},result:"The moment largely passed without changing the race."}]}
+];
+let g;
+
+function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1)+"M":"$"+Math.round(n/1000)+"k"}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+function rand(a){return a[Math.floor(Math.random()*a.length)]}
+function defaults(){
+ if(!g.message)g.message="Cost of living";
+ if(!g.lastMessage)g.lastMessage=g.message;
+ if(!g.ad)g.ad={objective:"Persuade undecided voters",tone:"Straight factual contrast"};
+ if(!g.policies){g.policies={};Object.keys(POLICY).forEach(k=>g.policies[k]=POLICY[k][Math.floor(POLICY[k].length/2)])}
+ if(!g.policyChanges)g.policyChanges=[];
+ if(!g.findings)g.findings=[];
+ if(!g.usedFindings)g.usedFindings=[];
+ if(!g.warHistory)g.warHistory=[];
+ if(!g.debateHistory)g.debateHistory=[];
+ if(!g.leaks)g.leaks=0;
+ if(!g.debatePrep)g.debatePrep=0;
+ if(!g.issueCredibility)g.issueCredibility=50;
+ if(!g.favorability)g.favorability=42;
+ if(!g.negativeSaturation)g.negativeSaturation=0;
+ if(!g.version)g.version=9;else g.version=9;
+}
+function start(){
+ let st=document.getElementById("state").value,s=S[st];
+ g={state:st,name:document.getElementById("name").value||"Alex Mercer",arch:document.getElementById("arch").value,week:1,you:s.you,opp:s.opp,und:100-s.you-s.opp,cash:s.cash,energy:72,morale:74,stress:30,research:0,hours:{},budget:{},polls:[],impacts:[],staff:"Full senior team",donor:50,press:50,endorse:0};
+ T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
+ g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-2.5)*2.3,20,70),turnout:62+i*3,persuade:18+((i*7)%24)}));
+ g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
+ defaults();g.surveyIndex=0;g.surveyCompleted=false;g.weeklyDecisions=null;document.getElementById("setup").style.display="none";beginQuestionnaire()
+}
+function showSection(id,label){
+ document.querySelectorAll(".tabs button").forEach(z=>z.classList.remove("on"));
+ document.querySelectorAll(".sec").forEach(z=>z.classList.remove("on"));
+ let sec=document.getElementById(id);if(sec)sec.classList.add("on");
+ let btn=[...document.querySelectorAll(".tabs button")].find(b=>b.dataset.section===id);if(btn)btn.classList.add("on");
+ if(label&&window.innerWidth<=720){window.scrollTo({top:0,behavior:"smooth"})}
+}
+function closeMore(){document.getElementById("moreModal").classList.remove("on")}
+function openMore(){
+ let more=[["polling","Polling"],["voters","Voters"],["research","Research"],["people","People"],["impact","Impact"]];
+ let grid=document.getElementById("moreGrid");grid.innerHTML="";
+ more.forEach(x=>{let b=document.createElement("button");b.textContent=x[1];b.onclick=()=>{closeMore();showSection(x[0],x[1])};grid.appendChild(b)});
+ document.getElementById("moreModal").classList.add("on");
+}
+function buildTabs(){
+ let box=document.getElementById("tabs");box.innerHTML="";
+ let mobile=window.innerWidth<=720;
+ let names=mobile?[["inbox","Inbox"],["time","Time"],["budget","Budget"],["strategy","Strategy"]]:[["inbox","Inbox"],["time","Time"],["budget","Budget"],["strategy","Strategy"],["polling","Polling"],["voters","Voters"],["research","Research"],["people","People"],["impact","Impact"]];
+ names.forEach((x,i)=>{let b=document.createElement("button");b.textContent=x[1];b.dataset.section=x[0];if(!i)b.className="on";b.onclick=()=>showSection(x[0],x[1]);box.appendChild(b)});
+ if(mobile){let b=document.createElement("button");b.textContent="More";b.onclick=openMore;box.appendChild(b)}
+}
+function totalHours(){return Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)}
+function remainingHours(){return Math.max(0,60-totalHours())}
+function setScheduleHours(cat,value,select){
+ let old=Number(g.hours[cat]||0),next=Number(value);
+ let proposed=totalHours()-old+next;
+ if(proposed>60){alert("That would put the candidate over 60 hours. You have "+remainingHours()+" hours remaining.");select.value=String(old);return}
+ g.hours[cat]=next;renderTotals()
+}
+function consumeHours(cat,amount,label){
+ if(remainingHours()<amount){alert("You need "+amount+" unallocated candidate hours for "+label+". You currently have "+remainingHours()+" remaining.");return false}
+ g.hours[cat]=Number(g.hours[cat]||0)+amount;buildTimeControls();renderTotals();return true
+}
+function buildTimeControls(){
+ let t=document.getElementById("timeList");if(!t)return;t.innerHTML="";
+ T.forEach(x=>{
+   let val=Number(g.hours[x]||0),d=document.createElement("div");d.className="item schedule-row";
+   let left=document.createElement("div");left.innerHTML="<b>"+x+"</b><div class='muted'>Weekly schedule block</div>";
+   let sel=document.createElement("select");sel.className="schedule-select";sel.setAttribute("aria-label",x+" hours");
+   for(let v=0;v<=30;v+=5){let o=document.createElement("option");o.value=String(v);o.textContent=v+" hrs";if(v===val)o.selected=true;sel.appendChild(o)}
+   sel.onchange=()=>setScheduleHours(x,sel.value,sel);d.appendChild(left);d.appendChild(sel);t.appendChild(d)
+ })
+}
+function buildInputs(){
+ buildTimeControls();
+ let b=document.getElementById("budgetList");b.innerHTML="";
+ B.forEach(x=>{
+   let d=document.createElement("div");d.className="item";
+   let step=x==="Broadcast TV"?100000:25000,max=5000000,current=Math.max(0,Number(g.budget[x]||0));
+   current=Math.min(max,Math.round(current/step)*step);g.budget[x]=current;
+   let sel=document.createElement("select");sel.className="budget-select";sel.setAttribute("aria-label",x+" budget");
+   for(let v=0;v<=max;v+=step){let o=document.createElement("option");o.value=String(v);o.textContent=v===0?"$0":money(v);if(v===current)o.selected=true;sel.appendChild(o)}
+   sel.onchange=()=>{g.budget[x]=Number(sel.value);renderTotals()};
+   let label=document.createElement("label");label.textContent=x;let note=document.createElement("small");note.className="muted";note.textContent=x==="Broadcast TV"?"$100k increments":"$25k increments";
+   d.appendChild(label);d.appendChild(sel);d.appendChild(note);b.appendChild(d)
+ });
+ let m=document.getElementById("message");m.innerHTML=MESSAGES.map(x=>"<option"+(x===g.message?" selected":"")+">"+x+"</option>").join("");
+ let ao=document.getElementById("adObjective");ao.innerHTML=ADOBJ.map(x=>"<option"+(x===g.ad.objective?" selected":"")+">"+x+"</option>").join("");
+ let at=document.getElementById("adTone");at.innerHTML=ADTONE.map(x=>"<option"+(x===g.ad.tone?" selected":"")+">"+x+"</option>").join("");
+ buildPolicies()
+}
+function buildPolicies(){
+ let box=document.getElementById("policyList");box.innerHTML="";
+ Object.keys(POLICY).forEach(k=>{let d=document.createElement("div");d.className="item";let opts=POLICY[k].map(x=>"<option"+(x===g.policies[k]?" selected":"")+">"+x+"</option>").join("");d.innerHTML="<b>"+k+"</b><select>"+opts+"</select><small class='muted'>Changing a position is remembered and can become a future press issue.</small>";d.querySelector("select").onchange=e=>changePolicy(k,e.target.value);box.appendChild(d)})
+}
+function changePolicy(k,v){
+ let old=g.policies[k];if(old===v)return;g.policies[k]=v;g.policyChanges.push({week:g.week,issue:k,from:old,to:v});g.issueCredibility=clamp(g.issueCredibility-2,0,100);g.press=clamp(g.press-1,0,100);alert("Position changed. The campaign record now remembers the previous position.");render()
+}
+function setMessage(v){g.message=v}
+function setAd(k,v){g.ad[k]=v}
+function renderTotals(){let h=totalHours(),s=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0);let tt=document.getElementById("timeTotal"),hr=document.getElementById("hoursRemaining");if(tt){tt.textContent=h+" / 60";tt.className=h>60?"bad":""}if(hr){hr.textContent=remainingHours();hr.className=remainingHours()<=5?"warn":""}document.getElementById("spend").textContent=money(s);document.getElementById("burn").textContent="Planned "+money(s)}
+function beginQuestionnaire(){document.getElementById("questionnaireModal").classList.add("on");renderQuestionnaire()}
+function renderQuestionnaire(){
+ let item=QUESTIONNAIRE[g.surveyIndex],box=document.getElementById("questionnaireContent");
+ if(!item)return finishQuestionnaire();
+ box.innerHTML="<span class='badge'>CANDIDATE PLATFORM · "+(g.surveyIndex+1)+" OF "+QUESTIONNAIRE.length+"</span><h2 style='margin-top:10px'>"+item.issue+"</h2><p>"+item.q+"</p><p class='muted'>These answers establish the candidate's opening platform. You can later change positions, but the campaign will remember the original answer.</p>"+item.opts.map((o,i)=>"<button class='choice' onclick='answerQuestion("+i+")'>"+o+"</button>").join("")
+}
+function answerQuestion(i){let item=QUESTIONNAIRE[g.surveyIndex];g.policies[item.issue]=item.opts[i];g.surveyIndex++;renderQuestionnaire()}
+function finishQuestionnaire(){
+ g.surveyCompleted=true;document.getElementById("questionnaireModal").classList.remove("on");document.getElementById("game").style.display="block";generateWeeklyDecisions();buildTabs();buildInputs();inbox();render()
+}
+function generateWeeklyDecisions(){
+ if(g.weeklyDecisions&&g.weeklyDecisions.week===g.week)return;
+ let pool=DECISION_POOL.map((x,i)=>i),picked=[];
+ while(picked.length<3&&pool.length){let n=Math.floor(Math.random()*pool.length);picked.push(pool.splice(n,1)[0])}
+ g.weeklyDecisions={week:g.week,items:picked.map(i=>({template:i,resolved:false,choice:null,result:""}))}
+}
+function applyDecisionFx(fx){
+ if(!fx)return;
+ if(fx.cash)g.cash+=fx.cash;if(fx.you)g.you=clamp(g.you+fx.you,20,65);if(fx.opp)g.opp=clamp(g.opp+fx.opp,20,70);
+ if(fx.press)g.press=clamp(g.press+fx.press,0,100);if(fx.energy)g.energy=clamp(g.energy+fx.energy,0,100);if(fx.stress)g.stress=clamp(g.stress+fx.stress,0,100);
+ if(fx.morale)g.morale=clamp(g.morale+fx.morale,0,100);if(fx.donor)g.donor=clamp(g.donor+fx.donor,0,100);if(fx.fav)g.favorability=clamp(g.favorability+fx.fav,0,100);
+ if(fx.cred)g.issueCredibility=clamp(g.issueCredibility+fx.cred,0,100);if(fx.endorse)g.endorse+=fx.endorse
+}
+function resolveWeeklyDecision(di,oi){
+ let d=g.weeklyDecisions.items[di];if(!d||d.resolved)return;let template=DECISION_POOL[d.template],o=template.opts[oi];
+ if(o.hours&&!consumeHours(o.hours[0],o.hours[1],template.title))return;
+ applyDecisionFx(o.fx);d.resolved=true;d.choice=o.label;d.result=o.result;render()
+}
+function decisionsResolved(){return g.weeklyDecisions?g.weeklyDecisions.items.filter(x=>x.resolved).length:0}
+function renderDecisions(){
+ generateWeeklyDecisions();let box=document.getElementById("decisionList");if(!box)return;
+ box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{let t=DECISION_POOL[d.template];return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><b>"+t.title+"</b><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p>"+(d.resolved?"<div class='decision-result'><b>Your decision:</b> "+d.choice+"<br><span class='muted'>"+d.result+"</span></div>":t.opts.map((o,oi)=>"<button class='choice' onclick='resolveWeeklyDecision("+di+","+oi+")'>"+o.label+(o.hours?" · "+o.hours[1]+" hrs":"")+"</button>").join(""))+"</div>"}).join("")
+}
+function inbox(){
+ g.inbox=[
+ ["Finance Director","We're tracking behind the opponent financially. Candidate call time remains the fastest way to close the gap."],
+ ["Communications Director","This week's chosen message is '"+g.message+"'. Repetition can help; constant pivots can blur the campaign."],
+ ["Pollster","The topline is useful, but several voter blocs remain low-confidence without fresh research."],
+ ["Candidate","I can push hard this week, but I don't want another schedule with no recovery time."],
+ ["Media Consultant","Creative on deck: "+g.ad.objective+" / "+g.ad.tone+"."]
+ ];
+ if(g.policyChanges.length)g.inbox.push(["Press Secretary","Reminder: we have "+g.policyChanges.length+" recorded policy change"+(g.policyChanges.length===1?"":"s")+". Assume reporters can find them."]);
+ if(g.findings.filter(x=>!x.used).length)g.inbox.push(["Research Director","We have unused research findings. Timing matters as much as the material itself."])
+}
+function render(){
+ defaults();let s=S[g.state];document.getElementById("title").textContent=g.name+" Campaign HQ";document.getElementById("scenario").textContent=g.state+" governor · "+s.party+" · "+s.diff+" · "+g.arch;
+ document.getElementById("week").textContent="Week "+g.week+" of 15";document.getElementById("poll").textContent=g.you.toFixed(1)+"–"+g.opp.toFixed(1);document.getElementById("cash").textContent=money(g.cash);document.getElementById("energy").textContent=Math.round(g.energy)+"%";document.getElementById("morale").textContent=Math.round(g.morale)+"%";document.getElementById("ebar").style.width=g.energy+"%";document.getElementById("mbar").style.width=g.morale+"%";
+ renderDecisions();document.getElementById("inboxList").innerHTML=g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
+ document.getElementById("pollList").innerHTML=g.polls.slice().reverse().map(p=>"<div class='item'><b>"+p.n+"</b><div>"+p.y.toFixed(1)+"% you · "+p.o.toFixed(1)+"% opponent · ±"+p.m+"%</div></div>").join("");
+ document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
+ document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+g.staff+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs + $15k</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100</small></div>";
+ document.getElementById("researchList").innerHTML=g.findings.length?g.findings.slice().reverse().map((f,i)=>"<div class='item'><b>"+f.title+"</b> <span class='badge'>"+(f.kind==="oppo"?"OPPONENT":"SELF")+"</span><div>"+f.text+"</div>"+(f.kind==="oppo"&&!f.used?"<button class='choice' onclick='useFinding("+g.findings.indexOf(f)+")'>Use this research</button>":"")+(f.used?"<small class='muted'>Already deployed.</small>":"")+"</div>").join(""):"<p class='muted'>No commissioned findings yet.</p>";
+ document.getElementById("impactList").innerHTML=g.impacts.length?g.impacts.slice().reverse().map(r=>"<div class='item'><b>Week "+r.week+": "+(r.move>=0?"+":"")+r.move.toFixed(2)+" pts modeled movement</b><div>"+r.lines.join("<br>")+"</div><small class='muted'>"+r.trade+"</small></div>").join(""):"<p class='muted'>Complete a week to see cause-and-effect reporting here.</p>";
+ renderTotals()
+}
+function meetDonor(){if(!consumeHours("Donor/endorsement meetings",2,"a donor meeting"))return;g.donor=clamp(g.donor+8,0,100);g.cash+=60000+g.donor*1200;g.energy=clamp(g.energy-2,0,100);alert("2 candidate hours used. The meeting strengthened the donor relationship and generated fundraising.");render()}
+function courtEndorsement(){if(g.cash<15000)return alert("Not enough cash.");if(!consumeHours("Donor/endorsement meetings",3,"an endorsement meeting"))return;g.cash-=15000;g.endorse++;g.morale=clamp(g.morale+2,0,100);g.blocs[Math.floor(Math.random()*g.blocs.length)].support+=.35;alert("3 candidate hours and $15k used. Endorsement secured.");render()}
+function pressAccess(){if(!consumeHours("Press",2,"an extended press interview"))return;g.press=clamp(g.press+7,0,100);g.energy=clamp(g.energy-1,0,100);alert("2 candidate press hours used. Press relationship improved; favorable coverage is not guaranteed.");render()}
+function buyPoll(){if(g.cash<90000)return alert("Not enough cash.");g.cash-=90000;g.research++;let n=()=>Math.random()*1.4-.7;g.polls.push({n:"Campaign benchmark poll",y:g.you+n(),o:g.opp+n(),m:3.2});alert("Benchmark poll complete. Voter-bloc estimates and opponent intelligence are now more reliable.");render()}
+function doResearch(kind){
+ let cost=kind==="oppo"?75000:60000;if(g.cash<cost)return alert("Not enough cash.");g.cash-=cost;
+ let base=kind==="oppo"?rand(OPPO_FINDINGS):rand(SELF_FINDINGS),f=Object.assign({},base,{kind:kind,week:g.week,used:false});g.findings.push(f);
+ if(kind==="self"&&f.risk>0){g.issueCredibility=clamp(g.issueCredibility+1,0,100)}
+ alert((kind==="oppo"?"Opponent":"Self")+" research complete: "+f.title);render()
+}
+function useFinding(i){
+ let f=g.findings[i];if(!f||f.used||f.kind!=="oppo")return;f.used=true;
+ if(f.strength===0){g.press=clamp(g.press-10,0,100);g.favorability=clamp(g.favorability-3,0,100);g.you-=.5;alert("The allegation failed verification and backfired. Press credibility suffered.")}
+ else if(f.strength===2){g.opp-=.35;g.you+=.15;g.negativeSaturation+=1;alert("The material landed, but only modestly. It created a news cycle without fundamentally changing the race.")}
+ else{g.opp-=.7;g.you+=.35;g.negativeSaturation+=1;alert("The factual contrast landed. Opponent favorability took a measurable hit.")}
+ render()
+}
+function messageFit(){
+ let good={Oregon:["Cost of living","Housing","Jobs & growth"],California:["Cost of living","Housing","Public safety"],Washington:["Cost of living","Housing","Public safety"],Nevada:["Cost of living","Jobs & growth","Housing"],Arizona:["Cost of living","Public safety","Jobs & growth"]};
+ return good[g.state].includes(g.message)?1.08:0.97
+}
+function creativeMods(){
+ let p=1,back=0,opp=1;
+ if(g.ad.objective==="Persuade undecided voters")p+=.12;if(g.ad.objective==="Improve favorability"){p+=.05;g.favorability+=.15}
+ if(g.ad.objective==="Attack opponent"){p+=.08;opp+=.12;g.negativeSaturation+=1}
+ if(g.ad.objective==="Mobilize supporters")p-=.15;
+ if(g.ad.tone==="Aggressive attack"){p+=.12;back=.10+.04*g.negativeSaturation;opp+=.18}
+ if(g.ad.tone==="Positive biography"){p-=.03;g.favorability+=.35}
+ if(g.ad.tone==="Straight factual contrast")p+=.07;
+ if(g.ad.tone==="Humor/satire"){p+=.03;back=.07}
+ return {pers:p,back:back,opp:opp}
+}
+function maybeWarRoom(){
+ let eligible=[4,8,11,14];if(!eligible.includes(g.week)||g.warHistory.includes(g.week))return false;g.warHistory.push(g.week);
+ let scenarios=[
+ {title:"Reporter has damaging documents",text:"A reporter says documents appear to contradict a biographical claim. Deadline: 90 minutes.",choices:[
+ ["Disclose the discrepancy and provide context",.12,3,2],["Attack the premise and demand more time",-.08,-2,4],["Decline comment until legal review",-.18,0,-1],["Put the candidate live immediately",.05,1,-4]]},
+ {title:"Major donor becomes toxic",text:"Your largest recent donor is suddenly at the center of a serious public scandal.",choices:[
+ ["Return the money and cut ties",.08,3,1],["Freeze contact and wait for facts",-.04,0,0],["Defend the donor publicly",-.22,-5,5],["Say nothing unless asked",-.10,-2,1]]},
+ {title:"Internal memo leaked",text:"A strategy memo describing a key voter bloc as 'low-information' has reached reporters.",choices:[
+ ["Apologize and discipline the author",.04,2,-2],["Call it internal shorthand",-.08,-1,0],["Blame a disgruntled former staffer",-.12,-3,2],["Refuse to authenticate the memo",-.06,-1,1]]}
+ ];
+ let sc=rand(scenarios),box=document.getElementById("warContent");box.innerHTML="<span class='badge'>WAR ROOM</span><h2>"+sc.title+"</h2><p>"+sc.text+"</p><p class='muted'>Staff are split. Choose a response.</p>"+sc.choices.map((c,i)=>"<button class='choice' onclick='resolveWar("+JSON.stringify(c)+")'>"+c[0]+"</button>").join("");document.getElementById("warModal").classList.add("on");return true
+}
+function resolveWar(c){
+ g.you+=c[1];g.press=clamp(g.press+c[2],0,100);g.energy=clamp(g.energy+c[3],0,100);g.leaks++;g.impacts.push({week:g.week,move:c[1],lines:["War Room: "+c[0]+".","Press relationship change: "+(c[2]>=0?"+":"")+c[2]+". Candidate energy impact: "+(c[3]>=0?"+":"")+c[3]+"."],trade:"Crisis choices can have delayed effects beyond the immediate modeled movement."});document.getElementById("warModal").classList.remove("on");render()
+}
+function maybeDebate(){
+ if(![6,12].includes(g.week)||g.debateHistory.includes(g.week))return false;g.debateHistory.push(g.week);
+ let q=g.week===6?"Your opponent says your economic plan would create a major budget hole. The moderator gives you 60 seconds.":"The moderator asks why voters should trust a candidate who has changed positions during the campaign.";
+ let choices=g.week===6?[
+ ["Defend the plan with numbers",.18],["Pivot to affordability",.12],["Attack the opponent's record",.08],["Reject the premise",-.02]
+ ]:[
+ ["Acknowledge the change directly",.16],["Argue circumstances changed",.10],["Attack the question as a distraction",-.08],["Pivot to the opponent",.02]
+ ];
+ let prep=(g.hours["Policy/debate prep"]||0)+g.debatePrep,box=document.getElementById("debateContent");box.innerHTML="<span class='badge'>LIVE DEBATE</span><h2>Debate "+(g.week===6?"I":"II")+"</h2><p>"+q+"</p><p class='muted'>Preparation entering debate: "+Math.round(prep)+" hours. Candidate energy: "+Math.round(g.energy)+"%.</p>"+choices.map(c=>"<button class='choice' onclick='resolveDebate("+JSON.stringify(c)+","+prep+")'>"+c[0]+"</button>").join("");document.getElementById("debateModal").classList.add("on");return true
+}
+function resolveDebate(c,prep){
+ let mod=Math.min(.22,prep*.009)+(g.energy-50)*.002-(g.stress*.0015),move=c[1]+mod+(Math.random()*.16-.08);g.you+=move;g.favorability=clamp(g.favorability+move*2,0,100);g.energy=clamp(g.energy-7,0,100);g.impacts.push({week:g.week,move:move,lines:["Debate response: "+c[0]+".","Preparation/fatigue modifier contributed "+(mod>=0?"+":"")+mod.toFixed(2)+" points to the modeled debate effect."],trade:"The debate consumed candidate energy and will affect the next week's performance."});document.getElementById("debateModal").classList.remove("on");render()
+}
+function advance(){
+ generateWeeklyDecisions();if(decisionsResolved()<3)return alert("Resolve all three weekly command decisions before advancing.");
+ let hrs=Object.values(g.hours).reduce((a,b)=>a+b,0),sp=Object.values(g.budget).reduce((a,b)=>a+b,0);if(hrs>60)return alert("Candidate time exceeds 60 hours. Reduce allocations before advancing.");if(sp>g.cash)return alert("Planned spending exceeds available cash.");
+ let start=g.you,media=g.budget["Broadcast TV"]+g.budget["Streaming/CTV"]+g.budget["Digital"]+g.budget["Direct mail"],reach=Math.min(.92,media/700000),mods=creativeMods();
+ let pers=(g.budget["Broadcast TV"]*.0000012+g.budget["Streaming/CTV"]*.000001+g.budget["Digital"]*.00000135+g.budget["Direct mail"]*.0000007)*Math.max(.45,1-media/3500000)*mods.pers*messageFit();
+ let field=g.budget["Field"]*.0000004,raised=(g.hours["Fundraising"]||0)*(22000+g.donor*180),oppSpend=(280000+Math.max(0,media*.42)+(15-g.week)*9000)*mods.opp,oppHit=oppSpend*.00000042;
+ g.cash=g.cash-sp+raised;let prep=(g.hours["Policy/debate prep"]||0)*.015,public=(g.hours["Public events"]||0)*.012,pressEff=(g.hours["Press"]||0)*.01*(.8+g.press/250),backlash=pers*mods.back;
+ let consistency=g.message===g.lastMessage?.06:-.02;let move=pers+field+prep+public+pressEff+consistency-oppHit-backlash+(Math.random()*.35-.175);g.you=clamp(g.you+move,20,65);g.opp=clamp(g.opp-move*.22+oppHit*.35,20,70);g.lastMessage=g.message;
+ g.blocs.forEach((b,i)=>{let affinity=(b.persuade/100)*(pers+public+pressEff)*(0.65+(i%3)*.18);if(g.ad.objective==="Mobilize supporters")b.turnout+=.3;g.blocs[i].support=clamp(b.support+affinity-oppHit*.25,10,85);g.blocs[i].turnout=clamp(b.turnout+field*.7+g.endorse*.04,35,95)});
+ let work=hrs-(g.hours["Rest/personal"]||0);g.energy=clamp(g.energy-(work-32)*.45+(g.hours["Rest/personal"]||0)*1.3,5,100);g.stress=clamp(g.stress+(work-35)*.35,0,100);g.debatePrep=g.hours["Policy/debate prep"]||0;
+ let lines=[];
+ if(media)lines.push("Paid media "+money(media)+": estimated reach "+Math.round(reach*100)+"%; persuasion contribution about +"+pers.toFixed(2)+" pts before opponent response and backlash.");
+ if(media)lines.push("Creative: "+g.ad.objective+" / "+g.ad.tone+". Modeled backlash cost "+backlash.toFixed(2)+" pts this week.");
+ lines.push("Message: "+g.message+". "+(consistency>0?"Staying consistent slightly improved campaign efficiency.":"Changing the emphasis created a small message-discipline cost."));
+ if(g.budget["Field"])lines.push("Field "+money(g.budget["Field"])+": limited immediate topline movement; improved modeled turnout probability.");
+ if(g.budget["Polling/research"])lines.push("Polling/research: information quality improved; this investment is primarily informational rather than persuasive.");
+ lines.push("Opponent response: estimated "+money(oppSpend)+" in counter-messaging; modeled pressure about -"+oppHit.toFixed(2)+" pts.");
+ if(raised)lines.push("Fundraising: "+money(raised)+" raised from "+(g.hours["Fundraising"]||0)+" candidate hours.");
+ let biggest=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade).slice(0,2).map(x=>x.name).join(" and ");lines.push("Most responsive voter terrain this week: "+biggest+".");
+ let trade="Cash after the week: "+money(g.cash)+". Candidate energy "+Math.round(g.energy)+"%. Stress "+Math.round(g.stress)+"%.";
+ g.impacts.push({week:g.week,move:g.you-start,lines:lines,trade:trade});g.polls.push({n:"Campaign tracking estimate",y:g.you+(Math.random()*.8-.4),o:g.opp+(Math.random()*.8-.4),m:3.5});
+ let completed=g.week;g.week++;
+ T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
+ if(completed===15)return election();
+ g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);render();if(!maybeDebate())maybeWarRoom()
+}
+function election(){
+ let regions=S[g.state].regions.slice(),a=g.you+(Math.random()*2-1),b=g.opp+(Math.random()*2-1),m=a-b,startMargin=S[g.state].you-S[g.state].opp;
+ let idx=0,rows=[],body=document.body;
+ body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
+ let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
+ btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
+function save(){try{localStorage.setItem("campaignManagerHostedV9",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV9");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+</script>
+</body></html>
