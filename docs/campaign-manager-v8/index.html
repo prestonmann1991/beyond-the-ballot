@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V10</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V11</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
 <label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select>
 <p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V10</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V11</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -83,7 +83,7 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 <div class="tabs" id="tabs"></div>
 <div id="inbox" class="card sec on"><h2>Weekly command decisions</h2><p class="muted">Resolve all three decisions before advancing the week.</p><div id="decisionList" class="stack"></div><h2 style="margin-top:18px">Inbox</h2><div id="inboxList" class="stack"></div></div>
 <div id="time" class="card sec"><h2>Candidate schedule</h2><div class="time-summary"><div><span class="muted">Hours remaining</span><b id="hoursRemaining">60</b></div><div><span class="muted">Scheduled</span><b id="timeTotal">0 / 60</b></div></div><p class="muted">Set broad weekly blocks in 5-hour increments. Meetings and interviews booked elsewhere also draw from this same 60-hour week.</p><div id="timeList" class="stack"></div></div>
-<div id="budget" class="card sec"><h2>Budget</h2><div id="budgetList" class="grid2"></div><p class="row"><span>Planned spend</span><b id="spend">$0</b></p></div>
+<div id="budget" class="card sec"><h2>Budget</h2><p class="muted">Your base weekly budget carries forward until you change it.</p><div id="budgetList" class="grid2"></div><div class="item" style="margin-top:10px"><div class="row"><b>Base weekly spend</b><b id="spend">$0</b></div></div><div class="item" style="margin-top:8px"><div class="row"><b>Decision commitments this week</b><b id="decisionSpendTotal">$0</b></div><div id="decisionSpendList" class="tiny muted" style="margin-top:6px"></div></div></div>
 
 <div id="strategy" class="card sec">
 <h2>Strategy</h2>
@@ -107,6 +107,7 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 <div class="card mobile-actionbar"><div class="row"><button onclick="save()">Save</button><button onclick="advance()">Advance week</button></div></div>
 </div>
 
+<div class="modal" id="weekTransitionModal"><div class="card"><div id="weekTransitionContent"></div></div></div>
 <div class="modal" id="questionnaireModal"><div class="card"><div id="questionnaireContent"></div></div></div>
 <div class="modal" id="moreModal"><div class="card"><div class="row"><div><span class="badge">CAMPAIGN HQ</span><h2 style="margin-top:8px">More</h2></div><button onclick="closeMore()" style="background:#202a43;color:var(--text)">Close</button></div><div class="more-grid" id="moreGrid"></div></div></div>
 <div class="modal" id="warModal"><div class="card"><div id="warContent"></div></div></div>
@@ -235,6 +236,109 @@ const DECISION_POOL=[
   {label:"Return the contribution immediately",known:"Known: removes the issue entirely.",risk:"Tradeoff: permanently loses $75k and may anger the donor.",fx:{cash:-75000,donor:-2},result:"The contribution was returned and the compliance issue disappeared.",trade:"You eliminated legal ambiguity but gave up the money."},
   {label:"Use the money while counsel investigates",known:"Known: keeps $75k available now.",risk:"Tradeoff: higher legal and press risk if the source proves improper.",fx:{press:-1},result:"No immediate violation surfaced, but counsel warned the risk remains open.",trade:"You preserved cash flexibility while accepting unresolved compliance exposure."}]}
 ];
+const STRATEGIC_DECISIONS=[
+{cat:"POLLSTER",title:"Pollster: Which coalition are we building this week?",text:"The new tracking memo shows three plausible paths, but the campaign cannot fully pursue all of them at once.",ask:"Choose the campaign's primary persuasion target for the week.",opts:[
+{label:"College-educated suburban persuadables",known:"Known: strongest persuasion efficiency in current data.",risk:"Tradeoff: rural base contact receives less emphasis.",fx:{you:.10},result:"The campaign concentrated message testing and targeting on suburban persuadables.",trade:"You improved efficiency with one bloc while accepting less attention elsewhere."},
+{label:"Lower-propensity base voters",known:"Known: smaller persuasion upside but stronger turnout potential.",risk:"Tradeoff: fewer resources aimed at undecided voters.",fx:{you:.05,morale:1},result:"The week emphasized enthusiasm and base contact.",trade:"You strengthened turnout posture rather than topline persuasion."},
+{label:"Independent voters statewide",known:"Known: broadest possible audience.",risk:"Tradeoff: message becomes less tailored and less efficient.",fx:{you:.06},result:"The campaign ran a broader statewide persuasion program.",trade:"You gained reach but sacrificed targeting precision."}]},
+{cat:"COMMS DIRECTOR",title:"Comms Director: What should lead every interview?",text:"Reporters keep asking across multiple issues. The communications team wants one disciplined answer that drives the week.",ask:"Set the dominant earned-media frame.",opts:[
+{label:"Cost of living and affordability",known:"Known: reinforces the current economic contrast.",risk:"Tradeoff: other issue openings may pass unused.",fx:{you:.08,press:1},result:"Most interviews came back to affordability.",trade:"The message became clearer but narrower."},
+{label:"Government competence and accountability",known:"Known: creates a broader change argument.",risk:"Tradeoff: less directly tied to pocketbook concerns.",fx:{you:.05,cred:1},result:"Coverage increasingly framed the race around management and competence.",trade:"You broadened the argument but reduced issue specificity."},
+{label:"Public safety",known:"Known: can move voters concerned about crime.",risk:"Tradeoff: may pull the campaign away from its strongest economic message.",fx:{you:.06},result:"Public-safety coverage increased.",trade:"You opened a second front but weakened message concentration."}]},
+{cat:"FINANCE DIRECTOR",title:"Finance Director: We are behind plan. Where do we find the money?",text:"The finance director projects a cash shortfall if the current paid-media plan continues for six more weeks.",ask:"Choose the fundraising response.",opts:[
+{label:"Increase candidate call time by 5 hours",known:"Known: raises roughly $100k-$150k if donor response holds.",risk:"Tradeoff: less time for public events and preparation.",hours:["Fundraising",5],fx:{cash:125000,energy:-2},result:"The extra call time closed a meaningful portion of the gap.",trade:"You improved cash at the cost of candidate bandwidth."},
+{label:"Schedule a high-dollar event",known:"Known: requires $25k in event costs; stronger upside.",risk:"Tradeoff: attendance risk and candidate time.",hours:["Donor/endorsement meetings",3],fx:{cash:160000},result:"The event netted a strong return after costs.",trade:"You improved finances but used both time and organizational capacity."},
+{label:"Cut planned media instead",known:"Known: preserves cash without more fundraising.",risk:"Tradeoff: directly reduces voter contact.",fx:{},result:"The finance plan stabilized without new fundraising.",trade:"You protected cash but will have less paid-media weight."}]},
+{cat:"MEDIA CONSULTANT",title:"Media Consultant: What is the purpose of the next ad?",text:"The creative team can finish only one major spot before trafficking deadlines.",ask:"Choose the strategic objective for the next creative cycle.",opts:[
+{label:"Biographical positive spot",known:"Known: best for favorability and candidate definition.",risk:"Tradeoff: does not answer opponent attacks.",fx:{fav:2,you:.05},result:"The new spot improved candidate definition.",trade:"You invested in your own image rather than direct contrast."},
+{label:"Factual contrast on the economy",known:"Known: combines persuasion with opponent contrast.",risk:"Tradeoff: more negative tone can increase backlash.",fx:{you:.09,opp:-.05},result:"The economic contrast became the main paid-media frame.",trade:"You gained issue contrast but moved the campaign toward negativity."},
+{label:"Direct response to opponent attack",known:"Known: strongest defensive value.",risk:"Tradeoff: lets the opponent choose the subject.",fx:{you:.07,press:1},result:"The response reduced damage from the opponent's attack.",trade:"You stabilized the issue but ceded agenda-setting power."}]},
+{cat:"FIELD DIRECTOR",title:"Field Director: Where do we put our organizers?",text:"The field team has enough staff for one major expansion, not three.",ask:"Choose the field priority.",opts:[
+{label:"Suburban persuasion turf",known:"Known: more doors with persuadable voters.",risk:"Tradeoff: lower volunteer enthusiasm than base turf.",fx:{you:.07},result:"Organizer hours shifted into suburban persuasion precincts.",trade:"You emphasized persuasion over volunteer intensity."},
+{label:"Base turnout turf",known:"Known: strongest volunteer recruitment and GOTV foundation.",risk:"Tradeoff: less direct persuasion value.",fx:{morale:2,you:.03},result:"Volunteer capacity grew in base areas.",trade:"You strengthened turnout infrastructure instead of immediate persuasion."},
+{label:"Weak rural region",known:"Known: helps reduce catastrophic losses.",risk:"Tradeoff: expensive per persuadable voter.",fx:{you:.04},result:"The campaign built a defensive rural presence.",trade:"You improved geographic balance at lower efficiency."}]},
+{cat:"RESEARCH DIRECTOR",title:"Research Director: Do we spend time verifying this attack?",text:"A tip alleges the opponent privately contradicted a public position. The source is credible but the evidence is incomplete.",ask:"Choose how aggressively research should pursue the lead.",opts:[
+{label:"Fully verify before use",known:"Known: costs $50k in research resources; lowest credibility risk.",risk:"Tradeoff: slower and may produce nothing usable.",fx:{cash:-50000,cred:1},result:"Researchers built a more defensible factual record.",trade:"You paid for certainty rather than immediate attack value."},
+{label:"Leak the tip to a reporter as a lead",known:"Known: almost no campaign spending.",risk:"Tradeoff: major credibility risk if the allegation collapses.",fx:{press:-2,opp:-.04},result:"A reporter began asking questions, but the campaign lost some trust.",trade:"You created pressure cheaply while accepting verification risk."},
+{label:"Drop it",known:"Known: no cost and no legal risk.",risk:"Tradeoff: could mean walking away from a real vulnerability.",fx:{},result:"The campaign did not pursue the lead.",trade:"You protected resources and credibility but gained nothing."}]},
+{cat:"LEGAL COUNSEL",title:"Legal Counsel: How aggressive should our disclaimer review be?",text:"The media team wants to traffic a new ad tonight. Counsel sees wording that is probably defensible but could invite a complaint.",ask:"Choose the campaign's risk tolerance.",opts:[
+{label:"Delay the ad for full legal review",known:"Known: lowest compliance risk.",risk:"Tradeoff: lose one day of paid-media delivery.",fx:{cred:1,you:-.02},result:"Counsel cleared revised language the next day.",trade:"You reduced legal risk but surrendered some reach."},
+{label:"Run with minor edits",known:"Known: keeps most of the schedule.",risk:"Tradeoff: moderate complaint risk remains.",fx:{you:.03},result:"The ad aired on schedule with modest revisions.",trade:"You balanced speed and caution."},
+{label:"Run the original copy",known:"Known: maximum speed and punch.",risk:"Tradeoff: highest complaint and press risk.",fx:{you:.05,press:-2},result:"The ad aired unchanged and immediately drew criticism from opposing counsel.",trade:"You maximized impact while accepting legal and reputational exposure."}]},
+{cat:"DIGITAL DIRECTOR",title:"Digital Director: Where should the next $100k go?",text:"Digital performance differs sharply by objective. The team wants one clear mandate.",ask:"Allocate the marginal $100k digital investment.",opts:[
+{label:"Persuasion video",known:"Known: best modeled persuasion return.",risk:"Tradeoff: little direct fundraising value.",fx:{cash:-100000,you:.10},result:"The spend reached high-value persuadable audiences.",trade:"You bought persuasion instead of fundraising or mobilization."},
+{label:"Small-dollar fundraising",known:"Known: can replenish cash if creative performs.",risk:"Tradeoff: less voter persuasion this week.",fx:{cash:30000},result:"Gross fundraising offset the spend and added list growth.",trade:"You prioritized financial sustainability over persuasion."},
+{label:"Supporter mobilization",known:"Known: improves volunteer and turnout activity.",risk:"Tradeoff: limited immediate poll impact.",fx:{cash:-100000,morale:3,you:.03},result:"Volunteer signups and supporter engagement increased.",trade:"You invested in organization rather than topline movement."}]},
+{cat:"CAMPAIGN MANAGER",title:"Chief of Staff: The candidate is over-scheduled. What gets cut?",text:"The next four days contain a fundraiser, two press availabilities, a policy speech and a regional swing.",ask:"Choose what to remove before fatigue causes mistakes.",opts:[
+{label:"Cut one press availability",known:"Known: protects energy.",risk:"Tradeoff: reporters may resent reduced access.",fx:{energy:4,press:-2},result:"The candidate recovered some bandwidth.",trade:"You protected performance at the cost of press access."},
+{label:"Cut the policy speech",known:"Known: frees preparation and event time.",risk:"Tradeoff: loses a planned message moment.",fx:{energy:3,you:-.03},result:"The schedule became more manageable.",trade:"You preserved candidate condition but lost an agenda-setting opportunity."},
+{label:"Keep everything",known:"Known: maximum activity.",risk:"Tradeoff: substantially higher fatigue and mistake risk.",fx:{energy:-6,stress:6,you:.03},result:"The campaign completed the full schedule, but the candidate ended the week exhausted.",trade:"You maximized activity at a growing human cost."}]},
+{cat:"POLLSTER",title:"Pollster: The race moved, but we don't know why",text:"Tracking shows a two-point improvement over ten days, while favorability and issue ratings moved in different directions.",ask:"Choose what research question to answer next.",opts:[
+{label:"Run a message test",known:"Known: isolates which arguments are working.",risk:"Tradeoff: costs $60k and does not itself persuade voters.",fx:{cash:-60000},result:"The message test identified one particularly effective economic argument.",trade:"You spent money to improve future decision quality."},
+{label:"Run voter-bloc segmentation",known:"Known: improves coalition targeting.",risk:"Tradeoff: costs $80k and may complicate strategy.",fx:{cash:-80000},result:"The team gained sharper bloc-level data.",trade:"You improved targeting while increasing analytical complexity."},
+{label:"Save the money and keep tracking",known:"Known: no extra research cost.",risk:"Tradeoff: campaign remains uncertain about causation.",fx:{},result:"The campaign continued operating with incomplete explanation.",trade:"You preserved cash but accepted strategic ambiguity."}]},
+{cat:"COMMUNICATIONS DIRECTOR",title:"Comms Director: Do we nationalize the race?",text:"A major national political controversy is dominating cable and social media. Reporters want your candidate's reaction.",ask:"Decide whether to connect the gubernatorial campaign to the national fight.",opts:[
+{label:"Take a strong position",known:"Known: high attention and base engagement.",risk:"Tradeoff: local issues get crowded out and opposition hardens.",fx:{you:.04,morale:2},result:"The campaign entered the national news cycle.",trade:"You gained attention but lost local message control."},
+{label:"Answer briefly, then pivot local",known:"Known: satisfies press while preserving state focus.",risk:"Tradeoff: less excitement on either side.",fx:{press:2,you:.04},result:"Coverage noted the answer but returned to state issues.",trade:"You maintained local focus with limited upside."},
+{label:"Refuse to engage",known:"Known: preserves complete message discipline.",risk:"Tradeoff: can look evasive to reporters.",fx:{press:-2},result:"The campaign stayed out of the national fight.",trade:"You protected focus but irritated part of the press corps."}]},
+{cat:"FINANCE DIRECTOR",title:"Finance Director: A bundler wants recognition",text:"A prolific fundraiser says they can bring in another $150k if the campaign gives them a visible role at events.",ask:"Decide how much access and recognition to grant.",opts:[
+{label:"Make them a campaign finance co-chair",known:"Known: likely $150k fundraising gain.",risk:"Tradeoff: creates access optics and internal status issues.",fx:{cash:150000,donor:5},result:"The bundler accepted the title and accelerated fundraising.",trade:"You gained money while deepening the donor's public association with the campaign."},
+{label:"Offer private recognition only",known:"Known: smaller likely fundraising gain.",risk:"Tradeoff: may not satisfy the bundler.",fx:{cash:70000,donor:2},result:"The bundler continued helping, but at a lower level.",trade:"You preserved some distance while leaving money unrealized."},
+{label:"Decline special treatment",known:"Known: cleaner access policy.",risk:"Tradeoff: likely loses substantial fundraising.",fx:{donor:-4},result:"The bundler reduced activity.",trade:"You protected campaign norms at a financial cost."}]},
+{cat:"FIELD DIRECTOR",title:"Field Director: Volunteers want a different script",text:"Volunteer leaders say the current door script is too long and policy-heavy. Analytics likes its message discipline.",ask:"Choose whether to prioritize consistency or volunteer usability.",opts:[
+{label:"Shorten the script dramatically",known:"Known: faster conversations and happier volunteers.",risk:"Tradeoff: less controlled message delivery.",fx:{morale:4,you:.04},result:"Volunteer contacts increased.",trade:"You gained volume while sacrificing some message precision."},
+{label:"Keep the existing script",known:"Known: strongest message consistency.",risk:"Tradeoff: volunteer frustration may reduce shifts.",fx:{morale:-2,you:.03},result:"Message quality stayed high but volunteer complaints continued.",trade:"You chose control over volunteer convenience."},
+{label:"A/B test both scripts",known:"Known: better evidence for next week.",risk:"Tradeoff: temporary complexity for organizers.",fx:{morale:1,cred:1},result:"The field team collected useful comparative data.",trade:"You delayed a final choice to improve evidence."}]},
+{cat:"MEDIA CONSULTANT",title:"Media Consultant: Broadcast inventory is tightening",text:"Prime inventory is filling. You can reserve now at a premium or risk worse placement later.",ask:"Choose how much future media risk to accept.",opts:[
+{label:"Reserve aggressively now",known:"Known: commits $400k immediately and protects inventory.",risk:"Tradeoff: ties up cash before later polling.",fx:{cash:-400000,you:.04},result:"The campaign secured strong inventory.",trade:"You bought certainty but reduced future flexibility."},
+{label:"Reserve a smaller hold",known:"Known: commits $200k and preserves options.",risk:"Tradeoff: some future inventory may be unavailable.",fx:{cash:-200000,you:.02},result:"The campaign protected a partial footprint.",trade:"You balanced flexibility and scarcity risk."},
+{label:"Wait",known:"Known: keeps all cash liquid.",risk:"Tradeoff: later rates and placement could worsen.",fx:{},result:"No inventory was reserved.",trade:"You preserved cash while accepting future media-market risk."}]},
+{cat:"CANDIDATE",title:"Candidate: I want to give a major policy speech",text:"The candidate wants a 25-minute speech announcing a new economic framework. Staff worry the press will focus on one controversial provision.",ask:"Decide whether to give the candidate a large agenda-setting moment.",opts:[
+{label:"Give the full speech",known:"Known: strong agenda-setting potential.",risk:"Tradeoff: creates many attackable specifics.",hours:["Policy/debate prep",4],fx:{you:.09,cred:1,energy:-2},result:"The speech dominated a full news cycle.",trade:"You gained definition but created a detailed record opponents can attack."},
+{label:"Release a shorter plan with local events",known:"Known: more controlled rollout.",risk:"Tradeoff: less statewide attention.",hours:["Public events",2],fx:{you:.06},result:"The plan received steady regional coverage.",trade:"You traded a splashy moment for controlled repetition."},
+{label:"Delay the rollout",known:"Known: preserves flexibility and prep time.",risk:"Tradeoff: candidate may feel strategically constrained.",fx:{morale:-1},result:"The campaign held the proposal for later.",trade:"You reduced immediate risk but passed on an agenda-setting opportunity."}]},
+{cat:"RESEARCH DIRECTOR",title:"Research Director: The opponent's biography has a weak point",text:"A resume claim is exaggerated but not wholly false. The team can attack it, quietly feed it to press, or ignore it.",ask:"Choose the level of escalation.",opts:[
+{label:"Run the contrast publicly",known:"Known: maximum campaign ownership of the attack.",risk:"Tradeoff: could look petty if voters see it as minor.",fx:{opp:-.08,you:.03},result:"The claim became part of the contrast message.",trade:"You inflicted a modest hit while assuming ownership of a small-bore attack."},
+{label:"Give the documents to a reporter",known:"Known: lower campaign fingerprints.",risk:"Tradeoff: reporter may decline or frame it differently.",fx:{opp:-.05,press:1},result:"A reporter pursued the discrepancy independently.",trade:"You created outside scrutiny but surrendered message control."},
+{label:"Ignore it",known:"Known: keeps focus on higher-value issues.",risk:"Tradeoff: leaves unused opposition material.",fx:{cred:1},result:"The campaign stayed focused elsewhere.",trade:"You preserved discipline rather than chasing every vulnerability."}]},
+{cat:"POLICY DIRECTOR",title:"Policy Director: How specific should the tax plan be?",text:"The candidate's broad tax message polls well, but editorial boards are asking for numbers.",ask:"Choose between detail and flexibility.",opts:[
+{label:"Release full fiscal estimates",known:"Known: increases credibility with policy-oriented audiences.",risk:"Tradeoff: creates precise numbers opponents can attack.",fx:{cred:3,you:.04},result:"The campaign released a detailed fiscal table.",trade:"You gained specificity while giving opponents more targets."},
+{label:"Release principles and examples",known:"Known: moderate detail with some flexibility.",risk:"Tradeoff: critics may still call the plan vague.",fx:{cred:1,you:.04},result:"The campaign published a concise policy outline.",trade:"You balanced definition and flexibility."},
+{label:"Keep the message broad",known:"Known: maximum flexibility.",risk:"Tradeoff: press skepticism and credibility cost.",fx:{press:-2,cred:-1},result:"The campaign declined to release detailed estimates.",trade:"You protected flexibility but invited scrutiny."}]},
+{cat:"DIGITAL DIRECTOR",title:"Digital Director: A viral clip is helping us",text:"A short candidate exchange unexpectedly took off online. The team can spend to amplify it, remix it into fundraising, or let organic reach run.",ask:"Choose how to exploit an unplanned viral moment.",opts:[
+{label:"Put $75k behind the clip",known:"Known: extends reach while interest is high.",risk:"Tradeoff: viral content can fatigue quickly.",fx:{cash:-75000,you:.08},result:"Paid amplification extended the clip's reach.",trade:"You converted momentum into broader exposure at a cash cost."},
+{label:"Turn it into a fundraising appeal",known:"Known: monetizes enthusiasm.",risk:"Tradeoff: less persuasion amplification.",fx:{cash:60000},result:"The clip produced a strong small-dollar fundraising burst.",trade:"You converted attention into cash rather than persuasion."},
+{label:"Let it run organically",known:"Known: no cost.",risk:"Tradeoff: leaves potential reach unrealized.",fx:{you:.03},result:"The clip continued circulating without paid support.",trade:"You preserved cash but did not maximize the moment."}]},
+{cat:"PRESS SECRETARY",title:"Press Secretary: A reporter wants off-the-record context",text:"A respected capitol reporter says the opponent's latest claim makes little sense and asks a senior aide for background.",ask:"Choose how much informal access to provide.",opts:[
+{label:"Give detailed background",known:"Known: can improve accuracy and context.",risk:"Tradeoff: off-record conversations can still shape future scrutiny.",fx:{press:4},result:"The reporter's story reflected more campaign context.",trade:"You improved the working relationship while increasing informal access."},
+{label:"Provide only written facts",known:"Known: controlled record and lower leak risk.",risk:"Tradeoff: less relationship value.",fx:{press:1},result:"The reporter used the factual material with limited additional context.",trade:"You protected message control at the expense of access."},
+{label:"Decline",known:"Known: no risk of accidental disclosure.",risk:"Tradeoff: reporter may rely more heavily on opponent framing.",fx:{press:-2},result:"The reporter proceeded without campaign background.",trade:"You minimized disclosure risk but reduced influence over context."}]},
+{cat:"SCHEDULING",title:"Scheduler: We can only do one of these Saturday stops",text:"Three events conflict: a suburban small-business roundtable, a rural county fair, and a major-city community festival.",ask:"Choose the candidate's highest-value Saturday appearance.",opts:[
+{label:"Suburban small-business roundtable",known:"Known: high persuadable-voter value and economic message fit.",risk:"Tradeoff: no rural or urban-base appearance.",hours:["Public events",3],fx:{you:.08,donor:1},result:"The roundtable generated useful local coverage.",trade:"You prioritized persuadable economic voters."},
+{label:"Rural county fair",known:"Known: improves geographic balance and base enthusiasm.",risk:"Tradeoff: fewer persuadable voters per hour.",hours:["Public events",4],fx:{you:.04,morale:2},result:"The rural stop produced strong volunteer energy.",trade:"You emphasized presence and enthusiasm over efficiency."},
+{label:"Major-city community festival",known:"Known: large crowd and strong visuals.",risk:"Tradeoff: many attendees already support the campaign.",hours:["Public events",3],fx:{fav:1,you:.04},result:"The event produced strong visuals and social content.",trade:"You gained visibility more than persuasion."}]},
+{cat:"OPPONENT TRACKING",title:"Tracking team: The opponent changed their stump speech",text:"For the third event in a row, the opponent is emphasizing an issue they previously ignored. Staff disagree whether it signals a strategic shift.",ask:"Decide how to react to imperfect opponent intelligence.",opts:[
+{label:"Assume a shift and prepare a counter-message",known:"Known: faster response if the pattern is real.",risk:"Tradeoff: could waste resources responding to noise.",fx:{you:.05},result:"The campaign prepared a counter-message before the issue fully developed.",trade:"You bought speed at the risk of overreaction."},
+{label:"Increase tracking and wait",known:"Known: better intelligence before changing course.",risk:"Tradeoff: slower response if the shift is real.",fx:{cash:-30000},result:"Tracking resources increased and produced clearer information.",trade:"You spent money to reduce uncertainty."},
+{label:"Ignore it",known:"Known: preserves focus.",risk:"Tradeoff: may let opponent define a new issue uncontested.",fx:{},result:"The campaign stayed on its existing strategy.",trade:"You protected discipline while accepting intelligence risk."}]},
+{cat:"DEBATE COACH",title:"Debate Coach: What should we train for?",text:"The next debate is two weeks away. Prep time is limited, and the opponent has several possible lines of attack.",ask:"Choose the debate-prep emphasis.",opts:[
+{label:"Rapid-response attack defense",known:"Known: best protection against hostile questions and attacks.",risk:"Tradeoff: less time on positive agenda delivery.",hours:["Policy/debate prep",3],fx:{cred:1},result:"Prep focused on concise rebuttals and pivots.",trade:"You strengthened defense at the expense of proactive message work."},
+{label:"Policy mastery",known:"Known: strongest detailed-answer performance.",risk:"Tradeoff: less focus on television style and attack lines.",hours:["Policy/debate prep",3],fx:{cred:2},result:"The candidate drilled detailed policy responses.",trade:"You prioritized substance over performance mechanics."},
+{label:"Closing argument and memorable lines",known:"Known: best chance for a standout moment.",risk:"Tradeoff: greater vulnerability on detailed follow-ups.",hours:["Policy/debate prep",3],fx:{fav:1},result:"Prep emphasized concise memorable contrasts.",trade:"You optimized for impact rather than comprehensive defense."}]},
+{cat:"OPERATIONS",title:"Operations Director: We need to choose headquarters spending",text:"The campaign can upgrade analytics capacity, add regional staff, or keep overhead lean.",ask:"Choose one operational investment.",opts:[
+{label:"Upgrade analytics and data tools",known:"Known: $125k cost; better targeting and reporting.",risk:"Tradeoff: invisible to voters and reduces media cash.",fx:{cash:-125000,cred:2},result:"Analytics capacity improved.",trade:"You invested in decision quality rather than visible voter contact."},
+{label:"Add regional staff",known:"Known: $150k cost; stronger local execution.",risk:"Tradeoff: ongoing management burden.",fx:{cash:-150000,morale:3,you:.03},result:"Regional campaign capacity expanded.",trade:"You improved execution at a substantial cash cost."},
+{label:"Keep overhead lean",known:"Known: no additional cost.",risk:"Tradeoff: staff remain stretched.",fx:{morale:-1},result:"The campaign deferred expansion.",trade:"You protected cash while leaving capacity constraints unresolved."}]},
+{cat:"COMMS DIRECTOR",title:"Comms Director: The opponent challenged us to release records",text:"The opponent is demanding a set of historical records that are not legally required but could become a transparency issue.",ask:"Choose how much voluntary disclosure to make.",opts:[
+{label:"Release everything quickly",known:"Known: strongest transparency posture.",risk:"Tradeoff: creates new material for opposition review.",fx:{press:4,cred:2},result:"The campaign released the records and won positive transparency coverage.",trade:"You gained credibility while exposing more raw material."},
+{label:"Release a limited summary",known:"Known: some transparency with less exposure.",risk:"Tradeoff: opponent will call it incomplete.",fx:{press:1},result:"The campaign published a summary and supporting documents.",trade:"You split the difference but did not end the argument."},
+{label:"Refuse the demand",known:"Known: preserves privacy and staff time.",risk:"Tradeoff: transparency story may grow.",fx:{press:-3,you:-.04},result:"The refusal became part of the opponent's message.",trade:"You protected information but surrendered some narrative ground."}]},
+{cat:"FINANCE DIRECTOR",title:"Finance Director: Do we accept a late high-dollar event?",text:"A host can assemble a six-figure fundraiser tomorrow night, but it would cancel a previously announced public event.",ask:"Choose between cash and public schedule reliability.",opts:[
+{label:"Take the fundraiser",known:"Known: approximately +$180k cash.",risk:"Tradeoff: canceling the public event creates bad optics.",hours:["Donor/endorsement meetings",4],fx:{cash:180000,press:-2},result:"The fundraiser performed well, but local press noted the cancellation.",trade:"You chose money over schedule consistency."},
+{label:"Keep the public event",known:"Known: preserves public commitment.",risk:"Tradeoff: leaves major money unrealized.",hours:["Public events",3],fx:{you:.06,press:1},result:"The public event generated solid local coverage.",trade:"You prioritized voter-facing credibility over fundraising."},
+{label:"Send the spouse/surrogate to the fundraiser",known:"Known: recovers part of the financial opportunity.",risk:"Tradeoff: donors receive less candidate access.",fx:{cash:75000},result:"Surrogates raised a respectable amount.",trade:"You preserved the candidate schedule while capturing some money."}]}
+];
+const ALL_DECISIONS=DECISION_POOL.concat(STRATEGIC_DECISIONS);
 let g;
 
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1)+"M":"$"+Math.round(n/1000)+"k"}
@@ -255,7 +359,10 @@ function defaults(){
  if(!g.issueCredibility)g.issueCredibility=50;
  if(!g.favorability)g.favorability=42;
  if(!g.negativeSaturation)g.negativeSaturation=0;
- if(!g.version)g.version=10;else g.version=10;
+ if(!g.decisionHours)g.decisionHours={};
+ if(!g.decisionLedger)g.decisionLedger=[];
+ if(!g.decisionHistory)g.decisionHistory=[];
+ if(!g.version)g.version=11;else g.version=11;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
@@ -263,7 +370,7 @@ function start(){
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-2.5)*2.3,20,70),turnout:62+i*3,persuade:18+((i*7)%24)}));
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
- defaults();g.surveyIndex=0;g.surveyCompleted=false;g.weeklyDecisions=null;document.getElementById("setup").style.display="none";beginQuestionnaire()
+ defaults();g.surveyIndex=0;g.surveyCompleted=false;g.weeklyDecisions=null;g.decisionHours={};g.decisionLedger=[];g.decisionHistory=[];document.getElementById("setup").style.display="none";beginQuestionnaire()
 }
 function showSection(id,label){
  document.querySelectorAll(".tabs button").forEach(z=>z.classList.remove("on"));
@@ -286,7 +393,7 @@ function buildTabs(){
  names.forEach((x,i)=>{let b=document.createElement("button");b.textContent=x[1];b.dataset.section=x[0];if(!i)b.className="on";b.onclick=()=>showSection(x[0],x[1]);box.appendChild(b)});
  if(mobile){let b=document.createElement("button");b.textContent="More";b.onclick=openMore;box.appendChild(b)}
 }
-function totalHours(){return Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)}
+function totalHours(){let base=Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0),extra=Object.values(g.decisionHours||{}).reduce((a,b)=>a+Number(b||0),0);return base+extra}
 function remainingHours(){return Math.max(0,60-totalHours())}
 function setScheduleHours(cat,value,select){
  let old=Number(g.hours[cat]||0),next=Number(value);
@@ -296,13 +403,13 @@ function setScheduleHours(cat,value,select){
 }
 function consumeHours(cat,amount,label){
  if(remainingHours()<amount){alert("You need "+amount+" unallocated candidate hours for "+label+". You currently have "+remainingHours()+" remaining.");return false}
- g.hours[cat]=Number(g.hours[cat]||0)+amount;buildTimeControls();renderTotals();return true
+ g.decisionHours[cat]=Number(g.decisionHours[cat]||0)+amount;buildTimeControls();renderTotals();return true
 }
 function buildTimeControls(){
  let t=document.getElementById("timeList");if(!t)return;t.innerHTML="";
  T.forEach(x=>{
    let val=Number(g.hours[x]||0),d=document.createElement("div");d.className="item schedule-row";
-   let left=document.createElement("div");left.innerHTML="<b>"+x+"</b><div class='muted'>Weekly schedule block</div>";
+   let left=document.createElement("div");let extra=Number((g.decisionHours||{})[x]||0);left.innerHTML="<b>"+x+"</b><div class='muted'>Base weekly block"+(extra?" · +"+extra+" hrs one-off this week":"")+"</div>";
    let sel=document.createElement("select");sel.className="schedule-select";sel.setAttribute("aria-label",x+" hours");
    for(let v=0;v<=30;v+=5){let o=document.createElement("option");o.value=String(v);o.textContent=v+" hrs";if(v===val)o.selected=true;sel.appendChild(o)}
    sel.onchange=()=>setScheduleHours(x,sel.value,sel);d.appendChild(left);d.appendChild(sel);t.appendChild(d)
@@ -335,7 +442,16 @@ function changePolicy(k,v){
 }
 function setMessage(v){g.message=v}
 function setAd(k,v){g.ad[k]=v}
-function renderTotals(){let h=totalHours(),s=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0);let tt=document.getElementById("timeTotal"),hr=document.getElementById("hoursRemaining");if(tt){tt.textContent=h+" / 60";tt.className=h>60?"bad":""}if(hr){hr.textContent=remainingHours();hr.className=remainingHours()<=5?"warn":""}document.getElementById("spend").textContent=money(s);document.getElementById("burn").textContent="Planned "+money(s)}
+function renderTotals(){
+ let h=totalHours(),s=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0),ledger=(g.decisionLedger||[]);
+ let decisionOut=ledger.filter(x=>x.amount<0).reduce((a,b)=>a+Math.abs(b.amount),0),decisionIn=ledger.filter(x=>x.amount>0).reduce((a,b)=>a+b.amount,0);
+ let tt=document.getElementById("timeTotal"),hr=document.getElementById("hoursRemaining");
+ if(tt){tt.textContent=h+" / 60";tt.className=h>60?"bad":""}if(hr){hr.textContent=remainingHours();hr.className=remainingHours()<=5?"warn":""}
+ let sp=document.getElementById("spend");if(sp)sp.textContent=money(s);document.getElementById("burn").textContent="Base "+money(s)+" / week";
+ let dt=document.getElementById("decisionSpendTotal"),dl=document.getElementById("decisionSpendList");
+ if(dt)dt.textContent=decisionOut?money(decisionOut):(decisionIn?"+"+money(decisionIn):"$0");
+ if(dl)dl.innerHTML=ledger.length?ledger.map(x=>(x.amount<0?"−":"+")+money(Math.abs(x.amount))+" · "+x.label).join("<br>"):"No one-off financial commitments yet this week.";
+}
 function beginQuestionnaire(){document.getElementById("questionnaireModal").classList.add("on");renderQuestionnaire()}
 function renderQuestionnaire(){
  let item=QUESTIONNAIRE[g.surveyIndex],box=document.getElementById("questionnaireContent");
@@ -348,7 +464,9 @@ function finishQuestionnaire(){
 }
 function generateWeeklyDecisions(){
  if(g.weeklyDecisions&&g.weeklyDecisions.week===g.week)return;
- let pool=DECISION_POOL.map((x,i)=>i),picked=[];
+ let recent=(g.decisionHistory||[]).slice(-18),pool=ALL_DECISIONS.map((x,i)=>i).filter(i=>!recent.includes(i));
+ if(pool.length<3)pool=ALL_DECISIONS.map((x,i)=>i);
+ let picked=[];
  while(picked.length<3&&pool.length){let n=Math.floor(Math.random()*pool.length);picked.push(pool.splice(n,1)[0])}
  g.weeklyDecisions={week:g.week,items:picked.map(i=>({template:i,resolved:false,choice:null,result:""}))}
 }
@@ -360,15 +478,18 @@ function applyDecisionFx(fx){
  if(fx.cred)g.issueCredibility=clamp(g.issueCredibility+fx.cred,0,100);if(fx.endorse)g.endorse+=fx.endorse
 }
 function resolveWeeklyDecision(di,oi){
- let d=g.weeklyDecisions.items[di];if(!d||d.resolved)return;let template=DECISION_POOL[d.template],o=template.opts[oi];
+ let d=g.weeklyDecisions.items[di];if(!d||d.resolved)return;let template=ALL_DECISIONS[d.template],o=template.opts[oi];
  if(o.hours&&!consumeHours(o.hours[0],o.hours[1],template.title))return;
- applyDecisionFx(o.fx);d.resolved=true;d.choice=o.label;d.result=o.result;d.trade=o.trade||"";render()
+ applyDecisionFx(o.fx);
+ if(o.fx&&o.fx.cash){g.decisionLedger.push({amount:o.fx.cash,label:template.title+" — "+o.label})}
+ g.decisionHistory.push(d.template);
+ d.resolved=true;d.choice=o.label;d.result=o.result;d.trade=o.trade||"";render()
 }
 function decisionsResolved(){return g.weeklyDecisions?g.weeklyDecisions.items.filter(x=>x.resolved).length:0}
 function renderDecisions(){
  generateWeeklyDecisions();let box=document.getElementById("decisionList");if(!box)return;
  box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{
-   let t=DECISION_POOL[d.template];
+   let t=ALL_DECISIONS[d.template];
    let choices=d.resolved?"<div class='decision-result'><b>Your decision</b><div>"+d.choice+"</div><p><b>Immediate result</b><br>"+d.result+"</p><p><b>What you gained / gave up</b><br>"+(d.trade||"The full downstream effect may take time to become clear.")+"</p></div>":
      t.opts.map((o,oi)=>"<button class='choice' onclick='resolveWeeklyDecision("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
    return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>"+(t.cat||"DECISION")+"</span><b style='display:block;margin-top:6px'>"+t.title+"</b></div><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>What they're asking</b><div>"+(t.ask||"Choose how the campaign should respond.")+"</div></div>"+choices+"</div>"
@@ -397,11 +518,11 @@ function render(){
  renderTotals()
 }
 function meetDonor(){if(!consumeHours("Donor/endorsement meetings",2,"a donor meeting"))return;g.donor=clamp(g.donor+8,0,100);g.cash+=60000+g.donor*1200;g.energy=clamp(g.energy-2,0,100);alert("2 candidate hours used. The meeting strengthened the donor relationship and generated fundraising.");render()}
-function courtEndorsement(){if(g.cash<15000)return alert("Not enough cash.");if(!consumeHours("Donor/endorsement meetings",3,"an endorsement meeting"))return;g.cash-=15000;g.endorse++;g.morale=clamp(g.morale+2,0,100);g.blocs[Math.floor(Math.random()*g.blocs.length)].support+=.35;alert("3 candidate hours and $15k used. Endorsement secured.");render()}
+function courtEndorsement(){if(g.cash<15000)return alert("Not enough cash.");if(!consumeHours("Donor/endorsement meetings",3,"an endorsement meeting"))return;g.cash-=15000;g.decisionLedger.push({amount:-15000,label:"Endorsement courtship"});g.endorse++;g.morale=clamp(g.morale+2,0,100);g.blocs[Math.floor(Math.random()*g.blocs.length)].support+=.35;alert("3 candidate hours and $15k used. Endorsement secured.");render()}
 function pressAccess(){if(!consumeHours("Press",2,"an extended press interview"))return;g.press=clamp(g.press+7,0,100);g.energy=clamp(g.energy-1,0,100);alert("2 candidate press hours used. Press relationship improved; favorable coverage is not guaranteed.");render()}
-function buyPoll(){if(g.cash<90000)return alert("Not enough cash.");g.cash-=90000;g.research++;let n=()=>Math.random()*1.4-.7;g.polls.push({n:"Campaign benchmark poll",y:g.you+n(),o:g.opp+n(),m:3.2});alert("Benchmark poll complete. Voter-bloc estimates and opponent intelligence are now more reliable.");render()}
+function buyPoll(){if(g.cash<90000)return alert("Not enough cash.");g.cash-=90000;g.decisionLedger.push({amount:-90000,label:"Benchmark poll"});g.research++;let n=()=>Math.random()*1.4-.7;g.polls.push({n:"Campaign benchmark poll",y:g.you+n(),o:g.opp+n(),m:3.2});alert("Benchmark poll complete. Voter-bloc estimates and opponent intelligence are now more reliable.");render()}
 function doResearch(kind){
- let cost=kind==="oppo"?75000:60000;if(g.cash<cost)return alert("Not enough cash.");g.cash-=cost;
+ let cost=kind==="oppo"?75000:60000;if(g.cash<cost)return alert("Not enough cash.");g.cash-=cost;g.decisionLedger.push({amount:-cost,label:(kind==="oppo"?"Opponent research":"Self-oppo research")});
  let base=kind==="oppo"?rand(OPPO_FINDINGS):rand(SELF_FINDINGS),f=Object.assign({},base,{kind:kind,week:g.week,used:false});g.findings.push(f);
  if(kind==="self"&&f.risk>0){g.issueCredibility=clamp(g.issueCredibility+1,0,100)}
  alert((kind==="oppo"?"Opponent":"Self")+" research complete: "+f.title);render()
@@ -456,6 +577,22 @@ function maybeDebate(){
 function resolveDebate(c,prep){
  let mod=Math.min(.22,prep*.009)+(g.energy-50)*.002-(g.stress*.0015),move=c[1]+mod+(Math.random()*.16-.08);g.you+=move;g.favorability=clamp(g.favorability+move*2,0,100);g.energy=clamp(g.energy-7,0,100);g.impacts.push({week:g.week,move:move,lines:["Debate response: "+c[0]+".","Preparation/fatigue modifier contributed "+(mod>=0?"+":"")+mod.toFixed(2)+" points to the modeled debate effect."],trade:"The debate consumed candidate energy and will affect the next week's performance."});document.getElementById("debateModal").classList.remove("on");render()
 }
+function showWeekTransition(completed,startYou,oppSpend,raised){
+ let latest=g.impacts[g.impacts.length-1],box=document.getElementById("weekTransitionContent"),next=g.week;
+ let delta=g.you-startYou,baseSpend=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0);
+ box.innerHTML="<span class='badge'>WEEK "+completed+" COMPLETE</span><h2 style='margin-top:10px'>Week "+next+" begins</h2>"+
+ "<div class='grid2'><div class='item'><span class='muted'>Polling movement</span><b style='display:block;font-size:22px'>"+(delta>=0?"+":"")+delta.toFixed(2)+" pts</b></div>"+
+ "<div class='item'><span class='muted'>Cash on hand</span><b style='display:block;font-size:22px'>"+money(g.cash)+"</b></div>"+
+ "<div class='item'><span class='muted'>Base budget carried forward</span><b style='display:block'>"+money(baseSpend)+" / week</b></div>"+
+ "<div class='item'><span class='muted'>Schedule carried forward</span><b style='display:block'>"+Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)+" hrs planned</b></div></div>"+
+ "<div class='item' style='margin-top:10px'><b>What happened</b><div>"+(latest?latest.lines.slice(0,4).join("<br>"):"Week complete.")+"</div></div>"+
+ "<div class='item' style='margin-top:8px'><b>Opponent activity</b><div>Estimated "+money(oppSpend)+" in counter-messaging this week.</div></div>"+
+ (raised?"<div class='item' style='margin-top:8px'><b>Fundraising</b><div>"+money(raised)+" raised from the standing candidate schedule.</div></div>":"")+
+ "<p class='muted'>One-off decision hours and commitments have cleared. Your base schedule and base budget remain in place for Week "+next+".</p>"+
+ "<button class='choice' onclick='closeWeekTransition()'>Enter Week "+next+"</button>";
+ document.getElementById("weekTransitionModal").classList.add("on")
+}
+function closeWeekTransition(){document.getElementById("weekTransitionModal").classList.remove("on");showSection("inbox","Inbox")}
 function advance(){
  generateWeeklyDecisions();if(decisionsResolved()<3)return alert("Resolve all three weekly command decisions before advancing.");
  let hrs=Object.values(g.hours).reduce((a,b)=>a+b,0),sp=Object.values(g.budget).reduce((a,b)=>a+b,0);if(hrs>60)return alert("Candidate time exceeds 60 hours. Reduce allocations before advancing.");if(sp>g.cash)return alert("Planned spending exceeds available cash.");
@@ -478,9 +615,8 @@ function advance(){
  let trade="Cash after the week: "+money(g.cash)+". Candidate energy "+Math.round(g.energy)+"%. Stress "+Math.round(g.stress)+"%.";
  g.impacts.push({week:g.week,move:g.you-start,lines:lines,trade:trade});g.polls.push({n:"Campaign tracking estimate",y:g.you+(Math.random()*.8-.4),o:g.opp+(Math.random()*.8-.4),m:3.5});
  let completed=g.week;g.week++;
- T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  if(completed===15)return election();
- g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);render();if(!maybeDebate())maybeWarRoom()
+ g.decisionHours={};g.decisionLedger=[];g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);buildInputs();render();showWeekTransition(completed,start,oppSpend,raised);if(!maybeDebate())maybeWarRoom()
 }
 function election(){
  let regions=S[g.state].regions.slice(),a=g.you+(Math.random()*2-1),b=g.opp+(Math.random()*2-1),m=a-b,startMargin=S[g.state].you-S[g.state].opp;
@@ -488,7 +624,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHostedV10",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV10");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV11",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV11");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
