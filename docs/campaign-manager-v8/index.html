@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V18</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V19</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
 <div class="grid2"><div><label>Party</label><select id="party"><option>Republican</option><option>Democrat</option><option>Independent</option></select></div><div><label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select></div></div>
 <label style="display:none">Archetype</label><p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V18</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V19</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -761,7 +761,7 @@ function resolveAttack(di,oi){
  g.you=clamp(g.you+change,20,65);g.press=clamp(g.press+press,0,100);g.favorability=clamp(g.favorability+fav,0,100);
  g.blocs.forEach(b=>{let t=blocTraits(b.name),s=0;if(a.type==="self-funding")s+=(t.working+t.ind)*-.018*a.intensity;if(a.type==="ideology")s+=(t.sub+t.ind)*-.018*a.intensity;if(o.mode==="rebut")s*=.35;if(o.mode==="ignore"&&arc.streak>=3)s*=.6;b.support=clamp(b.support+s,10,85)});
  d.resolved=true;d.choice=o.label;d.result=o.result;d.trade=o.trade;d.attackImpact=(change>=0?"+":"")+change.toFixed(2)+" pts to your modeled support";
- g.attackHistory.push({week:g.week,attack:a,response:o.label,impact:change});render()
+ g.attackHistory.push({week:g.week,attack:a,response:o.label,impact:change});d.world=createWorldAftermath({title:a.headline,cat:"OPPONENT ATTACK",issue:a.issue,text:a.claim},o,"Response to opponent attack");render()
 }
 function buildPollsterMemo(){
  if(!g||!g.blocs)return null;
@@ -778,6 +778,100 @@ function buildPollsterMemo(){
 function pollsterMemoHtml(){
  let m=g.pollsterMemo||buildPollsterMemo();if(!m)return "";
  return "<div class='item' style='border-left:4px solid #8ba3ff'><div class='row'><div><span class='badge'>POLLSTER MEMO</span><b style='display:block;margin-top:6px'>"+m.name+"</b></div><span class='muted tiny'>Week "+g.week+"</span></div><p>“"+m.tone+"”</p><p><b>Where I am watching:</b> "+m.target+".<br><b>Problem area:</b> "+m.weak+".<br><b>Issue driving the environment:</b> "+m.topIssue+".</p><p><b>"+m.recommendation+"</b></p><small class='muted'>This is advice, not a guaranteed outcome. Staff can misread the electorate.</small></div>"
+}
+const DONOR_PROFILES=[
+ {name:"Eleanor Price",desc:"technology executive",causes:["Economy & taxes","Housing","Government reform"],style:"pragmatic"},
+ {name:"Caleb Morrison",desc:"real-estate developer",causes:["Housing","Transportation","Economy & taxes"],style:"business"},
+ {name:"Ruth Adler",desc:"attorney and civic donor",causes:["Abortion policy","Education","Gun policy"],style:"social"},
+ {name:"Javier Mendoza",desc:"construction-company owner",causes:["Labor & workplace","Public safety","Economy & taxes"],style:"populist"},
+ {name:"Nina Patel",desc:"health-care entrepreneur",causes:["Health care","Child care & families","Education"],style:"policy"},
+ {name:"Thomas Reed",desc:"retired manufacturing CEO",causes:["Economy & taxes","Climate & energy","Government reform"],style:"ideological"}
+];
+function buildDonors(){
+ return DONOR_PROFILES.map((d,i)=>({name:d.name,desc:d.desc,causes:d.causes.slice(),style:d.style,relationship:48+((i*9)%27),capacity:100000+((i%3)*150000),active:true,lastReaction:"No major reaction yet."}))
+}
+function inferIssue(template){
+ if(template.issue)return template.issue;
+ let txt=((template.title||"")+" "+(template.text||"")+" "+(template.cat||"")).toLowerCase();
+ let map=[["tax","Economy & taxes"],["business","Economy & taxes"],["housing","Housing"],["crime","Public safety"],["police","Public safety"],["school","Education"],["teacher","Education"],["health","Health care"],["abortion","Abortion policy"],["climate","Climate & energy"],["energy","Climate & energy"],["transport","Transportation"],["labor","Labor & workplace"],["union","Labor & workplace"],["homeless","Homelessness"],["gun","Gun policy"],["ethic","Government reform"],["child","Child care & families"]];
+ let hit=map.find(x=>txt.includes(x[0]));return hit?hit[1]:null
+}
+function isAggressiveChoice(label){
+ let s=(label||"").toLowerCase();return /attack|fire|condemn|aggressive|hard|flood|reject|refuse|liar|negative|release|public/.test(s)
+}
+function createWorldAftermath(template,o,source){
+ let issue=inferIssue(template),reporter=rand(REPORTERS),aggressive=isAggressiveChoice(o.label),positiveBloc=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade)[0],negativeBloc=g.blocs.slice().sort((a,b)=>a.persuade-b.persuade)[0];
+ let pro=(.03+Math.random()*.06)*(aggressive?1.15:1),con=(.02+Math.random()*.07)*(aggressive?1.3:.9);
+ positiveBloc.support=clamp(positiveBloc.support+pro,10,85);negativeBloc.support=clamp(negativeBloc.support-con,10,85);
+ let donorReactions=[],aligned=(g.donors||[]).filter(d=>issue&&d.causes.includes(issue));
+ let donorA=aligned.length?rand(aligned):rand(g.donors||[]);
+ if(donorA){
+   let good=Math.random()>.38,delta=good?(3+Math.random()*5):-(3+Math.random()*6);
+   donorA.relationship=clamp(donorA.relationship+delta,0,100);
+   donorA.lastReaction=(good?"Liked":"Disliked")+" the campaign's handling of "+(issue||template.cat||"the issue")+".";
+   let amount=0;if(good&&donorA.active&&Math.random()>.45){amount=Math.round((25000+Math.random()*donorA.capacity)/5000)*5000;g.cash+=amount;g.decisionLedger.push({amount:amount,label:donorA.name+" reaction"});}
+   if(!good&&donorA.relationship<35){donorA.active=false}
+   donorReactions.push({name:donorA.name,good:good,delta:delta,amount:amount,text:good?(amount?donorA.name+" called finance and committed "+money(amount)+".":donorA.name+" told finance the move made the campaign easier to support."):(donorA.active?donorA.name+" told finance they were unhappy and are holding their next check.":donorA.name+" told finance they are done giving to the campaign.")})
+ }
+ let oppResponses=aggressive?[
+   g.opponent.name+" went on television within hours and called the move desperate.",
+   g.opponent.name+" answered with a contrast ad accusing your campaign of going negative.",
+   "The opponent's press secretary circulated a rapid-response memo to reporters challenging your claims."
+ ]:[
+   g.opponent.name+" tried to dismiss the move as vague and politically convenient.",
+   "The opponent countered by arguing that your campaign was avoiding the real issue.",
+   g.opponent.name+" largely ignored the move and stayed on their existing message."
+ ];
+ let opponent=rand(oppResponses);
+ let headlines=aggressive?[
+   g.name+" sharpens contrast as governor's race grows more personal",
+   "New "+g.name+" offensive forces rival onto defense",
+   g.name+" escalates campaign fight over "+(issue||"the race")
+ ]:[
+   g.name+" tries to reshape race around "+(issue||g.message),
+   "Campaign move tests whether "+g.name+" can broaden coalition",
+   g.name+" puts new emphasis on "+(issue||g.message)
+ ];
+ let headline=rand(headlines);
+ let staff=aggressive?"Erin Walsh thinks the move broke through, but Daniel Ruiz is worried about the voters who dislike political combat.":"Maya Chen thinks the move fits the broader strategy, while the finance team is watching whether donors see enough urgency.";
+ let hook=null;
+ if(Math.random()<.45){
+   hook={due:g.week+(Math.random()>.5?1:2),source:template.title,text:aggressive?"A fact-check, counter-ad, or donor backlash may revive this fight.":"Reporters and interest groups may test whether the campaign follows through on this position.",issue:issue,good:Math.random()>.5};
+   g.delayedConsequences.push(hook)
+ }
+ let world={week:g.week,source:source||template.title,headline:headline,outlet:reporter.outlet,reporter:reporter.name,opponent:opponent,donors:donorReactions,voters:[
+   {bloc:positiveBloc.name,move:pro,text:"Responded positively to the choice."},
+   {bloc:negativeBloc.name,move:-con,text:"Moved the other direction, illustrating the coalition tradeoff."}
+ ],staff:staff,delayed:hook};
+ g.worldEvents.push(world);return world
+}
+function worldAftermathHtml(w){
+ if(!w)return "";
+ return "<div class='item' style='margin-top:10px;background:#0d1426'><span class='badge'>48 HOURS LATER</span><h3 style='margin:8px 0 4px'>"+w.headline+"</h3><div class='muted tiny'>"+w.reporter+" · "+w.outlet+"</div><p><b>Opponent response</b><br>"+w.opponent+"</p>"+
+ "<p><b>Donor calls</b><br>"+(w.donors.length?w.donors.map(x=>x.text).join("<br>"):"No major donor moved immediately.")+"</p>"+
+ "<p><b>Voter reaction</b><br>"+w.voters.map(x=>x.bloc+" "+(x.move>=0?"+":"")+x.move.toFixed(2)+" · "+x.text).join("<br>")+"</p>"+
+ "<p><b>Inside HQ</b><br>"+w.staff+"</p>"+(w.delayed?"<p><b>Watch next</b><br>"+w.delayed.text+"</p>":"")+"</div>"
+}
+function resolveDelayedConsequences(){
+ let due=(g.delayedConsequences||[]).filter(x=>x.due===g.week),notes=[];
+ due.forEach(x=>{
+   let mv=x.good?.05:-.05;g.blocs.forEach((b,i)=>{if(i%4===0)b.support=clamp(b.support+mv,10,85)});
+   notes.push((x.good?"The earlier decision aged well: ":"The earlier decision came back around: ")+x.text)
+ });
+ if(due.length)g.delayedConsequences=g.delayedConsequences.filter(x=>x.due!==g.week);
+ return notes
+}
+function createAdAftermath(media){
+ if(!media)return null;
+ let attack=g.ad.objective==="Attack opponent"||g.ad.tone==="Aggressive attack";
+ let t={title:"Paid media launch",cat:"MEDIA",issue:g.message,text:"The campaign put new creative into the market."};
+ let o={label:attack?"Launch hard negative contrast":"Launch "+g.ad.tone+" creative"};
+ let w=createWorldAftermath(t,o,"Paid media: "+g.ad.objective+" / "+g.ad.tone);
+ if(attack){
+   w.headline=rand([g.name+" unleashes new attack ad against "+g.opponent.name,g.opponent.name+" hits back after "+g.name+" launches negative spot","Governor's race turns sharper after new television attack"]);
+   w.opponent=rand([g.opponent.name+" responded with a digital video accusing your ad of distorting the record.","The opponent bought response time in the same media markets and put a surrogate on local television.","The rival campaign sent reporters a point-by-point rebuttal and demanded the ad come down."]);
+ }
+ return w
 }
 let g;
 
@@ -822,15 +916,18 @@ function defaults(){
  if(!g.messageHistory)g.messageHistory=[];
  if(!g.attackHistory)g.attackHistory=[];
  if(!g.promptCategoryHistory)g.promptCategoryHistory=[];
+ if(!g.donors)g.donors=buildDonors();
+ if(!g.worldEvents)g.worldEvents=[];
+ if(!g.delayedConsequences)g.delayedConsequences=[];
  if(!g.pollsterMemo)g.pollsterMemo=buildPollsterMemo();
- if(!g.version)g.version=18;else g.version=18;
+ if(!g.version)g.version=19;else g.version=19;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
  let party=document.getElementById("party").value;
  let partyShift=party==="Republican"?0:party==="Democrat"?2.2: -1.0;
  g={state:st,party:party,name:document.getElementById("name").value||"Alex Mercer",arch:document.getElementById("arch").value,week:1,you:clamp(s.you+partyShift,20,65),opp:clamp(s.opp-partyShift*.45,20,70),und:100-s.you-s.opp,cash:s.cash,energy:72,morale:74,stress:30,research:0,hours:{},budget:{},polls:[],impacts:[],staff:"Full senior team",donor:50,press:50,endorse:0,issueEvents:[]};
- g.environment=randomEnvironment();g.staffTeam=buildStaff();g.opponent=initOpponent();g.outsideHistory=[];g.messageHistory=[];g.attackHistory=[];g.pollsterMemo=null;g.personalReserve=g.arch==="Wealthy Outsider"?(8000000+Math.round(Math.random()*8000000/500000)*500000):0;g.selfFundedTotal=0;g.selfFundingPenaltyTier=0;
+ g.environment=randomEnvironment();g.staffTeam=buildStaff();g.opponent=initOpponent();g.outsideHistory=[];g.messageHistory=[];g.attackHistory=[];g.pollsterMemo=null;g.donors=buildDonors();g.worldEvents=[];g.delayedConsequences=[];g.personalReserve=g.arch==="Wealthy Outsider"?(8000000+Math.round(Math.random()*8000000/500000)*500000):0;g.selfFundedTotal=0;g.selfFundingPenaltyTier=0;
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-(BLOCS[st].length-1)/2)*.85,20,70),turnout:56+((i*5)%30),persuade:14+((i*7)%30),topIssue:(STATE_ISSUES[st]&&Object.keys(STATE_ISSUES[st])[i%Object.keys(STATE_ISSUES[st]).length])||"Cost of living"}));
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
@@ -975,7 +1072,7 @@ function resolveWeeklyDecision(di,oi){
    let changes=applyPolicyBlocImpact(template.issue,stance,template.title);subgroupText=policyImpactText(changes);
  }else{g.decisionHistory.push(d.template);if(!g.promptCategoryHistory)g.promptCategoryHistory=[];g.promptCategoryHistory.push(template.cat||"DECISION")}
  d.resolved=true;d.choice=o.label;d.result=o.result;d.trade=o.trade||"";
- d.subgroupImpact=subgroupText;
+ d.subgroupImpact=subgroupText;d.world=createWorldAftermath(template,o,d.kind==="position"?"Policy position":template.cat||"Decision");
  render()
 }
 function decisionsResolved(){return g.weeklyDecisions?g.weeklyDecisions.items.filter(x=>x.resolved).length:0}
@@ -984,12 +1081,12 @@ function renderDecisions(){
  box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{
    if(d.kind==="attack"){
      let a=d.attack,opts=attackOptions(a);
-     let choices=d.resolved?"<div class='decision-result'><b>Your response</b><div>"+d.choice+"</div><p><b>What happened</b><br>"+d.result+"</p><p><b>Race impact</b><br>"+d.attackImpact+"</p><p><b>Tradeoff</b><br>"+d.trade+"</p></div>":opts.map((o,oi)=>"<button class='choice' onclick='resolveAttack("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
+     let choices=d.resolved?"<div class='decision-result'><b>Your response</b><div>"+d.choice+"</div><p><b>What happened</b><br>"+d.result+"</p><p><b>Race impact</b><br>"+d.attackImpact+"</p><p><b>Tradeoff</b><br>"+d.trade+"</p>"+worldAftermathHtml(d.world)+"</div>":opts.map((o,oi)=>"<button class='choice' onclick='resolveAttack("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
      return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>OPPONENT ATTACK</span><b style='display:block;margin-top:6px'>"+a.headline+"</b></div><span class='badge'>"+(d.resolved?"ANSWERED":"RESPONSE REQUIRED")+"</span></div><p>"+a.claim+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>"+a.reporter.name+" · "+a.reporter.outlet+"</b><div class='muted tiny'>Attack target: "+a.target+"</div></div>"+choices+"</div>"
    }
    let t=d.kind==="position"?POSITION_DECISIONS[d.template]:ALL_DECISIONS[d.template];
    let adviser=d.kind==="normal"&&g.staffTeam?g.staffTeam.find(s=>(t.cat||"").toUpperCase().includes(s.role.split(" ")[0].toUpperCase())):null;
-   let choices=d.resolved?"<div class='decision-result'><b>Your decision</b><div>"+d.choice+"</div><p><b>Immediate result</b><br>"+d.result+"</p>"+(d.subgroupImpact?"<p><b>Modeled voter-subgroup reaction</b><br>"+d.subgroupImpact+"</p>":"")+"<p><b>What you gained / gave up</b><br>"+(d.trade||"The full downstream effect may take time to become clear.")+"</p></div>":
+   let choices=d.resolved?"<div class='decision-result'><b>Your decision</b><div>"+d.choice+"</div><p><b>Immediate result</b><br>"+d.result+"</p>"+(d.subgroupImpact?"<p><b>Modeled voter-subgroup reaction</b><br>"+d.subgroupImpact+"</p>":"")+"<p><b>What you gained / gave up</b><br>"+(d.trade||"The full downstream effect may take time to become clear.")+"</p>"+worldAftermathHtml(d.world)+"</div>":
      t.opts.map((o,oi)=>"<button class='choice' onclick='resolveWeeklyDecision("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
    return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>"+(t.cat||"DECISION")+"</span>"+(adviser?"<small class='muted' style='display:block;margin-top:4px'>Advice from "+adviser.name+" · "+adviser.style+" · trust "+Math.round(adviser.trust)+"/100</small>":"")+"<b style='display:block;margin-top:6px'>"+t.title+"</b></div><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>What they're asking</b><div>"+(t.ask||"Choose how the campaign should respond.")+"</div></div>"+choices+"</div>"
  }).join("")
@@ -1058,9 +1155,9 @@ function render(){
  document.getElementById("pollList").innerHTML=g.polls.slice().reverse().map(p=>"<div class='item'><b>"+p.n+"</b><div>"+p.y.toFixed(1)+"% you · "+p.o.toFixed(1)+"% opponent · ±"+p.m+"%</div>"+(p.issues?"<small class='muted'>Top issues: "+p.issues.map(x=>x[0]+" "+x[1]+"%").join(" · ")+"</small>":"")+(p.blocrpt?"<div class='tiny' style='margin-top:6px'>"+p.blocrpt.slice(0,4).map(x=>x.name+": "+x.support.toFixed(1)+"% · "+x.issue).join("<br>")+"</div>":"")+"</div>").join("");
  let iss=document.getElementById("issuePollSummary");if(iss){let ti=g.latestIssuePoll||topIssues();iss.innerHTML=ti.map((x,i)=>"<div class='row'><span>"+(i+1)+". "+x[0]+"</span><b>"+x[1]+"%</b></div>").join("")}
  document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · Top issue: "+(b.topIssue||"Cost of living")+" · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
- document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+(g.staffTeam||[]).map(s=>s.name+" — "+s.role+" · "+s.style).join("<br>")+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><small class='muted'>Organizations can help with credibility, member communication and selected voter blocs. They may require questionnaires, interviews or policy commitments; endorsements never require campaign payment.</small><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100 · Populist appeal "+Math.round(g.populistAppeal||0)+"/100</small></div>";
+ document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+(g.staffTeam||[]).map(s=>s.name+" — "+s.role+" · "+s.style).join("<br>")+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><div class='tiny muted' style='margin-top:6px'>"+(g.donors||[]).map(d=>d.name+" · "+d.desc+" · "+Math.round(d.relationship)+"/100"+(d.active?"":" · STOPPED GIVING")+"<br><span style='opacity:.8'>"+d.lastReaction+"</span>").join("<br>")+"</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><small class='muted'>Organizations can help with credibility, member communication and selected voter blocs. They may require questionnaires, interviews or policy commitments; endorsements never require campaign payment.</small><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100 · Populist appeal "+Math.round(g.populistAppeal||0)+"/100</small></div>";
  document.getElementById("researchList").innerHTML=g.findings.length?g.findings.slice().reverse().map(f=>{let idx=g.findings.indexOf(f),buttons="";if(f.kind==="oppo"&&!f.used){buttons="<div class='tiny muted' style='margin-top:8px'>Choose deployment:</div><button class='choice' onclick='deployFindingDirect("+idx+",\"exclusive\")'>Reporter exclusive</button><button class='choice' onclick='deployFindingDirect("+idx+",\"public\")'>Public campaign release</button><button class='choice' onclick='deployFindingDirect("+idx+",\"paid\")'>$100k digital contrast</button><button class='choice' onclick='deployFindingDirect("+idx+",\"hold\")'>Hold for later</button>"}return "<div class='item'><b>"+f.title+"</b> <span class='badge'>"+(f.kind==="oppo"?"OPPONENT":"SELF")+"</span><div>"+f.text+"</div>"+buttons+(f.used?"<div class='decision-result'><b>Deployment:</b> "+(f.deployment||"campaign release")+"<br><b>Impact:</b> "+(f.impact?f.impact.desc+" You "+(f.impact.you>=0?"+":"")+f.impact.you.toFixed(2)+" · opponent "+f.impact.opp.toFixed(2)+" · press "+(f.impact.press>=0?"+":"")+f.impact.press:"No impact report available.")+"</div>":"")+"</div>"}).join(""):"<p class='muted'>No commissioned findings yet.</p>";
- document.getElementById("impactList").innerHTML=g.impacts.length?g.impacts.slice().reverse().map(r=>"<div class='item'><b>Week "+r.week+": "+(r.move>=0?"+":"")+r.move.toFixed(2)+" pts modeled movement</b><div>"+r.lines.join("<br>")+"</div><small class='muted'>"+r.trade+"</small></div>").join(""):"<p class='muted'>Complete a week to see cause-and-effect reporting here.</p>";
+ document.getElementById("impactList").innerHTML=((g.worldEvents||[]).slice().reverse().slice(0,12).map(w=>worldAftermathHtml(w)).join(""))+(g.impacts.length?g.impacts.slice().reverse().map(r=>"<div class='item'><b>Week "+r.week+": "+(r.move>=0?"+":"")+r.move.toFixed(2)+" pts modeled movement</b><div>"+r.lines.join("<br>")+"</div><small class='muted'>"+r.trade+"</small></div>").join(""):"<p class='muted'>Complete a week to see cause-and-effect reporting here.</p>");
  renderTotals()
 }
 function meetDonor(){if(!consumeHours("Donor/endorsement meetings",2,"a donor meeting"))return;g.donor=clamp(g.donor+8,0,100);let fm=fundraisingMomentum(),gain=(60000+g.donor*1200)*fm;g.cash+=gain;g.decisionLedger.push({amount:gain,label:"Major donor meeting"});g.energy=clamp(g.energy-2,0,100);alert("2 candidate hours used. Fundraising generated: "+money(gain)+" (momentum multiplier "+fm.toFixed(2)+"×).");render()}
@@ -1200,13 +1297,15 @@ function advance(){
  let biggest=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade).slice(0,2).map(x=>x.name).join(" and ");lines.push("Most responsive voter terrain this week: "+biggest+".");
  let trade="Cash after the week: "+money(g.cash)+". Candidate energy "+Math.round(g.energy)+"%. Stress "+Math.round(g.stress)+"%.";
  g.impacts.push({week:g.week,move:g.you-start,lines:lines,trade:trade});g.polls.push({n:"Campaign tracking estimate",y:g.you+(Math.random()*.8-.4),o:g.opp+(Math.random()*.8-.4),m:3.5});
+ let adWorld=createAdAftermath(media);if(adWorld)lines.push("Paid media aftermath: "+adWorld.headline+". "+adWorld.opponent);
  let completed=g.week;g.messageHistory.push(g.message);
  let oppReport=simulateOpponent(),outside=maybeOutsideGroup();if(outside)g.outsideHistory.push(Object.assign({week:g.week},outside));
  if(Math.random()<.55){let di=dynamicIssues(),chosen=rand(di);g.issueEvents.push({week:g.week,issue:chosen[0],bump:1+Math.floor(Math.random()*4)})}
  recalcBallotFromBlocs();
  g.week++;
+ let delayedNotes=resolveDelayedConsequences();
  if(completed===15)return election();
- g.decisionHours={};g.decisionLedger=[];g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);buildInputs();render();showWeekTransition(completed,start,oppSpend,raised);if(!maybeDebate())maybeWarRoom()
+ g.decisionHours={};g.decisionLedger=[];g.weeklyDecisions=null;generateWeeklyDecisions();inbox();if(delayedNotes.length)delayedNotes.reverse().forEach(n=>g.inbox.unshift(["FOLLOW-UP FROM EARLIER DECISION",n]));g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);buildInputs();render();showWeekTransition(completed,start,oppSpend,raised);if(!maybeDebate())maybeWarRoom()
 }
 function election(){
  let regions=S[g.state].regions.slice(),a=g.you+(Math.random()*2-1),b=g.opp+(Math.random()*2-1),m=a-b,startMargin=S[g.state].you-S[g.state].opp;
@@ -1214,7 +1313,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHostedV18",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV18");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV19",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV19");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
