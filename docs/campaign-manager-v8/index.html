@@ -13,7 +13,7 @@
 .sec{display:none}.sec.on{display:block}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.row{display:flex;justify-content:space-between;gap:10px;align-items:center}.stack{display:grid;gap:9px}
 input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:#0d1425;color:var(--text)}label{display:block;margin:7px 0 4px}.bar{height:7px;background:#0b1120;border-radius:99px;overflow:hidden;margin-top:5px}.bar i{display:block;height:100%;background:var(--accent)}
 .good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.purple{color:var(--purple)}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px}.choice{display:block;width:100%;text-align:left;margin-top:7px;background:#202a43;color:var(--text);border:1px solid var(--line)}
-.badge{display:inline-block;padding:3px 7px;border-radius:999px;background:#24314f;color:#cdd9f4;font-size:12px;margin-right:5px}.modal{position:fixed;inset:0;background:rgba(2,6,15,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.on{display:flex}.modal .card{max-width:680px;width:100%;max-height:88vh;overflow:auto;border-color:#47618f}.region{display:grid;grid-template-columns:1fr auto;gap:8px}.tiny{font-size:12px}.time-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#0d1425;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:10px;position:sticky;top:72px;z-index:7}.time-summary b{display:block;font-size:22px}.stepper{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.stepper-controls{display:grid;grid-template-columns:repeat(4,48px);gap:6px}.stepper-controls button{min-height:42px;padding:7px;font-size:14px}.budget-select{appearance:auto;-webkit-appearance:menulist}
+.badge{display:inline-block;padding:3px 7px;border-radius:999px;background:#24314f;color:#cdd9f4;font-size:12px;margin-right:5px}.modal{position:fixed;inset:0;background:rgba(2,6,15,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.on{display:flex}.modal .card{max-width:680px;width:100%;max-height:88vh;overflow:auto;border-color:#47618f}.region{display:grid;grid-template-columns:1fr auto;gap:8px}.tiny{font-size:12px}.time-summary{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#0d1425;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:10px;position:sticky;top:72px;z-index:7}.time-summary b{display:block;font-size:22px}.schedule-row{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:10px;align-items:center}.schedule-row select{margin:0}.decision-card.resolved{opacity:.78;border-color:#31558f}.decision-result{margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:13px}.budget-select,.schedule-select{appearance:auto;-webkit-appearance:menulist}
 @media(max-width:720px){
   html,body{min-height:100%;overscroll-behavior-y:none}
   body{font-size:16px;padding-bottom:calc(150px + env(safe-area-inset-bottom))}
@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V8</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V9</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
 <label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select>
 <p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V8</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V9</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -81,8 +81,8 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </div>
 
 <div class="tabs" id="tabs"></div>
-<div id="inbox" class="card sec on"><h2>Inbox</h2><div id="inboxList" class="stack"></div></div>
-<div id="time" class="card sec"><h2>Candidate time</h2><div id="timeSummary" class="time-summary"><div><span class="muted">Hours remaining</span><b id="hoursRemaining">60</b></div><div><span class="muted">Allocated</span><b id="timeTotal">0 / 60</b></div></div><p class="muted">Use the step buttons below. The game will not let you allocate more than 60 hours.</p><div id="timeList" class="stack"></div></div>
+<div id="inbox" class="card sec on"><h2>Weekly command decisions</h2><p class="muted">Resolve all three decisions before advancing the week.</p><div id="decisionList" class="stack"></div><h2 style="margin-top:18px">Inbox</h2><div id="inboxList" class="stack"></div></div>
+<div id="time" class="card sec"><h2>Candidate schedule</h2><div class="time-summary"><div><span class="muted">Hours remaining</span><b id="hoursRemaining">60</b></div><div><span class="muted">Scheduled</span><b id="timeTotal">0 / 60</b></div></div><p class="muted">Set broad weekly blocks in 5-hour increments. Meetings and interviews booked elsewhere also draw from this same 60-hour week.</p><div id="timeList" class="stack"></div></div>
 <div id="budget" class="card sec"><h2>Budget</h2><div id="budgetList" class="grid2"></div><p class="row"><span>Planned spend</span><b id="spend">$0</b></p></div>
 
 <div id="strategy" class="card sec">
@@ -107,6 +107,7 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 <div class="card mobile-actionbar"><div class="row"><button onclick="save()">Save</button><button onclick="advance()">Advance week</button></div></div>
 </div>
 
+<div class="modal" id="questionnaireModal"><div class="card"><div id="questionnaireContent"></div></div></div>
 <div class="modal" id="moreModal"><div class="card"><div class="row"><div><span class="badge">CAMPAIGN HQ</span><h2 style="margin-top:8px">More</h2></div><button onclick="closeMore()" style="background:#202a43;color:var(--text)">Close</button></div><div class="more-grid" id="moreGrid"></div></div></div>
 <div class="modal" id="warModal"><div class="card"><div id="warContent"></div></div></div>
 <div class="modal" id="debateModal"><div class="card"><div id="debateContent"></div></div></div>
@@ -153,6 +154,54 @@ const SELF_FINDINGS=[
 {title:"Former staff dispute",risk:2,text:"A former employee may speak critically about management style."},
 {title:"No major new vulnerability",risk:0,text:"The review found no significant undisclosed issue in this round."}
 ];
+const QUESTIONNAIRE=[
+ {issue:"Economy & taxes",q:"What should be the candidate's basic approach to taxes and the economy?",opts:["Targeted tax relief","Broad tax reduction","Maintain current rates","Revenue-neutral reform","Targeted new revenue for services"]},
+ {issue:"Housing",q:"What is the candidate's preferred housing strategy?",opts:["Local incentives and permitting reform","Statewide zoning reform","Major housing subsidy expansion","Public-private construction push","Tenant-protection emphasis"]},
+ {issue:"Public safety",q:"How should the candidate approach public safety?",opts:["Police staffing and prosecution","Prevention plus enforcement","Sentencing reform","Community intervention emphasis","State-local accountability package"]},
+ {issue:"Education",q:"What is the candidate's education priority?",opts:["K-12 funding increase","Accountability and outcomes","School choice expansion","Workforce/CTE emphasis","Higher-ed affordability"]},
+ {issue:"Health care",q:"What is the candidate's health-care approach?",opts:["Cost transparency and competition","Medicaid access protection","Public-option style expansion","Provider workforce expansion","Insurance regulation expansion"]},
+ {issue:"Abortion policy",q:"Which position best reflects the candidate's approach to abortion policy?",opts:["Protect current law","Broader statutory protections","Restrictions with exceptions","Defer to voters/courts","Incremental restrictions"]},
+ {issue:"Climate & energy",q:"What should anchor the candidate's climate and energy platform?",opts:["Clean-energy acceleration","All-of-the-above reliability","Market-based emissions reduction","Pause mandates and review costs","Aggressive electrification"]},
+ {issue:"Transportation",q:"What is the candidate's transportation priority?",opts:["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"]}
+];
+const DECISION_POOL=[
+ {title:"Opponent launches a new attack ad",text:"The opponent is spending heavily to define your candidate before you can answer.",opts:[
+  {label:"Answer immediately with a factual rebuttal",fx:{cash:-250000,you:.18,press:1},result:"You stopped some of the damage, but paid heavily for speed."},
+  {label:"Counterattack on a different vulnerability",fx:{cash:-200000,you:.12,opp:-.18,stress:2},result:"You changed the conversation, though the original attack remains partly unanswered."},
+  {label:"Ignore it and stay on message",fx:{you:-.12,morale:1},result:"You preserved resources but allowed the attack more room to circulate."}]},
+ {title:"Major donor asks for a private meeting",text:"A major supporter is considering a much larger contribution but wants direct candidate access.",opts:[
+  {label:"Take the meeting",hours:["Donor/endorsement meetings",2],fx:{cash:175000,donor:7,energy:-2},result:"The relationship strengthened and produced new money."},
+  {label:"Send the finance director instead",fx:{cash:70000,donor:1},result:"You raised some money without spending candidate time."},
+  {label:"Decline and protect the schedule",fx:{donor:-4,energy:1},result:"The schedule stayed intact, but the donor cooled."}]},
+ {title:"Editorial board interview invitation",text:"A major outlet offers an hour-long endorsement interview on short notice.",opts:[
+  {label:"Candidate attends",hours:["Press",2],fx:{press:6,energy:-2,you:.08},result:"The campaign gained credibility and access, at a cost to candidate time."},
+  {label:"Send policy staff with written answers",fx:{press:1},result:"You participated, but the outlet noticed the candidate's absence."},
+  {label:"Decline",fx:{press:-4},result:"You protected time but damaged the relationship."}]},
+ {title:"Internal poll shows a regional weakness",text:"Your pollster says one persuadable region is slipping while your base remains stable.",opts:[
+  {label:"Shift paid media toward the weak region",fx:{cash:-150000,you:.16},result:"The targeted intervention improved the weak spot."},
+  {label:"Send the candidate for a regional swing",hours:["Public events",4],fx:{you:.13,energy:-3},result:"The candidate visit helped, but it added fatigue."},
+  {label:"Trust the statewide strategy",fx:{you:-.06},result:"You avoided overreacting, but the regional problem lingered."}]},
+ {title:"Union seeks a policy commitment",text:"A major organization offers an endorsement if the candidate gives a clearer answer on one of its priorities.",opts:[
+  {label:"Make the requested commitment",fx:{endorse:1,you:.08,cred:-2},result:"You secured support but narrowed future policy flexibility."},
+  {label:"Meet without making a commitment",hours:["Donor/endorsement meetings",2],fx:{endorse:1,donor:1},result:"Relationship work paid off without a formal policy concession."},
+  {label:"Decline the courtship",fx:{},result:"You kept maximum flexibility but gained no organizational help."}]},
+ {title:"Reporter has an old quote",text:"A reporter found an old statement that does not fit neatly with the current platform.",opts:[
+  {label:"Acknowledge the evolution directly",fx:{press:4,fav:2,you:.10},result:"The answer limited the story and improved trust with reporters."},
+  {label:"Argue the quote is being taken out of context",fx:{press:-2,you:-.05},result:"The pushback energized staff but prolonged the story."},
+  {label:"Decline comment",fx:{press:-4,you:-.12},result:"The story ran without your explanation."}]},
+ {title:"Campaign staff are burning out",text:"Senior staff say the current pace is producing mistakes and internal tension.",opts:[
+  {label:"Give the team a lighter weekend",fx:{morale:8,you:-.03},result:"Morale recovered, though you gave up some activity."},
+  {label:"Push through until the next benchmark",fx:{morale:-6,you:.05},result:"You squeezed out more activity but increased organizational strain."},
+  {label:"Replace an underperforming manager",fx:{cash:-30000,morale:-2},result:"The change may help later, but caused immediate disruption."}]},
+ {title:"Outside group runs an unhelpful ad",text:"An allied independent group launches a message that conflicts with your campaign's strategy.",opts:[
+  {label:"Publicly distance the campaign",fx:{press:3,you:.06},result:"You clarified your message but created some public friction."},
+  {label:"Say nothing",fx:{you:-.04},result:"You avoided a fight but allowed mixed messaging to continue."},
+  {label:"Use the attention to pivot back to your message",fx:{you:.10,energy:-1},result:"The campaign regained message discipline."}]},
+ {title:"Opponent makes a factual mistake",text:"The opponent misstated a key fact during a press availability. Reporters are asking whether you'll capitalize.",opts:[
+  {label:"Hit it hard immediately",fx:{opp:-.16,you:.08,press:1},result:"The mistake became a larger story."},
+  {label:"Correct it calmly and move on",fx:{you:.07,fav:1},result:"You gained a smaller but cleaner advantage."},
+  {label:"Ignore it",fx:{},result:"The moment largely passed without changing the race."}]}
+];
 let g;
 
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1)+"M":"$"+Math.round(n/1000)+"k"}
@@ -173,7 +222,7 @@ function defaults(){
  if(!g.issueCredibility)g.issueCredibility=50;
  if(!g.favorability)g.favorability=42;
  if(!g.negativeSaturation)g.negativeSaturation=0;
- if(!g.version)g.version=8;else g.version=8;
+ if(!g.version)g.version=9;else g.version=9;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
@@ -181,7 +230,7 @@ function start(){
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-2.5)*2.3,20,70),turnout:62+i*3,persuade:18+((i*7)%24)}));
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
- defaults();document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()
+ defaults();g.surveyIndex=0;g.surveyCompleted=false;g.weeklyDecisions=null;document.getElementById("setup").style.display="none";beginQuestionnaire()
 }
 function showSection(id,label){
  document.querySelectorAll(".tabs button").forEach(z=>z.classList.remove("on"));
@@ -206,28 +255,24 @@ function buildTabs(){
 }
 function totalHours(){return Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)}
 function remainingHours(){return Math.max(0,60-totalHours())}
-function adjustHours(cat,delta){
- let current=Number(g.hours[cat]||0);
- if(delta>0){delta=Math.min(delta,remainingHours())}
- let next=Math.max(0,current+delta);
- g.hours[cat]=next;
- buildTimeControls();
- renderTotals();
+function setScheduleHours(cat,value,select){
+ let old=Number(g.hours[cat]||0),next=Number(value);
+ let proposed=totalHours()-old+next;
+ if(proposed>60){alert("That would put the candidate over 60 hours. You have "+remainingHours()+" hours remaining.");select.value=String(old);return}
+ g.hours[cat]=next;renderTotals()
 }
 function consumeHours(cat,amount,label){
  if(remainingHours()<amount){alert("You need "+amount+" unallocated candidate hours for "+label+". You currently have "+remainingHours()+" remaining.");return false}
- g.hours[cat]=Number(g.hours[cat]||0)+amount;
- buildTimeControls();
- renderTotals();
- return true
+ g.hours[cat]=Number(g.hours[cat]||0)+amount;buildTimeControls();renderTotals();return true
 }
 function buildTimeControls(){
  let t=document.getElementById("timeList");if(!t)return;t.innerHTML="";
- T.forEach((x,idx)=>{
-   let val=Number(g.hours[x]||0),d=document.createElement("div");d.className="item stepper";
-   d.innerHTML="<div><b>"+x+"</b><div class='muted'>"+val+" hours allocated</div></div><div class='stepper-controls'><button type='button' data-d='-5'>−5</button><button type='button' data-d='-1'>−1</button><button type='button' data-d='1'>+1</button><button type='button' data-d='5'>+5</button></div>";
-   d.querySelectorAll("button").forEach(btn=>btn.onclick=()=>adjustHours(x,Number(btn.dataset.d)));
-   t.appendChild(d)
+ T.forEach(x=>{
+   let val=Number(g.hours[x]||0),d=document.createElement("div");d.className="item schedule-row";
+   let left=document.createElement("div");left.innerHTML="<b>"+x+"</b><div class='muted'>Weekly schedule block</div>";
+   let sel=document.createElement("select");sel.className="schedule-select";sel.setAttribute("aria-label",x+" hours");
+   for(let v=0;v<=30;v+=5){let o=document.createElement("option");o.value=String(v);o.textContent=v+" hrs";if(v===val)o.selected=true;sel.appendChild(o)}
+   sel.onchange=()=>setScheduleHours(x,sel.value,sel);d.appendChild(left);d.appendChild(sel);t.appendChild(d)
  })
 }
 function buildInputs(){
@@ -235,17 +280,12 @@ function buildInputs(){
  let b=document.getElementById("budgetList");b.innerHTML="";
  B.forEach(x=>{
    let d=document.createElement("div");d.className="item";
-   let step=x==="Broadcast TV"?100000:25000;
-   let max=5000000;
-   let current=Math.max(0,Number(g.budget[x]||0));
+   let step=x==="Broadcast TV"?100000:25000,max=5000000,current=Math.max(0,Number(g.budget[x]||0));
    current=Math.min(max,Math.round(current/step)*step);g.budget[x]=current;
    let sel=document.createElement("select");sel.className="budget-select";sel.setAttribute("aria-label",x+" budget");
-   for(let v=0;v<=max;v+=step){
-     let opt=document.createElement("option");opt.value=String(v);opt.textContent=v===0?"$0":money(v);if(v===current)opt.selected=true;sel.appendChild(opt)
-   }
+   for(let v=0;v<=max;v+=step){let o=document.createElement("option");o.value=String(v);o.textContent=v===0?"$0":money(v);if(v===current)o.selected=true;sel.appendChild(o)}
    sel.onchange=()=>{g.budget[x]=Number(sel.value);renderTotals()};
-   let label=document.createElement("label");label.textContent=x;
-   let note=document.createElement("small");note.className="muted";note.textContent=x==="Broadcast TV"?"$100k increments":"$25k increments";
+   let label=document.createElement("label");label.textContent=x;let note=document.createElement("small");note.className="muted";note.textContent=x==="Broadcast TV"?"$100k increments":"$25k increments";
    d.appendChild(label);d.appendChild(sel);d.appendChild(note);b.appendChild(d)
  });
  let m=document.getElementById("message");m.innerHTML=MESSAGES.map(x=>"<option"+(x===g.message?" selected":"")+">"+x+"</option>").join("");
@@ -263,6 +303,39 @@ function changePolicy(k,v){
 function setMessage(v){g.message=v}
 function setAd(k,v){g.ad[k]=v}
 function renderTotals(){let h=totalHours(),s=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0);let tt=document.getElementById("timeTotal"),hr=document.getElementById("hoursRemaining");if(tt){tt.textContent=h+" / 60";tt.className=h>60?"bad":""}if(hr){hr.textContent=remainingHours();hr.className=remainingHours()<=5?"warn":""}document.getElementById("spend").textContent=money(s);document.getElementById("burn").textContent="Planned "+money(s)}
+function beginQuestionnaire(){document.getElementById("questionnaireModal").classList.add("on");renderQuestionnaire()}
+function renderQuestionnaire(){
+ let item=QUESTIONNAIRE[g.surveyIndex],box=document.getElementById("questionnaireContent");
+ if(!item)return finishQuestionnaire();
+ box.innerHTML="<span class='badge'>CANDIDATE PLATFORM · "+(g.surveyIndex+1)+" OF "+QUESTIONNAIRE.length+"</span><h2 style='margin-top:10px'>"+item.issue+"</h2><p>"+item.q+"</p><p class='muted'>These answers establish the candidate's opening platform. You can later change positions, but the campaign will remember the original answer.</p>"+item.opts.map((o,i)=>"<button class='choice' onclick='answerQuestion("+i+")'>"+o+"</button>").join("")
+}
+function answerQuestion(i){let item=QUESTIONNAIRE[g.surveyIndex];g.policies[item.issue]=item.opts[i];g.surveyIndex++;renderQuestionnaire()}
+function finishQuestionnaire(){
+ g.surveyCompleted=true;document.getElementById("questionnaireModal").classList.remove("on");document.getElementById("game").style.display="block";generateWeeklyDecisions();buildTabs();buildInputs();inbox();render()
+}
+function generateWeeklyDecisions(){
+ if(g.weeklyDecisions&&g.weeklyDecisions.week===g.week)return;
+ let pool=DECISION_POOL.map((x,i)=>i),picked=[];
+ while(picked.length<3&&pool.length){let n=Math.floor(Math.random()*pool.length);picked.push(pool.splice(n,1)[0])}
+ g.weeklyDecisions={week:g.week,items:picked.map(i=>({template:i,resolved:false,choice:null,result:""}))}
+}
+function applyDecisionFx(fx){
+ if(!fx)return;
+ if(fx.cash)g.cash+=fx.cash;if(fx.you)g.you=clamp(g.you+fx.you,20,65);if(fx.opp)g.opp=clamp(g.opp+fx.opp,20,70);
+ if(fx.press)g.press=clamp(g.press+fx.press,0,100);if(fx.energy)g.energy=clamp(g.energy+fx.energy,0,100);if(fx.stress)g.stress=clamp(g.stress+fx.stress,0,100);
+ if(fx.morale)g.morale=clamp(g.morale+fx.morale,0,100);if(fx.donor)g.donor=clamp(g.donor+fx.donor,0,100);if(fx.fav)g.favorability=clamp(g.favorability+fx.fav,0,100);
+ if(fx.cred)g.issueCredibility=clamp(g.issueCredibility+fx.cred,0,100);if(fx.endorse)g.endorse+=fx.endorse
+}
+function resolveWeeklyDecision(di,oi){
+ let d=g.weeklyDecisions.items[di];if(!d||d.resolved)return;let template=DECISION_POOL[d.template],o=template.opts[oi];
+ if(o.hours&&!consumeHours(o.hours[0],o.hours[1],template.title))return;
+ applyDecisionFx(o.fx);d.resolved=true;d.choice=o.label;d.result=o.result;render()
+}
+function decisionsResolved(){return g.weeklyDecisions?g.weeklyDecisions.items.filter(x=>x.resolved).length:0}
+function renderDecisions(){
+ generateWeeklyDecisions();let box=document.getElementById("decisionList");if(!box)return;
+ box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{let t=DECISION_POOL[d.template];return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><b>"+t.title+"</b><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p>"+(d.resolved?"<div class='decision-result'><b>Your decision:</b> "+d.choice+"<br><span class='muted'>"+d.result+"</span></div>":t.opts.map((o,oi)=>"<button class='choice' onclick='resolveWeeklyDecision("+di+","+oi+")'>"+o.label+(o.hours?" · "+o.hours[1]+" hrs":"")+"</button>").join(""))+"</div>"}).join("")
+}
 function inbox(){
  g.inbox=[
  ["Finance Director","We're tracking behind the opponent financially. Candidate call time remains the fastest way to close the gap."],
@@ -277,7 +350,7 @@ function inbox(){
 function render(){
  defaults();let s=S[g.state];document.getElementById("title").textContent=g.name+" Campaign HQ";document.getElementById("scenario").textContent=g.state+" governor · "+s.party+" · "+s.diff+" · "+g.arch;
  document.getElementById("week").textContent="Week "+g.week+" of 15";document.getElementById("poll").textContent=g.you.toFixed(1)+"–"+g.opp.toFixed(1);document.getElementById("cash").textContent=money(g.cash);document.getElementById("energy").textContent=Math.round(g.energy)+"%";document.getElementById("morale").textContent=Math.round(g.morale)+"%";document.getElementById("ebar").style.width=g.energy+"%";document.getElementById("mbar").style.width=g.morale+"%";
- document.getElementById("inboxList").innerHTML=g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
+ renderDecisions();document.getElementById("inboxList").innerHTML=g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
  document.getElementById("pollList").innerHTML=g.polls.slice().reverse().map(p=>"<div class='item'><b>"+p.n+"</b><div>"+p.y.toFixed(1)+"% you · "+p.o.toFixed(1)+"% opponent · ±"+p.m+"%</div></div>").join("");
  document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
  document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+g.staff+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs + $15k</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100</small></div>";
@@ -346,6 +419,7 @@ function resolveDebate(c,prep){
  let mod=Math.min(.22,prep*.009)+(g.energy-50)*.002-(g.stress*.0015),move=c[1]+mod+(Math.random()*.16-.08);g.you+=move;g.favorability=clamp(g.favorability+move*2,0,100);g.energy=clamp(g.energy-7,0,100);g.impacts.push({week:g.week,move:move,lines:["Debate response: "+c[0]+".","Preparation/fatigue modifier contributed "+(mod>=0?"+":"")+mod.toFixed(2)+" points to the modeled debate effect."],trade:"The debate consumed candidate energy and will affect the next week's performance."});document.getElementById("debateModal").classList.remove("on");render()
 }
 function advance(){
+ generateWeeklyDecisions();if(decisionsResolved()<3)return alert("Resolve all three weekly command decisions before advancing.");
  let hrs=Object.values(g.hours).reduce((a,b)=>a+b,0),sp=Object.values(g.budget).reduce((a,b)=>a+b,0);if(hrs>60)return alert("Candidate time exceeds 60 hours. Reduce allocations before advancing.");if(sp>g.cash)return alert("Planned spending exceeds available cash.");
  let start=g.you,media=g.budget["Broadcast TV"]+g.budget["Streaming/CTV"]+g.budget["Digital"]+g.budget["Direct mail"],reach=Math.min(.92,media/700000),mods=creativeMods();
  let pers=(g.budget["Broadcast TV"]*.0000012+g.budget["Streaming/CTV"]*.000001+g.budget["Digital"]*.00000135+g.budget["Direct mail"]*.0000007)*Math.max(.45,1-media/3500000)*mods.pers*messageFit();
@@ -368,7 +442,7 @@ function advance(){
  let completed=g.week;g.week++;
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  if(completed===15)return election();
- inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);render();if(!maybeDebate())maybeWarRoom()
+ g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);render();if(!maybeDebate())maybeWarRoom()
 }
 function election(){
  let regions=S[g.state].regions.slice(),a=g.you+(Math.random()*2-1),b=g.opp+(Math.random()*2-1),m=a-b,startMargin=S[g.state].you-S[g.state].opp;
@@ -376,7 +450,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHosted",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHosted");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV9",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV9");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
