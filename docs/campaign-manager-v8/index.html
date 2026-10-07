@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V12</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V13</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
 <label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select>
 <p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V12</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V13</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -493,6 +493,73 @@ const STRATEGIC_DECISIONS=[
 {label:"Send the spouse/surrogate to the fundraiser",known:"Known: recovers part of the financial opportunity.",risk:"Tradeoff: donors receive less candidate access.",fx:{cash:75000},result:"Surrogates raised a respectable amount.",trade:"You preserved the candidate schedule while capturing some money."}]}
 ];
 const ALL_DECISIONS=DECISION_POOL.concat(STRATEGIC_DECISIONS);
+const DEBATES=[
+ {week:6,name:"First Gubernatorial Debate",questions:[
+  {q:"The cost of living has risen sharply. What would your administration do first?",choices:[
+   {label:"Lead with targeted tax relief and immediate affordability measures",score:.14,note:"Clear pocketbook answer; good fit with high-salience economic concerns."},
+   {label:"Give a detailed long-term economic growth plan",score:.09,note:"Substantive, but less immediate."},
+   {label:"Attack the opponent's economic record",score:.05,note:"Effective contrast, but less responsive to the question."},
+   {label:"Reject the premise and say the economy is stronger than portrayed",score:-.08,note:"Came across as dismissive of voter concerns."}]},
+  {q:"Your opponent says your budget promises do not add up. How do you respond?",choices:[
+   {label:"Walk through the numbers and identify tradeoffs",score:.15,note:"Specific and credible."},
+   {label:"Acknowledge uncertainty but defend the priorities",score:.09,note:"Candid and steady."},
+   {label:"Pivot to the opponent's spending record",score:.04,note:"Useful contrast, but only partially answered the challenge."},
+   {label:"Say the criticism is partisan nonsense",score:-.07,note:"Energetic but weak on substance."}]},
+  {q:"Housing costs are a major concern. Should the state override local zoning rules?",choices:[
+   {label:"Defend the campaign's current housing position directly",score:.13,note:"Consistent with the candidate's established platform."},
+   {label:"Emphasize compromise with local governments",score:.08,note:"Moderate and practical."},
+   {label:"Shift to homelessness and public safety",score:.01,note:"Avoided the core zoning question."},
+   {label:"Give a new position that conflicts with the campaign platform",score:-.12,note:"Created a visible inconsistency."}]},
+  {q:"What is one area where you disagree with your own party?",choices:[
+   {label:"Name a specific policy disagreement and explain it",score:.14,note:"Demonstrated independence and specificity."},
+   {label:"Say you put the state ahead of party without naming an issue",score:.05,note:"Safe but generic."},
+   {label:"Attack the other party instead",score:-.02,note:"Missed the question."},
+   {label:"Say there is no meaningful disagreement",score:-.08,note:"Sounded overly partisan."}]},
+  {q:"Your opponent says you lack the experience to manage state government. Your response?",choices:[
+   {label:"Point to concrete executive or leadership accomplishments",score:.13,note:"Directly answered the qualification attack."},
+   {label:"Argue that outsider status is an advantage",score:.09,note:"Good if consistent with candidate archetype."},
+   {label:"Attack the opponent as a career politician",score:.04,note:"Strong contrast, less proof of readiness."},
+   {label:"Dismiss experience as irrelevant",score:-.09,note:"Raised more questions about readiness."}]},
+  {q:"In one minute, why should undecided voters choose you?",choices:[
+   {label:"Deliver a concise affordability-focused closing argument",score:.16,note:"Clear and aligned with voter priorities."},
+   {label:"Give a broad values-based appeal",score:.10,note:"Positive and accessible."},
+   {label:"Spend most of the time attacking the opponent",score:.02,note:"Memorable but overly negative."},
+   {label:"List several unrelated policy proposals",score:-.04,note:"Too diffuse for a closing answer."}]}
+ ]},
+ {week:12,name:"Final Gubernatorial Debate",questions:[
+  {q:"Voters have heard both campaigns for months. What is the clearest difference between you and your opponent?",choices:[
+   {label:"Name one sharp policy contrast and tie it to everyday consequences",score:.16,note:"Focused and persuasive."},
+   {label:"Frame the race as competence versus chaos",score:.10,note:"Broad but effective."},
+   {label:"List several differences quickly",score:.04,note:"Accurate but unfocused."},
+   {label:"Make it entirely personal",score:-.08,note:"Negative without enough policy substance."}]},
+  {q:"You changed at least one position during this campaign. Why should voters trust you?",choices:[
+   {label:"Acknowledge the change and explain what changed your view",score:.15,note:"Direct and credible."},
+   {label:"Say circumstances changed and cite new facts",score:.11,note:"Substantive explanation."},
+   {label:"Argue the old position was misunderstood",score:.02,note:"Defensive and only partly convincing."},
+   {label:"Attack the moderator for raising it",score:-.12,note:"Turned a vulnerability into a larger story."}]},
+  {q:"What would you cut if state revenue falls below expectations?",choices:[
+   {label:"Identify lower-priority spending and protect core services",score:.14,note:"Showed governing discipline."},
+   {label:"Say every agency would share the burden",score:.07,note:"Fair but vague."},
+   {label:"Promise no cuts and no tax increases",score:-.08,note:"Sounded fiscally unrealistic."},
+   {label:"Refuse to discuss hypothetical cuts",score:-.05,note:"Avoided a governing question."}]},
+  {q:"What is your biggest mistake in this campaign?",choices:[
+   {label:"Name a real but bounded mistake and explain the lesson",score:.14,note:"Human and accountable."},
+   {label:"Say you sometimes tried to do too much",score:.05,note:"Safe but rehearsed."},
+   {label:"Say the campaign made no meaningful mistakes",score:-.09,note:"Lacked credibility."},
+   {label:"Blame staff for a campaign error",score:-.12,note:"Created a leadership problem."}]},
+  {q:"How would you work with a legislature controlled by the other party?",choices:[
+   {label:"Name specific areas for bipartisan negotiation",score:.13,note:"Practical and governing-focused."},
+   {label:"Promise to use vetoes and executive power aggressively",score:.02,note:"Energetic but polarizing."},
+   {label:"Say the legislature will have to follow your mandate",score:-.05,note:"Sounded unrealistic."},
+   {label:"Attack legislative leaders by name",score:-.08,note:"Made cooperation harder to believe."}]},
+  {q:"This is your last major statewide audience. What do you want voters to remember?",choices:[
+   {label:"Deliver the campaign's strongest message-of-the-week as a closing case",score:.16,note:"Disciplined and memorable."},
+   {label:"Give a positive biography and values close",score:.11,note:"Warm and accessible."},
+   {label:"Use the full answer for a final negative attack",score:.01,note:"Could energize supporters but narrowed the appeal."},
+   {label:"Introduce a brand-new policy idea",score:-.05,note:"Created confusion at the worst time."}]}
+ ]}
+];
+
 let g;
 
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1)+"M":"$"+Math.round(n/1000)+"k"}
@@ -510,6 +577,7 @@ function defaults(){
  if(!g.debateHistory)g.debateHistory=[];
  if(!g.leaks)g.leaks=0;
  if(!g.debatePrep)g.debatePrep=0;
+ if(!g.debateResults)g.debateResults=[];
  if(!g.issueCredibility)g.issueCredibility=50;
  if(!g.favorability)g.favorability=42;
  if(!g.negativeSaturation)g.negativeSaturation=0;
@@ -520,7 +588,7 @@ function defaults(){
  if(!g.latestIssuePoll)g.latestIssuePoll=topIssues();
  if(!g.fundraisingTrend)g.fundraisingTrend=[];
  if(!g.oppoDeployments)g.oppoDeployments=[];
- if(!g.version)g.version=12;else g.version=12;
+ if(!g.version)g.version=13;else g.version=13;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
@@ -697,7 +765,7 @@ function render(){
  let iss=document.getElementById("issuePollSummary");if(iss){let ti=g.latestIssuePoll||topIssues();iss.innerHTML=ti.map((x,i)=>"<div class='row'><span>"+(i+1)+". "+x[0]+"</span><b>"+x[1]+"%</b></div>").join("")}
  document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · Top issue: "+(b.topIssue||"Cost of living")+" · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
  document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+g.staff+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100</small></div>";
- document.getElementById("researchList").innerHTML=g.findings.length?g.findings.slice().reverse().map((f,i)=>"<div class='item'><b>"+f.title+"</b> <span class='badge'>"+(f.kind==="oppo"?"OPPONENT":"SELF")+"</span><div>"+f.text+"</div>"+(f.kind==="oppo"&&!f.used?"<button class='choice' onclick='openDeploy("+g.findings.indexOf(f)+")'>Choose deployment</button>":"")+(f.used?"<small class='muted'>Deployed via "+(f.deployment||"campaign release")+". "+(f.impact?f.impact.desc+" Race impact: you "+(f.impact.you>=0?"+":"")+f.impact.you.toFixed(2)+" · opponent "+f.impact.opp.toFixed(2)+".":"")+"</small>":"")+"</div>").join(""):"<p class='muted'>No commissioned findings yet.</p>";
+ document.getElementById("researchList").innerHTML=g.findings.length?g.findings.slice().reverse().map(f=>{let idx=g.findings.indexOf(f),buttons="";if(f.kind==="oppo"&&!f.used){buttons="<div class='tiny muted' style='margin-top:8px'>Choose deployment:</div><button class='choice' onclick='deployFindingDirect("+idx+",\"exclusive\")'>Reporter exclusive</button><button class='choice' onclick='deployFindingDirect("+idx+",\"public\")'>Public campaign release</button><button class='choice' onclick='deployFindingDirect("+idx+",\"paid\")'>$100k digital contrast</button><button class='choice' onclick='deployFindingDirect("+idx+",\"hold\")'>Hold for later</button>"}return "<div class='item'><b>"+f.title+"</b> <span class='badge'>"+(f.kind==="oppo"?"OPPONENT":"SELF")+"</span><div>"+f.text+"</div>"+buttons+(f.used?"<div class='decision-result'><b>Deployment:</b> "+(f.deployment||"campaign release")+"<br><b>Impact:</b> "+(f.impact?f.impact.desc+" You "+(f.impact.you>=0?"+":"")+f.impact.you.toFixed(2)+" · opponent "+f.impact.opp.toFixed(2)+" · press "+(f.impact.press>=0?"+":"")+f.impact.press:"No impact report available.")+"</div>":"")+"</div>"}).join(""):"<p class='muted'>No commissioned findings yet.</p>";
  document.getElementById("impactList").innerHTML=g.impacts.length?g.impacts.slice().reverse().map(r=>"<div class='item'><b>Week "+r.week+": "+(r.move>=0?"+":"")+r.move.toFixed(2)+" pts modeled movement</b><div>"+r.lines.join("<br>")+"</div><small class='muted'>"+r.trade+"</small></div>").join(""):"<p class='muted'>Complete a week to see cause-and-effect reporting here.</p>";
  renderTotals()
 }
@@ -705,21 +773,11 @@ function meetDonor(){if(!consumeHours("Donor/endorsement meetings",2,"a donor me
 function courtEndorsement(){if(!consumeHours("Donor/endorsement meetings",3,"an endorsement meeting"))return;g.endorse++;g.morale=clamp(g.morale+2,0,100);let b=g.blocs[Math.floor(Math.random()*g.blocs.length)];b.support=clamp(b.support+.30,10,85);alert("3 candidate hours used. Endorsement secured; no campaign payment was required. Strongest modeled benefit: "+b.name+" +0.30 pts.");render()}
 function pressAccess(){if(!consumeHours("Press",2,"an extended press interview"))return;g.press=clamp(g.press+7,0,100);g.energy=clamp(g.energy-1,0,100);alert("2 candidate press hours used. Press relationship improved; favorable coverage is not guaranteed.");render()}
 
-function openDeploy(i){
- let f=g.findings[i];if(!f||f.used)return;g.deployingFinding=i;
- let box=document.getElementById("oppoDeployContent");
- box.innerHTML="<span class='badge'>OPPOSITION RESEARCH</span><h2 style='margin-top:10px'>"+f.title+"</h2><p>"+f.text+"</p><p class='muted'>Strength assessment: "+(f.strength===3?"strong/documented":f.strength===2?"usable but limited":"unverified / high risk")+"</p>"+
- "<button class='choice' onclick='deployFinding(\"exclusive\")'><b>Reporter exclusive</b><span class='muted' style='display:block'>Lower cost; press decides framing. Best when evidence is credible.</span></button>"+
- "<button class='choice' onclick='deployFinding(\"public\")'><b>Public campaign release</b><span class='muted' style='display:block'>Campaign owns the attack; clearer attribution and more scrutiny.</span></button>"+
- "<button class='choice' onclick='deployFinding(\"paid\")'><b>$100k digital contrast</b><span class='muted' style='display:block'>Guaranteed distribution but costs cash and magnifies backlash if evidence is weak.</span></button>"+
- "<button class='choice' onclick='deployFinding(\"hold\")'><b>Hold for later</b><span class='muted' style='display:block'>No immediate effect. Preserve optionality.</span></button>";
- document.getElementById("oppoDeployModal").classList.add("on")
-}
-function deployFinding(method){
- let i=g.deployingFinding,f=g.findings[i];if(!f)return;
- if(method==="hold"){document.getElementById("oppoDeployModal").classList.remove("on");return}
- if(method==="paid"){if(g.cash<100000)return alert("Not enough cash.");g.cash-=100000;g.decisionLedger.push({amount:-100000,label:"Paid opposition-research contrast"})}
- let strength=f.strength||0,oppMove=0,youMove=0,pressMove=0,desc="";
+function deployFindingDirect(i,method){
+ let f=g.findings[i];if(!f||f.used)return;
+ if(method==="hold"){alert("Research held. It remains available for later deployment.");return}
+ if(method==="paid"){if(g.cash<100000)return alert("Not enough cash for the $100k digital contrast.");g.cash-=100000;g.decisionLedger.push({amount:-100000,label:"Paid opposition-research contrast"})}
+ let strength=f.strength||0,oppMove=0,youMove=0,pressMove=0,desc="",methodName=method==="exclusive"?"Reporter exclusive":method==="public"?"Public campaign release":"$100k digital contrast";
  if(strength===0){
    youMove=method==="paid"?-.55:-.35;pressMove=-7;desc="The allegation did not verify. Fact-checking and reporter skepticism turned the deployment into a credibility problem."
  }else if(strength===2){
@@ -727,8 +785,11 @@ function deployFinding(method){
  }else{
    oppMove=method==="paid"?-.72:method==="exclusive"?-.60:-.52;youMove=.16;pressMove=method==="exclusive"?3:1;desc="The documented finding broke through and damaged the opponent's standing."
  }
- g.opp=clamp(g.opp+oppMove,20,70);g.you=clamp(g.you+youMove,20,65);g.press=clamp(g.press+pressMove,0,100);f.used=true;f.deployment=method;f.impact={you:youMove,opp:oppMove,press:pressMove,desc:desc};g.oppoDeployments.push({week:g.week,title:f.title,method:method,impact:f.impact});
- document.getElementById("oppoDeployModal").classList.remove("on");render();alert("Deployment: "+method+". "+desc+" Race impact: you "+(youMove>=0?"+":"")+youMove.toFixed(2)+" · opponent "+oppMove.toFixed(2)+".")
+ g.opp=clamp(g.opp+oppMove,20,70);g.you=clamp(g.you+youMove,20,65);g.press=clamp(g.press+pressMove,0,100);
+ f.used=true;f.deployment=methodName;f.impact={you:youMove,opp:oppMove,press:pressMove,desc:desc};g.oppoDeployments.push({week:g.week,title:f.title,method:methodName,impact:f.impact});
+ g.impacts.push({week:g.week,move:youMove,lines:["Opposition research deployed via "+methodName+".",desc,"Opponent movement: "+oppMove.toFixed(2)+" pts. Press relationship: "+(pressMove>=0?"+":"")+pressMove+"."],trade:"Opposition research can damage the opponent, but weak evidence can create direct blowback."});
+ render();
+ alert(methodName+" deployed. "+desc+" Race impact: you "+(youMove>=0?"+":"")+youMove.toFixed(2)+" · opponent "+oppMove.toFixed(2)+".")
 }
 function messageFit(){
  let good={Oregon:["Cost of living","Housing","Jobs & growth"],California:["Cost of living","Housing","Public safety"],Washington:["Cost of living","Housing","Public safety"],Nevada:["Cost of living","Jobs & growth","Housing"],Arizona:["Cost of living","Public safety","Jobs & growth"]};
@@ -761,18 +822,48 @@ function resolveWar(c){
  g.you+=c[1];g.press=clamp(g.press+c[2],0,100);g.energy=clamp(g.energy+c[3],0,100);g.leaks++;g.impacts.push({week:g.week,move:c[1],lines:["War Room: "+c[0]+".","Press relationship change: "+(c[2]>=0?"+":"")+c[2]+". Candidate energy impact: "+(c[3]>=0?"+":"")+c[3]+"."],trade:"Crisis choices can have delayed effects beyond the immediate modeled movement."});document.getElementById("warModal").classList.remove("on");render()
 }
 function maybeDebate(){
- if(![6,12].includes(g.week)||g.debateHistory.includes(g.week))return false;g.debateHistory.push(g.week);
- let q=g.week===6?"Your opponent says your economic plan would create a major budget hole. The moderator gives you 60 seconds.":"The moderator asks why voters should trust a candidate who has changed positions during the campaign.";
- let choices=g.week===6?[
- ["Defend the plan with numbers",.18],["Pivot to affordability",.12],["Attack the opponent's record",.08],["Reject the premise",-.02]
- ]:[
- ["Acknowledge the change directly",.16],["Argue circumstances changed",.10],["Attack the question as a distraction",-.08],["Pivot to the opponent",.02]
- ];
- let prep=(g.hours["Policy/debate prep"]||0)+g.debatePrep,box=document.getElementById("debateContent");box.innerHTML="<span class='badge'>LIVE DEBATE</span><h2>Debate "+(g.week===6?"I":"II")+"</h2><p>"+q+"</p><p class='muted'>Preparation entering debate: "+Math.round(prep)+" hours. Candidate energy: "+Math.round(g.energy)+"%.</p>"+choices.map(c=>"<button class='choice' onclick='resolveDebate("+JSON.stringify(c)+","+prep+")'>"+c[0]+"</button>").join("");document.getElementById("debateModal").classList.add("on");return true
+ let debate=DEBATES.find(d=>d.week===g.week);if(!debate||g.debateHistory.includes(g.week))return false;
+ g.debateHistory.push(g.week);
+ let prep=(g.hours["Policy/debate prep"]||0)+(g.debatePrep||0);
+ g.activeDebate={week:g.week,name:debate.name,index:0,total:0,answers:[],startYou:g.you,startOpp:g.opp,startFav:g.favorability,startEnergy:g.energy,prep:prep};
+ renderDebateQuestion();document.getElementById("debateModal").classList.add("on");return true
 }
-function resolveDebate(c,prep){
- let mod=Math.min(.22,prep*.009)+(g.energy-50)*.002-(g.stress*.0015),move=c[1]+mod+(Math.random()*.16-.08);g.you+=move;g.favorability=clamp(g.favorability+move*2,0,100);g.energy=clamp(g.energy-7,0,100);g.impacts.push({week:g.week,move:move,lines:["Debate response: "+c[0]+".","Preparation/fatigue modifier contributed "+(mod>=0?"+":"")+mod.toFixed(2)+" points to the modeled debate effect."],trade:"The debate consumed candidate energy and will affect the next week's performance."});document.getElementById("debateModal").classList.remove("on");render()
+function renderDebateQuestion(){
+ let a=g.activeDebate;if(!a)return;let debate=DEBATES.find(d=>d.week===a.week),q=debate.questions[a.index],box=document.getElementById("debateContent");
+ if(!q)return finishDebate();
+ box.innerHTML="<span class='badge'>LIVE DEBATE · QUESTION "+(a.index+1)+" OF "+debate.questions.length+"</span><h2 style='margin-top:10px'>"+a.name+"</h2><p>"+q.q+"</p><div class='item'><span class='muted'>Prep entering debate</span><b style='display:block'>"+Math.round(a.prep)+" hrs</b><span class='muted'>Candidate energy "+Math.round(g.energy)+"%</span></div>"+q.choices.map((c,i)=>"<button class='choice' onclick='answerDebate("+i+")'>"+c.label+"</button>").join("")
 }
+function answerDebate(choiceIndex){
+ let a=g.activeDebate,debate=DEBATES.find(d=>d.week===a.week),q=debate.questions[a.index],c=q.choices[choiceIndex];
+ let prepMod=Math.min(.035,a.prep*.0015),energyMod=(g.energy-60)*.0007,stressMod=-(g.stress||0)*.00035;
+ let answerScore=c.score+prepMod+energyMod+stressMod+(Math.random()*.05-.025);
+ a.total+=answerScore;a.answers.push({question:q.q,answer:c.label,score:answerScore,note:c.note});
+ g.energy=clamp(g.energy-1.2,0,100);a.index++;renderDebateQuestion()
+}
+function finishDebate(){
+ let a=g.activeDebate;if(!a)return;
+ let avg=a.total/a.answers.length;
+ let movement=clamp(avg*4.2,-1.25,1.25);
+ let oppEffect=-movement*.28;
+ let favEffect=clamp(avg*6,-3,4);
+ g.you=clamp(g.you+movement,20,65);g.opp=clamp(g.opp+oppEffect,20,70);g.favorability=clamp(g.favorability+favEffect,0,100);g.energy=clamp(g.energy-3,0,100);
+ let strongest=a.answers.slice().sort((x,y)=>y.score-x.score)[0],weakest=a.answers.slice().sort((x,y)=>x.score-y.score)[0];
+ let result={week:a.week,name:a.name,movement:movement,opp:oppEffect,fav:favEffect,answers:a.answers,strongest:strongest,weakest:weakest};
+ if(!g.debateResults)g.debateResults=[];g.debateResults.push(result);
+ g.impacts.push({week:g.week,move:movement,lines:[a.name+": "+(movement>=0?"+":"")+movement.toFixed(2)+" pts modeled movement.","Opponent effect: "+oppEffect.toFixed(2)+" pts. Favorability: "+(favEffect>=0?"+":"")+favEffect.toFixed(1)+".","Strongest answer: "+strongest.answer+".","Weakest answer: "+weakest.answer+"."],trade:"Debate preparation and candidate condition affected each answer; the debate also consumed candidate energy."});
+ let box=document.getElementById("debateContent");
+ box.innerHTML="<span class='badge'>DEBATE COMPLETE</span><h2 style='margin-top:10px'>"+a.name+" results</h2>"+
+ "<div class='grid2'><div class='item'><span class='muted'>Your polling movement</span><b style='display:block;font-size:24px' class='"+(movement>=0?"good":"bad")+"'>"+(movement>=0?"+":"")+movement.toFixed(2)+" pts</b></div>"+
+ "<div class='item'><span class='muted'>Opponent movement</span><b style='display:block;font-size:24px'>"+oppEffect.toFixed(2)+" pts</b></div>"+
+ "<div class='item'><span class='muted'>Favorability</span><b style='display:block'>"+(favEffect>=0?"+":"")+favEffect.toFixed(1)+"</b></div>"+
+ "<div class='item'><span class='muted'>Energy remaining</span><b style='display:block'>"+Math.round(g.energy)+"%</b></div></div>"+
+ "<div class='item' style='margin-top:10px'><b>Strongest answer</b><div>"+strongest.answer+"</div><small class='muted'>"+strongest.note+"</small></div>"+
+ "<div class='item' style='margin-top:8px'><b>Weakest answer</b><div>"+weakest.answer+"</div><small class='muted'>"+weakest.note+"</small></div>"+
+ "<h3 style='margin-top:14px'>Question-by-question</h3>"+a.answers.map((x,i)=>"<div class='item' style='margin-top:7px'><b>"+(i+1)+". "+x.question+"</b><div>"+x.answer+"</div><small class='muted'>"+x.note+" · score "+(x.score>=0?"+":"")+x.score.toFixed(2)+"</small></div>").join("")+
+ "<button class='choice' onclick='closeDebateResults()'>Return to campaign</button>";
+ render()
+}
+function closeDebateResults(){document.getElementById("debateModal").classList.remove("on");g.activeDebate=null;render()}
 function showWeekTransition(completed,startYou,oppSpend,raised){
  let latest=g.impacts[g.impacts.length-1],box=document.getElementById("weekTransitionContent"),next=g.week;
  let delta=g.you-startYou,baseSpend=Object.values(g.budget).reduce((a,b)=>a+Number(b||0),0);
@@ -822,7 +913,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHostedV12",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV12");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV13",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV13");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
