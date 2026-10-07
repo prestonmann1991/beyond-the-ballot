@@ -35,7 +35,8 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
   .choice{line-height:1.25}
   input,select{font-size:16px;min-height:48px;padding:11px 12px;border-radius:11px}
   input[type="number"]{font-variant-numeric:tabular-nums}
-  input[type="range"]{min-height:44px;padding:0}
+  input[type="range"]{min-height:48px;padding:0;touch-action:pan-y;width:100%;accent-color:var(--accent)}
+  input[type="range"]::-webkit-slider-thumb{width:28px;height:28px}
   label{font-size:14px;margin-top:10px}
   .row{align-items:center}
   .tabs{
@@ -205,9 +206,32 @@ function buildTabs(){
 }
 function buildInputs(){
  let t=document.getElementById("timeList");t.innerHTML="";
- T.forEach(x=>{let d=document.createElement("div");d.className="item";d.innerHTML="<div class='row'><span>"+x+"</span><b id='h-"+x+"'>"+(g.hours[x]||0)+"</b></div><input type='range' min='0' max='30' value='"+(g.hours[x]||0)+"'>";d.querySelector("input").oninput=e=>{g.hours[x]=+e.target.value;document.getElementById("h-"+x).textContent=e.target.value;renderTotals()};t.appendChild(d)});
+ T.forEach((x,idx)=>{
+   let val=Number(g.hours[x]||0),d=document.createElement("div");d.className="item";
+   d.innerHTML="<div class='row'><span>"+x+"</span><b id='hourValue"+idx+"'>"+val+" hrs</b></div><input class='time-slider' type='range' min='0' max='30' step='1' value='"+val+"' aria-label='"+x+" hours'>";
+   let slider=d.querySelector("input"),out=d.querySelector("b");
+   const apply=()=>{let v=Number(slider.value);g.hours[x]=v;out.textContent=v+" hrs";renderTotals()};
+   slider.addEventListener("input",apply,{passive:true});
+   slider.addEventListener("change",apply);
+   t.appendChild(d)
+ });
  let b=document.getElementById("budgetList");b.innerHTML="";
- B.forEach(x=>{let d=document.createElement("div");d.className="item";d.innerHTML="<label>"+x+"</label><input type='number' min='0' step='25000' value='"+(g.budget[x]||0)+"'>";d.querySelector("input").oninput=e=>{g.budget[x]=Math.max(0,+e.target.value||0);renderTotals()};b.appendChild(d)});
+ B.forEach(x=>{
+   let d=document.createElement("div");d.className="item";
+   let step=x==="Broadcast TV"?100000:25000;
+   let max=5000000;
+   let current=Math.max(0,Number(g.budget[x]||0));
+   let options="";
+   for(let v=0;v<=max;v+=step){options+="<option value='"+v+"'"+(v===current?" selected":"")+">"+(v===0?"$0":money(v))+"</option>"}
+   if(current>max||current%step!==0){
+     let rounded=Math.round(current/step)*step;current=Math.min(max,Math.max(0,rounded));g.budget[x]=current
+   }
+   d.innerHTML="<label>"+x+"</label><select class='budget-select' aria-label='"+x+" budget'>"+options+"</select><small class='muted'>"+(x==="Broadcast TV"?"$100k increments":"$25k increments")+"</small>";
+   let sel=d.querySelector("select");
+   sel.value=String(current);
+   sel.addEventListener("change",()=>{g.budget[x]=Number(sel.value);renderTotals()});
+   b.appendChild(d)
+ });
  let m=document.getElementById("message");m.innerHTML=MESSAGES.map(x=>"<option"+(x===g.message?" selected":"")+">"+x+"</option>").join("");
  let ao=document.getElementById("adObjective");ao.innerHTML=ADOBJ.map(x=>"<option"+(x===g.ad.objective?" selected":"")+">"+x+"</option>").join("");
  let at=document.getElementById("adTone");at.innerHTML=ADTONE.map(x=>"<option"+(x===g.ad.tone?" selected":"")+">"+x+"</option>").join("");
