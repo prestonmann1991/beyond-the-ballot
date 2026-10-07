@@ -14,7 +14,53 @@
 input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--line);background:#0d1425;color:var(--text)}label{display:block;margin:7px 0 4px}.bar{height:7px;background:#0b1120;border-radius:99px;overflow:hidden;margin-top:5px}.bar i{display:block;height:100%;background:var(--accent)}
 .good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.purple{color:var(--purple)}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px}.choice{display:block;width:100%;text-align:left;margin-top:7px;background:#202a43;color:var(--text);border:1px solid var(--line)}
 .badge{display:inline-block;padding:3px 7px;border-radius:999px;background:#24314f;color:#cdd9f4;font-size:12px;margin-right:5px}.modal{position:fixed;inset:0;background:rgba(2,6,15,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modal.on{display:flex}.modal .card{max-width:680px;width:100%;max-height:88vh;overflow:auto;border-color:#47618f}.region{display:grid;grid-template-columns:1fr auto;gap:8px}.tiny{font-size:12px}
-@media(max-width:720px){.metrics{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.top{align-items:flex-start}.app{padding:10px}}
+@media(max-width:720px){
+  html,body{min-height:100%;overscroll-behavior-y:none}
+  body{font-size:16px;padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+  .app{padding:10px 10px 0;max-width:none}
+  #game>.top{position:sticky;top:0;z-index:8;background:rgba(8,16,28,.96);backdrop-filter:blur(14px);margin:-10px -10px 10px;padding:12px 12px 10px;border-bottom:1px solid var(--line)}
+  #game>.top h1{font-size:20px;line-height:1.15;margin-bottom:4px;max-width:230px}
+  #scenario{font-size:12px;line-height:1.25;max-width:240px}
+  .pill{padding:6px 9px;font-size:12px;white-space:nowrap}
+  .metrics{grid-template-columns:1fr 1fr;gap:7px;margin-bottom:8px}
+  .metric{padding:10px;border-radius:14px;min-height:78px}
+  .metric b{font-size:20px;line-height:1.2;margin-top:2px}
+  .metric small,.tiny{font-size:12px}
+  .grid2{grid-template-columns:1fr;gap:9px}
+  .card{padding:13px;border-radius:16px;margin-bottom:10px}
+  .card>h2{font-size:21px}
+  .item{padding:13px;border-radius:14px}
+  .item h3{font-size:17px}
+  button,.choice{min-height:48px;font-size:16px;border-radius:12px;padding:12px 14px;touch-action:manipulation}
+  .choice{line-height:1.25}
+  input,select{font-size:16px;min-height:48px;padding:11px 12px;border-radius:11px}
+  input[type="number"]{font-variant-numeric:tabular-nums}
+  input[type="range"]{min-height:44px;padding:0}
+  label{font-size:14px;margin-top:10px}
+  .row{align-items:center}
+  .tabs{
+    position:fixed;left:0;right:0;bottom:0;z-index:15;
+    margin:0;padding:7px 7px calc(7px + env(safe-area-inset-bottom));
+    background:rgba(8,16,28,.98);backdrop-filter:blur(18px);
+    border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:5px;overflow:visible
+  }
+  .tabs button{min-width:0;min-height:52px;padding:7px 3px;font-size:11px;white-space:normal;line-height:1.05;border-radius:11px}
+  .tabs button.on{background:#31558f}
+  .mobile-actionbar{
+    position:fixed;left:8px;right:8px;bottom:calc(65px + env(safe-area-inset-bottom));z-index:14;
+    background:rgba(17,24,43,.97);backdrop-filter:blur(16px);padding:8px;border:1px solid var(--line);
+    border-radius:15px;box-shadow:0 8px 30px rgba(0,0,0,.35);margin:0
+  }
+  .mobile-actionbar .row{gap:8px}.mobile-actionbar button{flex:1}
+  .modal{align-items:flex-end;padding:0;z-index:30}
+  .modal .card{width:100%;max-width:none;max-height:85vh;margin:0;border-radius:22px 22px 0 0;padding:18px 14px calc(18px + env(safe-area-inset-bottom));border-left:0;border-right:0;border-bottom:0}
+  #moreModal .card{max-height:70vh}
+  .more-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .more-grid button{background:#202a43;color:var(--text);border:1px solid var(--line);text-align:left}
+  .sec{margin-bottom:4px}
+  #policyList .item small{display:block;margin-top:6px}
+  .region{grid-template-columns:minmax(0,1fr) auto}
+}
 </style>
 </head>
 <body>
@@ -57,9 +103,10 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 
 <div id="people" class="card sec"><h2>People & politics</h2><div id="peopleList" class="stack"></div></div>
 <div id="impact" class="card sec"><h2>Weekly impact</h2><div id="impactList" class="stack"></div></div>
-<div class="card"><div class="row"><button onclick="save()">Save</button><button onclick="advance()">Advance week</button></div></div>
+<div class="card mobile-actionbar"><div class="row"><button onclick="save()">Save</button><button onclick="advance()">Advance week</button></div></div>
 </div>
 
+<div class="modal" id="moreModal"><div class="card"><div class="row"><div><span class="badge">CAMPAIGN HQ</span><h2 style="margin-top:8px">More</h2></div><button onclick="closeMore()" style="background:#202a43;color:var(--text)">Close</button></div><div class="more-grid" id="moreGrid"></div></div></div>
 <div class="modal" id="warModal"><div class="card"><div id="warContent"></div></div></div>
 <div class="modal" id="debateModal"><div class="card"><div id="debateContent"></div></div></div>
 
@@ -135,9 +182,26 @@ function start(){
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
  defaults();document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()
 }
+function showSection(id,label){
+ document.querySelectorAll(".tabs button").forEach(z=>z.classList.remove("on"));
+ document.querySelectorAll(".sec").forEach(z=>z.classList.remove("on"));
+ let sec=document.getElementById(id);if(sec)sec.classList.add("on");
+ let btn=[...document.querySelectorAll(".tabs button")].find(b=>b.dataset.section===id);if(btn)btn.classList.add("on");
+ if(label&&window.innerWidth<=720){window.scrollTo({top:0,behavior:"smooth"})}
+}
+function closeMore(){document.getElementById("moreModal").classList.remove("on")}
+function openMore(){
+ let more=[["polling","Polling"],["voters","Voters"],["research","Research"],["people","People"],["impact","Impact"]];
+ let grid=document.getElementById("moreGrid");grid.innerHTML="";
+ more.forEach(x=>{let b=document.createElement("button");b.textContent=x[1];b.onclick=()=>{closeMore();showSection(x[0],x[1])};grid.appendChild(b)});
+ document.getElementById("moreModal").classList.add("on");
+}
 function buildTabs(){
- let names=[["inbox","Inbox"],["time","Time"],["budget","Budget"],["strategy","Strategy"],["polling","Polling"],["voters","Voters"],["research","Research"],["people","People"],["impact","Impact"]],box=document.getElementById("tabs");box.innerHTML="";
- names.forEach((x,i)=>{let b=document.createElement("button");b.textContent=x[1];if(!i)b.className="on";b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(z=>z.classList.remove("on"));b.classList.add("on");document.querySelectorAll(".sec").forEach(z=>z.classList.remove("on"));document.getElementById(x[0]).classList.add("on")};box.appendChild(b)})
+ let box=document.getElementById("tabs");box.innerHTML="";
+ let mobile=window.innerWidth<=720;
+ let names=mobile?[["inbox","Inbox"],["time","Time"],["budget","Budget"],["strategy","Strategy"]]:[["inbox","Inbox"],["time","Time"],["budget","Budget"],["strategy","Strategy"],["polling","Polling"],["voters","Voters"],["research","Research"],["people","People"],["impact","Impact"]];
+ names.forEach((x,i)=>{let b=document.createElement("button");b.textContent=x[1];b.dataset.section=x[0];if(!i)b.className="on";b.onclick=()=>showSection(x[0],x[1]);box.appendChild(b)});
+ if(mobile){let b=document.createElement("button");b.textContent="More";b.onclick=openMore;box.appendChild(b)}
 }
 function buildInputs(){
  let t=document.getElementById("timeList");t.innerHTML="";
