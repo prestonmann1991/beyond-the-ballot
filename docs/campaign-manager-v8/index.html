@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V16</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V17</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
 <div class="grid2"><div><label>Party</label><select id="party"><option>Republican</option><option>Democrat</option><option>Independent</option></select></div><div><label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select></div></div>
 <label style="display:none">Archetype</label><p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V16</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V17</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -687,7 +687,7 @@ function recalcBallotFromBlocs(){
 }
 function simulateOpponent(){
  let o=g.opponent;if(!o)return;
- let choices=["increase broadcast advertising","attack the candidate's record","hold a major fundraiser","release a positive biography ad","court a major endorsement","shift message to "+rand(dynamicIssues())[0],"expand field operations"];
+ let choices=["increase broadcast advertising","launch a new contrast ad against "+g.name,"hold a major fundraiser","release a positive biography ad","court a major endorsement","shift message to "+rand(dynamicIssues())[0],"expand field operations"];
  let action=rand(choices);o.recentAction=action;
  let spend=90000+Math.random()*260000;if(/advertising|attack|biography/.test(action)){o.cash=Math.max(0,o.cash-spend);g.blocs.forEach((b,i)=>{let hit=.03+Math.random()*.07;b.support=clamp(b.support-hit,10,85)})}
  if(/fundraiser/.test(action))o.cash+=120000+Math.random()*180000;
@@ -704,6 +704,79 @@ function maybeOutsideGroup(){
 }
 function memoryFlag(issue){
  let prior=(g.positionHistory||[]).filter(x=>x.issue===issue);return prior.length>1
+}
+const REPORTERS=[
+ {name:"Lena Ortiz",outlet:"StateView Politics",beat:"state politics"},
+ {name:"Ben Carlisle",outlet:"Capitol Ledger",beat:"campaigns and government"},
+ {name:"Maya Brooks",outlet:"Channel 8 Politics",beat:"television politics"},
+ {name:"Eli Warren",outlet:"Morning Dispatch",beat:"investigations"},
+ {name:"Nora Kim",outlet:"State Political Report",beat:"money and elections"}
+];
+function currentMessageArc(){
+ let hist=(g.messageHistory||[]).slice(),cur=g.message||"Cost of living";hist.push(cur);
+ let streak=1;for(let i=hist.length-2;i>=0;i--){if(hist[i]===cur)streak++;else break}
+ let prev=hist.length>1?hist[hist.length-2]:cur;
+ return {message:cur,streak:streak,changed:prev!==cur,previous:prev}
+}
+function messageArcEffect(){
+ let a=currentMessageArc(),bonus=0,note="";
+ if(a.streak>=4){bonus=.10;note="The campaign has built a recognizable "+a.message+" narrative over "+a.streak+" consecutive weeks."}
+ else if(a.streak===3){bonus=.07;note="The "+a.message+" message is becoming a durable campaign identity."}
+ else if(a.streak===2){bonus=.035;note="Repeating "+a.message+" is beginning to build message memory."}
+ else if(a.changed){bonus=-.035;note="The campaign changed its central message from "+a.previous+" to "+a.message+", creating some narrative whiplash."}
+ else note="The campaign is still establishing a clear message arc.";
+ return {effect:bonus,note:note,arc:a}
+}
+function mostChangedPolicy(){
+ let arr=(g.positionHistory||[]);return arr.length?arr[arr.length-1]:null
+}
+function buildOpponentAttack(){
+ if(g.week<=1)return null;
+ let o=g.opponent||{name:"Opponent"},angles=[];
+ if((g.selfFundedTotal||0)>=1000000)angles.push({type:"self-funding",issue:"money",headline:o.name+" says "+g.name+" is trying to buy the governor's office",claim:"The opponent launches a statewide ad showing your self-funding total — "+money(g.selfFundedTotal)+" — and argues that you are insulated from ordinary voters.",target:"working-class and independent voters"});
+ let pc=mostChangedPolicy();if(pc)angles.push({type:"flip",issue:pc.issue,headline:o.name+" accuses "+g.name+" of changing positions on "+pc.issue.toLowerCase(),claim:"The opponent contrasts your current "+pc.issue+" position with an earlier campaign answer and calls the change politically convenient.",target:"independents and voters who prioritize authenticity"});
+ let arc=currentMessageArc();if(arc.streak>=3)angles.push({type:"message",issue:arc.message,headline:o.name+" attacks centerpiece of "+g.name+"'s "+arc.message+" campaign",claim:"The opponent is trying to break your strongest narrative by arguing that your "+arc.message.toLowerCase()+" message is more slogan than plan.",target:"persuadable voters already hearing your core message"});
+ if(g.debateResults&&g.debateResults.length){let d=g.debateResults[g.debateResults.length-1];if(d.movement<0)angles.push({type:"debate",issue:"debate",headline:o.name+" campaign turns debate stumble into new attack ad",claim:"The opponent cuts your weakest debate answer into a 30-second spot and says it reveals a candidate unprepared to govern.",target:"late-deciding and low-information voters"})}
+ if(g.arch==="Ideological Firebrand")angles.push({type:"ideology",issue:"ideology",headline:o.name+" tries to define "+g.name+" as outside the state's mainstream",claim:"The opponent packages several of your most ideological platform positions into a single ad meant to make the election a referendum on temperament and ideology.",target:"suburban moderates and independents"});
+ if(!angles.length)angles.push({type:"generic",issue:topIssues()[0][0],headline:o.name+" opens new contrast on "+topIssues()[0][0].toLowerCase(),claim:"The opponent launches a new ad arguing that your plan on "+topIssues()[0][0].toLowerCase()+" would make the problem worse.",target:"undecided voters"});
+ let attack=rand(angles);attack.reporter=rand(REPORTERS);attack.week=g.week;attack.intensity=.7+Math.random()*.6;return attack
+}
+function attackOptions(attack){
+ let issue=attack.issue;
+ return [
+  {label:"Answer it directly with facts",known:"You contest the claim and put the candidate on record.",risk:"If the attack contains a real vulnerability, direct engagement can extend the story.",result:"The campaign issued a detailed rebuttal and booked the candidate for an interview.",trade:"You fought on the opponent's chosen terrain but reduced the chance the attack went unanswered.",mode:"rebut"},
+  {label:"Counterattack the opponent",known:"You try to turn the news cycle into a contrast on the opponent's record.",risk:"Can look evasive if voters still want an answer to the original charge.",result:"The campaign answered briefly, then launched a counterattack.",trade:"You tried to seize initiative but accepted more negativity.",mode:"counter"},
+  {label:"Use a trusted surrogate to respond",known:"Keeps the candidate above the fight and preserves candidate time.",risk:"A surrogate may not extinguish a damaging charge.",result:"A validator responded while the candidate stayed on message.",trade:"You preserved candidate stature but gave up some control over the rebuttal.",mode:"surrogate"},
+  {label:"Ignore it and stay on the campaign's message",known:"Protects the existing message arc.",risk:"If the attack is resonating, silence can let the opponent define you.",result:"The campaign declined to chase the attack and continued its planned message.",trade:"You protected narrative discipline while betting the attack would fade.",mode:"ignore"}
+ ]
+}
+function resolveAttack(di,oi){
+ let d=g.weeklyDecisions.items[di],a=d.attack,o=attackOptions(a)[oi];if(!d||d.resolved)return;
+ let base=.05*a.intensity,change=0,press=0,fav=0,arc=currentMessageArc();
+ if(o.mode==="rebut"){change= a.type==="flip"||a.type==="self-funding"?-.02:base*.35;press=2}
+ if(o.mode==="counter"){change=base*.25;g.opp=clamp(g.opp-.08*a.intensity,20,70);g.negativeSaturation+=1;fav=-.3}
+ if(o.mode==="surrogate"){change=base*.12;press=1}
+ if(o.mode==="ignore"){change=arc.streak>=3?base*.30:-base*.45}
+ g.you=clamp(g.you+change,20,65);g.press=clamp(g.press+press,0,100);g.favorability=clamp(g.favorability+fav,0,100);
+ g.blocs.forEach(b=>{let t=blocTraits(b.name),s=0;if(a.type==="self-funding")s+=(t.working+t.ind)*-.018*a.intensity;if(a.type==="ideology")s+=(t.sub+t.ind)*-.018*a.intensity;if(o.mode==="rebut")s*=.35;if(o.mode==="ignore"&&arc.streak>=3)s*=.6;b.support=clamp(b.support+s,10,85)});
+ d.resolved=true;d.choice=o.label;d.result=o.result;d.trade=o.trade;d.attackImpact=(change>=0?"+":"")+change.toFixed(2)+" pts to your modeled support";
+ g.attackHistory.push({week:g.week,attack:a,response:o.label,impact:change});render()
+}
+function buildPollsterMemo(){
+ if(!g||!g.blocs)return null;
+ let pollster=(g.staffTeam||[]).find(s=>s.role==="Pollster")||{name:"Daniel Ruiz",accuracy:.75};
+ let sorted=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade),target=sorted[0],weak=g.blocs.slice().sort((a,b)=>a.support-b.support)[0],top=topIssues()[0],arc=currentMessageArc();
+ let recMessage=top[0]==="Cost of living"?"Cost of living":top[0]==="Public safety"?"Public safety":top[0]==="Housing"?"Housing":g.message;
+ let wrong=Math.random()>(pollster.accuracy||.75);if(wrong&&sorted[1])target=sorted[1];
+ let trend=(g.impacts||[]).slice(-2).reduce((s,x)=>s+(x.move||0),0);
+ let tone=trend>.25?"We are moving in the right direction, but I would not overread it.":trend<-.25?"We have a real problem developing. This is not just noise.":"The race is basically holding. The important story is underneath the topline.";
+ let recommendation="My recommendation: center "+recMessage.toLowerCase()+" this week and spend candidate time with "+target.name+".";
+ if(arc.streak>=3&&recMessage!==g.message)recommendation="My recommendation: do not abandon the "+g.message.toLowerCase()+" arc yet. Use "+top[0].toLowerCase()+" as proof of that larger argument and focus on "+target.name+".";
+ return {name:pollster.name,tone:tone,target:target.name,weak:weak.name,topIssue:top[0],recommendation:recommendation,wrong:wrong}
+}
+function pollsterMemoHtml(){
+ let m=g.pollsterMemo||buildPollsterMemo();if(!m)return "";
+ return "<div class='item' style='border-left:4px solid #8ba3ff'><div class='row'><div><span class='badge'>POLLSTER MEMO</span><b style='display:block;margin-top:6px'>"+m.name+"</b></div><span class='muted tiny'>Week "+g.week+"</span></div><p>“"+m.tone+"”</p><p><b>Where I am watching:</b> "+m.target+".<br><b>Problem area:</b> "+m.weak+".<br><b>Issue driving the environment:</b> "+m.topIssue+".</p><p><b>"+m.recommendation+"</b></p><small class='muted'>This is advice, not a guaranteed outcome. Staff can misread the electorate.</small></div>"
 }
 let g;
 
@@ -745,14 +818,17 @@ function defaults(){
  if(g.selfFundedTotal===undefined)g.selfFundedTotal=0;
  if(g.selfFundingPenaltyTier===undefined)g.selfFundingPenaltyTier=0;
  if(!g.weeklyNews)g.weeklyNews=[];
- if(!g.version)g.version=16;else g.version=16;
+ if(!g.messageHistory)g.messageHistory=[];
+ if(!g.attackHistory)g.attackHistory=[];
+ if(!g.pollsterMemo)g.pollsterMemo=buildPollsterMemo();
+ if(!g.version)g.version=17;else g.version=17;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
  let party=document.getElementById("party").value;
  let partyShift=party==="Republican"?0:party==="Democrat"?2.2: -1.0;
  g={state:st,party:party,name:document.getElementById("name").value||"Alex Mercer",arch:document.getElementById("arch").value,week:1,you:clamp(s.you+partyShift,20,65),opp:clamp(s.opp-partyShift*.45,20,70),und:100-s.you-s.opp,cash:s.cash,energy:72,morale:74,stress:30,research:0,hours:{},budget:{},polls:[],impacts:[],staff:"Full senior team",donor:50,press:50,endorse:0,issueEvents:[]};
- g.environment=randomEnvironment();g.staffTeam=buildStaff();g.opponent=initOpponent();g.outsideHistory=[];g.personalReserve=g.arch==="Wealthy Outsider"?(8000000+Math.round(Math.random()*8000000/500000)*500000):0;g.selfFundedTotal=0;g.selfFundingPenaltyTier=0;
+ g.environment=randomEnvironment();g.staffTeam=buildStaff();g.opponent=initOpponent();g.outsideHistory=[];g.messageHistory=[];g.attackHistory=[];g.pollsterMemo=null;g.personalReserve=g.arch==="Wealthy Outsider"?(8000000+Math.round(Math.random()*8000000/500000)*500000):0;g.selfFundedTotal=0;g.selfFundingPenaltyTier=0;
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
  g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-(BLOCS[st].length-1)/2)*.85,20,70),turnout:56+((i*5)%30),persuade:14+((i*7)%30),topIssue:(STATE_ISSUES[st]&&Object.keys(STATE_ISSUES[st])[i%Object.keys(STATE_ISSUES[st]).length])||"Cost of living"}));
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
@@ -865,15 +941,14 @@ function finishQuestionnaire(){
 function generateWeeklyDecisions(){
  if(g.weeklyDecisions&&g.weeklyDecisions.week===g.week)return;
  let posIndex=(g.week-1)%POSITION_DECISIONS.length;
- let normalRecent=(g.decisionHistory||[]).slice(-22),pool=ALL_DECISIONS.map((x,i)=>i).filter(i=>!normalRecent.includes(i)),picked=[];
- if(pool.length<2)pool=ALL_DECISIONS.map((x,i)=>i);
- while(picked.length<2&&pool.length){let n=Math.floor(Math.random()*pool.length);picked.push(pool.splice(n,1)[0])}
- let staffPick=picked.findIndex(i=>/POLLSTER|COMMS|FINANCE|FIELD|MEDIA|RESEARCH|LEGAL|DIGITAL|PRESS|SCHEDULING|OPERATIONS|POLICY/i.test(ALL_DECISIONS[i].cat||""));
- if(staffPick<0&&pool.length){let si=pool.findIndex(i=>/POLLSTER|COMMS|FINANCE|FIELD|MEDIA|RESEARCH|LEGAL|DIGITAL|PRESS|SCHEDULING|OPERATIONS|POLICY/i.test(ALL_DECISIONS[i].cat||""));if(si>=0)picked[1]=pool[si]}
- g.weeklyDecisions={week:g.week,items:[
-  {kind:"position",template:posIndex,resolved:false,choice:null,result:""},
-  ...picked.map(i=>({kind:"normal",template:i,resolved:false,choice:null,result:""}))
- ]}
+ let normalRecent=(g.decisionHistory||[]).slice(-22),pool=ALL_DECISIONS.map((x,i)=>i).filter(i=>!normalRecent.includes(i));
+ if(!pool.length)pool=ALL_DECISIONS.map((x,i)=>i);
+ let staffPool=pool.filter(i=>/POLLSTER|COMMS|FINANCE|FIELD|MEDIA|RESEARCH|LEGAL|DIGITAL|PRESS|SCHEDULING|OPERATIONS|POLICY/i.test(ALL_DECISIONS[i].cat||""));
+ let strategic=staffPool.length?rand(staffPool):rand(pool);
+ let items=[{kind:"position",template:posIndex,resolved:false,choice:null,result:""}];
+ let attack=buildOpponentAttack();if(attack)items.push({kind:"attack",attack:attack,resolved:false,choice:null,result:""});
+ items.push({kind:"normal",template:strategic,resolved:false,choice:null,result:""});
+ g.weeklyDecisions={week:g.week,items:items}
 }
 function applyDecisionFx(fx){
  if(!fx)return;
@@ -903,6 +978,11 @@ function decisionsResolved(){return g.weeklyDecisions?g.weeklyDecisions.items.fi
 function renderDecisions(){
  generateWeeklyDecisions();let box=document.getElementById("decisionList");if(!box)return;
  box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{
+   if(d.kind==="attack"){
+     let a=d.attack,opts=attackOptions(a);
+     let choices=d.resolved?"<div class='decision-result'><b>Your response</b><div>"+d.choice+"</div><p><b>What happened</b><br>"+d.result+"</p><p><b>Race impact</b><br>"+d.attackImpact+"</p><p><b>Tradeoff</b><br>"+d.trade+"</p></div>":opts.map((o,oi)=>"<button class='choice' onclick='resolveAttack("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
+     return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>OPPONENT ATTACK</span><b style='display:block;margin-top:6px'>"+a.headline+"</b></div><span class='badge'>"+(d.resolved?"ANSWERED":"RESPONSE REQUIRED")+"</span></div><p>"+a.claim+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>"+a.reporter.name+" · "+a.reporter.outlet+"</b><div class='muted tiny'>Attack target: "+a.target+"</div></div>"+choices+"</div>"
+   }
    let t=d.kind==="position"?POSITION_DECISIONS[d.template]:ALL_DECISIONS[d.template];
    let adviser=d.kind==="normal"&&g.staffTeam?g.staffTeam.find(s=>(t.cat||"").toUpperCase().includes(s.role.split(" ")[0].toUpperCase())):null;
    let choices=d.resolved?"<div class='decision-result'><b>Your decision</b><div>"+d.choice+"</div><p><b>Immediate result</b><br>"+d.result+"</p>"+(d.subgroupImpact?"<p><b>Modeled voter-subgroup reaction</b><br>"+d.subgroupImpact+"</p>":"")+"<p><b>What you gained / gave up</b><br>"+(d.trade||"The full downstream effect may take time to become clear.")+"</p></div>":
@@ -911,15 +991,17 @@ function renderDecisions(){
  }).join("")
 }
 function inbox(){
+ g.pollsterMemo=buildPollsterMemo();
+ let arc=currentMessageArc(),attack=(g.attackHistory||[]).slice(-1)[0];
  g.inbox=[
- ["Finance Director","Fundraising momentum is currently "+fundraisingMomentum().toFixed(2)+"× baseline. Better polling and positive movement make donor asks easier; sustained weakness makes them harder."],
- ["Communications Director","This week's chosen message is '"+g.message+"'. Repetition can help; constant pivots can blur the campaign."],
- ["Pollster","The topline is useful, but several voter blocs remain low-confidence without fresh research."],
- ["Candidate","I can push hard this week, but I don't want another schedule with no recovery time."],
- ["Media Consultant","Creative on deck: "+g.ad.objective+" / "+g.ad.tone+"."]
+ ["Marcus Hill · Finance Director","Fundraising momentum is "+fundraisingMomentum().toFixed(2)+"× baseline. "+(fundraisingMomentum()>1.1?"Donors are leaning in because they sense movement.":"We are having to work harder for the same dollar right now.")],
+ ["Erin Walsh · Communications Director",arc.streak>=3?"We finally have a story voters can repeat back to us: "+g.message+". I don't want to throw that away because of one noisy news cycle.":"Right now we still sound like a campaign with several arguments, not one argument. We need to decide what this race is about."],
+ ["Claire Donovan · Media Consultant","The paid program is currently "+g.ad.objective.toLowerCase()+" with a "+g.ad.tone.toLowerCase()+" tone. I want the ads to reinforce the same story the candidate is telling in earned media."],
+ ["Candidate",g.energy<45?"I'm running on fumes. If we keep this schedule, I'm going to make a mistake in public.":"I need to know what we're trying to make voters remember about me this week — not just where I'm going."]
  ];
- if(g.policyChanges.length)g.inbox.push(["Press Secretary","Reminder: we have "+g.policyChanges.length+" recorded policy change"+(g.policyChanges.length===1?"":"s")+". Assume reporters can find them."]);
- if(g.findings.filter(x=>!x.used).length)g.inbox.push(["Research Director","We have unused research findings. Timing matters as much as the material itself."])
+ if(attack)g.inbox.push(["Maya Chen · Campaign Manager","Last week's response to the opponent's attack was: "+attack.response+". We need to decide whether that fight is over or whether it now belongs in our broader message."]);
+ if(g.policyChanges.length)g.inbox.push(["Lena Ortiz · StateView Politics","I'm working on a story about how your platform has changed since launch. I count "+g.policyChanges.length+" change"+(g.policyChanges.length===1?"":"s")+"."]);
+ if(g.findings.filter(x=>!x.used).length)g.inbox.push(["Noah Bennett · Research Director","We have unused opposition research. I'm less interested in whether it is damaging than whether this is the right week to deploy it."])
 }
 function doResearch(kind){
  let cost=kind==="oppo"?75000:60000;if(g.cash<cost)return alert("Not enough cash.");
@@ -968,7 +1050,7 @@ function generateWeeklyNews(completed,delta,raised){
 function render(){
  defaults();let s=S[g.state];document.getElementById("title").textContent=g.name+" Campaign HQ";document.getElementById("scenario").textContent=g.state+" governor · "+g.party+" · "+s.diff+" · "+g.arch+" · vs. "+(g.opponent?g.opponent.name+" ("+g.opponent.arch+")":"opponent");
  document.getElementById("week").textContent="Week "+g.week+" of 15";document.getElementById("poll").textContent=g.you.toFixed(1)+"–"+g.opp.toFixed(1);document.getElementById("cash").textContent=money(g.cash);document.getElementById("energy").textContent=Math.round(g.energy)+"%";document.getElementById("morale").textContent=Math.round(g.morale)+"%";document.getElementById("ebar").style.width=g.energy+"%";document.getElementById("mbar").style.width=g.morale+"%";
- renderDecisions();document.getElementById("inboxList").innerHTML=g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
+ renderDecisions();document.getElementById("inboxList").innerHTML=pollsterMemoHtml()+g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
  document.getElementById("pollList").innerHTML=g.polls.slice().reverse().map(p=>"<div class='item'><b>"+p.n+"</b><div>"+p.y.toFixed(1)+"% you · "+p.o.toFixed(1)+"% opponent · ±"+p.m+"%</div>"+(p.issues?"<small class='muted'>Top issues: "+p.issues.map(x=>x[0]+" "+x[1]+"%").join(" · ")+"</small>":"")+(p.blocrpt?"<div class='tiny' style='margin-top:6px'>"+p.blocrpt.slice(0,4).map(x=>x.name+": "+x.support.toFixed(1)+"% · "+x.issue).join("<br>")+"</div>":"")+"</div>").join("");
  let iss=document.getElementById("issuePollSummary");if(iss){let ti=g.latestIssuePoll||topIssues();iss.innerHTML=ti.map((x,i)=>"<div class='row'><span>"+(i+1)+". "+x[0]+"</span><b>"+x[1]+"%</b></div>").join("")}
  document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · Top issue: "+(b.topIssue||"Cost of living")+" · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
@@ -1080,6 +1162,7 @@ function showWeekTransition(completed,startYou,oppSpend,raised){
  "<div class='item'><span class='muted'>Cash on hand</span><b style='display:block;font-size:22px'>"+money(g.cash)+"</b></div>"+
  "<div class='item'><span class='muted'>Base budget carried forward</span><b style='display:block'>"+money(baseSpend)+" / week</b></div>"+
  "<div class='item'><span class='muted'>Schedule carried forward</span><b style='display:block'>"+Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)+" hrs planned</b></div></div>"+
+ "<div class='item' style='margin-top:10px'><span class='badge'>MONDAY STRATEGY BRIEFING</span><h3 style='margin-top:8px'>"+((g.pollsterMemo||buildPollsterMemo()).name)+"'s read</h3><div>"+((g.pollsterMemo||buildPollsterMemo()).tone)+"</div><p><b>"+((g.pollsterMemo||buildPollsterMemo()).recommendation)+"</b></p></div>"+
  "<div class='item' style='margin-top:10px'><b>Race headlines</b><div>"+news.map(x=>"<div style='padding:7px 0;border-bottom:1px solid var(--line)'><b>"+x.headline+"</b><br><span class='muted tiny'>"+x.outlet+"</span></div>").join("")+"</div></div>"+
  "<div class='item' style='margin-top:10px'><b>What happened</b><div>"+(latest?latest.lines.slice(0,4).join("<br>"):"Week complete.")+"</div></div>"+
  "<div class='item' style='margin-top:8px'><b>Opponent activity</b><div>"+(g.opponent?g.opponent.recentAction:"Estimated "+money(oppSpend)+" in counter-messaging this week.")+"</div></div>"+
@@ -1093,19 +1176,19 @@ function showWeekTransition(completed,startYou,oppSpend,raised){
 }
 function closeWeekTransition(){document.getElementById("weekTransitionModal").classList.remove("on");showSection("inbox","Inbox")}
 function advance(){
- generateWeeklyDecisions();if(decisionsResolved()<3)return alert("Resolve all three weekly command decisions before advancing.");
+ generateWeeklyDecisions();if(decisionsResolved()<g.weeklyDecisions.items.length)return alert("Resolve all weekly command decisions before advancing.");
  let hrs=Object.values(g.hours).reduce((a,b)=>a+b,0),sp=Object.values(g.budget).reduce((a,b)=>a+b,0);if(hrs>60)return alert("Candidate time exceeds 60 hours. Reduce allocations before advancing.");if(sp>g.cash)return alert("Planned spending exceeds available cash.");
  let start=g.you,media=g.budget["Broadcast TV"]+g.budget["Streaming/CTV"]+g.budget["Digital"]+g.budget["Direct mail"],reach=Math.min(.92,media/700000),mods=creativeMods();
  let pers=(g.budget["Broadcast TV"]*.0000012+g.budget["Streaming/CTV"]*.000001+g.budget["Digital"]*.00000135+g.budget["Direct mail"]*.0000007)*Math.max(.45,1-media/3500000)*mods.pers*messageFit();
  let field=g.budget["Field"]*.0000004,fundMult=fundraisingMomentum(),raised=(g.hours["Fundraising"]||0)*(22000+g.donor*180)*fundMult,oppSpend=(280000+Math.max(0,media*.42)+(15-g.week)*9000)*mods.opp,oppHit=oppSpend*.00000042;
  g.cash=g.cash-sp+raised;let prep=(g.hours["Policy/debate prep"]||0)*.015,public=(g.hours["Public events"]||0)*.012,pressEff=(g.hours["Press"]||0)*.01*(.8+g.press/250),backlash=pers*mods.back;
- let consistency=g.message===g.lastMessage?.06:-.02,popBonus=populistCampaignBonus();let move=pers+field+prep+public+pressEff+consistency+popBonus-oppHit-backlash+(Math.random()*.35-.175);g.you=clamp(g.you+move,20,65);g.opp=clamp(g.opp-move*.22+oppHit*.35,20,70);g.lastMessage=g.message;
+ let arcFx=messageArcEffect(),consistency=arcFx.effect,popBonus=populistCampaignBonus();let move=pers+field+prep+public+pressEff+consistency+popBonus-oppHit-backlash+(Math.random()*.35-.175);g.you=clamp(g.you+move,20,65);g.opp=clamp(g.opp-move*.22+oppHit*.35,20,70);g.lastMessage=g.message;
  g.blocs.forEach((b,i)=>{let affinity=(b.persuade/100)*(pers+public+pressEff)*(0.65+(i%3)*.18);if(g.ad.objective==="Mobilize supporters")b.turnout+=.3;g.blocs[i].support=clamp(b.support+affinity-oppHit*.25,10,85);g.blocs[i].turnout=clamp(b.turnout+field*.7+g.endorse*.04,35,95)});
  let work=hrs-(g.hours["Rest/personal"]||0);g.energy=clamp(g.energy-(work-32)*.45+(g.hours["Rest/personal"]||0)*1.3,5,100);g.stress=clamp(g.stress+(work-35)*.35,0,100);g.debatePrep=g.hours["Policy/debate prep"]||0;
  let lines=[];
  if(media)lines.push("Paid media "+money(media)+": estimated reach "+Math.round(reach*100)+"%; persuasion contribution about +"+pers.toFixed(2)+" pts before opponent response and backlash.");
  if(media)lines.push("Creative: "+g.ad.objective+" / "+g.ad.tone+". Modeled backlash cost "+backlash.toFixed(2)+" pts this week.");
- lines.push("Message: "+g.message+". "+(consistency>0?"Staying consistent slightly improved campaign efficiency.":"Changing the emphasis created a small message-discipline cost."));if(popBonus>0){lines.push("Populist appeal: cross-cutting affordability/accountability messaging contributed about +"+popBonus.toFixed(2)+" pts this week.");applyPopulistBlocEffects(popBonus)}
+ lines.push("Messaging arc: "+arcFx.note+" Modeled effect "+(consistency>=0?"+":"")+consistency.toFixed(2)+" pts.");if(popBonus>0){lines.push("Populist appeal: cross-cutting affordability/accountability messaging contributed about +"+popBonus.toFixed(2)+" pts this week.");applyPopulistBlocEffects(popBonus)}
  if(g.budget["Field"])lines.push("Field "+money(g.budget["Field"])+": limited immediate topline movement; improved modeled turnout probability.");
  if(g.budget["Polling/research"])lines.push("Polling/research: information quality improved; this investment is primarily informational rather than persuasive.");
  lines.push("Opponent response: estimated "+money(oppSpend)+" in counter-messaging; modeled pressure about -"+oppHit.toFixed(2)+" pts.");
@@ -1113,7 +1196,7 @@ function advance(){
  let biggest=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade).slice(0,2).map(x=>x.name).join(" and ");lines.push("Most responsive voter terrain this week: "+biggest+".");
  let trade="Cash after the week: "+money(g.cash)+". Candidate energy "+Math.round(g.energy)+"%. Stress "+Math.round(g.stress)+"%.";
  g.impacts.push({week:g.week,move:g.you-start,lines:lines,trade:trade});g.polls.push({n:"Campaign tracking estimate",y:g.you+(Math.random()*.8-.4),o:g.opp+(Math.random()*.8-.4),m:3.5});
- let completed=g.week;
+ let completed=g.week;g.messageHistory.push(g.message);
  let oppReport=simulateOpponent(),outside=maybeOutsideGroup();if(outside)g.outsideHistory.push(Object.assign({week:g.week},outside));
  if(Math.random()<.55){let di=dynamicIssues(),chosen=rand(di);g.issueEvents.push({week:g.week,issue:chosen[0],bump:1+Math.floor(Math.random()*4)})}
  recalcBallotFromBlocs();
@@ -1127,7 +1210,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHostedV16",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV16");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV17",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV17");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
