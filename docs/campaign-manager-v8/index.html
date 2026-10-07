@@ -66,13 +66,13 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 </head>
 <body>
 <div class="app" id="setup">
-<div class="card"><div class="badge">MOBILE BUILD V14</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
+<div class="card"><div class="badge">MOBILE BUILD V15</div><h1>Campaign Manager Simulator</h1><p class="muted">15 weeks. One underdog gubernatorial campaign. Every choice compounds.</p>
 <div class="grid2"><div><label>State</label><select id="state"><option>Oregon</option><option>California</option><option>Washington</option><option>Nevada</option><option>Arizona</option></select></div><div><label>Candidate name</label><input id="name" value="Alex Mercer"></div></div>
-<label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select>
-<p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
+<div class="grid2"><div><label>Party</label><select id="party"><option>Republican</option><option>Democrat</option><option>Independent</option></select></div><div><label>Archetype</label><select id="arch"><option>Moderate Reformer</option><option>Ideological Firebrand</option><option>Wealthy Outsider</option><option>Veteran Legislator</option><option>Charismatic Mayor</option></select></div></div>
+<label style="display:none">Archetype</label><p><button onclick="start()">Enter Campaign HQ</button></p></div></div>
 
 <div class="app" id="game" style="display:none">
-<div class="top"><div><div class="badge">V14</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
+<div class="top"><div><div class="badge">V15</div><h1 id="title">Campaign HQ</h1><div class="muted" id="scenario"></div></div><div class="pill" id="week">Week 1 of 15</div></div>
 <div class="metrics">
 <div class="metric"><span class="muted">Internal poll</span><b id="poll">40–49</b><small>±3.5%</small></div>
 <div class="metric"><span class="muted">Cash</span><b id="cash">$4.2M</b><small id="burn">Planned $0</small></div>
@@ -83,7 +83,7 @@ input,select{width:100%;padding:9px;border-radius:8px;border:1px solid var(--lin
 <div class="tabs" id="tabs"></div>
 <div id="inbox" class="card sec on"><h2>Weekly command decisions</h2><p class="muted">Resolve all three decisions before advancing the week.</p><div id="decisionList" class="stack"></div><h2 style="margin-top:18px">Inbox</h2><div id="inboxList" class="stack"></div></div>
 <div id="time" class="card sec"><h2>Candidate schedule</h2><div class="time-summary"><div><span class="muted">Hours remaining</span><b id="hoursRemaining">60</b></div><div><span class="muted">Scheduled</span><b id="timeTotal">0 / 60</b></div></div><p class="muted">Set broad weekly blocks in 5-hour increments. Meetings and interviews booked elsewhere also draw from this same 60-hour week.</p><div id="timeList" class="stack"></div></div>
-<div id="budget" class="card sec"><h2>Budget</h2><p class="muted">Your base weekly budget carries forward until you change it.</p><div id="budgetList" class="grid2"></div><div class="item" style="margin-top:10px"><div class="row"><b>Base weekly spend</b><b id="spend">$0</b></div></div><div class="item" style="margin-top:8px"><div class="row"><b>Decision commitments this week</b><b id="decisionSpendTotal">$0</b></div><div id="decisionSpendList" class="tiny muted" style="margin-top:6px"></div></div></div>
+<div id="budget" class="card sec"><h2>Budget</h2><p class="muted">Your base weekly budget carries forward until you change it.</p><div id="budgetList" class="grid2"></div><div class="item" style="margin-top:10px"><div class="row"><b>Base weekly spend</b><b id="spend">$0</b></div><div class="row tiny muted"><span>Projected Election Day cash</span><b id="projectedCash">$0</b></div></div><div class="item" style="margin-top:8px"><div class="row"><b>Decision commitments this week</b><b id="decisionSpendTotal">$0</b></div><div id="decisionSpendList" class="tiny muted" style="margin-top:6px"></div></div></div>
 
 <div id="strategy" class="card sec">
 <h2>Strategy</h2>
@@ -129,12 +129,12 @@ Arizona:{you:42,opp:49,cash:5000000,party:"Underdog",diff:"Uphill",regions:["Pho
 const T=["Fundraising","Public events","Press","Policy/debate prep","Donor/endorsement meetings","Rest/personal"];
 const B=["Broadcast TV","Streaming/CTV","Digital","Direct mail","Field","Polling/research","Opposition research","Travel/events"];
 const BLOCS={
-Oregon:["Portland progressives","Portland suburbs","Willamette swing voters","Rural conservatives","Coastal voters","Central Oregon independents"],
-California:["LA Democrats","Bay Area liberals","Orange County swing voters","Central Valley voters","Inland conservatives","Asian American persuadables"],
-Washington:["Seattle progressives","King County suburbs","Pierce swing voters","Eastern Washington conservatives","Southwest independents","College-educated moderates"],
-Nevada:["Clark Democrats","Las Vegas swing voters","Washoe independents","Rural conservatives","Latino persuadables","Service workers"],
-Arizona:["Phoenix suburbanites","Maricopa conservatives","Latino persuadables","Tucson liberals","Rural conservatives","Independent retirees"]
-};
+Oregon:["Portland progressives","Portland working-class voters","Washington County college suburbs","Clackamas swing voters","Salem-Keizer working-class voters","Eugene progressives","Central Oregon independents","Southern Oregon conservatives","Coastal independents","Rural agricultural conservatives","Young renters","Older suburban homeowners"],
+California:["Los Angeles progressives","Los Angeles working-class voters","Bay Area liberals","Bay Area professionals","Orange County swing voters","San Diego moderates","Central Valley working-class voters","Central Valley conservatives","Inland Empire independents","Asian American persuadables","Latino working-class voters","Young renters"],
+Washington:["Seattle progressives","Seattle working-class voters","King County college suburbs","Snohomish swing voters","Pierce County independents","Tacoma working-class voters","Southwest Washington moderates","Eastern Washington conservatives","Spokane independents","College-educated moderates","Young renters","Older suburban homeowners"],
+Nevada:["Clark County Democrats","Las Vegas swing voters","Las Vegas service workers","Henderson suburban moderates","Washoe independents","Reno college voters","Rural conservatives","Latino working-class voters","Union households","Young renters","Older retirees","Non-college independents"],
+Arizona:["Phoenix suburbanites","Phoenix working-class voters","Maricopa conservatives","Maricopa college suburbs","Latino persuadables","Tucson liberals","Tucson working-class voters","Pinal County conservatives","Northern Arizona independents","Rural conservatives","Independent retirees","Young renters"]
+}
 const POLICY={
 "Economy & taxes":["Targeted tax relief","Broad tax reduction","Maintain current rates","Revenue-neutral reform","Targeted new revenue for services"],
 "Housing":["Local incentives and permitting reform","Statewide zoning reform","Major housing subsidy expansion","Public-private construction push","Tenant-protection emphasis"],
@@ -143,7 +143,12 @@ const POLICY={
 "Health care":["Cost transparency and competition","Medicaid access protection","Public-option style expansion","Provider workforce expansion","Insurance regulation expansion"],
 "Abortion policy":["Protect current law","Broader statutory protections","Restrictions with exceptions","Defer to voters/courts","Incremental restrictions"],
 "Climate & energy":["Clean-energy acceleration","All-of-the-above reliability","Market-based emissions reduction","Pause mandates and review costs","Aggressive electrification"],
-"Transportation":["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"]
+"Transportation":["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"],
+"Labor & workplace":["Maintain current labor law","Expand worker protections","Right-to-work style reform","Targeted small-business flexibility","Sector bargaining expansion"],
+"Homelessness":["Shelter plus enforcement","Housing-first expansion","Local-control approach","Statewide camping restrictions","Treatment-focused intervention"],
+"Gun policy":["Enforce current law","Expand background checks","Stronger firearm restrictions","Protect gun rights","Targeted violence-prevention policy"],
+"Government reform":["Ethics and transparency expansion","Agency performance audits","Civil-service reform","Campaign-finance reform","Local-control emphasis"],
+"Child care & families":["Targeted child-care tax credits","Public subsidy expansion","Employer incentives","Maintain current programs","Universal child-care expansion"]
 };
 const MESSAGES=["Cost of living","Public safety","Housing","Education","Government accountability","Jobs & growth","Health care","Reproductive policy"];
 const ADOBJ=["Introduce candidate","Improve favorability","Persuade undecided voters","Attack opponent","Respond to attack","Mobilize supporters"];
@@ -169,7 +174,13 @@ const QUESTIONNAIRE=[
  {issue:"Abortion policy",q:"Which position best reflects the candidate's approach to abortion policy?",opts:["Protect current law","Broader statutory protections","Restrictions with exceptions","Defer to voters/courts","Incremental restrictions"]},
  {issue:"Climate & energy",q:"What should anchor the candidate's climate and energy platform?",opts:["Clean-energy acceleration","All-of-the-above reliability","Market-based emissions reduction","Pause mandates and review costs","Aggressive electrification"]},
  {issue:"Transportation",q:"What is the candidate's transportation priority?",opts:["Maintenance-first funding","Major capital expansion","Transit emphasis","Road capacity emphasis","Balanced multimodal package"]}
-];
+,
+ {issue:"Labor & workplace",q:"What is the candidate's basic approach to labor and workplace policy?",opts:["Maintain current labor law","Expand worker protections","Right-to-work style reform","Targeted small-business flexibility","Sector bargaining expansion"]},
+ {issue:"Homelessness",q:"What should anchor the candidate's homelessness policy?",opts:["Shelter plus enforcement","Housing-first expansion","Local-control approach","Statewide camping restrictions","Treatment-focused intervention"]},
+ {issue:"Gun policy",q:"Which gun-policy approach best reflects the candidate?",opts:["Enforce current law","Expand background checks","Stronger firearm restrictions","Protect gun rights","Targeted violence-prevention policy"]},
+ {issue:"Government reform",q:"What kind of government reform should the candidate prioritize?",opts:["Ethics and transparency expansion","Agency performance audits","Civil-service reform","Campaign-finance reform","Local-control emphasis"]},
+ {issue:"Child care & families",q:"What is the candidate's approach to child-care affordability?",opts:["Targeted child-care tax credits","Public subsidy expansion","Employer incentives","Maintain current programs","Universal child-care expansion"]}
+]
 const DECISION_POOL=[
  {cat:"ENDORSEMENT",title:"State Builders Alliance offers its endorsement",text:"The State Builders Alliance, a fictional construction and trades coalition, will endorse your candidate if you publicly back faster permitting for large housing projects and appear at its annual convention Friday.",ask:"Publicly endorse expedited permitting and spend 3 candidate hours at the convention.",opts:[
   {label:"Accept the endorsement terms",known:"Known: +1 endorsement, 3 candidate hours, stronger construction-industry relationship.",risk:"Tradeoff: environmental and neighborhood groups may accuse you of weakening review standards.",hours:["Donor/endorsement meetings",3],fx:{endorse:1,you:.10,cred:-1},result:"The Alliance endorsed you and promoted the announcement to its members.",trade:"You gained organizational support and a useful earned-media event, but you are now publicly tied to the permitting commitment."},
@@ -243,11 +254,10 @@ const DECISION_POOL=[
 ];
 
 const POLL_PRODUCTS={
- topline:{name:"Statewide topline",cost:60000,moe:3.8,desc:"Horse-race estimate, candidate favorability and undecided share."},
  benchmark:{name:"Benchmark poll",cost:100000,moe:3.2,desc:"Topline, favorability, top issues and broad message diagnostics."},
- issues:{name:"Issue-priority poll",cost:75000,moe:3.6,desc:"What voters say matters most, plus issue salience by broad voter type."},
- blocs:{name:"Voter-bloc segmentation",cost:125000,moe:4.2,desc:"Support, persuadability and issue priorities for campaign voter blocs."},
- tracking:{name:"Tracking poll",cost:150000,moe:2.8,desc:"Higher-frequency trend read with tighter modeled uncertainty."}
+ tracking:{name:"Tracking poll",cost:150000,moe:2.8,desc:"Trend read that may disagree with public polling because of turnout assumptions."},
+ issues:{name:"Issue-priority poll",cost:75000,moe:3.6,desc:"What voters say matters most and how priorities differ across broad groups."},
+ blocs:{name:"Targeted voter-bloc poll",cost:125000,moe:4.2,desc:"Detailed support, persuadability and issue priorities for selected voter blocs."}
 };
 
 const STATE_ISSUES={
@@ -373,18 +383,14 @@ function applyPolicyBlocImpact(issue,stance,label){
   if(Math.abs(s)>=.02){b.support=clamp(b.support+s,10,85);changes.push({name:b.name,delta:s})}
  });
  changes.sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
- g.lastPolicyImpact={issue:issue,stance:stance,label:label||issue,changes:changes.slice(0,4)};
+ g.lastPolicyImpact={issue:issue,stance:stance,label:label||issue,changes:changes.slice(0,4)};recalcBallotFromBlocs();
  return changes
 }
 function policyImpactText(changes){
  if(!changes||!changes.length)return "No measurable subgroup movement modeled.";
  return changes.slice(0,4).map(x=>x.name+" "+(x.delta>=0?"+":"")+x.delta.toFixed(2)+" pts").join(" · ")
 }
-function topIssues(){
- let base=Object.assign({},STATE_ISSUES[g.state]||STATE_ISSUES.Oregon);
- if(g.week>8){base["Cost of living"]=(base["Cost of living"]||20)+1}
- return Object.entries(base).sort((a,b)=>b[1]-a[1]).slice(0,5)
-}
+function topIssues(){return dynamicIssues().slice(0,5)}
 function fundraisingMomentum(){
  let start=S[g.state].you,improve=g.you-start,margin=g.you-g.opp;
  let mult=1+improve*.045+Math.max(-.18,Math.min(.12,margin*.008));
@@ -458,6 +464,7 @@ function showLaunchReport(){
  "<div class='item'><span class='muted'>Platform fit adjustment</span><b style='display:block'>"+(adj>=0?"+":"")+adj.toFixed(2)+" pts</b></div>"+
  "<div class='item'><span class='muted'>Platform profile</span><b style='display:block'>"+ideologyLabel+"</b></div></div>"+
  "<div class='item' style='margin-top:10px'><b>Why</b><div>The platform is being compared with a modeled "+fit.label+". Party identification is already reflected in the scenario baseline; the platform adjustment measures additional ideological fit or mismatch.</div></div>"+
+ "<div class='item' style='margin-top:8px'><b>Campaign environment</b><div>"+g.environment.economy+" · "+g.environment.national+" · electorate mood: "+g.environment.mood+"</div></div>"+
  "<div class='item' style='margin-top:8px'><b>Alternative path</b><div>Populist appeal begins at <b>"+Math.round(g.populistAppeal)+"/100</b>. A candidate who starts outside the statewide ideological center can still build support through affordability, jobs, government-accountability and other cross-cutting messages, especially among working-class, independent and rural blocs.</div></div>"+
  "<button class='choice' onclick='enterCampaignAfterLaunch()'>Launch campaign</button>"
 }
@@ -636,6 +643,68 @@ const DEBATES=[
  ]}
 ];
 
+const STAFF_ROSTER=[
+ {role:"Campaign Manager",name:"Maya Chen",style:"disciplined",bias:"protect the plan"},
+ {role:"Pollster",name:"Daniel Ruiz",style:"cautious",bias:"trust data and wait for confirmation"},
+ {role:"Communications Director",name:"Erin Walsh",style:"aggressive",bias:"win the news cycle"},
+ {role:"Finance Director",name:"Marcus Hill",style:"pragmatic",bias:"protect cash and fundraising"},
+ {role:"Field Director",name:"Tasha Green",style:"organizer",bias:"invest in turnout and volunteers"},
+ {role:"Research Director",name:"Noah Bennett",style:"skeptical",bias:"verify before deploying"},
+ {role:"Media Consultant",name:"Claire Donovan",style:"competitive",bias:"dominate paid media"},
+ {role:"Legal Counsel",name:"Priya Shah",style:"risk-averse",bias:"avoid preventable legal exposure"}
+];
+const OUTSIDE_GROUPS=["Working Families Alliance","Business Leadership Network","Clean Energy Action","Public Safety Partnership","Teachers United","Taxpayer Accountability Fund","Housing Now","Healthcare Access Coalition"];
+function buildStaff(){
+ return STAFF_ROSTER.map((s,i)=>({role:s.role,name:s.name,style:s.style,bias:s.bias,trust:55+((i*7)%20),accuracy:.62+((i%4)*.07)}))
+}
+function randomEnvironment(){
+ let econ=rand(["cost-of-living pressure","stable economy","softening job market","strong growth with high housing costs"]);
+ let national=rand(["quiet national environment","high partisan polarization","major national controversy","presidential approval drag"]);
+ let mood=rand(["change-oriented","risk-averse","anti-establishment","status-quo leaning"]);
+ return {economy:econ,national:national,mood:mood}
+}
+function initOpponent(){
+ let archetypes=["Moderate Reformer","Ideological Firebrand","Wealthy Outsider","Veteran Legislator","Charismatic Mayor"];
+ let arch=rand(archetypes.filter(x=>x!==g.arch)),cash=g.cash*(.85+Math.random()*.45);
+ return {name:"Jordan Blake",arch:arch,cash:cash,morale:72,energy:74,press:52,endorse:0,message:rand(MESSAGES),recentAction:"No major move yet",mistakeRisk:.12+Math.random()*.18}
+}
+function dynamicIssues(){
+ let base=Object.assign({},STATE_ISSUES[g.state]||STATE_ISSUES.Oregon);
+ let env=g.environment||{};
+ if(env.economy==="cost-of-living pressure")base["Cost of living"]=(base["Cost of living"]||20)+5;
+ if(env.economy==="softening job market")base["Jobs & growth"]=(base["Jobs & growth"]||10)+5;
+ if(env.national==="major national controversy")base["Government accountability"]=(base["Government accountability"]||7)+3;
+ (g.issueEvents||[]).slice(-4).forEach(e=>{base[e.issue]=(base[e.issue]||5)+e.bump});
+ return Object.entries(base).sort((a,b)=>b[1]-a[1]).slice(0,6)
+}
+function recalcBallotFromBlocs(){
+ if(!g.blocs||!g.blocs.length)return;
+ let w=0,total=0;
+ g.blocs.forEach(b=>{let wt=(b.turnout||65)*(0.75+(b.persuade||20)/100);total+=b.support*wt;w+=wt});
+ let estimate=total/w;
+ g.you=clamp(estimate,20,65);
+ g.opp=clamp(100-g.you-Math.max(4,Math.min(14,g.und||9)),20,70)
+}
+function simulateOpponent(){
+ let o=g.opponent;if(!o)return;
+ let choices=["increase broadcast advertising","attack the candidate's record","hold a major fundraiser","release a positive biography ad","court a major endorsement","shift message to "+rand(dynamicIssues())[0],"expand field operations"];
+ let action=rand(choices);o.recentAction=action;
+ let spend=90000+Math.random()*260000;if(/advertising|attack|biography/.test(action)){o.cash=Math.max(0,o.cash-spend);g.blocs.forEach((b,i)=>{let hit=.03+Math.random()*.07;b.support=clamp(b.support-hit,10,85)})}
+ if(/fundraiser/.test(action))o.cash+=120000+Math.random()*180000;
+ if(/endorsement/.test(action))o.endorse++;
+ if(Math.random()<o.mistakeRisk){o.recentAction+=" — but the execution drew negative coverage";g.blocs.forEach(b=>b.support=clamp(b.support+.03+Math.random()*.05,10,85));o.press-=4}
+ return {action:action,spend:spend}
+}
+function maybeOutsideGroup(){
+ if(Math.random()>.48)return null;
+ let group=rand(OUTSIDE_GROUPS),support=Math.random()>.5,spend=50000+Math.round(Math.random()*250000/25000)*25000;
+ let issue=rand(dynamicIssues())[0];
+ g.blocs.forEach((b,i)=>{let d=(support?.025:-.025)*(1+(i%4)*.18);b.support=clamp(b.support+d,10,85)});
+ return {group:group,support:support,spend:spend,issue:issue}
+}
+function memoryFlag(issue){
+ let prior=(g.positionHistory||[]).filter(x=>x.issue===issue);return prior.length>1
+}
 let g;
 
 function money(n){return n>=1e6?"$"+(n/1e6).toFixed(1)+"M":"$"+Math.round(n/1000)+"k"}
@@ -666,13 +735,22 @@ function defaults(){
  if(!g.oppoDeployments)g.oppoDeployments=[];
  if(g.populistAppeal===undefined)g.populistAppeal=initialPopulistAppeal();
  if(g.prePlatformYou===undefined)g.prePlatformYou=S[g.state]?S[g.state].you:g.you;
- if(!g.version)g.version=14;else g.version=14;
+ if(!g.party)g.party="Republican";
+ if(!g.environment)g.environment=randomEnvironment();
+ if(!g.staffTeam)g.staffTeam=buildStaff();
+ if(!g.opponent)g.opponent=initOpponent();
+ if(!g.outsideHistory)g.outsideHistory=[];
+ if(!g.issueEvents)g.issueEvents=[];
+ if(!g.version)g.version=15;else g.version=15;
 }
 function start(){
  let st=document.getElementById("state").value,s=S[st];
- g={state:st,name:document.getElementById("name").value||"Alex Mercer",arch:document.getElementById("arch").value,week:1,you:s.you,opp:s.opp,und:100-s.you-s.opp,cash:s.cash,energy:72,morale:74,stress:30,research:0,hours:{},budget:{},polls:[],impacts:[],staff:"Full senior team",donor:50,press:50,endorse:0};
+ let party=document.getElementById("party").value;
+ let partyShift=party==="Republican"?0:party==="Democrat"?2.2: -1.0;
+ g={state:st,party:party,name:document.getElementById("name").value||"Alex Mercer",arch:document.getElementById("arch").value,week:1,you:clamp(s.you+partyShift,20,65),opp:clamp(s.opp-partyShift*.45,20,70),und:100-s.you-s.opp,cash:s.cash,energy:72,morale:74,stress:30,research:0,hours:{},budget:{},polls:[],impacts:[],staff:"Full senior team",donor:50,press:50,endorse:0,issueEvents:[]};
+ g.environment=randomEnvironment();g.staffTeam=buildStaff();g.opponent=initOpponent();g.outsideHistory=[];
  T.forEach(x=>g.hours[x]=0);B.forEach(x=>g.budget[x]=0);
- g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-2.5)*2.3,20,70),turnout:62+i*3,persuade:18+((i*7)%24),topIssue:(STATE_ISSUES[st]&&Object.keys(STATE_ISSUES[st])[i%Object.keys(STATE_ISSUES[st]).length])||"Cost of living"}));
+ g.blocs=BLOCS[st].map((n,i)=>({name:n,support:clamp(g.you+(i-(BLOCS[st].length-1)/2)*.85,20,70),turnout:56+((i*5)%30),persuade:14+((i*7)%30),topIssue:(STATE_ISSUES[st]&&Object.keys(STATE_ISSUES[st])[i%Object.keys(STATE_ISSUES[st]).length])||"Cost of living"}));
  g.polls=[{n:"Initial public poll",y:g.you,o:g.opp,m:4.1},{n:"Campaign internal",y:g.you+.4,o:g.opp-.2,m:3.5}];
  defaults();g.prePlatformYou=g.you;g.surveyIndex=0;g.surveyCompleted=false;g.weeklyDecisions=null;g.decisionHours={};g.decisionLedger=[];g.decisionHistory=[];document.getElementById("setup").style.display="none";beginQuestionnaire()
 }
@@ -744,7 +822,7 @@ function buildPollProducts(){
 function commissionPoll(type){
  let p=POLL_PRODUCTS[type];if(!p)return;if(g.cash<p.cost)return alert("Not enough cash.");
  g.cash-=p.cost;g.decisionLedger.push({amount:-p.cost,label:p.name});g.research++;
- let noise=()=>Math.random()*1.2-.6,poll={n:p.name,y:g.you+noise(),o:g.opp+noise(),m:p.moe,type:type,week:g.week};
+ let house=(Math.random()*1.4-.7),turnout=(Math.random()*1.0-.5),noise=()=>Math.random()*.8-.4,poll={n:p.name,y:g.you+house+turnout+noise(),o:g.opp-house*.45-turnout*.3+noise(),m:p.moe,type:type,week:g.week,house:house,turnout:turnout};
  if(type==="benchmark"||type==="issues"||type==="blocs"){poll.issues=topIssues();g.latestIssuePoll=poll.issues}
  if(type==="blocs"){poll.blocrpt=g.blocs.map(b=>({name:b.name,support:b.support+(Math.random()*2-1),issue:b.topIssue||"Cost of living"}))}
  if(type==="tracking"){poll.trend=(g.polls.length?g.you-g.polls[g.polls.length-1].y:0)}
@@ -764,7 +842,7 @@ function renderTotals(){
  let decisionOut=ledger.filter(x=>x.amount<0).reduce((a,b)=>a+Math.abs(b.amount),0),decisionIn=ledger.filter(x=>x.amount>0).reduce((a,b)=>a+b.amount,0);
  let tt=document.getElementById("timeTotal"),hr=document.getElementById("hoursRemaining");
  if(tt){tt.textContent=h+" / 60";tt.className=h>60?"bad":""}if(hr){hr.textContent=remainingHours();hr.className=remainingHours()<=5?"warn":""}
- let sp=document.getElementById("spend");if(sp)sp.textContent=money(s);document.getElementById("burn").textContent="Base "+money(s)+" / week";
+ let sp=document.getElementById("spend");if(sp)sp.textContent=money(s);document.getElementById("burn").textContent="Base "+money(s)+" / week";let pc=document.getElementById("projectedCash");if(pc)pc.textContent=money(g.cash-s*Math.max(0,16-g.week));
  let dt=document.getElementById("decisionSpendTotal"),dl=document.getElementById("decisionSpendList");
  if(dt)dt.textContent=decisionOut?money(decisionOut):(decisionIn?"+"+money(decisionIn):"$0");
  if(dl)dl.innerHTML=ledger.length?ledger.map(x=>(x.amount<0?"−":"+")+money(Math.abs(x.amount))+" · "+x.label).join("<br>"):"No one-off financial commitments yet this week.";
@@ -785,6 +863,8 @@ function generateWeeklyDecisions(){
  let normalRecent=(g.decisionHistory||[]).slice(-22),pool=ALL_DECISIONS.map((x,i)=>i).filter(i=>!normalRecent.includes(i)),picked=[];
  if(pool.length<2)pool=ALL_DECISIONS.map((x,i)=>i);
  while(picked.length<2&&pool.length){let n=Math.floor(Math.random()*pool.length);picked.push(pool.splice(n,1)[0])}
+ let staffPick=picked.findIndex(i=>/POLLSTER|COMMS|FINANCE|FIELD|MEDIA|RESEARCH|LEGAL|DIGITAL|PRESS|SCHEDULING|OPERATIONS|POLICY/i.test(ALL_DECISIONS[i].cat||""));
+ if(staffPick<0&&pool.length){let si=pool.findIndex(i=>/POLLSTER|COMMS|FINANCE|FIELD|MEDIA|RESEARCH|LEGAL|DIGITAL|PRESS|SCHEDULING|OPERATIONS|POLICY/i.test(ALL_DECISIONS[i].cat||""));if(si>=0)picked[1]=pool[si]}
  g.weeklyDecisions={week:g.week,items:[
   {kind:"position",template:posIndex,resolved:false,choice:null,result:""},
   ...picked.map(i=>({kind:"normal",template:i,resolved:false,choice:null,result:""}))
@@ -819,9 +899,10 @@ function renderDecisions(){
  generateWeeklyDecisions();let box=document.getElementById("decisionList");if(!box)return;
  box.innerHTML=g.weeklyDecisions.items.map((d,di)=>{
    let t=d.kind==="position"?POSITION_DECISIONS[d.template]:ALL_DECISIONS[d.template];
+   let adviser=d.kind==="normal"&&g.staffTeam?g.staffTeam.find(s=>(t.cat||"").toUpperCase().includes(s.role.split(" ")[0].toUpperCase())):null;
    let choices=d.resolved?"<div class='decision-result'><b>Your decision</b><div>"+d.choice+"</div><p><b>Immediate result</b><br>"+d.result+"</p>"+(d.subgroupImpact?"<p><b>Modeled voter-subgroup reaction</b><br>"+d.subgroupImpact+"</p>":"")+"<p><b>What you gained / gave up</b><br>"+(d.trade||"The full downstream effect may take time to become clear.")+"</p></div>":
      t.opts.map((o,oi)=>"<button class='choice' onclick='resolveWeeklyDecision("+di+","+oi+")'><b>"+o.label+"</b><span style='display:block;margin-top:5px;font-weight:500'>"+o.known+"</span><span class='muted' style='display:block;margin-top:4px;font-weight:500'>"+o.risk+"</span></button>").join("");
-   return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>"+(t.cat||"DECISION")+"</span><b style='display:block;margin-top:6px'>"+t.title+"</b></div><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>What they're asking</b><div>"+(t.ask||"Choose how the campaign should respond.")+"</div></div>"+choices+"</div>"
+   return "<div class='item decision-card "+(d.resolved?"resolved":"")+"'><div class='row'><div><span class='badge'>"+(t.cat||"DECISION")+"</span>"+(adviser?"<small class='muted' style='display:block;margin-top:4px'>Advice from "+adviser.name+" · "+adviser.style+" · trust "+Math.round(adviser.trust)+"/100</small>":"")<b style='display:block;margin-top:6px'>"+t.title+"</b></div><span class='badge'>"+(d.resolved?"DECIDED":"ACTION REQUIRED")+"</span></div><p>"+t.text+"</p><div class='item' style='background:#10182b;margin:8px 0'><b>What they're asking</b><div>"+(t.ask||"Choose how the campaign should respond.")+"</div></div>"+choices+"</div>"
  }).join("")
 }
 function inbox(){
@@ -836,13 +917,13 @@ function inbox(){
  if(g.findings.filter(x=>!x.used).length)g.inbox.push(["Research Director","We have unused research findings. Timing matters as much as the material itself."])
 }
 function render(){
- defaults();let s=S[g.state];document.getElementById("title").textContent=g.name+" Campaign HQ";document.getElementById("scenario").textContent=g.state+" governor · "+s.party+" · "+s.diff+" · "+g.arch;
+ defaults();let s=S[g.state];document.getElementById("title").textContent=g.name+" Campaign HQ";document.getElementById("scenario").textContent=g.state+" governor · "+g.party+" · "+s.diff+" · "+g.arch+" · vs. "+(g.opponent?g.opponent.name+" ("+g.opponent.arch+")":"opponent");
  document.getElementById("week").textContent="Week "+g.week+" of 15";document.getElementById("poll").textContent=g.you.toFixed(1)+"–"+g.opp.toFixed(1);document.getElementById("cash").textContent=money(g.cash);document.getElementById("energy").textContent=Math.round(g.energy)+"%";document.getElementById("morale").textContent=Math.round(g.morale)+"%";document.getElementById("ebar").style.width=g.energy+"%";document.getElementById("mbar").style.width=g.morale+"%";
  renderDecisions();document.getElementById("inboxList").innerHTML=g.inbox.map(x=>"<div class='item'><b>"+x[0]+"</b><div>"+x[1]+"</div></div>").join("");
  document.getElementById("pollList").innerHTML=g.polls.slice().reverse().map(p=>"<div class='item'><b>"+p.n+"</b><div>"+p.y.toFixed(1)+"% you · "+p.o.toFixed(1)+"% opponent · ±"+p.m+"%</div>"+(p.issues?"<small class='muted'>Top issues: "+p.issues.map(x=>x[0]+" "+x[1]+"%").join(" · ")+"</small>":"")+(p.blocrpt?"<div class='tiny' style='margin-top:6px'>"+p.blocrpt.slice(0,4).map(x=>x.name+": "+x.support.toFixed(1)+"% · "+x.issue).join("<br>")+"</div>":"")+"</div>").join("");
  let iss=document.getElementById("issuePollSummary");if(iss){let ti=g.latestIssuePoll||topIssues();iss.innerHTML=ti.map((x,i)=>"<div class='row'><span>"+(i+1)+". "+x[0]+"</span><b>"+x[1]+"%</b></div>").join("")}
  document.getElementById("blocList").innerHTML=g.blocs.map(b=>"<div class='item'><b>"+b.name+"</b><div>Support: "+b.support.toFixed(1)+"%</div><small class='muted'>Turnout "+Math.round(b.turnout)+"% · Persuadability "+Math.round(b.persuade)+"% · Top issue: "+(b.topIssue||"Cost of living")+" · confidence "+(g.research>1?"high":g.research?"moderate":"low")+"</small></div>").join("");
- document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+g.staff+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100 · Populist appeal "+Math.round(g.populistAppeal||0)+"/100</small></div>";
+ document.getElementById("peopleList").innerHTML="<div class='item'><b>Senior staff</b><div>"+(g.staffTeam||[]).map(s=>s.name+" — "+s.role+" · "+s.style).join("<br>")+"</div><small class='muted'>Morale "+Math.round(g.morale)+"/100</small></div><div class='item'><b>Major donor network</b><div>Relationship "+Math.round(g.donor)+"/100</div><button class='choice' onclick='meetDonor()'>Schedule donor meeting · 2 hrs</button></div><div class='item'><b>Endorsements</b><div>"+g.endorse+" secured</div><small class='muted'>Organizations can help with credibility, member communication and selected voter blocs. They may require questionnaires, interviews or policy commitments; endorsements never require campaign payment.</small><button class='choice' onclick='courtEndorsement()'>Pursue endorsement · 3 hrs</button></div><div class='item'><b>Press relationship</b><div>"+Math.round(g.press)+"/100</div><button class='choice' onclick='pressAccess()'>Offer extended interview · 2 hrs</button></div><div class='item'><b>Candidate favorability</b><div>"+Math.round(g.favorability)+"/100</div><small class='muted'>Issue credibility "+Math.round(g.issueCredibility)+"/100 · Stress "+Math.round(g.stress)+"/100 · Populist appeal "+Math.round(g.populistAppeal||0)+"/100</small></div>";
  document.getElementById("researchList").innerHTML=g.findings.length?g.findings.slice().reverse().map(f=>{let idx=g.findings.indexOf(f),buttons="";if(f.kind==="oppo"&&!f.used){buttons="<div class='tiny muted' style='margin-top:8px'>Choose deployment:</div><button class='choice' onclick='deployFindingDirect("+idx+",\"exclusive\")'>Reporter exclusive</button><button class='choice' onclick='deployFindingDirect("+idx+",\"public\")'>Public campaign release</button><button class='choice' onclick='deployFindingDirect("+idx+",\"paid\")'>$100k digital contrast</button><button class='choice' onclick='deployFindingDirect("+idx+",\"hold\")'>Hold for later</button>"}return "<div class='item'><b>"+f.title+"</b> <span class='badge'>"+(f.kind==="oppo"?"OPPONENT":"SELF")+"</span><div>"+f.text+"</div>"+buttons+(f.used?"<div class='decision-result'><b>Deployment:</b> "+(f.deployment||"campaign release")+"<br><b>Impact:</b> "+(f.impact?f.impact.desc+" You "+(f.impact.you>=0?"+":"")+f.impact.you.toFixed(2)+" · opponent "+f.impact.opp.toFixed(2)+" · press "+(f.impact.press>=0?"+":"")+f.impact.press:"No impact report available.")+"</div>":"")+"</div>"}).join(""):"<p class='muted'>No commissioned findings yet.</p>";
  document.getElementById("impactList").innerHTML=g.impacts.length?g.impacts.slice().reverse().map(r=>"<div class='item'><b>Week "+r.week+": "+(r.move>=0?"+":"")+r.move.toFixed(2)+" pts modeled movement</b><div>"+r.lines.join("<br>")+"</div><small class='muted'>"+r.trade+"</small></div>").join(""):"<p class='muted'>Complete a week to see cause-and-effect reporting here.</p>";
  renderTotals()
@@ -885,7 +966,7 @@ function creativeMods(){
  return {pers:p,back:back,opp:opp}
 }
 function maybeWarRoom(){
- let eligible=[4,8,11,14];if(!eligible.includes(g.week)||g.warHistory.includes(g.week))return false;g.warHistory.push(g.week);
+ let eligible=[3,5,7,9,11,13,14];if(!eligible.includes(g.week)||g.warHistory.includes(g.week)||Math.random()>.62)return false;g.warHistory.push(g.week);
  let scenarios=[
  {title:"Reporter has damaging documents",text:"A reporter says documents appear to contradict a biographical claim. Deadline: 90 minutes.",choices:[
  ["Disclose the discrepancy and provide context",.12,3,2],["Attack the premise and demand more time",-.08,-2,4],["Decline comment until legal review",-.18,0,-1],["Put the candidate live immediately",.05,1,-4]]},
@@ -951,7 +1032,8 @@ function showWeekTransition(completed,startYou,oppSpend,raised){
  "<div class='item'><span class='muted'>Base budget carried forward</span><b style='display:block'>"+money(baseSpend)+" / week</b></div>"+
  "<div class='item'><span class='muted'>Schedule carried forward</span><b style='display:block'>"+Object.values(g.hours).reduce((a,b)=>a+Number(b||0),0)+" hrs planned</b></div></div>"+
  "<div class='item' style='margin-top:10px'><b>What happened</b><div>"+(latest?latest.lines.slice(0,4).join("<br>"):"Week complete.")+"</div></div>"+
- "<div class='item' style='margin-top:8px'><b>Opponent activity</b><div>Estimated "+money(oppSpend)+" in counter-messaging this week.</div></div>"+
+ "<div class='item' style='margin-top:8px'><b>Opponent activity</b><div>"+(g.opponent?g.opponent.recentAction:"Estimated "+money(oppSpend)+" in counter-messaging this week.")+"</div></div>"+
+ (g.outsideHistory&&g.outsideHistory.length?"<div class='item' style='margin-top:8px'><b>Outside spending</b><div>"+(()=>{let x=g.outsideHistory[g.outsideHistory.length-1];return x.group+" spent "+money(x.spend)+" "+(x.support?"supporting":"opposing")+" your campaign around "+x.issue+"."})()+"</div></div>":"")+
  "<div class='item' style='margin-top:8px'><b>Top voter issues</b><div>"+topIssues().slice(0,4).map(x=>x[0]+" "+x[1]+"%").join(" · ")+"</div></div>"+
  "<div class='item' style='margin-top:8px'><b>Fundraising environment</b><div>Momentum multiplier: "+fundraisingMomentum().toFixed(2)+"× baseline.</div></div>"+
  (raised?"<div class='item' style='margin-top:8px'><b>Fundraising</b><div>"+money(raised)+" raised from the standing candidate schedule.</div></div>":"")+
@@ -981,7 +1063,11 @@ function advance(){
  let biggest=g.blocs.slice().sort((a,b)=>b.persuade-a.persuade).slice(0,2).map(x=>x.name).join(" and ");lines.push("Most responsive voter terrain this week: "+biggest+".");
  let trade="Cash after the week: "+money(g.cash)+". Candidate energy "+Math.round(g.energy)+"%. Stress "+Math.round(g.stress)+"%.";
  g.impacts.push({week:g.week,move:g.you-start,lines:lines,trade:trade});g.polls.push({n:"Campaign tracking estimate",y:g.you+(Math.random()*.8-.4),o:g.opp+(Math.random()*.8-.4),m:3.5});
- let completed=g.week;g.week++;
+ let completed=g.week;
+ let oppReport=simulateOpponent(),outside=maybeOutsideGroup();if(outside)g.outsideHistory.push(Object.assign({week:g.week},outside));
+ if(Math.random()<.55){let di=dynamicIssues(),chosen=rand(di);g.issueEvents.push({week:g.week,issue:chosen[0],bump:1+Math.floor(Math.random()*4)})}
+ recalcBallotFromBlocs();
+ g.week++;
  if(completed===15)return election();
  g.decisionHours={};g.decisionLedger=[];g.weeklyDecisions=null;generateWeeklyDecisions();inbox();g.inbox.unshift(["Campaign Analytics","Week "+completed+" impact report is ready. Modeled net movement: "+(g.you-start>=0?"+":"")+(g.you-start).toFixed(2)+" points."]);buildInputs();render();showWeekTransition(completed,start,oppSpend,raised);if(!maybeDebate())maybeWarRoom()
 }
@@ -991,7 +1077,7 @@ function election(){
  body.innerHTML="<div class='app'><div class='card'><span class='badge'>ELECTION NIGHT</span><h1>"+g.state+" Governor</h1><p class='muted'>Results arrive region by region. Watch whether you hit the campaign's geographic targets.</p><div id='ereg' class='stack'></div><div class='row' style='margin-top:12px'><div id='estate' class='pill'>No regions reporting</div><button id='nextReg'>Report next region</button></div></div><div class='card' id='autopsy' style='display:none'></div></div>";
  let box=document.getElementById("ereg"),state=document.getElementById("estate"),btn=document.getElementById("nextReg");
  btn.onclick=()=>{let r=regions[idx],target=48+(idx%3)*2+(startMargin<-15?-3:0),actual=target+(m-startMargin)*.22+(Math.random()*4-2);rows.push({r:r,target:target,actual:actual});box.innerHTML=rows.map(x=>"<div class='item region'><div><b>"+x.r+"</b><div class='"+(x.actual>=x.target?"good":"warn")+"'>You "+x.actual.toFixed(1)+"% · target "+x.target.toFixed(1)+"%</div></div><b>"+(x.actual-x.target>=0?"+":"")+(x.actual-x.target).toFixed(1)+"</b></div>").join("");idx++;state.textContent=Math.round(idx/regions.length*100)+"% of reporting sequence complete";if(idx>=regions.length){btn.style.display="none";let win=m>0,improvement=m-startMargin,top=g.impacts.slice().sort((x,y)=>y.move-x.move)[0],worst=g.impacts.slice().sort((x,y)=>x.move-y.move)[0];let auto=document.getElementById("autopsy");auto.style.display="block";auto.innerHTML="<h2>"+(win?"Election won":"Campaign complete")+"</h2><p>Final modeled result: <b>"+a.toFixed(1)+"% – "+b.toFixed(1)+"%</b></p><div class='grid2'><div class='item'><b>Starting margin</b><div>"+startMargin.toFixed(1)+" pts</div></div><div class='item'><b>Final margin</b><div>"+m.toFixed(1)+" pts</div></div><div class='item'><b>Campaign movement</b><div>"+(improvement>=0?"+":"")+improvement.toFixed(1)+" pts vs. starting margin</div></div><div class='item'><b>Cash remaining</b><div>"+money(g.cash)+"</div></div></div><p><b>Best modeled week:</b> Week "+(top?top.week:"—")+" ("+(top?(top.move>=0?"+":"")+top.move.toFixed(2):"—")+" pts)<br><b>Hardest modeled week:</b> Week "+(worst?worst.week:"—")+" ("+(worst?(worst.move>=0?"+":"")+worst.move.toFixed(2):"—")+" pts)<br><b>Policy changes:</b> "+g.policyChanges.length+" · <b>Research findings:</b> "+g.findings.length+" · <b>Endorsements:</b> "+g.endorse+"</p><p>"+(win?"The campaign assembled enough support to overcome the starting environment.":improvement>5?"The campaign lost, but substantially improved on its starting environment.":"The campaign did not create enough movement to overcome the starting environment.")+"</p>"}}}
-function save(){try{localStorage.setItem("campaignManagerHostedV14",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
-window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV14");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
+function save(){try{localStorage.setItem("campaignManagerHostedV15",JSON.stringify(g));alert("Saved on this device/browser.")}catch(e){alert("Save unavailable in this browser.")}}
+window.addEventListener("load",()=>{try{let s=localStorage.getItem("campaignManagerHostedV15");if(s&&confirm("Resume your saved campaign on this device?")){g=JSON.parse(s);defaults();T.forEach(x=>{if(g.hours[x]===undefined)g.hours[x]=0});B.forEach(x=>{if(g.budget[x]===undefined)g.budget[x]=0});document.getElementById("setup").style.display="none";document.getElementById("game").style.display="block";buildTabs();buildInputs();inbox();render()}}catch(e){}})
 </script>
 </body></html>
