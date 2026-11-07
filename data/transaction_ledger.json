@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 13,
+  "contributionReconcileCursor": 14,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -15019,24 +15019,6 @@
       "filedDate": "2026-09-23",
       "filedAt": "2026-09-23T00:00:00",
       "transactionType": "E"
-    },
-    "5726471": {
-      "id": "5726471",
-      "date": "2026-07-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 104.1,
-      "filerID": 24506,
-      "transactionType": "C"
-    },
-    "5592354": {
-      "id": "5592354",
-      "date": "2026-02-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 103.2,
-      "filerID": 24506,
-      "transactionType": "C"
     },
     "5793542": {
       "id": "5793542",
@@ -340937,6 +340919,28 @@
       "filedAt": "2026-11-07T00:00:00",
       "transactionType": "E"
     },
+    "5937545": {
+      "id": "5937545",
+      "date": "2026-11-05",
+      "name": "SquareSpace, Inc",
+      "category": "Cash Expenditure",
+      "amount": 25.0,
+      "filerID": 23161,
+      "filedDate": "2026-11-07",
+      "filedAt": "2026-11-07T00:00:00",
+      "transactionType": "E"
+    },
+    "5937560": {
+      "id": "5937560",
+      "date": "2026-11-04",
+      "name": "Intisar Strategies LLC",
+      "category": "Cash Expenditure",
+      "amount": 19665.51,
+      "filerID": 22032,
+      "filedDate": "2026-11-07",
+      "filedAt": "2026-11-07T00:00:00",
+      "transactionType": "E"
+    },
     "5937434": {
       "id": "5937434",
       "date": "2026-11-03",
@@ -340991,9 +340995,38 @@
       "filedDate": "2026-11-07",
       "filedAt": "2026-11-07T00:00:00",
       "transactionType": "E"
+    },
+    "5937546": {
+      "id": "5937546",
+      "date": "2026-11-02",
+      "name": "Lynn Howlett Photography",
+      "category": "Cash Expenditure",
+      "amount": 250.0,
+      "filerID": 23161,
+      "filedDate": "2026-11-07",
+      "filedAt": "2026-11-07T00:00:00",
+      "transactionType": "E"
+    },
+    "5726471": {
+      "id": "5726471",
+      "date": "2026-07-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5592354": {
+      "id": "5592354",
+      "date": "2026-02-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 103.2,
+      "filerID": 24506,
+      "transactionType": "C"
     }
   },
   "rollingReconciledOn": "2026-11-07",
-  "lastSuccessfulSync": "2026-11-07T12:14:48-08:00",
+  "lastSuccessfulSync": "2026-11-07T15:40:06-08:00",
   "contributionBackfillComplete": true
 }
