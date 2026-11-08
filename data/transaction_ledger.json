@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 15,
+  "contributionReconcileCursor": 16,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -16392,17 +16392,6 @@
       "filerID": 25141,
       "transactionType": "C"
     },
-    "5824512": {
-      "id": "5824512",
-      "date": "2026-09-22",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 600.0,
-      "filerID": 25309,
-      "transactionType": "C",
-      "filedDate": "2026-09-23",
-      "filedAt": "2026-09-23T00:00:00"
-    },
     "5818803": {
       "id": "5818803",
       "date": "2026-09-11",
@@ -24432,17 +24421,6 @@
       "category": "Cash Contribution",
       "amount": 50.0,
       "filerID": 24956,
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00",
-      "transactionType": "C"
-    },
-    "5844318": {
-      "id": "5844318",
-      "date": "2026-09-28",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 25309,
       "filedDate": "2026-09-29",
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "C"
@@ -43543,17 +43521,6 @@
       "category": "Cash Contribution",
       "amount": 183.35,
       "filerID": 23262,
-      "filedDate": "2026-10-05",
-      "filedAt": "2026-10-05T00:00:00",
-      "transactionType": "C"
-    },
-    "5858524": {
-      "id": "5858524",
-      "date": "2026-09-11",
-      "name": "Harold Hutchison",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 500.0,
-      "filerID": 25309,
       "filedDate": "2026-10-05",
       "filedAt": "2026-10-05T00:00:00",
       "transactionType": "C"
@@ -62899,17 +62866,6 @@
       "filedAt": "2026-10-09T00:00:00",
       "transactionType": "C"
     },
-    "5874975": {
-      "id": "5874975",
-      "date": "2026-10-07",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 25309,
-      "filedDate": "2026-10-09",
-      "filedAt": "2026-10-09T00:00:00",
-      "transactionType": "C"
-    },
     "5875082": {
       "id": "5875082",
       "date": "2026-10-07",
@@ -63170,17 +63126,6 @@
       "category": "Cash Contribution",
       "amount": 25.0,
       "filerID": 25068,
-      "filedDate": "2026-10-09",
-      "filedAt": "2026-10-09T00:00:00",
-      "transactionType": "C"
-    },
-    "5874969": {
-      "id": "5874969",
-      "date": "2026-10-02",
-      "name": "Joe Everton for Hillsboro (21145)",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 25309,
       "filedDate": "2026-10-09",
       "filedAt": "2026-10-09T00:00:00",
       "transactionType": "C"
@@ -125734,17 +125679,6 @@
       "category": "Cash Contribution",
       "amount": 1000.0,
       "filerID": 18744,
-      "transactionType": "C"
-    },
-    "5891581": {
-      "id": "5891581",
-      "date": "2026-10-19",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 187.5,
-      "filerID": 25309,
-      "filedDate": "2026-10-19",
-      "filedAt": "2026-10-19T00:00:00",
       "transactionType": "C"
     },
     "5897461": {
@@ -312919,6 +312853,51 @@
       "filedAt": "2026-10-31T00:00:00",
       "transactionType": "E"
     },
+    "5726471": {
+      "id": "5726471",
+      "date": "2026-07-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 104.1,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5592354": {
+      "id": "5592354",
+      "date": "2026-02-16",
+      "name": "Jeff Lang",
+      "category": "Cash Contribution",
+      "amount": 103.2,
+      "filerID": 24506,
+      "transactionType": "C"
+    },
+    "5793542": {
+      "id": "5793542",
+      "date": "2026-08-04",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 5.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5726531": {
+      "id": "5726531",
+      "date": "2026-04-09",
+      "name": "Adam Beckmann",
+      "category": "Cash Contribution",
+      "amount": 260.25,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
+    "5612956": {
+      "id": "5612956",
+      "date": "2026-03-09",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24869,
+      "transactionType": "C"
+    },
     "5926674": {
       "id": "5926674",
       "date": "2026-11-01",
@@ -338087,24 +338066,6 @@
       "filedAt": "2026-11-05T00:00:00",
       "transactionType": "E"
     },
-    "5726471": {
-      "id": "5726471",
-      "date": "2026-07-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 104.1,
-      "filerID": 24506,
-      "transactionType": "C"
-    },
-    "5592354": {
-      "id": "5592354",
-      "date": "2026-02-16",
-      "name": "Jeff Lang",
-      "category": "Cash Contribution",
-      "amount": 103.2,
-      "filerID": 24506,
-      "transactionType": "C"
-    },
     "5936126": {
       "id": "5936126",
       "date": "2026-11-06",
@@ -341042,35 +341003,74 @@
       "filedAt": "2026-11-07T00:00:00",
       "transactionType": "E"
     },
-    "5793542": {
-      "id": "5793542",
-      "date": "2026-08-04",
+    "5891581": {
+      "id": "5891581",
+      "date": "2026-10-19",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 187.5,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-10-19",
+      "filedAt": "2026-10-19T00:00:00"
+    },
+    "5874975": {
+      "id": "5874975",
+      "date": "2026-10-07",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 5.0,
-      "filerID": 24869,
-      "transactionType": "C"
+      "amount": 50.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-10-09",
+      "filedAt": "2026-10-09T00:00:00"
     },
-    "5726531": {
-      "id": "5726531",
-      "date": "2026-04-09",
-      "name": "Adam Beckmann",
+    "5874969": {
+      "id": "5874969",
+      "date": "2026-10-02",
+      "name": "Joe Everton for Hillsboro (21145)",
       "category": "Cash Contribution",
-      "amount": 260.25,
-      "filerID": 24869,
-      "transactionType": "C"
+      "amount": 150.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-10-09",
+      "filedAt": "2026-10-09T00:00:00"
     },
-    "5612956": {
-      "id": "5612956",
-      "date": "2026-03-09",
+    "5844318": {
+      "id": "5844318",
+      "date": "2026-09-28",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24869,
-      "transactionType": "C"
+      "amount": 25.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
+    },
+    "5824512": {
+      "id": "5824512",
+      "date": "2026-09-22",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 600.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-09-23",
+      "filedAt": "2026-09-23T00:00:00"
+    },
+    "5858524": {
+      "id": "5858524",
+      "date": "2026-09-11",
+      "name": "Harold Hutchison",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 500.0,
+      "filerID": 25309,
+      "transactionType": "C",
+      "filedDate": "2026-10-05",
+      "filedAt": "2026-10-05T00:00:00"
     }
   },
-  "rollingReconciledOn": "2026-11-07",
-  "lastSuccessfulSync": "2026-11-07T22:06:23-08:00",
+  "rollingReconciledOn": "2026-11-08",
+  "lastSuccessfulSync": "2026-11-08T07:15:13-08:00",
   "contributionBackfillComplete": true
 }
