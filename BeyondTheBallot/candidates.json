@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T12:29:56-08:00",
+  "updatedAt": "2026-11-08T22:39:15-08:00",
   "source": "Oregon Secretary of State ORESTAR and Oregon Elections Division",
   "races": [
     {
@@ -20325,7 +20325,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 1069455.97,
-      "expenditureDelta10Days": 1986359.44
+      "expenditureDelta10Days": 1989008.94
     },
     {
       "districtOrder": 101,
@@ -22899,11 +22899,44 @@
       "party": "Democratic / Working Families",
       "race": "House District 7",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19995",
-      "financeSummaryUpdatedAt": "2026-11-07T15:40:06-08:00",
-      "contributionsYTD": 343506.84,
-      "expendituresYTD": 331957.47,
-      "balanceDeficit": 22146.98,
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
+      "contributionsYTD": 345306.84,
+      "expendituresYTD": 331959.85,
+      "balanceDeficit": 23944.6,
       "reportedContributions7Days": [
+        {
+          "id": "5937805",
+          "date": "2026-11-07",
+          "name": "Oregonians to Maintain Community Standards (1579)",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937803",
+          "date": "2026-11-07",
+          "name": "Confederated Tribes of Grand Ronde",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937802",
+          "date": "2026-10-31",
+          "name": "Wanda Davis",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5934986",
           "date": "2026-11-04",
@@ -22940,6 +22973,17 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5937806",
+          "date": "2026-11-01",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 2.38,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5934985",
           "date": "2026-11-04",
           "name": "Community Labor Administrative Service",
@@ -22963,6 +23007,39 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5937805",
+          "date": "2026-11-07",
+          "name": "Oregonians to Maintain Community Standards (1579)",
+          "category": "Cash Contribution",
+          "amount": 250.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937803",
+          "date": "2026-11-07",
+          "name": "Confederated Tribes of Grand Ronde",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937802",
+          "date": "2026-10-31",
+          "name": "Wanda Davis",
+          "category": "Cash Contribution",
+          "amount": 50.0,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5934986",
           "date": "2026-11-04",
@@ -22998,6 +23075,17 @@
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5937806",
+          "date": "2026-11-01",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 2.38,
+          "filerID": 19995,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5934985",
           "date": "2026-11-04",
@@ -23065,8 +23153,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 3813.06,
-      "expenditureDelta10Days": 41527.79
+      "contributionDelta10Days": 5613.06,
+      "expenditureDelta10Days": 41530.17
     },
     {
       "campaignURL": "https://www.wilsonforspringfield.com/",
@@ -23210,11 +23298,33 @@
       "race": "House District 8",
       "filerID": 19751,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19751",
-      "financeSummaryUpdatedAt": "2026-11-07T15:40:06-08:00",
-      "contributionsYTD": 69473.9,
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
+      "contributionsYTD": 71473.9,
       "expendituresYTD": 85528.6,
-      "balanceDeficit": 33329.68,
+      "balanceDeficit": 35329.68,
       "reportedContributions7Days": [
+        {
+          "id": "5937830",
+          "date": "2026-11-07",
+          "name": "Confederated Tribes of Grand Ronde",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 19751,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937829",
+          "date": "2026-11-07",
+          "name": "Oregonians to Maintain Community Standards (1579)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 19751,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5933880",
           "date": "2026-11-02",
@@ -23285,6 +23395,28 @@
         }
       ],
       "recentContributions": [
+        {
+          "id": "5937830",
+          "date": "2026-11-07",
+          "name": "Confederated Tribes of Grand Ronde",
+          "category": "Cash Contribution",
+          "amount": 1500.0,
+          "filerID": 19751,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937829",
+          "date": "2026-11-07",
+          "name": "Oregonians to Maintain Community Standards (1579)",
+          "category": "Cash Contribution",
+          "amount": 500.0,
+          "filerID": 19751,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5933880",
           "date": "2026-11-02",
@@ -23398,7 +23530,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 5505.0,
+      "contributionDelta10Days": 7505.0,
       "expenditureDelta10Days": 0.2
     },
     {
@@ -25118,10 +25250,10 @@
       "race": "House District 14",
       "filerID": 17469,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17469",
-      "financeSummaryUpdatedAt": "2026-11-07T22:06:23-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 532461.82,
-      "expendituresYTD": 609823.45,
-      "balanceDeficit": 93817.29,
+      "expendituresYTD": 610263.1,
+      "balanceDeficit": 93377.64,
       "reportedContributions7Days": [
         {
           "id": "5937659",
@@ -25224,6 +25356,17 @@
         }
       ],
       "reportedExpenditures7Days": [
+        {
+          "id": "5937831",
+          "date": "2026-11-06",
+          "name": "Hilton Hotel",
+          "category": "Cash Expenditure",
+          "amount": 439.65,
+          "filerID": 17469,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5932530",
           "date": "2026-10-31",
@@ -25383,6 +25526,17 @@
       ],
       "recentExpenditures": [
         {
+          "id": "5937831",
+          "date": "2026-11-06",
+          "name": "Hilton Hotel",
+          "category": "Cash Expenditure",
+          "amount": 439.65,
+          "filerID": 17469,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5932530",
           "date": "2026-10-31",
           "name": "WestCliff Lodge",
@@ -25483,7 +25637,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 24600.0,
-      "expenditureDelta10Days": 40506.73
+      "expenditureDelta10Days": 40946.38
     },
     {
       "districtOrder": 114,
@@ -25515,11 +25669,44 @@
       "race": "House District 15",
       "filerID": 24710,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24710",
-      "financeSummaryUpdatedAt": "2026-11-08T07:15:13-08:00",
-      "contributionsYTD": 167929.13,
-      "expendituresYTD": 155615.68,
-      "balanceDeficit": 12313.45,
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
+      "contributionsYTD": 168574.41,
+      "expendituresYTD": 156766.76,
+      "balanceDeficit": 11807.65,
       "reportedContributions7Days": [
+        {
+          "id": "5937800",
+          "date": "2026-10-31",
+          "name": "Mark Leonard",
+          "category": "In-Kind Contribution",
+          "amount": 255.0,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937799",
+          "date": "2026-11-03",
+          "name": "Oregon Working Families Party (5528)",
+          "category": "In-Kind Contribution",
+          "amount": 223.68,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937797",
+          "date": "2026-11-06",
+          "name": "2026 Oregon Voter Guide (25351)",
+          "category": "In-Kind Contribution",
+          "amount": 166.6,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
         {
           "id": "5935027",
           "date": "2026-10-30",
@@ -25754,6 +25941,28 @@
       ],
       "reportedExpenditures7Days": [
         {
+          "id": "5937796",
+          "date": "2026-11-08",
+          "name": "Andrea Ottoman",
+          "category": "Cash Expenditure",
+          "amount": 481.8,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5937793",
+          "date": "2026-11-08",
+          "name": "Wix.com",
+          "category": "Cash Expenditure",
+          "amount": 24.0,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
           "id": "5926818",
           "date": "2026-10-30",
           "name": "Google",
@@ -25965,6 +26174,39 @@
       ],
       "recentContributions": [
         {
+          "id": "5937800",
+          "date": "2026-10-31",
+          "name": "Mark Leonard",
+          "category": "In-Kind Contribution",
+          "amount": 255.0,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937799",
+          "date": "2026-11-03",
+          "name": "Oregon Working Families Party (5528)",
+          "category": "In-Kind Contribution",
+          "amount": 223.68,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
+          "id": "5937797",
+          "date": "2026-11-06",
+          "name": "2026 Oregon Voter Guide (25351)",
+          "category": "In-Kind Contribution",
+          "amount": 166.6,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "C"
+        },
+        {
           "id": "5935027",
           "date": "2026-10-30",
           "name": "Miscellaneous Cash Contributions $100 and under",
@@ -26040,42 +26282,31 @@
           "filedDate": "2026-11-04",
           "filedAt": "2026-11-04T00:00:00",
           "transactionType": "C"
-        },
-        {
-          "id": "5935009",
-          "date": "2026-10-29",
-          "name": "Nancy Greenman",
-          "category": "Cash Contribution",
-          "amount": 100.0,
-          "filerID": 24710,
-          "filedDate": "2026-11-04",
-          "filedAt": "2026-11-04T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5935008",
-          "date": "2026-10-29",
-          "name": "Gretchen Nelson",
-          "category": "Cash Contribution",
-          "amount": 100.0,
-          "filerID": 24710,
-          "filedDate": "2026-11-04",
-          "filedAt": "2026-11-04T00:00:00",
-          "transactionType": "C"
-        },
-        {
-          "id": "5935007",
-          "date": "2026-10-29",
-          "name": "John Berg",
-          "category": "Cash Contribution",
-          "amount": 25.0,
-          "filerID": 24710,
-          "filedDate": "2026-11-04",
-          "filedAt": "2026-11-04T00:00:00",
-          "transactionType": "C"
         }
       ],
       "recentExpenditures": [
+        {
+          "id": "5937796",
+          "date": "2026-11-08",
+          "name": "Andrea Ottoman",
+          "category": "Cash Expenditure",
+          "amount": 481.8,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5937793",
+          "date": "2026-11-08",
+          "name": "Wix.com",
+          "category": "Cash Expenditure",
+          "amount": 24.0,
+          "filerID": 24710,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
         {
           "id": "5926818",
           "date": "2026-10-30",
@@ -26163,28 +26394,6 @@
           "filedDate": "2026-11-04",
           "filedAt": "2026-11-04T00:00:00",
           "transactionType": "E"
-        },
-        {
-          "id": "5935021",
-          "date": "2026-11-03",
-          "name": "Vibe Advertising",
-          "category": "Cash Expenditure",
-          "amount": 500.0,
-          "filerID": 24710,
-          "filedDate": "2026-11-04",
-          "filedAt": "2026-11-04T00:00:00",
-          "transactionType": "E"
-        },
-        {
-          "id": "5935019",
-          "date": "2026-11-03",
-          "name": "ActBlue Technical Services",
-          "category": "Cash Expenditure",
-          "amount": 0.99,
-          "filerID": 24710,
-          "filedDate": "2026-11-04",
-          "filedAt": "2026-11-04T00:00:00",
-          "transactionType": "E"
         }
       ],
       "topContributorsSince2026": [
@@ -26202,7 +26411,7 @@
         },
         {
           "name": "Oregon Working Families Party (5528)",
-          "amount": 5042.86
+          "amount": 5266.54
         },
         {
           "name": "Ginger Hamp",
@@ -26231,8 +26440,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 50838.63,
-      "expenditureDelta10Days": 59002.05
+      "contributionDelta10Days": 51483.91,
+      "expenditureDelta10Days": 60153.13
     },
     {
       "districtOrder": 115,
@@ -26617,7 +26826,7 @@
       "race": "House District 16",
       "filerID": 23262,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23262",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 39613.35,
       "expendituresYTD": 47907.56,
       "balanceDeficit": 19517.95,
@@ -27495,7 +27704,7 @@
       "race": "House District 19",
       "filerID": 16690,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=16690",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 82951.81,
       "expendituresYTD": 83891.72,
       "balanceDeficit": 19727.82,
@@ -28516,7 +28725,7 @@
       "race": "House District 20",
       "filerID": 25068,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25068",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 10494.8,
       "expendituresYTD": 3935.49,
       "balanceDeficit": 5136.18,
@@ -30113,7 +30322,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24273",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 590093.84,
       "expendituresYTD": 590660.45,
       "balanceDeficit": 638.61,
@@ -30312,7 +30521,7 @@
       "race": "House District 23",
       "filerID": 23683,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23683",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -30334,7 +30543,7 @@
       "race": "House District 23",
       "filerID": 21575,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21575",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 156813.06,
       "expendituresYTD": 179339.18,
       "balanceDeficit": 18826.07,
@@ -31615,7 +31824,7 @@
       "race": "House District 26",
       "filerID": 25090,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=25090",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 0.0,
       "expendituresYTD": 0.0,
       "balanceDeficit": 0.0,
@@ -31845,7 +32054,7 @@
       "race": "House District 27",
       "filerID": 21883,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21883",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 296030.38,
       "expendituresYTD": 310545.08,
       "balanceDeficit": 7953.42,
@@ -32529,7 +32738,7 @@
       "race": "House District 28",
       "filerID": 20290,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20290",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 201439.95,
       "expendituresYTD": 157203.13,
       "balanceDeficit": 87057.57,
@@ -33034,7 +33243,7 @@
       "race": "House District 29",
       "filerID": 23939,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23939",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 23672.66,
       "expendituresYTD": 19599.62,
       "balanceDeficit": 3849.19,
@@ -34772,7 +34981,7 @@
       "race": "House District 33",
       "filerID": 23464,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=23464",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 62561.92,
       "expendituresYTD": 44766.48,
       "balanceDeficit": -5811.78,
@@ -34983,7 +35192,7 @@
       "race": "House District 35",
       "filerID": 21775,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21775",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 40610.0,
       "expendituresYTD": 52927.86,
       "balanceDeficit": 16132.5,
@@ -35555,7 +35764,7 @@
       "race": "House District 38",
       "filerID": 19463,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19463",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 280328.08,
       "expendituresYTD": 308835.33,
       "balanceDeficit": 31569.16,
@@ -37654,7 +37863,7 @@
       "race": "House District 43",
       "filerID": 17625,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17625",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 206997.5,
       "expendituresYTD": 221044.9,
       "balanceDeficit": 40377.5,
@@ -37985,7 +38194,7 @@
       "race": "House District 44",
       "filerID": 21678,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21678",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 102111.9,
       "expendituresYTD": 71213.51,
       "balanceDeficit": 58857.38,
@@ -39886,7 +40095,7 @@
       "race": "House District 50",
       "filerID": 19778,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=19778",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 168937.42,
       "expendituresYTD": 133903.31,
       "balanceDeficit": 51668.51,
@@ -41437,7 +41646,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 10348.71,
-      "expenditureDelta10Days": 26532.51
+      "expenditureDelta10Days": 18532.51
     },
     {
       "campaignURL": "https://www.oregonlegislature.gov/levy",
@@ -41955,8 +42164,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 40880.4,
-      "expenditureDelta10Days": 75582.77
+      "contributionDelta10Days": 6054.02,
+      "expenditureDelta10Days": 7439.88
     },
     {
       "campaignURL": "https://www.facebook.com/SummersforOregon/",
@@ -43718,7 +43927,7 @@
       "race": "House District 58",
       "filerID": 20272,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20272",
-      "financeSummaryUpdatedAt": "2026-11-07T12:14:48-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 74285.0,
       "expendituresYTD": 116046.7,
       "balanceDeficit": 27757.31,
@@ -44123,8 +44332,8 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 8300.0,
-      "expenditureDelta10Days": 860.0
+      "contributionDelta10Days": 3000.0,
+      "expenditureDelta10Days": 0.0
     },
     {
       "districtOrder": 160,
@@ -44474,7 +44683,7 @@
       ],
       "financeDetailsPending": false,
       "dataError": null,
-      "contributionDelta10Days": 9250.0,
+      "contributionDelta10Days": 8250.0,
       "expenditureDelta10Days": 3789.65
     },
     {
@@ -44494,7 +44703,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=22066",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 1369585.14,
       "expendituresYTD": 1350860.46,
       "balanceDeficit": 21949.62,
@@ -44847,7 +45056,7 @@
       "race": "Senate District 3",
       "filerID": 17209,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=17209",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 4659.41,
       "expendituresYTD": 3320.37,
       "balanceDeficit": 566.07,
@@ -45380,7 +45589,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 6579.1,
-      "expenditureDelta10Days": 91858.17
+      "expenditureDelta10Days": 30193.94
     },
     {
       "districtOrder": 204,
@@ -45589,14 +45798,60 @@
       "race": "Senate District 6",
       "filerID": 24911,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24911",
-      "financeSummaryUpdatedAt": "2026-11-07T15:40:06-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 12334.87,
-      "expendituresYTD": 7620.41,
-      "balanceDeficit": 4714.46,
+      "expendituresYTD": 10622.16,
+      "balanceDeficit": 1712.71,
       "reportedContributions7Days": [],
-      "reportedExpenditures7Days": [],
+      "reportedExpenditures7Days": [
+        {
+          "id": "5937814",
+          "date": "2026-11-06",
+          "name": "Mid-Valley Media Group",
+          "category": "Cash Expenditure",
+          "amount": 3000.0,
+          "filerID": 24911,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5937812",
+          "date": "2026-11-01",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 1.75,
+          "filerID": 24911,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        }
+      ],
       "recentContributions": [],
-      "recentExpenditures": [],
+      "recentExpenditures": [
+        {
+          "id": "5937814",
+          "date": "2026-11-06",
+          "name": "Mid-Valley Media Group",
+          "category": "Cash Expenditure",
+          "amount": 3000.0,
+          "filerID": 24911,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        },
+        {
+          "id": "5937812",
+          "date": "2026-11-01",
+          "name": "ActBlue Technical Services",
+          "category": "Cash Expenditure",
+          "amount": 1.75,
+          "filerID": 24911,
+          "filedDate": "2026-11-08",
+          "filedAt": "2026-11-08T00:00:00",
+          "transactionType": "E"
+        }
+      ],
       "topContributorsSince2026": [
         {
           "name": "Citizen Action for Political Education (33)",
@@ -45642,7 +45897,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 0.0,
-      "expenditureDelta10Days": 0.0
+      "expenditureDelta10Days": 3001.75
     },
     {
       "districtOrder": 206,
@@ -46545,7 +46800,7 @@
       "race": "Senate District 8",
       "filerID": 4680,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=4680",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 66272.0,
       "expendituresYTD": 73623.55,
       "balanceDeficit": 17027.0,
@@ -47663,7 +47918,7 @@
         }
       ],
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=20287",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 1650433.85,
       "expendituresYTD": 1662385.99,
       "balanceDeficit": 16509.57,
@@ -49122,7 +49377,7 @@
       "race": "Senate District 15",
       "filerID": 24761,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=24761",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 448076.8,
       "expendituresYTD": 443867.46,
       "balanceDeficit": -31340.99,
@@ -49383,7 +49638,7 @@
       "party": "Democratic",
       "race": "Senate District 16",
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=21842",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 116939.72,
       "expendituresYTD": 99411.01,
       "balanceDeficit": 16215.43,
@@ -49836,7 +50091,7 @@
       "financeDetailsPending": false,
       "dataError": null,
       "contributionDelta10Days": 5737.38,
-      "expenditureDelta10Days": 15171.95
+      "expenditureDelta10Days": 14421.95
     },
     {
       "districtOrder": 216,
@@ -50581,7 +50836,7 @@
       "race": "Senate District 19",
       "filerID": 18396,
       "orestarURL": "https://secure.sos.state.or.us/orestar/publicAccountSummary.do?filerId=18396",
-      "financeSummaryUpdatedAt": "2026-11-07T06:54:55-08:00",
+      "financeSummaryUpdatedAt": "2026-11-08T22:39:15-08:00",
       "contributionsYTD": 713659.34,
       "expendituresYTD": 772023.51,
       "balanceDeficit": 88114.99,
