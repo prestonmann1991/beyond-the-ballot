@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 32,
+  "contributionReconcileCursor": 33,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -29545,109 +29545,6 @@
       "filedDate": "2026-10-01",
       "filedAt": "2026-10-01T00:00:00",
       "transactionType": "E"
-    },
-    "5813447": {
-      "id": "5813447",
-      "date": "2026-09-16",
-      "name": "Cindy Sawyer",
-      "category": "In-Kind Contribution",
-      "amount": 1000.0,
-      "filerID": 24878,
-      "transactionType": "C",
-      "filedDate": "2026-09-17",
-      "filedAt": "2026-09-17T00:00:00"
-    },
-    "5813434": {
-      "id": "5813434",
-      "date": "2026-09-08",
-      "name": "Randall Fryer",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 6000.0,
-      "filerID": 24878,
-      "transactionType": "C",
-      "filedDate": "2026-09-17",
-      "filedAt": "2026-09-17T00:00:00"
-    },
-    "5774695": {
-      "id": "5774695",
-      "date": "2026-08-21",
-      "name": "Robert Merrill",
-      "category": "Cash Contribution",
-      "amount": 1500.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5754993": {
-      "id": "5754993",
-      "date": "2026-08-05",
-      "name": "Natalia Bronner",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5752167": {
-      "id": "5752167",
-      "date": "2026-08-03",
-      "name": "Randall Fryer",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 4000.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5752183": {
-      "id": "5752183",
-      "date": "2026-07-24",
-      "name": "Randall Fryer",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5707329": {
-      "id": "5707329",
-      "date": "2026-07-01",
-      "name": "Randall Fryer",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 12000.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5707328": {
-      "id": "5707328",
-      "date": "2026-06-30",
-      "name": "Randall Fryer",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 4000.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5647588": {
-      "id": "5647588",
-      "date": "2026-04-25",
-      "name": "Cindy Sawyer",
-      "category": "In-Kind Contribution",
-      "amount": 800.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5647587": {
-      "id": "5647587",
-      "date": "2026-04-15",
-      "name": "Randall Fryer",
-      "category": "Cash Contribution",
-      "amount": 600.0,
-      "filerID": 24878,
-      "transactionType": "C"
-    },
-    "5707330": {
-      "id": "5707330",
-      "date": "2026-03-25",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24878,
-      "transactionType": "C"
     },
     "5851724": {
       "id": "5851724",
@@ -350205,6 +350102,473 @@
       "filedAt": "2026-11-12T00:00:00",
       "transactionType": "E"
     },
+    "5919578": {
+      "id": "5919578",
+      "date": "2026-10-23",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-27",
+      "filedAt": "2026-10-27T00:00:00"
+    },
+    "5908442": {
+      "id": "5908442",
+      "date": "2026-10-15",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-21",
+      "filedAt": "2026-10-21T00:00:00"
+    },
+    "5874619": {
+      "id": "5874619",
+      "date": "2026-10-09",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-09",
+      "filedAt": "2026-10-09T00:00:00"
+    },
+    "5878006": {
+      "id": "5878006",
+      "date": "2026-10-09",
+      "name": "Starr Leadership Fund (23228)",
+      "category": "In-Kind Contribution",
+      "amount": 2000.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-12",
+      "filedAt": "2026-10-12T00:00:00"
+    },
+    "5866708": {
+      "id": "5866708",
+      "date": "2026-10-07",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 3000.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-07",
+      "filedAt": "2026-10-07T00:00:00"
+    },
+    "5873578": {
+      "id": "5873578",
+      "date": "2026-10-06",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 2030.2,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-08",
+      "filedAt": "2026-10-08T00:00:00"
+    },
+    "5874599": {
+      "id": "5874599",
+      "date": "2026-10-02",
+      "name": "Linda Hallberg",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-10-09",
+      "filedAt": "2026-10-09T00:00:00"
+    },
+    "5850790": {
+      "id": "5850790",
+      "date": "2026-09-30",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 3000.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00"
+    },
+    "5839500": {
+      "id": "5839500",
+      "date": "2026-09-29",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 10.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
+    },
+    "5839493": {
+      "id": "5839493",
+      "date": "2026-09-23",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
+    },
+    "5812638": {
+      "id": "5812638",
+      "date": "2026-09-16",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 175.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-16",
+      "filedAt": "2026-09-16T00:00:00"
+    },
+    "5812637": {
+      "id": "5812637",
+      "date": "2026-09-10",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 37.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-16",
+      "filedAt": "2026-09-16T00:00:00"
+    },
+    "5812606": {
+      "id": "5812606",
+      "date": "2026-09-09",
+      "name": "The Leadership Fund (2690)",
+      "category": "Cash Contribution",
+      "amount": 750.0,
+      "filerID": 24594,
+      "transactionType": "C",
+      "filedDate": "2026-09-16",
+      "filedAt": "2026-09-16T00:00:00"
+    },
+    "5780697": {
+      "id": "5780697",
+      "date": "2026-08-25",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5801162": {
+      "id": "5801162",
+      "date": "2026-08-21",
+      "name": "Marisa Hilarides",
+      "category": "In-Kind Contribution",
+      "amount": 136.98,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5780687": {
+      "id": "5780687",
+      "date": "2026-08-20",
+      "name": "Marilyn Cummings",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5764972": {
+      "id": "5764972",
+      "date": "2026-08-12",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5755868": {
+      "id": "5755868",
+      "date": "2026-08-06",
+      "name": "The Leadership Fund (2690)",
+      "category": "In-Kind Contribution",
+      "amount": 2500.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5754617": {
+      "id": "5754617",
+      "date": "2026-08-03",
+      "name": "East Clackamas County Republican Women",
+      "category": "In-Kind Contribution",
+      "amount": 400.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5737156": {
+      "id": "5737156",
+      "date": "2026-07-17",
+      "name": "Stephanie S Scott Trust",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5737160": {
+      "id": "5737160",
+      "date": "2026-07-17",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5737159": {
+      "id": "5737159",
+      "date": "2026-07-09",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5693539": {
+      "id": "5693539",
+      "date": "2026-06-10",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5666473": {
+      "id": "5666473",
+      "date": "2026-05-12",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5659727": {
+      "id": "5659727",
+      "date": "2026-05-06",
+      "name": "Linda Hallberg",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5649967": {
+      "id": "5649967",
+      "date": "2026-05-01",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5635437": {
+      "id": "5635437",
+      "date": "2026-04-22",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5635436": {
+      "id": "5635436",
+      "date": "2026-04-15",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5611335": {
+      "id": "5611335",
+      "date": "2026-04-02",
+      "name": "The Leadership Fund (2690)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5611108": {
+      "id": "5611108",
+      "date": "2026-03-25",
+      "name": "Glenn Lancaster",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5611570": {
+      "id": "5611570",
+      "date": "2026-03-25",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5586174": {
+      "id": "5586174",
+      "date": "2026-03-11",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5561561": {
+      "id": "5561561",
+      "date": "2026-03-04",
+      "name": "Barbara Kanz",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5561570": {
+      "id": "5561570",
+      "date": "2026-03-04",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5553625": {
+      "id": "5553625",
+      "date": "2026-02-25",
+      "name": "Marietta Hauser",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5553634": {
+      "id": "5553634",
+      "date": "2026-02-25",
+      "name": "Ken Hawes",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5554174": {
+      "id": "5554174",
+      "date": "2026-02-25",
+      "name": "Eckmann Family Trust",
+      "category": "Cash Contribution",
+      "amount": 3000.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5546963": {
+      "id": "5546963",
+      "date": "2026-02-19",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5546962": {
+      "id": "5546962",
+      "date": "2026-02-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5537755": {
+      "id": "5537755",
+      "date": "2026-02-11",
+      "name": "Diana Newman",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5537761": {
+      "id": "5537761",
+      "date": "2026-02-11",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528826": {
+      "id": "5528826",
+      "date": "2026-02-03",
+      "name": "Melissa Snowberger",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528822": {
+      "id": "5528822",
+      "date": "2026-01-30",
+      "name": "Kirsten Thompson",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528829": {
+      "id": "5528829",
+      "date": "2026-01-30",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528818": {
+      "id": "5528818",
+      "date": "2026-01-29",
+      "name": "John Pries",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528828": {
+      "id": "5528828",
+      "date": "2026-01-29",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5519185": {
+      "id": "5519185",
+      "date": "2026-01-27",
+      "name": "The Leadership Fund (2690)",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5528292": {
+      "id": "5528292",
+      "date": "2026-01-27",
+      "name": "Megan Maxwell",
+      "category": "In-Kind Contribution",
+      "amount": 150.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
+    "5509133": {
+      "id": "5509133",
+      "date": "2026-01-13",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24594,
+      "transactionType": "C"
+    },
     "5945443": {
       "id": "5945443",
       "date": "2026-11-12",
@@ -350234,6 +350598,17 @@
       "category": "Cash Contribution",
       "amount": 75.0,
       "filerID": 20246,
+      "filedDate": "2026-11-13",
+      "filedAt": "2026-11-13T00:00:00",
+      "transactionType": "C"
+    },
+    "5946014": {
+      "id": "5946014",
+      "date": "2026-11-12",
+      "name": "Stephen Hunter",
+      "category": "Cash Contribution",
+      "amount": 12.0,
+      "filerID": 24594,
       "filedDate": "2026-11-13",
       "filedAt": "2026-11-13T00:00:00",
       "transactionType": "C"
@@ -350711,486 +351086,166 @@
       "filedAt": "2026-11-13T00:00:00",
       "transactionType": "E"
     },
-    "5946014": {
-      "id": "5946014",
+    "5946318": {
+      "id": "5946318",
       "date": "2026-11-12",
-      "name": "Stephen Hunter",
+      "name": "Malcolm Skinner",
       "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-11-13",
-      "filedAt": "2026-11-13T00:00:00"
+      "amount": 75.0,
+      "filerID": 19050,
+      "filedDate": "2026-11-14",
+      "filedAt": "2026-11-14T00:00:00",
+      "transactionType": "C"
     },
-    "5919578": {
-      "id": "5919578",
-      "date": "2026-10-23",
-      "name": "Miscellaneous Cash Contributions $100 and under",
+    "5946319": {
+      "id": "5946319",
+      "date": "2026-11-12",
+      "name": "Valdine Skinner",
       "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-27",
-      "filedAt": "2026-10-27T00:00:00"
+      "amount": 75.0,
+      "filerID": 19050,
+      "filedDate": "2026-11-14",
+      "filedAt": "2026-11-14T00:00:00",
+      "transactionType": "C"
     },
-    "5908442": {
-      "id": "5908442",
-      "date": "2026-10-15",
-      "name": "Miscellaneous Cash Contributions $100 and under",
+    "5946320": {
+      "id": "5946320",
+      "date": "2026-11-12",
+      "name": "Sally A Gillilan",
       "category": "Cash Contribution",
       "amount": 100.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-21",
-      "filedAt": "2026-10-21T00:00:00"
+      "filerID": 19050,
+      "filedDate": "2026-11-14",
+      "filedAt": "2026-11-14T00:00:00",
+      "transactionType": "C"
     },
-    "5874619": {
-      "id": "5874619",
-      "date": "2026-10-09",
+    "5946324": {
+      "id": "5946324",
+      "date": "2026-11-12",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-09",
-      "filedAt": "2026-10-09T00:00:00"
+      "amount": 130.0,
+      "filerID": 19050,
+      "filedDate": "2026-11-14",
+      "filedAt": "2026-11-14T00:00:00",
+      "transactionType": "C"
     },
-    "5878006": {
-      "id": "5878006",
-      "date": "2026-10-09",
-      "name": "Starr Leadership Fund (23228)",
-      "category": "In-Kind Contribution",
-      "amount": 2000.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-12",
-      "filedAt": "2026-10-12T00:00:00"
+    "5946325": {
+      "id": "5946325",
+      "date": "2026-11-13",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 20.0,
+      "filerID": 19050,
+      "filedDate": "2026-11-14",
+      "filedAt": "2026-11-14T00:00:00",
+      "transactionType": "E"
     },
-    "5866708": {
-      "id": "5866708",
-      "date": "2026-10-07",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 3000.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-07",
-      "filedAt": "2026-10-07T00:00:00"
-    },
-    "5873578": {
-      "id": "5873578",
-      "date": "2026-10-06",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 2030.2,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-08",
-      "filedAt": "2026-10-08T00:00:00"
-    },
-    "5874599": {
-      "id": "5874599",
-      "date": "2026-10-02",
-      "name": "Linda Hallberg",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-10-09",
-      "filedAt": "2026-10-09T00:00:00"
-    },
-    "5850790": {
-      "id": "5850790",
-      "date": "2026-09-30",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 3000.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-09-30",
-      "filedAt": "2026-09-30T00:00:00"
-    },
-    "5839500": {
-      "id": "5839500",
-      "date": "2026-09-29",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 10.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00"
-    },
-    "5839493": {
-      "id": "5839493",
-      "date": "2026-09-23",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00"
-    },
-    "5812638": {
-      "id": "5812638",
+    "5813447": {
+      "id": "5813447",
       "date": "2026-09-16",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 175.0,
-      "filerID": 24594,
+      "name": "Cindy Sawyer",
+      "category": "In-Kind Contribution",
+      "amount": 1000.0,
+      "filerID": 24878,
       "transactionType": "C",
-      "filedDate": "2026-09-16",
-      "filedAt": "2026-09-16T00:00:00"
+      "filedDate": "2026-09-17",
+      "filedAt": "2026-09-17T00:00:00"
     },
-    "5812637": {
-      "id": "5812637",
-      "date": "2026-09-10",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 37.0,
-      "filerID": 24594,
+    "5813434": {
+      "id": "5813434",
+      "date": "2026-09-08",
+      "name": "Randall Fryer",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 6000.0,
+      "filerID": 24878,
       "transactionType": "C",
-      "filedDate": "2026-09-16",
-      "filedAt": "2026-09-16T00:00:00"
+      "filedDate": "2026-09-17",
+      "filedAt": "2026-09-17T00:00:00"
     },
-    "5812606": {
-      "id": "5812606",
-      "date": "2026-09-09",
-      "name": "The Leadership Fund (2690)",
-      "category": "Cash Contribution",
-      "amount": 750.0,
-      "filerID": 24594,
-      "transactionType": "C",
-      "filedDate": "2026-09-16",
-      "filedAt": "2026-09-16T00:00:00"
-    },
-    "5780697": {
-      "id": "5780697",
-      "date": "2026-08-25",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5801162": {
-      "id": "5801162",
+    "5774695": {
+      "id": "5774695",
       "date": "2026-08-21",
-      "name": "Marisa Hilarides",
-      "category": "In-Kind Contribution",
-      "amount": 136.98,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5780687": {
-      "id": "5780687",
-      "date": "2026-08-20",
-      "name": "Marilyn Cummings",
+      "name": "Robert Merrill",
       "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24594,
+      "amount": 1500.0,
+      "filerID": 24878,
       "transactionType": "C"
     },
-    "5764972": {
-      "id": "5764972",
-      "date": "2026-08-12",
-      "name": "Miscellaneous Cash Contributions $100 and under",
+    "5754993": {
+      "id": "5754993",
+      "date": "2026-08-05",
+      "name": "Natalia Bronner",
       "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
+      "amount": 500.0,
+      "filerID": 24878,
       "transactionType": "C"
     },
-    "5755868": {
-      "id": "5755868",
-      "date": "2026-08-06",
-      "name": "The Leadership Fund (2690)",
-      "category": "In-Kind Contribution",
-      "amount": 2500.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5754617": {
-      "id": "5754617",
+    "5752167": {
+      "id": "5752167",
       "date": "2026-08-03",
-      "name": "East Clackamas County Republican Women",
+      "name": "Randall Fryer",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 4000.0,
+      "filerID": 24878,
+      "transactionType": "C"
+    },
+    "5752183": {
+      "id": "5752183",
+      "date": "2026-07-24",
+      "name": "Randall Fryer",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24878,
+      "transactionType": "C"
+    },
+    "5707329": {
+      "id": "5707329",
+      "date": "2026-07-01",
+      "name": "Randall Fryer",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 12000.0,
+      "filerID": 24878,
+      "transactionType": "C"
+    },
+    "5707328": {
+      "id": "5707328",
+      "date": "2026-06-30",
+      "name": "Randall Fryer",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 4000.0,
+      "filerID": 24878,
+      "transactionType": "C"
+    },
+    "5647588": {
+      "id": "5647588",
+      "date": "2026-04-25",
+      "name": "Cindy Sawyer",
       "category": "In-Kind Contribution",
-      "amount": 400.0,
-      "filerID": 24594,
+      "amount": 800.0,
+      "filerID": 24878,
       "transactionType": "C"
     },
-    "5737156": {
-      "id": "5737156",
-      "date": "2026-07-17",
-      "name": "Stephanie S Scott Trust",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5737160": {
-      "id": "5737160",
-      "date": "2026-07-17",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5737159": {
-      "id": "5737159",
-      "date": "2026-07-09",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5693539": {
-      "id": "5693539",
-      "date": "2026-06-10",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5666473": {
-      "id": "5666473",
-      "date": "2026-05-12",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5659727": {
-      "id": "5659727",
-      "date": "2026-05-06",
-      "name": "Linda Hallberg",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5649967": {
-      "id": "5649967",
-      "date": "2026-05-01",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5635437": {
-      "id": "5635437",
-      "date": "2026-04-22",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5635436": {
-      "id": "5635436",
+    "5647587": {
+      "id": "5647587",
       "date": "2026-04-15",
-      "name": "Miscellaneous Cash Contributions $100 and under",
+      "name": "Randall Fryer",
       "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
+      "amount": 600.0,
+      "filerID": 24878,
       "transactionType": "C"
     },
-    "5611335": {
-      "id": "5611335",
-      "date": "2026-04-02",
-      "name": "The Leadership Fund (2690)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5611108": {
-      "id": "5611108",
-      "date": "2026-03-25",
-      "name": "Glenn Lancaster",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5611570": {
-      "id": "5611570",
+    "5707330": {
+      "id": "5707330",
       "date": "2026-03-25",
       "name": "Miscellaneous Cash Contributions $100 and under",
       "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5586174": {
-      "id": "5586174",
-      "date": "2026-03-11",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 12.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5561561": {
-      "id": "5561561",
-      "date": "2026-03-04",
-      "name": "Barbara Kanz",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5561570": {
-      "id": "5561570",
-      "date": "2026-03-04",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5553625": {
-      "id": "5553625",
-      "date": "2026-02-25",
-      "name": "Marietta Hauser",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5553634": {
-      "id": "5553634",
-      "date": "2026-02-25",
-      "name": "Ken Hawes",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5554174": {
-      "id": "5554174",
-      "date": "2026-02-25",
-      "name": "Eckmann Family Trust",
-      "category": "Cash Contribution",
-      "amount": 3000.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5546963": {
-      "id": "5546963",
-      "date": "2026-02-19",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
       "amount": 100.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5546962": {
-      "id": "5546962",
-      "date": "2026-02-18",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5537755": {
-      "id": "5537755",
-      "date": "2026-02-11",
-      "name": "Diana Newman",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5537761": {
-      "id": "5537761",
-      "date": "2026-02-11",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528826": {
-      "id": "5528826",
-      "date": "2026-02-03",
-      "name": "Melissa Snowberger",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528822": {
-      "id": "5528822",
-      "date": "2026-01-30",
-      "name": "Kirsten Thompson",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528829": {
-      "id": "5528829",
-      "date": "2026-01-30",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528818": {
-      "id": "5528818",
-      "date": "2026-01-29",
-      "name": "John Pries",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528828": {
-      "id": "5528828",
-      "date": "2026-01-29",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5519185": {
-      "id": "5519185",
-      "date": "2026-01-27",
-      "name": "The Leadership Fund (2690)",
-      "category": "Cash Contribution",
-      "amount": 5000.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5528292": {
-      "id": "5528292",
-      "date": "2026-01-27",
-      "name": "Megan Maxwell",
-      "category": "In-Kind Contribution",
-      "amount": 150.0,
-      "filerID": 24594,
-      "transactionType": "C"
-    },
-    "5509133": {
-      "id": "5509133",
-      "date": "2026-01-13",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24594,
+      "filerID": 24878,
       "transactionType": "C"
     }
   },
   "rollingReconciledOn": "2026-11-14",
-  "lastSuccessfulSync": "2026-11-14T03:31:05-08:00",
+  "lastSuccessfulSync": "2026-11-14T10:07:52-08:00",
   "contributionBackfillComplete": true
 }
