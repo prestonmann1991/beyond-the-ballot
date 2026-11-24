@@ -132,7 +132,7 @@
     25226,
     25309
   ],
-  "contributionReconcileCursor": 55,
+  "contributionReconcileCursor": 56,
   "transactions": {
     "5808286": {
       "id": "5808286",
@@ -3539,586 +3539,6 @@
       "filedDate": "2026-09-16",
       "filedAt": "2026-09-16T00:00:00",
       "transactionType": "E"
-    },
-    "5812192": {
-      "id": "5812192",
-      "date": "2026-09-15",
-      "name": "Jeanine Wenning",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C",
-      "filedDate": "2026-09-15",
-      "filedAt": "2026-09-15T00:00:00"
-    },
-    "5809448": {
-      "id": "5809448",
-      "date": "2026-09-14",
-      "name": "Oregon Beverage PAC (126)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C",
-      "filedDate": "2026-09-14",
-      "filedAt": "2026-09-14T00:00:00"
-    },
-    "5804421": {
-      "id": "5804421",
-      "date": "2026-09-11",
-      "name": "Kerry Whitlatch",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5794081": {
-      "id": "5794081",
-      "date": "2026-09-04",
-      "name": "Oregon Soft Drink PAC (197)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5802018": {
-      "id": "5802018",
-      "date": "2026-09-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5770151": {
-      "id": "5770151",
-      "date": "2026-08-19",
-      "name": "Heather McDaniel",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5768775": {
-      "id": "5768775",
-      "date": "2026-08-14",
-      "name": "Anheuser Busch",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5766070": {
-      "id": "5766070",
-      "date": "2026-08-12",
-      "name": "UP Railroad Company",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5760634": {
-      "id": "5760634",
-      "date": "2026-08-10",
-      "name": "Ken Jackola",
-      "category": "Loan Received (Non-Exempt)",
-      "amount": 3000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5760635": {
-      "id": "5760635",
-      "date": "2026-08-10",
-      "name": "Santiam Excursion LLC",
-      "category": "Cash Contribution",
-      "amount": 1500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5755522": {
-      "id": "5755522",
-      "date": "2026-08-06",
-      "name": "Faye Barnes",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5752338": {
-      "id": "5752338",
-      "date": "2026-08-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5708645": {
-      "id": "5708645",
-      "date": "2026-07-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5683138": {
-      "id": "5683138",
-      "date": "2026-06-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5674263": {
-      "id": "5674263",
-      "date": "2026-05-26",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5659198": {
-      "id": "5659198",
-      "date": "2026-05-10",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5652426": {
-      "id": "5652426",
-      "date": "2026-05-05",
-      "name": "Heather McDaniel",
-      "category": "Cash Contribution",
-      "amount": 5000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5650547": {
-      "id": "5650547",
-      "date": "2026-05-04",
-      "name": "Tom Oliver",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5650552": {
-      "id": "5650552",
-      "date": "2026-05-04",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5643530": {
-      "id": "5643530",
-      "date": "2026-04-28",
-      "name": "FamilyCare, Inc",
-      "category": "Cash Contribution",
-      "amount": 2500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5643532": {
-      "id": "5643532",
-      "date": "2026-04-28",
-      "name": "Osteopathic Political Action Committee (212)",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5643751": {
-      "id": "5643751",
-      "date": "2026-04-28",
-      "name": "William Pavlisick",
-      "category": "Cash Contribution",
-      "amount": 150.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5642744": {
-      "id": "5642744",
-      "date": "2026-04-27",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5637764": {
-      "id": "5637764",
-      "date": "2026-04-23",
-      "name": "Lynden Brown Farms",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5629413": {
-      "id": "5629413",
-      "date": "2026-04-16",
-      "name": "Jeanine Wenning",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5629414": {
-      "id": "5629414",
-      "date": "2026-04-16",
-      "name": "Katherine Glaser",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5627779": {
-      "id": "5627779",
-      "date": "2026-04-15",
-      "name": "Jason Williams",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5629410": {
-      "id": "5629410",
-      "date": "2026-04-14",
-      "name": "Shellie Jackola",
-      "category": "In-Kind Contribution",
-      "amount": 215.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5629411": {
-      "id": "5629411",
-      "date": "2026-04-14",
-      "name": "Shellie Jackola",
-      "category": "In-Kind Contribution",
-      "amount": 186.53,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5629412": {
-      "id": "5629412",
-      "date": "2026-04-14",
-      "name": "Moore Family Vineyard",
-      "category": "In-Kind Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5621577": {
-      "id": "5621577",
-      "date": "2026-04-13",
-      "name": "Oregon Firearms Educational Foundation",
-      "category": "Cash Contribution",
-      "amount": 2500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5621586": {
-      "id": "5621586",
-      "date": "2026-04-13",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5606273": {
-      "id": "5606273",
-      "date": "2026-04-06",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5600335": {
-      "id": "5600335",
-      "date": "2026-04-03",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5597297": {
-      "id": "5597297",
-      "date": "2026-04-01",
-      "name": "McClain Family Corporation",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5597301": {
-      "id": "5597301",
-      "date": "2026-04-01",
-      "name": "Buckmaster Pro Plumbing and Heating Inc.",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5597303": {
-      "id": "5597303",
-      "date": "2026-04-01",
-      "name": "Alton Sullivan",
-      "category": "Cash Contribution",
-      "amount": 1250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5597305": {
-      "id": "5597305",
-      "date": "2026-04-01",
-      "name": "Dixie Sullivan",
-      "category": "Cash Contribution",
-      "amount": 1250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5597307": {
-      "id": "5597307",
-      "date": "2026-04-01",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5573543": {
-      "id": "5573543",
-      "date": "2026-03-11",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5562092": {
-      "id": "5562092",
-      "date": "2026-03-05",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5554126": {
-      "id": "5554126",
-      "date": "2026-02-26",
-      "name": "Telly Wirth",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5553328": {
-      "id": "5553328",
-      "date": "2026-02-25",
-      "name": "Sugar Vibes Donut Company, LLC",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5553382": {
-      "id": "5553382",
-      "date": "2026-02-25",
-      "name": "Dale Latimer",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5547350": {
-      "id": "5547350",
-      "date": "2026-02-20",
-      "name": "Bernice Franklin",
-      "category": "Cash Contribution",
-      "amount": 5000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5547352": {
-      "id": "5547352",
-      "date": "2026-02-20",
-      "name": "Bernice Franklin",
-      "category": "Cash Contribution",
-      "amount": 5000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5546502": {
-      "id": "5546502",
-      "date": "2026-02-19",
-      "name": "Ken Jackola",
-      "category": "Cash Contribution",
-      "amount": 600.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5540429": {
-      "id": "5540429",
-      "date": "2026-02-18",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539693": {
-      "id": "5539693",
-      "date": "2026-02-17",
-      "name": "Jeanine Wenning",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539695": {
-      "id": "5539695",
-      "date": "2026-02-17",
-      "name": "Ackland Living Trust",
-      "category": "Cash Contribution",
-      "amount": 500.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539697": {
-      "id": "5539697",
-      "date": "2026-02-17",
-      "name": "Larry Brown",
-      "category": "Cash Contribution",
-      "amount": 125.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539698": {
-      "id": "5539698",
-      "date": "2026-02-17",
-      "name": "Marlys Brown",
-      "category": "Cash Contribution",
-      "amount": 125.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539699": {
-      "id": "5539699",
-      "date": "2026-02-17",
-      "name": "Morley Thomas Law LLC",
-      "category": "Cash Contribution",
-      "amount": 300.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539700": {
-      "id": "5539700",
-      "date": "2026-02-17",
-      "name": "Dala Johnson",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539704": {
-      "id": "5539704",
-      "date": "2026-02-17",
-      "name": "Doug Picklee",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539706": {
-      "id": "5539706",
-      "date": "2026-02-17",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 400.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5553408": {
-      "id": "5553408",
-      "date": "2026-02-17",
-      "name": "Chris Breshears",
-      "category": "In-Kind Contribution",
-      "amount": 375.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5539054": {
-      "id": "5539054",
-      "date": "2026-02-16",
-      "name": "Gregory Rieskamp",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5531043": {
-      "id": "5531043",
-      "date": "2026-02-05",
-      "name": "Heather McDaniel",
-      "category": "Cash Contribution",
-      "amount": 250.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5529117": {
-      "id": "5529117",
-      "date": "2026-02-03",
-      "name": "Kerry Whitlatch",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5520708": {
-      "id": "5520708",
-      "date": "2026-01-28",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 25.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5520710": {
-      "id": "5520710",
-      "date": "2026-01-28",
-      "name": "Michelle Steinhebel",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5520903": {
-      "id": "5520903",
-      "date": "2026-01-28",
-      "name": "Bernice Franklin",
-      "category": "Cash Contribution",
-      "amount": 10000.0,
-      "filerID": 24696,
-      "transactionType": "C"
-    },
-    "5517840": {
-      "id": "5517840",
-      "date": "2026-01-23",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "transactionType": "C"
     },
     "5813377": {
       "id": "5813377",
@@ -9291,17 +8711,6 @@
       "filerID": 19763,
       "transactionType": "C"
     },
-    "5817395": {
-      "id": "5817395",
-      "date": "2026-09-19",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-19",
-      "filedAt": "2026-09-19T00:00:00",
-      "transactionType": "C"
-    },
     "5817204": {
       "id": "5817204",
       "date": "2026-09-19",
@@ -9664,28 +9073,6 @@
       "filedDate": "2026-09-20",
       "filedAt": "2026-09-20T00:00:00",
       "transactionType": "E"
-    },
-    "5819152": {
-      "id": "5819152",
-      "date": "2026-09-21",
-      "name": "Lynden Brown Farms",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-21",
-      "filedAt": "2026-09-21T00:00:00",
-      "transactionType": "C"
-    },
-    "5819176": {
-      "id": "5819176",
-      "date": "2026-09-21",
-      "name": "Michelle Steinhebel",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-21",
-      "filedAt": "2026-09-21T00:00:00",
-      "transactionType": "C"
     },
     "5818814": {
       "id": "5818814",
@@ -13581,17 +12968,6 @@
       "filedAt": "2026-09-24T00:00:00",
       "transactionType": "C"
     },
-    "5829349": {
-      "id": "5829349",
-      "date": "2026-09-24",
-      "name": "Better Public Education PAC (23965)",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-24",
-      "filedAt": "2026-09-24T00:00:00",
-      "transactionType": "C"
-    },
     "5827951": {
       "id": "5827951",
       "date": "2026-09-23",
@@ -16936,17 +16312,6 @@
       "filedAt": "2026-09-26T00:00:00",
       "transactionType": "E"
     },
-    "5832150": {
-      "id": "5832150",
-      "date": "2026-09-26",
-      "name": "Altria Client Services LLC",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-27",
-      "filedAt": "2026-09-27T00:00:00",
-      "transactionType": "C"
-    },
     "5832189": {
       "id": "5832189",
       "date": "2026-09-27",
@@ -19275,17 +18640,6 @@
       "category": "Cash Contribution",
       "amount": 2000.0,
       "filerID": 19763,
-      "filedDate": "2026-09-29",
-      "filedAt": "2026-09-29T00:00:00",
-      "transactionType": "C"
-    },
-    "5839199": {
-      "id": "5839199",
-      "date": "2026-09-28",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 200.0,
-      "filerID": 24696,
       "filedDate": "2026-09-29",
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "C"
@@ -24372,17 +23726,6 @@
       "filedAt": "2026-09-29T00:00:00",
       "transactionType": "E"
     },
-    "5850815": {
-      "id": "5850815",
-      "date": "2026-09-30",
-      "name": "AG-PAC (3)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-09-30",
-      "filedAt": "2026-09-30T00:00:00",
-      "transactionType": "C"
-    },
     "5850641": {
       "id": "5850641",
       "date": "2026-09-24",
@@ -28758,28 +28101,6 @@
       "filedAt": "2026-10-04T00:00:00",
       "transactionType": "E"
     },
-    "5858492": {
-      "id": "5858492",
-      "date": "2026-10-05",
-      "name": "Bernice Franklin",
-      "category": "Cash Contribution",
-      "amount": 10000.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-05",
-      "filedAt": "2026-10-05T00:00:00",
-      "transactionType": "C"
-    },
-    "5858486": {
-      "id": "5858486",
-      "date": "2026-10-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-05",
-      "filedAt": "2026-10-05T00:00:00",
-      "transactionType": "C"
-    },
     "5856604": {
       "id": "5856604",
       "date": "2026-10-05",
@@ -30206,17 +29527,6 @@
       "category": "Cash Contribution",
       "amount": 300.0,
       "filerID": 16015,
-      "filedDate": "2026-10-06",
-      "filedAt": "2026-10-06T00:00:00",
-      "transactionType": "C"
-    },
-    "5862158": {
-      "id": "5862158",
-      "date": "2026-10-05",
-      "name": "Miscellaneous Cash Contributions $100 and under",
-      "category": "Cash Contribution",
-      "amount": 100.0,
-      "filerID": 24696,
       "filedDate": "2026-10-06",
       "filedAt": "2026-10-06T00:00:00",
       "transactionType": "C"
@@ -70020,17 +69330,6 @@
       "filedAt": "2026-10-14T00:00:00",
       "transactionType": "C"
     },
-    "5884867": {
-      "id": "5884867",
-      "date": "2026-10-14",
-      "name": "Orloggers PAC (11)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-14",
-      "filedAt": "2026-10-14T00:00:00",
-      "transactionType": "C"
-    },
     "5886387": {
       "id": "5886387",
       "date": "2026-10-14",
@@ -80784,17 +80083,6 @@
       "filedAt": "2026-10-16T00:00:00",
       "transactionType": "C"
     },
-    "5888588": {
-      "id": "5888588",
-      "date": "2026-10-16",
-      "name": "Koch GA Inc.",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-16",
-      "filedAt": "2026-10-16T00:00:00",
-      "transactionType": "C"
-    },
     "5888686": {
       "id": "5888686",
       "date": "2026-10-16",
@@ -80912,17 +80200,6 @@
       "category": "Cash Contribution",
       "amount": 500.0,
       "filerID": 24400,
-      "filedDate": "2026-10-16",
-      "filedAt": "2026-10-16T00:00:00",
-      "transactionType": "C"
-    },
-    "5889732": {
-      "id": "5889732",
-      "date": "2026-10-16",
-      "name": "Surplus Line Insurance PAC (4556)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
       "filedDate": "2026-10-16",
       "filedAt": "2026-10-16T00:00:00",
       "transactionType": "C"
@@ -130266,17 +129543,6 @@
       "category": "Cash Contribution",
       "amount": 50.0,
       "filerID": 23140,
-      "transactionType": "C"
-    },
-    "5908139": {
-      "id": "5908139",
-      "date": "2026-10-21",
-      "name": "Oregon Realtors Political Action Committee (191)",
-      "category": "Cash Contribution",
-      "amount": 2500.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-21",
-      "filedAt": "2026-10-21T00:00:00",
       "transactionType": "C"
     },
     "5908569": {
@@ -224676,17 +223942,6 @@
       "filedAt": "2026-10-27T00:00:00",
       "transactionType": "C"
     },
-    "5920414": {
-      "id": "5920414",
-      "date": "2026-10-27",
-      "name": "ORLAPAC (193)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-10-27",
-      "filedAt": "2026-10-27T00:00:00",
-      "transactionType": "C"
-    },
     "5919455": {
       "id": "5919455",
       "date": "2026-10-26",
@@ -301270,28 +300525,6 @@
       "filedAt": "2026-11-02T00:00:00",
       "transactionType": "C"
     },
-    "5932131": {
-      "id": "5932131",
-      "date": "2026-11-02",
-      "name": "BNSF Railway Company",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
-      "filedDate": "2026-11-02",
-      "filedAt": "2026-11-02T00:00:00",
-      "transactionType": "C"
-    },
-    "5932133": {
-      "id": "5932133",
-      "date": "2026-11-02",
-      "name": "PhRMA",
-      "category": "Cash Contribution",
-      "amount": 2500.0,
-      "filerID": 24696,
-      "filedDate": "2026-11-02",
-      "filedAt": "2026-11-02T00:00:00",
-      "transactionType": "C"
-    },
     "5932145": {
       "id": "5932145",
       "date": "2026-11-02",
@@ -310807,17 +310040,6 @@
       "filedAt": "2026-11-04T00:00:00",
       "transactionType": "C"
     },
-    "5933996": {
-      "id": "5933996",
-      "date": "2026-11-04",
-      "name": "Julia Ingram",
-      "category": "Cash Contribution",
-      "amount": 50.0,
-      "filerID": 24696,
-      "filedDate": "2026-11-04",
-      "filedAt": "2026-11-04T00:00:00",
-      "transactionType": "C"
-    },
     "5934204": {
       "id": "5934204",
       "date": "2026-11-04",
@@ -319166,17 +318388,6 @@
       "category": "Cash Contribution",
       "amount": 2000.0,
       "filerID": 18284,
-      "filedDate": "2026-11-06",
-      "filedAt": "2026-11-06T00:00:00",
-      "transactionType": "C"
-    },
-    "5937364": {
-      "id": "5937364",
-      "date": "2026-11-06",
-      "name": "Oregon Bankers PAC (125)",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 24696,
       "filedDate": "2026-11-06",
       "filedAt": "2026-11-06T00:00:00",
       "transactionType": "C"
@@ -335915,17 +335126,6 @@
       "category": "Cash Contribution",
       "amount": 750.0,
       "filerID": 17469,
-      "filedDate": "2026-11-10",
-      "filedAt": "2026-11-10T00:00:00",
-      "transactionType": "C"
-    },
-    "5943752": {
-      "id": "5943752",
-      "date": "2026-11-09",
-      "name": "Confederated Tribes of Grand Ronde",
-      "category": "Cash Contribution",
-      "amount": 1500.0,
-      "filerID": 24696,
       "filedDate": "2026-11-10",
       "filedAt": "2026-11-10T00:00:00",
       "transactionType": "C"
@@ -353045,17 +352245,6 @@
       "filedAt": "2026-11-20T00:00:00",
       "transactionType": "E"
     },
-    "5948204": {
-      "id": "5948204",
-      "date": "2026-11-20",
-      "name": "PMI US Corporate Services",
-      "category": "Cash Contribution",
-      "amount": 2000.0,
-      "filerID": 24696,
-      "filedDate": "2026-11-21",
-      "filedAt": "2026-11-21T00:00:00",
-      "transactionType": "C"
-    },
     "5948205": {
       "id": "5948205",
       "date": "2026-11-20",
@@ -353098,116 +352287,6 @@
       "filerID": 19050,
       "filedDate": "2026-11-21",
       "filedAt": "2026-11-21T00:00:00",
-      "transactionType": "E"
-    },
-    "5948353": {
-      "id": "5948353",
-      "date": "2026-11-19",
-      "name": "Boise Cascade Company",
-      "category": "Cash Contribution",
-      "amount": 1000.0,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "C"
-    },
-    "5948275": {
-      "id": "5948275",
-      "date": "2026-11-09",
-      "name": "Confederated Tribes of the Grand Ronde",
-      "category": "Cash Contribution",
-      "amount": 1500.0,
-      "filerID": 24521,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "C"
-    },
-    "5948357": {
-      "id": "5948357",
-      "date": "2026-11-20",
-      "name": "Walmart",
-      "category": "Cash Expenditure",
-      "amount": 7.97,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948360": {
-      "id": "5948360",
-      "date": "2026-11-20",
-      "name": "Miscellaneous Cash Expenditures $100 and under",
-      "category": "Cash Expenditure",
-      "amount": 7.0,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948352": {
-      "id": "5948352",
-      "date": "2026-11-17",
-      "name": "5:00 Marketing Group LLC",
-      "category": "Cash Expenditure",
-      "amount": 139.88,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948354": {
-      "id": "5948354",
-      "date": "2026-11-17",
-      "name": "Skills USA",
-      "category": "Cash Expenditure",
-      "amount": 5000.0,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948355": {
-      "id": "5948355",
-      "date": "2026-11-17",
-      "name": "CASA for children of Klamath County",
-      "category": "Cash Expenditure",
-      "amount": 1000.0,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948350": {
-      "id": "5948350",
-      "date": "2026-11-16",
-      "name": "Jackson County Airport",
-      "category": "Cash Expenditure",
-      "amount": 6.0,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948359": {
-      "id": "5948359",
-      "date": "2026-11-16",
-      "name": "Miscellaneous Cash Expenditures $100 and under",
-      "category": "Cash Expenditure",
-      "amount": 10.5,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
-      "transactionType": "E"
-    },
-    "5948358": {
-      "id": "5948358",
-      "date": "2026-11-12",
-      "name": "Miscellaneous Cash Expenditures $100 and under",
-      "category": "Cash Expenditure",
-      "amount": 51.95,
-      "filerID": 21903,
-      "filedDate": "2026-11-22",
-      "filedAt": "2026-11-22T00:00:00",
       "transactionType": "E"
     },
     "5944663": {
@@ -354004,9 +353083,1469 @@
       "amount": 1000.0,
       "filerID": 20272,
       "transactionType": "C"
+    },
+    "5948353": {
+      "id": "5948353",
+      "date": "2026-11-19",
+      "name": "Boise Cascade Company",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "C"
+    },
+    "5948275": {
+      "id": "5948275",
+      "date": "2026-11-09",
+      "name": "Confederated Tribes of the Grand Ronde",
+      "category": "Cash Contribution",
+      "amount": 1500.0,
+      "filerID": 24521,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "C"
+    },
+    "5948357": {
+      "id": "5948357",
+      "date": "2026-11-20",
+      "name": "Walmart",
+      "category": "Cash Expenditure",
+      "amount": 7.97,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948360": {
+      "id": "5948360",
+      "date": "2026-11-20",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 7.0,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948352": {
+      "id": "5948352",
+      "date": "2026-11-17",
+      "name": "5:00 Marketing Group LLC",
+      "category": "Cash Expenditure",
+      "amount": 139.88,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948354": {
+      "id": "5948354",
+      "date": "2026-11-17",
+      "name": "Skills USA",
+      "category": "Cash Expenditure",
+      "amount": 5000.0,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948355": {
+      "id": "5948355",
+      "date": "2026-11-17",
+      "name": "CASA for children of Klamath County",
+      "category": "Cash Expenditure",
+      "amount": 1000.0,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948350": {
+      "id": "5948350",
+      "date": "2026-11-16",
+      "name": "Jackson County Airport",
+      "category": "Cash Expenditure",
+      "amount": 6.0,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948359": {
+      "id": "5948359",
+      "date": "2026-11-16",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 10.5,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948358": {
+      "id": "5948358",
+      "date": "2026-11-12",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 51.95,
+      "filerID": 21903,
+      "filedDate": "2026-11-22",
+      "filedAt": "2026-11-22T00:00:00",
+      "transactionType": "E"
+    },
+    "5948669": {
+      "id": "5948669",
+      "date": "2026-11-23",
+      "name": "Oncology Associates of Oregon PC, Willamette Valley Cancer",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 17469,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948670": {
+      "id": "5948670",
+      "date": "2026-11-23",
+      "name": "The Travelers Companies, Inc. PAC",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 17469,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948474": {
+      "id": "5948474",
+      "date": "2026-11-21",
+      "name": "Sharon L Bonn",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948472": {
+      "id": "5948472",
+      "date": "2026-11-20",
+      "name": "John Harris Knight",
+      "category": "Cash Contribution",
+      "amount": 27.0,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948560": {
+      "id": "5948560",
+      "date": "2026-11-20",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 5.0,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948441": {
+      "id": "5948441",
+      "date": "2026-11-18",
+      "name": "Carol Landsman",
+      "category": "Cash Contribution",
+      "amount": 10.0,
+      "filerID": 21883,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948531": {
+      "id": "5948531",
+      "date": "2026-11-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 10.0,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948618": {
+      "id": "5948618",
+      "date": "2026-11-18",
+      "name": "Vivian Fulgencio",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948619": {
+      "id": "5948619",
+      "date": "2026-11-18",
+      "name": "Margaret Day",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948620": {
+      "id": "5948620",
+      "date": "2026-11-18",
+      "name": "Mary O'Reilly",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948624": {
+      "id": "5948624",
+      "date": "2026-11-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 5.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948559": {
+      "id": "5948559",
+      "date": "2026-11-16",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5949523": {
+      "id": "5949523",
+      "date": "2026-11-16",
+      "name": "Nike, Inc",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948587": {
+      "id": "5948587",
+      "date": "2026-11-13",
+      "name": "PacifiCorp",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948616": {
+      "id": "5948616",
+      "date": "2026-11-12",
+      "name": "Gail Gasso",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948623": {
+      "id": "5948623",
+      "date": "2026-11-12",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 10.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5949522": {
+      "id": "5949522",
+      "date": "2026-11-12",
+      "name": "Erik Kancler",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948608": {
+      "id": "5948608",
+      "date": "2026-11-10",
+      "name": "Tamara Johnson",
+      "category": "Cash Contribution",
+      "amount": 60.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948615": {
+      "id": "5948615",
+      "date": "2026-11-10",
+      "name": "Donna Fischer",
+      "category": "Cash Contribution",
+      "amount": 280.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948622": {
+      "id": "5948622",
+      "date": "2026-11-10",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 180.0,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5949521": {
+      "id": "5949521",
+      "date": "2026-11-09",
+      "name": "Springboard Group",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "C"
+    },
+    "5948626": {
+      "id": "5948626",
+      "date": "2026-11-23",
+      "name": "Dominos Pizza",
+      "category": "Cash Expenditure",
+      "amount": 107.94,
+      "filerID": 21839,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5949524": {
+      "id": "5949524",
+      "date": "2026-11-23",
+      "name": "Democratic Party of Oregon (353)",
+      "category": "Cash Expenditure",
+      "amount": 1250.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948600": {
+      "id": "5948600",
+      "date": "2026-11-22",
+      "name": "Alaska Air",
+      "category": "Personal Expenditure for Reimbursement",
+      "amount": 2177.58,
+      "filerID": 21729,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948477": {
+      "id": "5948477",
+      "date": "2026-11-21",
+      "name": "ActBlue",
+      "category": "Cash Expenditure",
+      "amount": 1.98,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948447": {
+      "id": "5948447",
+      "date": "2026-11-20",
+      "name": "Zack Surmacz",
+      "category": "Cash Expenditure",
+      "amount": 5000.0,
+      "filerID": 21883,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948473": {
+      "id": "5948473",
+      "date": "2026-11-20",
+      "name": "ActBlue",
+      "category": "Cash Expenditure",
+      "amount": 1.07,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948552": {
+      "id": "5948552",
+      "date": "2026-11-20",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 1.5,
+      "filerID": 24273,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948557": {
+      "id": "5948557",
+      "date": "2026-11-20",
+      "name": "Anedot, Inc",
+      "category": "Cash Expenditure",
+      "amount": 0.5,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948565": {
+      "id": "5948565",
+      "date": "2026-11-20",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 4.5,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948573": {
+      "id": "5948573",
+      "date": "2026-11-20",
+      "name": "Noble Consulting",
+      "category": "Cash Expenditure",
+      "amount": 3817.04,
+      "filerID": 22958,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948561": {
+      "id": "5948561",
+      "date": "2026-11-19",
+      "name": "Claire Lynn",
+      "category": "Cash Expenditure",
+      "amount": 462.99,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948442": {
+      "id": "5948442",
+      "date": "2026-11-18",
+      "name": "ActBlue",
+      "category": "Cash Expenditure",
+      "amount": 0.4,
+      "filerID": 21883,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948471": {
+      "id": "5948471",
+      "date": "2026-11-18",
+      "name": "ActBlue",
+      "category": "Cash Expenditure",
+      "amount": 0.4,
+      "filerID": 21775,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948607": {
+      "id": "5948607",
+      "date": "2026-11-18",
+      "name": "ActBlue Technical Services",
+      "category": "Cash Expenditure",
+      "amount": 4.16,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5949518": {
+      "id": "5949518",
+      "date": "2026-11-18",
+      "name": "North Clackamas Chamber of Commerce",
+      "category": "Cash Expenditure",
+      "amount": 2000.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948594": {
+      "id": "5948594",
+      "date": "2026-11-17",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 12.7,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948550": {
+      "id": "5948550",
+      "date": "2026-11-16",
+      "name": "Facebook",
+      "category": "Cash Expenditure",
+      "amount": 83.09,
+      "filerID": 24273,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948555": {
+      "id": "5948555",
+      "date": "2026-11-16",
+      "name": "Anedot, Inc",
+      "category": "Cash Expenditure",
+      "amount": 4.3,
+      "filerID": 24663,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948593": {
+      "id": "5948593",
+      "date": "2026-11-13",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 38.53,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948582": {
+      "id": "5948582",
+      "date": "2026-11-12",
+      "name": "Wayfair",
+      "category": "Cash Expenditure",
+      "amount": 320.98,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948584": {
+      "id": "5948584",
+      "date": "2026-11-12",
+      "name": "Forest Pass Brewing",
+      "category": "Cash Expenditure",
+      "amount": 107.38,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948585": {
+      "id": "5948585",
+      "date": "2026-11-12",
+      "name": "Amazon",
+      "category": "Cash Expenditure",
+      "amount": 30.89,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948592": {
+      "id": "5948592",
+      "date": "2026-11-12",
+      "name": "Miscellaneous Cash Expenditures $100 and under",
+      "category": "Cash Expenditure",
+      "amount": 6.79,
+      "filerID": 21575,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948605": {
+      "id": "5948605",
+      "date": "2026-11-12",
+      "name": "Dwell Event Co",
+      "category": "Cash Expenditure",
+      "amount": 326.5,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948606": {
+      "id": "5948606",
+      "date": "2026-11-12",
+      "name": "ActBlue Technical Services",
+      "category": "Cash Expenditure",
+      "amount": 2.38,
+      "filerID": 24431,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5949517": {
+      "id": "5949517",
+      "date": "2026-11-12",
+      "name": "ActBlue Technical Services",
+      "category": "Cash Expenditure",
+      "amount": 9.88,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948439": {
+      "id": "5948439",
+      "date": "2026-11-11",
+      "name": "Mailchimp",
+      "category": "Cash Expenditure",
+      "amount": 45.0,
+      "filerID": 21883,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5949520": {
+      "id": "5949520",
+      "date": "2026-11-03",
+      "name": "Democratic Party of Oregon (353)",
+      "category": "Account Payable",
+      "amount": 1250.0,
+      "filerID": 16719,
+      "filedDate": "2026-11-23",
+      "filedAt": "2026-11-23T00:00:00",
+      "transactionType": "E"
+    },
+    "5948204": {
+      "id": "5948204",
+      "date": "2026-11-20",
+      "name": "PMI US Corporate Services",
+      "category": "Cash Contribution",
+      "amount": 2000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-21",
+      "filedAt": "2026-11-21T00:00:00"
+    },
+    "5943752": {
+      "id": "5943752",
+      "date": "2026-11-09",
+      "name": "Confederated Tribes of Grand Ronde",
+      "category": "Cash Contribution",
+      "amount": 1500.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-10",
+      "filedAt": "2026-11-10T00:00:00"
+    },
+    "5937364": {
+      "id": "5937364",
+      "date": "2026-11-06",
+      "name": "Oregon Bankers PAC (125)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-06",
+      "filedAt": "2026-11-06T00:00:00"
+    },
+    "5933996": {
+      "id": "5933996",
+      "date": "2026-11-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-04",
+      "filedAt": "2026-11-04T00:00:00"
+    },
+    "5932131": {
+      "id": "5932131",
+      "date": "2026-11-02",
+      "name": "BNSF Railway Company",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-02",
+      "filedAt": "2026-11-02T00:00:00"
+    },
+    "5932133": {
+      "id": "5932133",
+      "date": "2026-11-02",
+      "name": "PhRMA",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-11-02",
+      "filedAt": "2026-11-02T00:00:00"
+    },
+    "5920414": {
+      "id": "5920414",
+      "date": "2026-10-27",
+      "name": "ORLAPAC (193)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-27",
+      "filedAt": "2026-10-27T00:00:00"
+    },
+    "5908139": {
+      "id": "5908139",
+      "date": "2026-10-21",
+      "name": "Oregon Realtors Political Action Committee (191)",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-21",
+      "filedAt": "2026-10-21T00:00:00"
+    },
+    "5888588": {
+      "id": "5888588",
+      "date": "2026-10-16",
+      "name": "Koch GA Inc.",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-16",
+      "filedAt": "2026-10-16T00:00:00"
+    },
+    "5889732": {
+      "id": "5889732",
+      "date": "2026-10-16",
+      "name": "Surplus Line Insurance PAC (4556)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-16",
+      "filedAt": "2026-10-16T00:00:00"
+    },
+    "5884867": {
+      "id": "5884867",
+      "date": "2026-10-14",
+      "name": "Orloggers PAC (11)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-14",
+      "filedAt": "2026-10-14T00:00:00"
+    },
+    "5858492": {
+      "id": "5858492",
+      "date": "2026-10-05",
+      "name": "Bernice Franklin",
+      "category": "Cash Contribution",
+      "amount": 10000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-05",
+      "filedAt": "2026-10-05T00:00:00"
+    },
+    "5862158": {
+      "id": "5862158",
+      "date": "2026-10-05",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-06",
+      "filedAt": "2026-10-06T00:00:00"
+    },
+    "5858486": {
+      "id": "5858486",
+      "date": "2026-10-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-10-05",
+      "filedAt": "2026-10-05T00:00:00"
+    },
+    "5850815": {
+      "id": "5850815",
+      "date": "2026-09-30",
+      "name": "AG-PAC (3)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-30",
+      "filedAt": "2026-09-30T00:00:00"
+    },
+    "5839199": {
+      "id": "5839199",
+      "date": "2026-09-28",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-29",
+      "filedAt": "2026-09-29T00:00:00"
+    },
+    "5832150": {
+      "id": "5832150",
+      "date": "2026-09-26",
+      "name": "Altria Client Services LLC",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-27",
+      "filedAt": "2026-09-27T00:00:00"
+    },
+    "5829349": {
+      "id": "5829349",
+      "date": "2026-09-24",
+      "name": "Better Public Education PAC (23965)",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-24",
+      "filedAt": "2026-09-24T00:00:00"
+    },
+    "5819152": {
+      "id": "5819152",
+      "date": "2026-09-21",
+      "name": "Lynden Brown Farms",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00"
+    },
+    "5819176": {
+      "id": "5819176",
+      "date": "2026-09-21",
+      "name": "Michelle Steinhebel",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-21",
+      "filedAt": "2026-09-21T00:00:00"
+    },
+    "5817395": {
+      "id": "5817395",
+      "date": "2026-09-19",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-19",
+      "filedAt": "2026-09-19T00:00:00"
+    },
+    "5812192": {
+      "id": "5812192",
+      "date": "2026-09-15",
+      "name": "Jeanine Wenning",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-15",
+      "filedAt": "2026-09-15T00:00:00"
+    },
+    "5809448": {
+      "id": "5809448",
+      "date": "2026-09-14",
+      "name": "Oregon Beverage PAC (126)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C",
+      "filedDate": "2026-09-14",
+      "filedAt": "2026-09-14T00:00:00"
+    },
+    "5804421": {
+      "id": "5804421",
+      "date": "2026-09-11",
+      "name": "Kerry Whitlatch",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5794081": {
+      "id": "5794081",
+      "date": "2026-09-04",
+      "name": "Oregon Soft Drink PAC (197)",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5802018": {
+      "id": "5802018",
+      "date": "2026-09-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5770151": {
+      "id": "5770151",
+      "date": "2026-08-19",
+      "name": "Heather McDaniel",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5768775": {
+      "id": "5768775",
+      "date": "2026-08-14",
+      "name": "Anheuser Busch",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5766070": {
+      "id": "5766070",
+      "date": "2026-08-12",
+      "name": "UP Railroad Company",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5760634": {
+      "id": "5760634",
+      "date": "2026-08-10",
+      "name": "Ken Jackola",
+      "category": "Loan Received (Non-Exempt)",
+      "amount": 3000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5760635": {
+      "id": "5760635",
+      "date": "2026-08-10",
+      "name": "Santiam Excursion LLC",
+      "category": "Cash Contribution",
+      "amount": 1500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5755522": {
+      "id": "5755522",
+      "date": "2026-08-06",
+      "name": "Faye Barnes",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5752338": {
+      "id": "5752338",
+      "date": "2026-08-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5708645": {
+      "id": "5708645",
+      "date": "2026-07-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5683138": {
+      "id": "5683138",
+      "date": "2026-06-04",
+      "name": "Julia Ingram",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5674263": {
+      "id": "5674263",
+      "date": "2026-05-26",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5659198": {
+      "id": "5659198",
+      "date": "2026-05-10",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5652426": {
+      "id": "5652426",
+      "date": "2026-05-05",
+      "name": "Heather McDaniel",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5650547": {
+      "id": "5650547",
+      "date": "2026-05-04",
+      "name": "Tom Oliver",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5650552": {
+      "id": "5650552",
+      "date": "2026-05-04",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5643530": {
+      "id": "5643530",
+      "date": "2026-04-28",
+      "name": "FamilyCare, Inc",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5643532": {
+      "id": "5643532",
+      "date": "2026-04-28",
+      "name": "Osteopathic Political Action Committee (212)",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5643751": {
+      "id": "5643751",
+      "date": "2026-04-28",
+      "name": "William Pavlisick",
+      "category": "Cash Contribution",
+      "amount": 150.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5642744": {
+      "id": "5642744",
+      "date": "2026-04-27",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5637764": {
+      "id": "5637764",
+      "date": "2026-04-23",
+      "name": "Lynden Brown Farms",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5629413": {
+      "id": "5629413",
+      "date": "2026-04-16",
+      "name": "Jeanine Wenning",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5629414": {
+      "id": "5629414",
+      "date": "2026-04-16",
+      "name": "Katherine Glaser",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5627779": {
+      "id": "5627779",
+      "date": "2026-04-15",
+      "name": "Jason Williams",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5629410": {
+      "id": "5629410",
+      "date": "2026-04-14",
+      "name": "Shellie Jackola",
+      "category": "In-Kind Contribution",
+      "amount": 215.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5629411": {
+      "id": "5629411",
+      "date": "2026-04-14",
+      "name": "Shellie Jackola",
+      "category": "In-Kind Contribution",
+      "amount": 186.53,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5629412": {
+      "id": "5629412",
+      "date": "2026-04-14",
+      "name": "Moore Family Vineyard",
+      "category": "In-Kind Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5621577": {
+      "id": "5621577",
+      "date": "2026-04-13",
+      "name": "Oregon Firearms Educational Foundation",
+      "category": "Cash Contribution",
+      "amount": 2500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5621586": {
+      "id": "5621586",
+      "date": "2026-04-13",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5606273": {
+      "id": "5606273",
+      "date": "2026-04-06",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5600335": {
+      "id": "5600335",
+      "date": "2026-04-03",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5597297": {
+      "id": "5597297",
+      "date": "2026-04-01",
+      "name": "McClain Family Corporation",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5597301": {
+      "id": "5597301",
+      "date": "2026-04-01",
+      "name": "Buckmaster Pro Plumbing and Heating Inc.",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5597303": {
+      "id": "5597303",
+      "date": "2026-04-01",
+      "name": "Alton Sullivan",
+      "category": "Cash Contribution",
+      "amount": 1250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5597305": {
+      "id": "5597305",
+      "date": "2026-04-01",
+      "name": "Dixie Sullivan",
+      "category": "Cash Contribution",
+      "amount": 1250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5597307": {
+      "id": "5597307",
+      "date": "2026-04-01",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 50.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5573543": {
+      "id": "5573543",
+      "date": "2026-03-11",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5562092": {
+      "id": "5562092",
+      "date": "2026-03-05",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5554126": {
+      "id": "5554126",
+      "date": "2026-02-26",
+      "name": "Telly Wirth",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5553328": {
+      "id": "5553328",
+      "date": "2026-02-25",
+      "name": "Sugar Vibes Donut Company, LLC",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5553382": {
+      "id": "5553382",
+      "date": "2026-02-25",
+      "name": "Dale Latimer",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5547350": {
+      "id": "5547350",
+      "date": "2026-02-20",
+      "name": "Bernice Franklin",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5547352": {
+      "id": "5547352",
+      "date": "2026-02-20",
+      "name": "Bernice Franklin",
+      "category": "Cash Contribution",
+      "amount": 5000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5546502": {
+      "id": "5546502",
+      "date": "2026-02-19",
+      "name": "Ken Jackola",
+      "category": "Cash Contribution",
+      "amount": 600.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5540429": {
+      "id": "5540429",
+      "date": "2026-02-18",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539693": {
+      "id": "5539693",
+      "date": "2026-02-17",
+      "name": "Jeanine Wenning",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539695": {
+      "id": "5539695",
+      "date": "2026-02-17",
+      "name": "Ackland Living Trust",
+      "category": "Cash Contribution",
+      "amount": 500.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539697": {
+      "id": "5539697",
+      "date": "2026-02-17",
+      "name": "Larry Brown",
+      "category": "Cash Contribution",
+      "amount": 125.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539698": {
+      "id": "5539698",
+      "date": "2026-02-17",
+      "name": "Marlys Brown",
+      "category": "Cash Contribution",
+      "amount": 125.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539699": {
+      "id": "5539699",
+      "date": "2026-02-17",
+      "name": "Morley Thomas Law LLC",
+      "category": "Cash Contribution",
+      "amount": 300.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539700": {
+      "id": "5539700",
+      "date": "2026-02-17",
+      "name": "Dala Johnson",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539704": {
+      "id": "5539704",
+      "date": "2026-02-17",
+      "name": "Doug Picklee",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539706": {
+      "id": "5539706",
+      "date": "2026-02-17",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 400.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5553408": {
+      "id": "5553408",
+      "date": "2026-02-17",
+      "name": "Chris Breshears",
+      "category": "In-Kind Contribution",
+      "amount": 375.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5539054": {
+      "id": "5539054",
+      "date": "2026-02-16",
+      "name": "Gregory Rieskamp",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5531043": {
+      "id": "5531043",
+      "date": "2026-02-05",
+      "name": "Heather McDaniel",
+      "category": "Cash Contribution",
+      "amount": 250.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5529117": {
+      "id": "5529117",
+      "date": "2026-02-03",
+      "name": "Kerry Whitlatch",
+      "category": "Cash Contribution",
+      "amount": 1000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5520708": {
+      "id": "5520708",
+      "date": "2026-01-28",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 25.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5520710": {
+      "id": "5520710",
+      "date": "2026-01-28",
+      "name": "Michelle Steinhebel",
+      "category": "Cash Contribution",
+      "amount": 200.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5520903": {
+      "id": "5520903",
+      "date": "2026-01-28",
+      "name": "Bernice Franklin",
+      "category": "Cash Contribution",
+      "amount": 10000.0,
+      "filerID": 24696,
+      "transactionType": "C"
+    },
+    "5517840": {
+      "id": "5517840",
+      "date": "2026-01-23",
+      "name": "Miscellaneous Cash Contributions $100 and under",
+      "category": "Cash Contribution",
+      "amount": 100.0,
+      "filerID": 24696,
+      "transactionType": "C"
     }
   },
   "rollingReconciledOn": "2026-11-23",
-  "lastSuccessfulSync": "2026-11-23T06:43:18-08:00",
+  "lastSuccessfulSync": "2026-11-23T18:55:24-08:00",
   "contributionBackfillComplete": true
 }
